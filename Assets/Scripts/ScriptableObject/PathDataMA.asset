@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f56b3f574e1bfb47bf027c10e95b0c5, type: 3}
+  m_Name: PathDataMA
+  m_EditorClassIdentifier: 
+  controlPoints:
+  - startPoint: {x: 0, y: 0, z: 0}
+    haveModification: 0
+    startTangent: {x: 0.23768243, y: 0, z: 0.30063623}
+    startRotation: {x: 0, y: 0, z: 0, w: 1}
+    endPoint: {x: 0, y: 0, z: 1}
+    endRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
+    endTangent: {x: -0.20951985, y: 0, z: 0.6808862}
+  - startPoint: {x: 0, y: 0, z: 1}
+    haveModification: 0
+    startTangent: {x: 0.20951985, y: 0, z: 1.3191137}
+    startRotation: {x: 0, y: 0, z: 0, w: 1}
+    endPoint: {x: 0, y: 0, z: 2}
+    endRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
+    endTangent: {x: -0.35, y: 0, z: 1.6}
+  - startPoint: {x: 0, y: 0, z: 2}
+    haveModification: 0
+    startTangent: {x: 0.35, y: 0, z: 2.4}
+    startRotation: {x: 0, y: 0, z: 0, w: 1}
+    endPoint: {x: 0, y: 0, z: 3}
+    endRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
+    endTangent: {x: -0.35, y: 0, z: 2.6}
+  - startPoint: {x: 0, y: 0, z: 3}
+    haveModification: 0
+    startTangent: {x: 0.35, y: 0, z: 3.4}
+    startRotation: {x: 0, y: 0, z: 0, w: 1}
+    endPoint: {x: 0, y: 0, z: 4}
+    endRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
+    endTangent: {x: -0.35, y: 0, z: 3.6}
+  - startPoint: {x: 0, y: 0, z: 4}
+    haveModification: 0
+    startTangent: {x: 0.35, y: 0, z: 4.4}
+    startRotation: {x: 0, y: 0, z: 0, w: 1}
+    endPoint: {x: 0, y: 0, z: 5}
+    endRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
+    endTangent: {x: -0.35, y: 0, z: 4.6}
+  - startPoint: {x: 0, y: 0, z: 5}
+    haveModification: 0
+    startTangent: {x: 0.35, y: 0, z: 5.4}
+    startRotation: {x: 0, y: 0, z: 0, w: 1}
+    endPoint: {x: 0, y: 0, z: 6}
+    endRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
+    endTangent: {x: -0.35, y: 0, z: 5.6}
+  - startPoint: {x: 0, y: 0, z: 6}
+    haveModification: 0
+    startTangent: {x: 0.35, y: 0, z: 6.4}
+    startRotation: {x: 0, y: 0, z: 0, w: 1}
+    endPoint: {x: 0, y: 0, z: 7}
+    endRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
+    endTangent: {x: -0.35, y: 0, z: 6.6}
+  - startPoint: {x: 0, y: 0, z: 7}
+    haveModification: 0
+    startTangent: {x: 0.35, y: 0, z: 7.4}
+    startRotation: {x: 0, y: 0, z: 0, w: 1}
+    endPoint: {x: 0, y: 0, z: 8}
+    endRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
+    endTangent: {x: -0.35, y: 0, z: 7.6}
+  - startPoint: {x: 0, y: 0, z: 8}
+    haveModification: 0
+    startTangent: {x: 0.35, y: 0, z: 8.4}
+    startRotation: {x: 0, y: 0, z: 0, w: 1}
+    endPoint: {x: 0, y: 0, z: 9}
+    endRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
+    endTangent: {x: -0.35, y: 0, z: 8.6}
+  - startPoint: {x: 0, y: 0, z: 9}
+    haveModification: 0
+    startTangent: {x: 0.35, y: 0, z: 9.4}
+    startRotation: {x: 0, y: 0, z: 0, w: 1}
+    endPoint: {x: 0, y: 0, z: 10}
+    endRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
+    endTangent: {x: -0.35, y: 0, z: 9.6}
+  - startPoint: {x: 0, y: 0, z: 10}
+    haveModification: 0
+    startTangent: {x: 0.35, y: 0, z: 10.4}
+    startRotation: {x: 0, y: 0, z: 0, w: 1}
+    endPoint: {x: 0, y: 0, z: 11}
+    endRotation: {x: 0, y: 0, z: 0.008726535, w: 0.9999619}
+    endTangent: {x: -0.35, y: 0, z: 10.6}
+  colorPath: {r: 1, g: 0, b: 0, a: 1}
