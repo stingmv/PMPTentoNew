@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -41,14 +42,28 @@ namespace Login
         
         public void Login()
         {
+            StopAllCoroutines();
+            StartCoroutine(ILogin());
+
+        }
+
+        IEnumerator ILogin()
+        {
+            if (ComprobeMissFields())
+            {
+                _onMissingFields?.Invoke();
+                yield break;
+            }
+            yield return new WaitForSeconds(1);
 #if UNITY_EDITOR
+            
             _onSuccessLogin?.Invoke();
-            return;
+            yield break;
 #endif
             if (ComprobeMissFields())
             {
                 _onMissingFields?.Invoke();
-                return;
+                yield break;
             }
 
             if (ComprobeUser())
@@ -59,7 +74,8 @@ namespace Login
             {
                 _onFailedLogin?.Invoke();
             }
-      
+            yield return null;
+            
         }
     }
 }

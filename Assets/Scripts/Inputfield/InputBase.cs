@@ -51,6 +51,7 @@ public abstract class InputBase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        haveError = true;
         // _inputField = GetComponent<TMP_InputField>();
         _placeholderText = _inputField.placeholder.GetComponent<TextMeshProUGUI>();
     }
