@@ -97,8 +97,7 @@ public class KeyboardController : MonoBehaviour
             }
 #elif UNITY_IOS
             _keyboardHeight = TouchScreenKeyboard.area.height;
-#elif UNITY_EDITOR
-            _keyboardHeight = _move;
+
 #endif
             if( _timeToMoveCanvasWithKeyboard == 0)
             {
