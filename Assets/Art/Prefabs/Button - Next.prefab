@@ -151,3 +151,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
+  _imageButton: {fileID: 2990972692810813976}
+  _eventTrigger: {fileID: 4059904762643041316}

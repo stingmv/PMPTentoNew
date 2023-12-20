@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5952b0647ee6946b4c6518171ed941, type: 3}
+  m_Name: Instructors
+  m_EditorClassIdentifier: 
+  instructors:
+  - id: 0
+    prefab: {fileID: 7277756800929346100, guid: 35d0db4f734029044ba3eaf62075389f, type: 3}
+  - id: 1
+    prefab: {fileID: 3376904180048999921, guid: 89e4b752a55348548bac4514750d3d7d, type: 3}
+  currentInstructor:
+    id: 0
+    prefab: {fileID: 0}

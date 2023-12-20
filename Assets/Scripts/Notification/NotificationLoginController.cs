@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,12 +9,14 @@ namespace Notification
     {
         [SerializeField] private Transform _loginErrorNotification;
         [SerializeField] private Transform _loginSuccessNotification;
+        [SerializeField] private TextMeshProUGUI _messageErrorNotification;
         [SerializeField] private float _NotificationDuration;
         [SerializeField] private UnityEvent _onFinishNotificationError;
         [SerializeField] private UnityEvent _onFinishNotificationSuccess;
 
-        public void StartErrorNotification()
+        public void StartErrorNotification(string errorMessage)
         {
+            _messageErrorNotification.text = errorMessage;
             StopAllCoroutines();
             StartCoroutine(IStartNotification(true));
         }
