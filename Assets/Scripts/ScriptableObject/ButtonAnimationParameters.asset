@@ -36,7 +36,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _timeDuration: 0.09
+  _timeDuration: 0.05
   _animationInverseCurve:
     serializedVersion: 2
     m_Curve: []

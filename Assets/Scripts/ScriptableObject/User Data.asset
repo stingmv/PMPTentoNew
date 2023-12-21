@@ -21,7 +21,7 @@ MonoBehaviour:
       idContacto: 0
       clave: 
       userName: pruebaxjrivera@bsginstitute.net
-      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0._o2z1Q7GzWeAnEZnMXJZHgr1Cz4srJ8E_O69xwGhYymFMmJDV9GXQQ.68O2qDDOf6D_28Bb7k7cXA.nF7Rj_PPqhI_SbJN2wf1Lb2FS73sCRGspbqC1s2BXzjew0qKHbY3INQ8jCGyjtMrbf7V-K8b4DnzGOFF4cu74IExzNrkY-ZybTW8E8ooqExXH5Pj1ZLkltAWbAohyJhSxScWJ87hTkij25cYOsuf3IeNdeyNyTphfXZu2fiAp0ONf0rAgo_ary34cST5xKfVW9OZvH_w327Pj0pnfMZfsgcosBZXOaEdjTqjAaih2ocG0IxDOZOfO-VY4m4OJavBIXUEONfjaPqWQqotY6ij0JLNtDXtZ2AQwpqKQQSjXG2SP1baH_PMJdgn3Bcdxk73NKl66OgTyY0kwgHnesqBu6M-ZPSGoHQTvR6iLjGC3NztFEXZRr-0q3F2ATE2x6_5jryDpdxIKTfKSU1Qg2Ix-j_OR7Tm5mUJPzkAgEk__donJ41lb5NQxhYvlQbALPpOBCceDayMH4vAlIbHePUy8zzqDU1oMOAOOu3EASQ-RbRIJCHL3ZSba46WBpnk2dvmeRqRPEvdRxKY0GJorraHoszrwZjqwn1nsA8VBNGDP9owfUqm-6pDgRMoZIQJO6oLYpzrO0hZES4J-1sjoK3wVRBX2T2kWgOC5fXf0TuGJ7TEYdKU0ytZTwlwyTN1yMin.SrVC3paEVWPnwM838luVDA
+      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.1zsNRg3zacTdUB0C4RNaYNHny5AK0Ef3GHrEJjT1rTmB6XuVHyw7XQ.Z950MD49DrQB19vfFTmXcg.hedhLgeLvriFTw_RCpLTQqB5_07Fd_w40PZqsHIsaBRkq4xcYSx1XocOIWxp6lFIG-L2zo6HtN1wBo2avnvpLzt2jJs3sXDS-J6TrNgTl1dBVy-tuYB0cPPMfsAlQRE_bSySQQ_WwTV36hvFZ8ciyTbe1s8QWsiWVmb7trW0S6-IwFrDP9YOhWw52K_h2xJ_kK0A8C8VH_QJV4LiiSlcwE-glLUKpItWpwuX76SlDvtJ1ziGNJTkKEErm6xM7_Sg7Y0_GkXOGXps2GwXBx6SAFf8mORfTs5om-JqdpMOno4VH4TdPBArNSeNJ-N9yC3uX8W7cvRm7vDi1SH-57uVK3SCIbYrt37WLNokCfxwAPTqb09AB_zXol7paHRJ9yZnIewomBcB9MLIXZF5Q30IBrviZl-o8Jjgl5_3js6jlKmE7NTcyjwiSsBe1vEguex0A6rqP_cgj6vtHwculjYMSCi4Uez1wUIWF1lk4AzkBnXvawiWEnU76X3DgZKm_pvxxwxrfA4VjWpvAIxGYcJLfc5oRT1iDUwK8AfX-ZV0Oo8nXtnLiQ7r0WlHDeMhkGaORn_tZSxKt5VKsemdBORxE0_YVtVhm805R73XqXGsVe8Gh9YBzy6dCzC1PKgbBfIj.19kMnwL36cHCxSiFXxY4nA
       tipoCarrera: 1
       correoEnc: 
       telEnc: 
@@ -32,6 +32,8 @@ MonoBehaviour:
         descripcionGeneral: 
     haveUser: 0
     haveUsername: 0
-    username: gjusto
+    username: test test
     haveInstructor: 0
-    idInstructor: 0
+    idInstructor: 1
+    totalExperience: 500
+    totalCoins: 100
