@@ -20,7 +20,9 @@ public class PathToInstantiateInstructor : MonoBehaviour
 
         for (int i = 0; i < numInstants; i++)
         {
-            Gizmos.DrawSphere(new Vector3( -_radious * Mathf.Sin( -_angleRad * i), 0,- _radious * Mathf.Cos( -_angleRad * i)), .1f);
+            var pos = new Vector3(-_radious * Mathf.Sin(-_angleRad * i), 0, -_radious * Mathf.Cos(-_angleRad * i));
+            Gizmos.DrawSphere(pos, .1f);
+            Gizmos.DrawRay(pos, (pos - Vector3.zero).normalized);
         }
         
     }
@@ -32,10 +34,11 @@ public class PathToInstantiateInstructor : MonoBehaviour
         _angleRad =Mathf.Deg2Rad *_angle;
     }
 
-    public Vector3 GetPositionToInstantiate(int index)
+    public (Vector3, Vector3) GetPositionToInstantiate(int index)
     {
-        
-        return new Vector3(-_radious * Mathf.Sin(- _angleRad * index), 0, -_radious * Mathf.Cos(- _angleRad * index));
+        var positionTemp = new Vector3(-_radious * Mathf.Sin(-_angleRad * index), 0,
+            -_radious * Mathf.Cos(-_angleRad * index));
+        return (positionTemp,(positionTemp - Vector3.zero).normalized) ;
     }
     public void RotateToItem(int index)
     {

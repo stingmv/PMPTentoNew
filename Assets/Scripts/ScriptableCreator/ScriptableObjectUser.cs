@@ -38,6 +38,8 @@ public class UserInfo
     public string username;
     public bool haveInstructor;
     public int idInstructor;
+    public int totalExperience;
+    public int totalCoins;
 }
 [CreateAssetMenu(fileName = "User Data", menuName = "User data")]
 public class ScriptableObjectUser : ScriptableObject

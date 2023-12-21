@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -57,9 +56,9 @@ namespace UI.Button
         void Start()
         {
             _colorsBackup = new List<Color>(buttonColors);
-            // CreateButton("Persona");
-            // CreateButton("Proceso");
-            // CreateButton("Entorno \nempresarial");
+            CreateButton("Persona");
+            CreateButton("Proceso");
+            CreateButton("Entorno \nempresarial");
         }
 
         // Update is called once per frame
@@ -115,5 +114,5 @@ namespace UI.Button
         // }
         #endregion
     }
-
 }
+
