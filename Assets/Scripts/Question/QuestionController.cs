@@ -64,22 +64,22 @@ namespace Question
         // Start is called before the first frame update
         void Start()
         {
-            // _progressQuestion.CalculateWidth(10);
-            //
-            // for (int i = 0; i < 10; i++)
-            // {
-            //     QuestionData questionData = new QuestionData();
-            //     var randomValue = Random.value;
-            //     questionData.idQuestion = randomValue.ToString();
-            //     questionData.question = $"Question nº {randomValue}";
-            //     questionData.option1 = $"Question {randomValue} option 1";
-            //     questionData.option2 = $"Question {randomValue} option 2";
-            //     questionData.option3 = $"Question {randomValue} option 3";
-            //     questionData.option4 = $"Question {randomValue} option 4";
-            //     // questionData.idCorrectOption = Random.Range(1, 5);
-            //     questionData.progressItem = _progressQuestion.CreateItem();
-            //     _session.Add( questionData);
-            // }
+            _progressQuestion.CalculateWidth(10);
+            
+            for (int i = 0; i < 10; i++)
+            {
+                QuestionData questionData = new QuestionData();
+                var randomValue = Random.value;
+                questionData.idQuestion = randomValue.ToString();
+                questionData.question = $"Question nº {randomValue}";
+                questionData.options[0] = $"Question {randomValue} option 1";
+                questionData.options[1] = $"Question {randomValue} option 2";
+                questionData.options[2] = $"Question {randomValue} option 3";
+                questionData.options[3] = $"Question {randomValue} option 4";
+                questionData.idCorrectOption = $"Question {randomValue} option 4";
+                questionData.progressItem = _progressQuestion.CreateItem();
+                _session.Add( questionData);
+            }
         }
 
         

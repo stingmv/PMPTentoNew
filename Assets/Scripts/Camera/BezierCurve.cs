@@ -78,7 +78,9 @@ namespace Camera
             var index = (int)Mathf.Floor(percentage * _path.controlPoints.Length);
             var maxRange = 1f / _path.controlPoints.Length; 
             // Debug.Log("index: " + index + " current value in trace: " + (percentage - index * maxRange) + " maxRange: " + maxRange);
-            return CalculateBezierPoint(( percentage - index * maxRange ) / ( maxRange) , _path.controlPoints[index].startPoint, _path.controlPoints[index].startTangent, _path.controlPoints[index].endTangent, _path.controlPoints[index].endPoint);
+            return CalculateBezierPoint((percentage - index * maxRange) / (maxRange),
+                _path.controlPoints[index].startPoint, _path.controlPoints[index].startTangent,
+                _path.controlPoints[index].endTangent, _path.controlPoints[index].endPoint);
         }
         
         // public float distanceToT(float[] LUT, float distance )
@@ -90,13 +92,13 @@ namespace Camera
             
 
                 // Handles.PositionHandle(_controlPoints[i].startPoint.position, Quaternion.identity);
-                Handles.DrawBezier(_path.controlPoints[i].startPoint, _path.controlPoints[i].endPoint, _path.controlPoints[i].startTangent, _path.controlPoints[i].endTangent, _path.colorPath, null,10 );
-                Gizmos.DrawLine(_path.controlPoints[i].startPoint, _path.controlPoints[i].startTangent);
-                Gizmos.DrawLine(_path.controlPoints[i].endPoint, _path.controlPoints[i].endTangent);
+                Handles.DrawBezier(transform.TransformPoint(_path.controlPoints[i].startPoint), transform.TransformPoint(_path.controlPoints[i].endPoint), transform.TransformPoint(_path.controlPoints[i].startTangent), transform.TransformPoint(_path.controlPoints[i].endTangent), _path.colorPath, null,10 );
+                Gizmos.DrawLine(transform.TransformPoint(_path.controlPoints[i].startPoint), transform.TransformPoint(_path.controlPoints[i].startTangent));
+                Gizmos.DrawLine(transform.TransformPoint(_path.controlPoints[i].endPoint), transform.TransformPoint(_path.controlPoints[i].endTangent));
                 Gizmos.color = Color.blue;
-                Gizmos.DrawSphere(_path.controlPoints[i].startPoint, .03f);
+                Gizmos.DrawSphere(transform.TransformPoint(_path.controlPoints[i].startPoint), .03f);
                 Gizmos.color = Color.cyan;
-                Gizmos.DrawSphere(_path.controlPoints[i].endPoint, .03f);
+                Gizmos.DrawSphere(transform.TransformPoint(_path.controlPoints[i].endPoint), .03f);
                 if (i -1 > -1)
                 {
                     ConfigurateStartTangents(i);
@@ -108,8 +110,8 @@ namespace Camera
                 Gizmos.color = Color.green;
                 // }
             
-                Gizmos.DrawSphere(_path.controlPoints[i].startTangent, .03f);
-                Gizmos.DrawSphere(_path.controlPoints[i].endTangent, .03f);
+                Gizmos.DrawSphere(transform.TransformPoint(_path.controlPoints[i].startTangent), .03f);
+                Gizmos.DrawSphere(transform.TransformPoint(_path.controlPoints[i].endTangent), .03f);
             }
         }
 
