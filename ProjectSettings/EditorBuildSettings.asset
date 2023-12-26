@@ -14,7 +14,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ModoCategoria.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ModoAprendizaje.unity
     guid: 8a4b4105edaca3b48804e020fe865127
+  - enabled: 0
+    path: Assets/Scenes/DesafioGlosario.unity
+    guid: bf4952dc38efa1b478a3a14a1f5e5f9d
+  - enabled: 1
+    path: Assets/Scenes/RepasoDiario.unity
+    guid: f17369140026369479563021fc7ffe5f
   m_configObjects: {}
