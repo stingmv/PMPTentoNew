@@ -99,7 +99,6 @@ namespace Handles3D
         {
             var currentTime = 0f;
             var rand = Random.Range(5f, 10f);
-            var initVelocity = 0;
             while (currentTime <= 2)
             {
                 currentTime += Time.deltaTime/ _timeToTransition;

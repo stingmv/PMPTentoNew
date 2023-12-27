@@ -1003,10 +1003,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1614823432325642451, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 134.96027
-      objectReference: {fileID: 0}
     - target: {fileID: 2166064476933086909, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1026,6 +1022,18 @@ PrefabInstance:
     - target: {fileID: 4606493883804608817, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379867882959917788, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 1424572914}
+    - target: {fileID: 6212910339763779900, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1424572914}
+    - target: {fileID: 6212910339763779900, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7585952658672253018, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: _powerUpController
@@ -1123,10 +1131,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8817589297136455787, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 296
-      objectReference: {fileID: 0}
     - target: {fileID: 8867376344282905003, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1134,6 +1138,10 @@ PrefabInstance:
     - target: {fileID: 8867376344282905003, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ReloadCurrentScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016208948349842272, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1226,7 +1234,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43
+  m_fontSize: 42.55
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1577,8 +1585,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424572912}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.00000003090862, y: 0.70710677, z: -0.70710677, w: -0.00000003090862}
+  m_LocalPosition: {x: -7.11661, y: 1.9391571, z: 7.627108}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

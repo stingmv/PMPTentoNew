@@ -43,7 +43,6 @@ namespace UI
 
         IEnumerator IStartAnimation()
         {
-            var initHeight = 0;
             var width = _rectTransform.sizeDelta.x;
             var currentTime = 0f;
             while (currentTime <= _delay)

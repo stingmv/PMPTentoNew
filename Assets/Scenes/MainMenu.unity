@@ -156,30 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38da666e022b1a49ad58a308a9bc0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &176296946 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 524800472182715277, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
-  m_PrefabInstance: {fileID: 7743064895462747754}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &176296947 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 900230765647491178, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
-  m_PrefabInstance: {fileID: 7743064895462747754}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &176296950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176296946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba118bd5cca03b40b0e3d12df23d256, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ruletaTransform: {fileID: 176296947}
-  velocidadRotacion: 5
 --- !u!114 &368921699 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6611994795968532884, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
@@ -1807,7 +1783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 906585093886604418, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 471.83353
+      value: 471.8326
       objectReference: {fileID: 0}
     - target: {fileID: 1231416095845685344, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2428,10 +2404,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 524800472182715277, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 176296950}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
 --- !u!225 &7743064895462747755 stripped
 CanvasGroup:

@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Camera;
+using CameraUI;
 using Unity.Mathematics;
 using UnityEngine;
 
