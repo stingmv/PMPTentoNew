@@ -29,29 +29,50 @@ public class LoginRestApi : MonoBehaviour
             request.downloadHandler = new DownloadHandlerBuffer();
             
             request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Accept", "application/json");
+            request.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Unity 3D; ZFBrowser 3.1.0; UnityTests 1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36");
             
             yield return request.SendWebRequest();
-            if (request.result == UnityWebRequest.Result.ConnectionError)
+            if (request.responseCode == 401)
+            {
+                _objectUser.userInfo.haveUser = false;
+                GameEvents.FailedLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
+            }
+            else if (request.responseCode >= 400)
             {
                 _objectUser.userInfo.haveUser = false;
                 _loginController._onErrorInLogin?.Invoke("Fallo de comunicación con el servidor, intentelo denuevo");
-
+                Debug.Log(request.error);
             }
             else
             {
-                _objectUser.userInfo.user = JsonUtility.FromJson<User>(request.downloadHandler.text);
-                if (_objectUser.userInfo.user.excepcion.excepcionGenerada)
+                try
                 {
+                    _objectUser.userInfo.user = JsonUtility.FromJson<User>(request.downloadHandler.text);
+                    if (_objectUser.userInfo.user.excepcion.excepcionGenerada)
+                    {
+                        _objectUser.userInfo.haveUser = false;
+                        GameEvents.FailedLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
+                        // _loginController._onFailedLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
+                    }
+                    else
+                    {
+                        _objectUser.userInfo.haveUser = true;
+                        GameEvents.SuccessfulLogin?.Invoke(_objectUser.userInfo.user);
+                        GameEvents.GetUserExam?.Invoke(_objectUser.userInfo.user.userName);
+                        GameEvents.GetNameExam?.Invoke(_objectUser.userInfo.user.idAlumno.ToString());
+                        // _loginController._onSuccessLogin?.Invoke();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.Log(request.downloadHandler.text);
                     _objectUser.userInfo.haveUser = false;
-                    _loginController._onFailedLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
+                    _loginController._onErrorInLogin?.Invoke("Se tuvo un error interno, vuelva a intentarlo mas tarde");
                 }
-                else
-                {
-                    _objectUser.userInfo.haveUser = true;
-                    _loginController._onSuccessLogin?.Invoke();
-                }
+                
             }
-            PlayerPrefs.SetString("userInfo", JsonUtility.ToJson(_objectUser.userInfo));
+            // PlayerPrefs.SetString("userInfo", JsonUtility.ToJson(_objectUser.userInfo));
             _finishRequest = true;
        }
     }

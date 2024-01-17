@@ -11,6 +11,7 @@ namespace PowerUp
 {
     public class PowerUpDeleteOption : PowerUpListener
     {
+        [SerializeField] private BombAnimation _bombAnimation;
         [SerializeField] private QuestionInformation _questionInformation;
         [SerializeField] private QuestionController _questionController;
 
@@ -25,6 +26,7 @@ namespace PowerUp
                 Debug.Log(" seleccion: " + _optionChoose.ID + " -> " +(_questionController.CompareResponse(_optionChoose.ID) || _optionChoose.IsDisable() ));
             } while (_questionController.CompareResponse(_optionChoose.ID) || _optionChoose.IsDisable());
             _numUses++;
+            _bombAnimation.SetTarget(_optionChoose.transform);
             Debug.Log(" elegido: " + _optionChoose.ID + " " + _optionChoose.IsDisable());
         }
         public void DeleteOption(){

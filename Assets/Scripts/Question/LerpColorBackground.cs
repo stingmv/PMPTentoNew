@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,16 +21,26 @@ namespace Question
 
         #region Unity Methods
 
-        // Start is called before the first frame update
-        // void Start()
-        // {
-        //     StartAnimation();
-        // }
-
-        // Update is called once per frame
-        void Update()
+        private void OnEnable()
         {
-            
+            GameEvents.GameWon += GmeEvents_GameWon;
+            GameEvents.GameLost += GameEvents_GameLost;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.GameWon -= GmeEvents_GameWon;
+            GameEvents.GameLost -= GameEvents_GameLost;
+        }
+
+        private void GameEvents_GameLost()
+        {
+            StartAnimation(false);
+        }
+
+        private void GmeEvents_GameWon()
+        {
+            StartAnimation(true);
         }
 
         #endregion

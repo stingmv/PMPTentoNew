@@ -41,13 +41,13 @@ namespace Handles3D
         // Start is called before the first frame update
         private void Start()
         {
-            List<String> tags = new List<string>();
-            for (int i = 0; i < 20; i++)
-            {
-                var s = $"------>{i}<------";
-                tags.Add(s);
-            }
-            SetData(tags);
+            // List<String> tags = new List<string>();
+            // for (int i = 0; i < 20; i++)
+            // {
+            //     var s = $"------>{i}<------";
+            //     tags.Add(s);
+            // }
+            // SetData(tags);
         }
 
         // Update is called once per frame
@@ -64,7 +64,7 @@ namespace Handles3D
         {
             _domainText.text = tittle;
         }
-        public void SetData(List<string> tags)
+        public void SetData(List<Task> tags)
         {
             for (int i = 0; i < _options.Count; i++)
             {
@@ -76,7 +76,8 @@ namespace Handles3D
             for (int i = 0; i < tags.Count; i++)
             {
                 item = Instantiate(_prefabItem, _itemsContainer);
-                item.SetData(tags[i].Replace('_', ' ').Replace('\n', ' '), tags[i]);
+                // Debug.Log();//
+                item.SetData(tags[i].nombre.Substring(tags[i].nombre.IndexOf('-')+1), tags[i].id.ToString());
                 _options.Add(item);
             }
 
@@ -99,10 +100,13 @@ namespace Handles3D
         {
             var currentTime = 0f;
             var rand = Random.Range(5f, 10f);
+            var rand2 = Random.Range(1.7f, 100f);
+            var rand3 = Random.Range(3f, 10f);
+            
             while (currentTime <= 2)
             {
                 currentTime += Time.deltaTime/ _timeToTransition;
-                _timeVelocity = Mathf.Lerp(.01f, 4, 1 / (1 + Mathf.Exp(-7 * currentTime + rand)));
+                _timeVelocity = Mathf.Lerp(.03f, 4, 1 / (1 + rand2 * Mathf.Exp(-7 * currentTime + rand)));
                 yield return null;
 
             }
@@ -110,12 +114,14 @@ namespace Handles3D
         }
         IEnumerator ITransition()
         {
+            var height = _prefabItem.Rect.sizeDelta.y;
+            Debug.Log(height);
             var i = count;
             while (true)
             {
                 var currentItem = _options[i];
                 _currentTime = 0f;
-                var heithTemp = currentItem.Rect.sizeDelta.y;
+                var heithTemp = height;
                 currentItem.Rect.sizeDelta = new Vector2(currentItem.Rect.sizeDelta.x, 0);
                 currentItem.Rect.SetAsFirstSibling();
                 var y = 0f;
@@ -128,7 +134,7 @@ namespace Handles3D
                     yield return null;
 
                 }
-                y = heithTemp;
+                y = heithTemp ;
                 currentItem.Rect.sizeDelta = new Vector2(currentItem.Rect.sizeDelta.x, y); 
                 _offset.sizeDelta = new Vector2(currentItem.Rect.sizeDelta.x,heithTemp - y);
                 if (_timeVelocity > 3.5f)
@@ -136,6 +142,7 @@ namespace Handles3D
                     _elegido = _itemsContainer.GetChild((_itemsContainer.childCount - 2) / 2).GetComponent<HandlesItem>();
                     Debug.Log("elegido => " +_elegido.ID);
                     _onSelectedItem?.Invoke();
+                    GameEvents.GetIdTask?.Invoke(Int32.Parse(_elegido.ID));
                     yield break;
                 }
                 i--;

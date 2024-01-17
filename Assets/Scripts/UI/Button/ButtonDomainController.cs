@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace UI.Button
 {
@@ -45,6 +47,7 @@ namespace UI.Button
                 }
                 _currentButton = value;
                 _domainDescription.text = _currentButton.Description;
+                GameEvents.GetIdDomain?.Invoke(Int32.Parse(_currentButton.IndexS));
             } 
         }
 
@@ -56,17 +59,12 @@ namespace UI.Button
         void Start()
         {
             _colorsBackup = new List<Color>(buttonColors);
-            CreateButton("Persona");
-            CreateButton("Proceso");
-            CreateButton("Entorno \nempresarial");
+            // CreateButton("Persona");
+            // CreateButton("Proceso");
+            // CreateButton("Entorno \nempresarial");
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
-
+        
         #endregion
 
         #region Methods

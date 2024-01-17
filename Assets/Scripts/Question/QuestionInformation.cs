@@ -52,10 +52,10 @@ namespace Question
         public void SetData(QuestionData questionData)
         {
             _question.text = questionData.question;
-            _opt1.SetData(questionData.options[0],questionData.options[0]);
-            _opt2.SetData(questionData.options[1],questionData.options[1]);
-            _opt3.SetData(questionData.options[2],questionData.options[2]);
-            _opt4.SetData(questionData.options[3],questionData.options[3]);
+            _opt1.SetData(questionData.options[0].respuesta,questionData.options[0].id.ToString());
+            _opt2.SetData(questionData.options[1].respuesta,questionData.options[1].id.ToString());
+            _opt3.SetData(questionData.options[2].respuesta,questionData.options[2].id.ToString());
+            _opt4.SetData(questionData.options[3].respuesta,questionData.options[3].id.ToString());
             EnableOptions();
         }
 

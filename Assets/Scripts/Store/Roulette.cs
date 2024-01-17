@@ -84,11 +84,17 @@ public class Roulette : MonoBehaviour
     public void PointerUp()
     {
         _currentRotationSpeed = Touchscreen.current.delta.magnitude;
+        Debug.Log(_currentRotationSpeed);
         if (_currentRotationSpeed < _minSpeedDrag && _currentRotationSpeed >5)
         {
             _onInitRotation?.Invoke();
             Debug.Log(_currentRotationSpeed + " poca velocidad, agregando velocidad personalizada");
             _currentRotationSpeed += 80;
+            _canRotate = true;
+        }
+        else if (_currentRotationSpeed >= _minSpeedDrag )
+        {
+            _onInitRotation?.Invoke();
             _canRotate = true;
         }
         else

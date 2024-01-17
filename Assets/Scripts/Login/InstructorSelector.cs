@@ -22,6 +22,7 @@ public class InstructorSelector : MonoBehaviour
     private List<GameObject> _instructors = new List<GameObject>();
     public void InstantiateInstructor()
     {
+        _pathToInstantiateInstructor.transform.rotation = Quaternion.Euler(0,0,0);
         for (int i = 0; i < _objectInstructor.instructors.Length; i++)
         {
             (Vector3, Vector3) posRot = _pathToInstantiateInstructor.GetPositionToInstantiate(i);
@@ -46,9 +47,15 @@ public class InstructorSelector : MonoBehaviour
 
     public void InitValues()
     {
+        index = 0;
         InstantiateInstructor();
         ComprobeNext();
         ComprobePrevious();
+    }
+
+    private void OnEnable()
+    {
+        InitValues();
     }
 
     public void ClearListInsructor()
@@ -100,9 +107,9 @@ public class InstructorSelector : MonoBehaviour
     {
         _buttonNext.DisableButton();
         _buttonPrevious.DisableButton();
-        _objectUser.userInfo.haveInstructor = true;
-        _objectUser.userInfo.idInstructor = index;
-        PlayerPrefs.SetString("userInfo", JsonUtility.ToJson(_objectUser.userInfo));
+        GameEvents.NewInstuctorId?.Invoke(index);
+        
+        
         _onSelectInstructor?.Invoke();
     }
 }

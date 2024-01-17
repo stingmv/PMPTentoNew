@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UI;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,7 +15,7 @@ namespace Question
     {
         public string idQuestion;
         public string question;
-        public string[] options = new string[4];
+        public OptionItem[] options = new OptionItem[4];
         public string option1;
         public string option2;
         public string option3;
@@ -33,7 +34,7 @@ namespace Question
         [SerializeField] private ProgressQuestion _progressQuestion;
         [SerializeField] private UnityEvent _onEndQuestions;
         [SerializeField] private UnityEvent _onNextQuestion;
-
+        [SerializeField] private DataToRegisterSO _toRegisterSo;
         private List<QuestionData> _session = new List<QuestionData>();
 
         private QuestionData _currentQuestion;
@@ -61,25 +62,42 @@ namespace Question
 
         #region Unity Methods
 
+        private void OnEnable()
+        {
+            GameEvents.QuestionReady += GameEvents_QuestionReady;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.QuestionReady -= GameEvents_QuestionReady;
+        }
+
+        private void GameEvents_QuestionReady()
+        {
+            SetData(_toRegisterSo.questionInformation.listaPreguntas);
+            ConfigurateQuestion();
+            UIEvents.ShowQuestionView?.Invoke();
+        }
+
         // Start is called before the first frame update
         void Start()
         {
             _progressQuestion.CalculateWidth(10);
             
-            for (int i = 0; i < 10; i++)
-            {
-                QuestionData questionData = new QuestionData();
-                var randomValue = Random.value;
-                questionData.idQuestion = randomValue.ToString();
-                questionData.question = $"Question nº {randomValue}";
-                questionData.options[0] = $"Question {randomValue} option 1";
-                questionData.options[1] = $"Question {randomValue} option 2";
-                questionData.options[2] = $"Question {randomValue} option 3";
-                questionData.options[3] = $"Question {randomValue} option 4";
-                questionData.idCorrectOption = $"Question {randomValue} option 4";
-                questionData.progressItem = _progressQuestion.CreateItem();
-                _session.Add( questionData);
-            }
+            // for (int i = 0; i < 10; i++)
+            // {
+            //     QuestionData questionData = new QuestionData();
+            //     var randomValue = Random.value;
+            //     questionData.idQuestion = randomValue.ToString();
+            //     questionData.question = $"Question nº {randomValue}";
+            //     questionData.options[0]. = $"Question {randomValue} option 1";
+            //     questionData.options[1] = $"Question {randomValue} option 2";
+            //     questionData.options[2] = $"Question {randomValue} option 3";
+            //     questionData.options[3] = $"Question {randomValue} option 4";
+            //     questionData.idCorrectOption = $"Question {randomValue} option 4";
+            //     questionData.progressItem = _progressQuestion.CreateItem();
+            //     _session.Add( questionData);
+            // }
         }
 
         
@@ -87,32 +105,32 @@ namespace Question
 
         #region Methods
 
-        public void SetData(List<RootQuestion> questions)
+        public void SetData(QuestionItem[] questions)
         {
-            _progressQuestion.CalculateWidth(questions.Count);
-            for (int i = 0; i < questions.Count; i++)
+            _progressQuestion.CalculateWidth(questions.Length);
+            for (int i = 0; i < questions.Length; i++)
             {
                 
                 QuestionData questionData = new QuestionData();
-                questionData.idQuestion = questions[i].id;
-                questionData.question = questions[i].question.text;
+                questionData.idQuestion = questions[i].pregunta.id.ToString();
+                questionData.question = questions[i].pregunta.enunciado;
                 
                 var randomvalue = Random.Range(0, _indexes.Count);
-                questionData.options[_indexes[randomvalue]] = questions[i].incorrectAnswers[0];
+                questionData.options[_indexes[randomvalue]] = questions[i].pregunta.respuesta[0];
                 _indexes.RemoveAt(randomvalue);
 
                 randomvalue = Random.Range(0, _indexes.Count);
-                questionData.options[_indexes[randomvalue]] = questions[i].incorrectAnswers[1];
+                questionData.options[_indexes[randomvalue]] = questions[i].pregunta.respuesta[1];
                 _indexes.RemoveAt(randomvalue);
 
                 randomvalue = Random.Range(0, _indexes.Count);
-                questionData.options[_indexes[randomvalue]] = questions[i].incorrectAnswers[2];
+                questionData.options[_indexes[randomvalue]] = questions[i].pregunta.respuesta[2];
                 _indexes.RemoveAt(randomvalue);
 
-                questionData.options[_indexes[0]] = questions[i].correctAnswer;
+                questionData.options[_indexes[0]] = questions[i].pregunta.respuesta[3];
                 _indexes.RemoveAt(0);
 
-                questionData.idCorrectOption = questions[i].correctAnswer;
+                questionData.idCorrectOption = questions[i].pregunta.respuesta.FirstOrDefault(x => x.correcto == "true")?.id.ToString();
                 questionData.progressItem = _progressQuestion.CreateItem();
                 _session.Add( questionData);
                 _indexes.Add(0);
@@ -133,6 +151,7 @@ namespace Question
         {
             if (_currentIndex == _session.Count)
             {
+                GameEvents.GameWon?.Invoke();
                 _onEndQuestions?.Invoke();
                 return;
             }
@@ -156,11 +175,13 @@ namespace Question
             {
                 _currentQuestion.progressItem.SetCorrectSelection();
                 _questionInformation.SetMessage("¡Correcto! ¡Eres un experto en este tema!", true);
+                GameEvents.CorrectlyAnswered?.Invoke();
                 _onCorrectOption?.Invoke();
                 return true;
             }
             _currentQuestion.progressItem.SetIncorrectSelection();
             _questionInformation.SetMessage("Esa no es la respuesta correcta, pero cada error es una oportunidad de aprendizaje.", false);
+            GameEvents.IncorrectlyAnswered?.Invoke();
             _onIncorrectOption?.Invoke();
             return false;
             
@@ -201,6 +222,10 @@ namespace Question
             return;
         }
 
+        public void SendGameLost()
+        {
+            GameEvents.GameLost?.Invoke();
+        }
         
         #endregion
 

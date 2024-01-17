@@ -364,7 +364,19 @@ MonoBehaviour:
   _canvasGroup: {fileID: 6364756245332809511}
   _onBeforeTransition:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8262717394335504669}
+        m_TargetAssemblyTypeName: UI.PopupQuestion, Assembly-CSharp
+        m_MethodName: SetMessage
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onEndTransitionFadeout:
     m_PersistentCalls:
       m_Calls:
@@ -413,6 +425,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _detectTouchOutside: 0
+  _textMessage: {fileID: 0}
   _message: {fileID: 821035260445898075}
   _messagePower: {fileID: 0}
   _imageBSecondOportunity: {fileID: 0}
@@ -799,8 +812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
-  _imageButton: {fileID: 0}
-  _eventTrigger: {fileID: 0}
+  _imageButton: {fileID: 1479308582277463393}
+  _eventTrigger: {fileID: 8560324021063089869}
 --- !u!114 &8560324021063089869
 MonoBehaviour:
   m_ObjectHideFlags: 0

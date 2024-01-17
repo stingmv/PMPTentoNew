@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -46,6 +47,30 @@ namespace Login
                 yield break;
             }
             ComprobeUser();
+        }
+
+        private void OnEnable()
+        {
+            GameEvents.ErrorLogin += GameEvents_ErrorLogin;
+            GameEvents.FailedLogin += GameEvents_FailedLogin;
+            GameEvents.SuccessfulLogin += GameEvents_SuccessfulLogin;
+        }
+
+        private void GameEvents_SuccessfulLogin(User obj)
+        {
+            PlayerPrefs.SetString("UserInfo", JsonUtility.ToJson(obj));
+            PlayerPrefs.Save();
+            _onSuccessLogin?.Invoke();
+        }
+
+        private void GameEvents_FailedLogin(string obj)
+        {
+            _onFailedLogin?.Invoke(obj);
+        }
+
+        private void GameEvents_ErrorLogin(string obj)
+        {
+            _onErrorInLogin?.Invoke(obj);
         }
     }
 }

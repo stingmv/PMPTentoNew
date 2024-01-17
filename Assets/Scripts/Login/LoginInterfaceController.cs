@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,19 +14,39 @@ namespace Login
         [SerializeField] private ScriptableObjectUser _objectUser;
         [SerializeField] private ScriptableObjectInstructor _objectInstructor;
         [SerializeField] private UnityEvent _onFinishLoginConfiguration;
-        
+
+        [SerializeField] private UserManager _userManager;
+
         // Start is called before the first frame update
-        void Start()
+        IEnumerator Start()
         {
-            if (PlayerPrefs.HasKey("userInfo"))
-            {
-                _objectUser.userInfo = JsonUtility.FromJson<UserInfo>(PlayerPrefs.GetString("userInfo"));
-            }
-            Debug.Log(_objectUser.userInfo.haveUser);
-            Debug.Log(_objectUser.userInfo.user.userName);
-            Debug.Log(_objectUser.userInfo.haveUsername);
-            Debug.Log(_objectUser.userInfo.haveUser);
+            yield return new WaitUntil(() =>_userManager.EndFinishLoadData );
+            Debug.Log("terminado 2");
+            // yield return null;
             ComprobeLogin();
+        }
+
+        private void OnEnable()
+        {
+            GameEvents.UsernameSelected += GameEvents_UsernameSelected;
+            GameEvents.InstructorSelected += GameEvents_InstructorSelected;
+        }
+
+        private void GameEvents_InstructorSelected()
+        {
+            ComprobeInstructor();
+
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.UsernameSelected -= GameEvents_UsernameSelected;
+            GameEvents.InstructorSelected -= GameEvents_InstructorSelected;
+        }
+
+        private void GameEvents_UsernameSelected()
+        {
+            ComprobeUsername();
         }
 
         public void ComprobeLogin()

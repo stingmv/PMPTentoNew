@@ -116,34 +116,40 @@ public class PathController : MonoBehaviour
         _toRanking = _mainToRanking;
         _toTrain = _mainToTrain;
         _toStore = _mainToStore;
+        gameObject.SetActive(false);
     }
 
     public void ToMain()
     {
+        gameObject.SetActive(true);
         CurrentPath = PathState.storeToMain;
         _toMain.StartTransition();
     }
 
     public void ToStore()
     {
+        gameObject.SetActive(true);
         CurrentPath = PathState.mainToStore;
         _toStore.StartTransition();
     }
 
     public void ToTrain()
     {
+        gameObject.SetActive(true);
         CurrentPath = PathState.mainToTrain;
         _toTrain.StartTransition();
     }
 
     public void ToAchievement()
     {
+        gameObject.SetActive(true);
         CurrentPath = PathState.maintoAchievement;
         _toAchievement.StartTransition();
     }
 
     public void ToRanking()
     {
+        gameObject.SetActive(true);
         CurrentPath = PathState.mainToRanking;
         _toRanking.StartTransition();
     }

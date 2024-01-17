@@ -9,6 +9,7 @@ namespace UI
     {
         #region Variables
 
+        [SerializeField] private TextMessageSO _textMessage;
         [SerializeField] private TextMeshProUGUI _message;
         [SerializeField] private TextMeshProUGUI _messagePower;
         [SerializeField] private Image _imageBSecondOportunity;
@@ -26,17 +27,25 @@ namespace UI
         {
             
         }
-
         // Update is called once per frame
-        void Update()
-        {
-            
-        }
+        
+        
 
         #endregion
 
         #region Methods
 
+        public void SetMessage(bool isCorrect)
+        {
+            if (!isCorrect)
+            {
+                SetMessage(_textMessage.incorrectQuestionMessage[Random.Range(0, _textMessage.incorrectQuestionMessage.Length)], isCorrect);
+            }
+            else
+            {
+                SetMessage(_textMessage.correctQuestionMessage[Random.Range(0, _textMessage.correctQuestionMessage.Length)], isCorrect);
+            }
+        }
         public void SetMessage(string message, bool isCorrect)
         {
             if (isCorrect)

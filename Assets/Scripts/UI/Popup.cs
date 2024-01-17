@@ -10,7 +10,7 @@ namespace UI
         [SerializeField] private UnityEvent _onOutsidePopup;
         [SerializeField] private bool _detectTouchOutside = true;
 
-        private void OnEnable()
+        public void OnEnable()
         {
             if (_detectTouchOutside)
             {

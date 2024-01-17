@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class KeepScaleOnCanvas : MonoBehaviour
 {
+    [SerializeField] private ScriptableObjectInstructor _instructors;
+    [SerializeField] private ScriptableObjectUser _user;
+    [SerializeField] private GameObject _instructorPrefab;
     [SerializeField] private Camera _camera;
     [SerializeField] private Transform _guideTransform;
 
@@ -22,6 +25,9 @@ public class KeepScaleOnCanvas : MonoBehaviour
     private void Start()
     {
         _initScale = _guideTransform.localScale;
+        _guideTransform =
+            Instantiate(_instructors.instructors[_user.userInfo.idInstructor].prefab, transform.position, Quaternion.Euler(new Vector3(8.3f, 180f, 0f)), transform.parent).transform;
+        _guideTransform.localRotation= Quaternion.Euler(new Vector3(8.6f, 180f, 0f));
     }
 
     private void Update()

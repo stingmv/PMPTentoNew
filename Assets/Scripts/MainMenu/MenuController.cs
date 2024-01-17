@@ -17,8 +17,8 @@ namespace MainMenu
         [SerializeField] private TextMeshProUGUI _totalExpirience;
         [SerializeField] private TextMeshProUGUI _totalCoins;
         [SerializeField] private TMP_InputField _userInputField;
-        [SerializeField] private Slider _soundEffects;
-        [SerializeField] private Slider _music;
+        // [SerializeField] private Slider _soundEffects;
+        // [SerializeField] private Slider _music;
         [SerializeField] private NotificationToggle _notificationToggle;
         [SerializeField] private Transform _pointToInstantiate;
         [SerializeField] private UnityEvent _onSuccessSaveInformation;
@@ -28,20 +28,30 @@ namespace MainMenu
         private GameObject _instructorInstantiated;
         private void Start()
         {
-            if (PlayerPrefs.HasKey("settingInfo"))
-            {
-                _objectSettings.settingData = JsonUtility.FromJson<ScriptableObjectSettings.SettingData>(PlayerPrefs.GetString("settingInfo"));
-            }
+            // if (PlayerPrefs.HasKey("settingInfo"))
+            // {
+            //     _objectSettings.settingData = JsonUtility.FromJson<ScriptableObjectSettings.SettingData>(PlayerPrefs.GetString("settingInfo"));
+            // }
             PathToInstantiateInstructor();
             SetUserProperties();
             SetConfigurationProperties();
+        }
+
+        private void OnEnable()
+        {
+            GameEvents.NewInstuctorId += GameEvents_InstructorChanged;
+        }
+
+        private void GameEvents_InstructorChanged(int obj)
+        {
+            ChangeInstructor();
         }
 
         public void PathToInstantiateInstructor()
         {
             var indexInstructor = _user.userInfo.idInstructor;
             _instructorInstantiated =Instantiate(_objectInstructor.instructors.FirstOrDefault(x => x.id == indexInstructor)!.prefab,
-                _pointToInstantiate.position, _pointToInstantiate.rotation);
+                _pointToInstantiate.position, _pointToInstantiate.rotation, _pointToInstantiate);
             _instructorInstantiated.layer = 0;
         }
 
@@ -65,8 +75,8 @@ namespace MainMenu
 
         public void SetConfigurationProperties()
         {
-            _soundEffects.value = _objectSettings.settingData.soundEffectVolume;
-            _music.value = _objectSettings.settingData.musicVolume;
+            // _soundEffects.value = _objectSettings.settingData.soundEffectVolume;
+            // _music.value = _objectSettings.settingData.musicVolume;
             _notificationToggle.ActiveNotification = _objectSettings.settingData.haveNotification;
             _notificationToggle.InitToggle();
 
@@ -75,8 +85,8 @@ namespace MainMenu
         public void SaveInformation()
         {
             _user.userInfo.username = _userInputField.text;
-            _objectSettings.settingData.musicVolume = _music.value;
-            _objectSettings.settingData.soundEffectVolume = _soundEffects.value;
+            // _objectSettings.settingData.musicVolume = _music.value;
+            // _objectSettings.settingData.soundEffectVolume = _soundEffects.value;
             _objectSettings.settingData.haveNotification = _notificationToggle.ToggleNotification.isOn;
             SaveUserInformation();
             SaveSettingInformation();
@@ -97,7 +107,8 @@ namespace MainMenu
 
         public void SaveSettingInformation()
         {
-            PlayerPrefs.SetString("settingInfo", JsonUtility.ToJson(_objectSettings.settingData));
+            PlayerPrefs.SetString("MusicVolume", JsonUtility.ToJson(_objectSettings.settingData));
+            PlayerPrefs.SetString("SounEffectVolume", JsonUtility.ToJson(_objectSettings.settingData));
 PlayerPrefs.Save();
         }
     }

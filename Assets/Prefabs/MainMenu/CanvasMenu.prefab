@@ -1504,21 +1504,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4704189745058003523}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5281699085166420264}
-        m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-        m_MethodName: FadeInTransition
+      - m_Target: {fileID: 3756658141462696555}
+        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+        m_MethodName: OpenGameModesPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1526,7 +1514,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &4165793295968849002
 MonoBehaviour:
@@ -1541,8 +1529,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
-  _imageButton: {fileID: 0}
-  _eventTrigger: {fileID: 0}
+  _imageButton: {fileID: 2982561050013906995}
+  _eventTrigger: {fileID: 287952105128951244}
 --- !u!114 &287952105128951244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4833,21 +4821,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3097647785565438926}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 6611994795968532884}
-          m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-          m_MethodName: FadeInTransition
+        - m_Target: {fileID: 3756658141462696555}
+          m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+          m_MethodName: OpenConfigurationPopup
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5389,9 +5365,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 437651326869184498}
-          m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-          m_MethodName: FadeOutTransition
+        - m_Target: {fileID: 3756658141462696555}
+          m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+          m_MethodName: CloseChooseInstructorPopup
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6918,9 +6894,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6611994795968532884}
-          m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-          m_MethodName: FadeOutTransition
+        - m_Target: {fileID: 3756658141462696555}
+          m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+          m_MethodName: CloseConfigurationPopup
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -9052,21 +9028,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 174567272855633957}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 8565745649142242288}
-        m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-        m_MethodName: FadeInTransition
+      - m_Target: {fileID: 3756658141462696555}
+        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+        m_MethodName: OpenNotificationPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9074,7 +9038,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &6708422042951240033
 MonoBehaviour:
@@ -9089,8 +9053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
-  _imageButton: {fileID: 0}
-  _eventTrigger: {fileID: 0}
+  _imageButton: {fileID: 2426630025581252029}
+  _eventTrigger: {fileID: 4655019034843496589}
 --- !u!114 &4655019034843496589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9299,8 +9263,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 357064693764517608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.258, y: 0}
-  m_AnchorMax: {x: 0.258, y: 1}
+  m_AnchorMin: {x: 0.0025799999, y: 0}
+  m_AnchorMax: {x: 0.0025799999, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 57.2712, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11315,7 +11279,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1641163940978619510}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0.258
   m_OnValueChanged:
@@ -12371,21 +12335,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7131726404452073607}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 437651326869184498}
-          m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-          m_MethodName: FadeInTransition
+        - m_Target: {fileID: 3756658141462696555}
+          m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+          m_MethodName: OpenChooseInstructorPopup
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -13101,6 +13053,7 @@ GameObject:
   - component: {fileID: 7646021243352787297}
   - component: {fileID: 6611994795968532884}
   - component: {fileID: 2632092235323432225}
+  - component: {fileID: 374597415647964950}
   m_Layer: 5
   m_Name: Popup - Game configuration
   m_TagString: Untagged
@@ -13216,6 +13169,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _detectTouchOutside: 0
+--- !u!114 &374597415647964950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3097647785565438926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941a5b26388ad05449c199ba8cff109b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _musicVolumeSlider: {fileID: 2954259343578000869}
+  _soundEffectVolumeSlider: {fileID: 6222603220498434886}
 --- !u!1 &3101290738039331343
 GameObject:
   m_ObjectHideFlags: 0
@@ -16163,7 +16130,7 @@ GameObject:
   - component: {fileID: 1804933727574840764}
   - component: {fileID: 3997819623938186296}
   - component: {fileID: 5238309651859127577}
-  - component: {fileID: 3801684703349290127}
+  - component: {fileID: 7078944750387422705}
   m_Layer: 5
   m_Name: UserName
   m_TagString: Untagged
@@ -16287,7 +16254,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &3801684703349290127
+--- !u!114 &7078944750387422705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16296,25 +16263,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3717966542766944349}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ae7bf86b8530c847bc1c64cace0e016, type: 3}
+  m_Script: {fileID: 11500000, guid: e3207d7ade16f6b40bd04f293a7ffba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectNotification: {fileID: 11400000, guid: 856706e90161151489b21b17c5698210, type: 2}
-  _onResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5238309651859127577}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &3730525836192278478
 GameObject:
   m_ObjectHideFlags: 0
@@ -17367,9 +17318,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8565745649142242288}
-          m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-          m_MethodName: FadeOutTransition
+        - m_Target: {fileID: 3756658141462696555}
+          m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+          m_MethodName: CloseNotificationPopup
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -17541,6 +17492,7 @@ GameObject:
   - component: {fileID: 6842431087896661508}
   - component: {fileID: 1419865206442883213}
   - component: {fileID: 5849535673400791448}
+  - component: {fileID: 3756658141462696555}
   m_Layer: 5
   m_Name: CanvasMenu
   m_TagString: Untagged
@@ -17652,6 +17604,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &3756658141462696555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3943235550924310009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4ead019e38e23448b5d0bed1373826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameModesPopup: {fileID: 5281699085166420264}
+  _gameChallengesPopup: {fileID: 1994436671162144534}
+  _gameConfigurationPopup: {fileID: 6611994795968532884}
+  _chooseInstructorPopup: {fileID: 437651326869184498}
+  _notificationPopup: {fileID: 8565745649142242288}
 --- !u!1 &4018052424075958621
 GameObject:
   m_ObjectHideFlags: 0
@@ -19952,9 +19921,9 @@ MonoBehaviour:
   _onOutsidePopup:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5281699085166420264}
-        m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-        m_MethodName: FadeOutTransition
+      - m_Target: {fileID: 3756658141462696555}
+        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+        m_MethodName: CloseGameModesPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20206,8 +20175,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3114139876687629503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.258, y: 0}
-  m_AnchorMax: {x: 0.258, y: 1}
+  m_AnchorMin: {x: 0.0025799999, y: 0}
+  m_AnchorMax: {x: 0.0025799999, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 57.2712, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -21211,7 +21180,7 @@ RectTransform:
   m_Father: {fileID: 8114516168523434641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.258, y: 1}
+  m_AnchorMax: {x: 0.0025799999, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00024414062}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -22871,8 +22840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
-  _imageButton: {fileID: 0}
-  _eventTrigger: {fileID: 0}
+  _imageButton: {fileID: 7163650828203774798}
+  _eventTrigger: {fileID: 9138262785517130654}
 --- !u!114 &9138262785517130654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24611,9 +24580,9 @@ MonoBehaviour:
   _onOutsidePopup:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1994436671162144534}
-        m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-        m_MethodName: FadeOutTransition
+      - m_Target: {fileID: 3756658141462696555}
+        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+        m_MethodName: CloseGameChanllengesPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26865,7 +26834,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1596437710740042860}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0.258
   m_OnValueChanged:
@@ -28227,6 +28196,7 @@ GameObject:
   - component: {fileID: 6972894868730110157}
   - component: {fileID: 4864745633739255907}
   - component: {fileID: 6394920243243096774}
+  - component: {fileID: 6828806895768356398}
   m_Layer: 5
   m_Name: InputField (TMP)
   m_TagString: Untagged
@@ -28390,6 +28360,18 @@ MonoBehaviour:
   m_isRichTextEditingAllowed: 0
   m_LineLimit: 0
   m_InputValidator: {fileID: 0}
+--- !u!114 &6828806895768356398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776181316421164536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7699905c591dc44bcb466699f020bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6782123938088241072
 GameObject:
   m_ObjectHideFlags: 0
@@ -29629,9 +29611,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 437651326869184498}
-          m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-          m_MethodName: FadeOutTransition
+        - m_Target: {fileID: 3756658141462696555}
+          m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+          m_MethodName: CloseChooseInstructorPopup
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -33032,21 +33014,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5992541204563438659}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1994436671162144534}
-        m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-        m_MethodName: FadeInTransition
+      - m_Target: {fileID: 3756658141462696555}
+        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+        m_MethodName: OpenGameChanllengesPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33069,8 +33039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
-  _imageButton: {fileID: 0}
-  _eventTrigger: {fileID: 0}
+  _imageButton: {fileID: 5560698484270309702}
+  _eventTrigger: {fileID: 3422315820324186098}
 --- !u!114 &3422315820324186098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37972,7 +37942,7 @@ RectTransform:
   m_Father: {fileID: 7262568103323347476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.258, y: 1}
+  m_AnchorMax: {x: 0.0025799999, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00024414062}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

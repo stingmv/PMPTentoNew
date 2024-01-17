@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f78b2450c1eb1144f89914826d7b2cd2, type: 3}
+  m_Name: User Data
+  m_EditorClassIdentifier: 
+  userInfo:
+    user:
+      id: 
+      idProveedor: 0
+      cursos: 246
+      idAlumno: 9818325
+      idContacto: 0
+      clave: 
+      userName: pruebaxjrivera@bsginstitute.net
+      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.RvspKxR9GEgG7YADBvD7joyvIUzPbyxVqETgUONRMLuufK27yt0Wtg.hzDQ_4cmMj6P1CHKaaUUww.5tctw3q7_5cvkKdxGPkyt-GKbaSTGPUjessxwwHic1XvXa60ssnTiLvPiGhYoZW2EOEcGHT7N8jta4dfuyL6qXGKLbjxeyE6n6P74e5ziDKcZt08pwanne0HqTDj5UjNSQmUl6k9cSr4bvlFAfWFCYjA1xCCKIGEnXgb89Ey-zRwdEeD1YMg3m75b2hqFHAZjOOtMfg2AacO11gGJfQ_kvAijDD86HnnxCvAuPnt0YZfRx9pymVY3CumX_CnJUyRFRwQ93FY8RlYOhzJ_DqyUUuqxsOCDrXOInfGmxbyx2HPaDyQAkPB9qG2tgkqYgcq6rxf8nt41wLBJ7Qg_WHHTwWFzPQN2fdvGnj7SqtdNTYZUG3rvoonunZ3Y9Gwe-5P57pkzoBKig30twc_AiJsWlxlXR6DSdDx5l-BAH58Nd_5R9AYdocUM2bS3zw8U0afh4izktocOgnbqe83LXUtu_K9kJloXGTJKM874UDXENNWqwAeKAkArzsS9_nIQwipCC38tDw8opt2671HdFZQeKMiPGA3fIhHxx9oP2hQkQpdyrcwi8wg1Kyz2X5N4mJKMCWF3_AyCqKIj2w9nZvsgtlewYaDUJJcsJaH0xvq0RvS7s_4xN-HluOysvVR1OtRs6DSuwjYtK3ght2E4You1A.9yligQmR5ft9ZZOrA7oqkw
+      tipoCarrera: 1
+      correoEnc: 
+      telEnc: 
+      userAgent: 
+      userIp: 
+      excepcion:
+        excepcionGenerada: 0
+        descripcionGeneral: 
+    haveUser: 1
+    haveUsername: 0
+    username: 
+    haveInstructor: 0
+    idInstructor: -1
+    totalExperience: 500
+    totalCoins: 100

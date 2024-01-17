@@ -16,6 +16,7 @@ namespace Question
         [SerializeField] private RewardItem _prefabSecondOportunity;
         [SerializeField] private RewardItem _prefabTrueOption;
         [SerializeField] private RewardItem _prefabCoin;
+        [SerializeField] private RewardItem _prefabExperience;
         [SerializeField] private RectTransform _rectContainer;
 
         [SerializeField] private float _timeBetweenItems;
@@ -28,15 +29,10 @@ namespace Question
         // Start is called before the first frame update
         void Start()
         {
-            
+            InitRewards();
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
-
+        
         #endregion
 
         #region Methods
@@ -77,6 +73,11 @@ namespace Question
         {
             _prefabCoin.SetData(amount);
             _listToInstantiate.Enqueue(_prefabCoin);
+        }
+        public void AddExperience(int amount)
+        {
+            _prefabExperience.SetData(amount);
+            _listToInstantiate.Enqueue(_prefabExperience);
         }
         public void InitRewards()
         {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -16,10 +17,31 @@ namespace Button
         private Vector3 _startScale;
         private Color _colorDisable = new Color(.8f , .8f, .8f, 1);
         private Color _colorDefault = Color.white;
+        EventTrigger.Entry entry = new EventTrigger.Entry();
         private void Start()
         {
             _startScale = transform.localScale;
         }
+
+        private void OnEnable()
+        {
+            entry.eventID = EventTriggerType.PointerDown;
+            entry.callback.AddListener( Call);
+            _eventTrigger.triggers.Add(entry);
+        }
+
+        private void Call(BaseEventData arg0)
+        {
+            UIEvents.PressLoginButton?.Invoke(); 
+            Debug.Log("call");
+        }
+
+        private void OnDisable()
+        {
+            entry.callback.RemoveListener(Call);
+            _eventTrigger.triggers.Remove(entry);
+        }
+        
 
         public void StartAnimation()
         {

@@ -1,0 +1,1273 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17502f1ed2d8194dbf641bf356d3ce1, type: 3}
+  m_Name: ToRegister_Data
+  m_EditorClassIdentifier: 
+  dataToRegisterExam:
+    Id: 0
+    IdSimuladorPmpModo: 1
+    NombreExamen: 12/01/2024 6:13:04 p. m.
+    Tiempo: 0
+    IdAspNetUsers: 
+    Usuario: pruebaxjrivera@bsginstitute.net
+    IdSimuladorPmpTarea: 45
+    IdSimuladorPmpDominio: 5
+  responseOfRegisterExam:
+    idSimuladorPmpModo: 1
+    nombreExamen: 12/01/2024 6:13:04 p. m.
+    tiempo: 0
+    fechaInicio: 2024-01-12T18:10:59.7607116-05:00
+    idAspNetUsers: 
+    estadoExamen: 1
+    id: 0
+    fechaCreacion: 2024-01-12T18:10:59.7607128-05:00
+    fechaModificacion: 2024-01-12T18:10:59.760713-05:00
+    estado: 1
+    usuarioCreacion: pruebaxjrivera@bsginstitute.net
+    usuarioModificacion: pruebaxjrivera@bsginstitute.net
+    IdSimuladorPmpDominio: 0
+  questionInformation:
+    id: 9682
+    nombreExamen: 12/01/2024 6:13:04 p. m.
+    tiempo: 0
+    fechaInicio: 2024-01-12T18:10:59.76
+    idAspNetUsers: 
+    estadoExamen: 1
+    preguntasRespondidas: 0
+    preguntasPendientes: 27
+    listaPreguntas:
+    - id: 757332
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 1917
+      ejecutado: 0
+      pregunta:
+        id: 1917
+        enunciado: "Eres una t\xE9cnico de recursos humanos y la directora del proyecto
+          de dise\xF1o e implantaci\xF3n de un programa de desarrollo por competencias
+          en tu organizaci\xF3n. Como resultado del proceso de dirigir y gestionar
+          el trabajo del proyecto obtendr\xE1s observaciones y mediciones relativas
+          a los trabajos ejecutados que ir\xE1n a todos los procesos siguientes EXCEPTO
+          a:"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318474579112
+        retroalimentacion: "Los datos de desempe\xF1o del trabajo, observaciones
+          y mediciones sobre el trabajo realizado, son entradas para todos los procesos
+          de control de todas las \xE1reas de conocimiento. Ser\xE1n entrada para
+          los procesos de controlar el alcance, controlar los costes, controlar el
+          cronograma, controlar la calidad, controlar las comunicaciones, controlar
+          riesgos, controlar interesados y controlar adquisiciones. De estos procesos
+          saldr\xE1n como informaci\xF3n de desempe\xF1o del trabajo que ser\xE1
+          entrada para el proceso de Monitorizar y controlar el trabajo del proyecto.
+          PMBOK\xAE Guide 4.3.3. Dirigir y gestionar el trabajo de proyecto: Salidas"
+        activo: 1
+        respuesta:
+        - id: 7709
+          respuesta: Monitorizar y controlar el trabajo de proyecto
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 7710
+          respuesta: Controlar los costos y el cronograma
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 7711
+          respuesta: Controlar los riesgos del proyecto
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 7712
+          respuesta: Controlar las comunicaciones y los interesados
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757333
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 1919
+      ejecutado: 0
+      pregunta:
+        id: 1919
+        enunciado: "Eres una t\xE9cnico de recursos humanos y la directora del proyecto
+          de dise\xF1o e implantaci\xF3n de un programa de desarrollo por competencias
+          en tu organizaci\xF3n. Est\xE1s dirigiendo y gestionando el trabajo de
+          proyecto y quieres reunirte con el cliente para que te acepte formalmente
+          la plataforma donde se alojar\xE1 la informaci\xF3n. El proceso que vas
+          a ejecutar es:"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318475173112
+        retroalimentacion: "Es en el proceso de validaci\xF3n del alcance en el que
+          el director del proyecto puede lograr la aceptaci\xF3n formal de los entregables.
+          PMBOK\xAE Guide 4.3 Dirigir y gestionar el trabajo de proyecto y 5.5 Validar
+          el alcance"
+        activo: 1
+        respuesta:
+        - id: 7717
+          respuesta: Controlar el alcance con el cliente
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 7718
+          respuesta: Controlar la calidad con el cliente
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 7719
+          respuesta: Monitorear y controlar el trabajo de proyecto
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 7720
+          respuesta: Validar el alcance por parte del cliente
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757334
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2025
+      ejecutado: 0
+      pregunta:
+        id: 2025
+        enunciado: "Eres la gerente de proyecto y ves que nuevamente un miembro del
+          equipo no est\xE1 realizando correctamente su trabajo. Ya se lo habias
+          comunicado en un encuentro anterior y el miembro del equipo no tom\xF3
+          correctivos, \xBFQu\xE9 es lo mejor que puedes hacer?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318473745112
+        retroalimentacion: "Independientemente de que se deje constancia de la situaci\xF3n,
+          lo m\xE1s correcto es que la reuni\xF3n se realice cara a cara, en el despacho
+          del gerente de proyecto y, por supuesto, a solas. Al ser una segunda vez,
+          debe ser formal y mejor cara a cara.10. Gesti\xF3n de las comunicaciones
+          de proyecto."
+        activo: 1
+        respuesta:
+        - id: 8141
+          respuesta: "Comunicaci\xF3n informal verbal."
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8142
+          respuesta: "Comunicaci\xF3n informal escrita."
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8143
+          respuesta: "Comunicaci\xF3n formal verbal."
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 8144
+          respuesta: "Comunicaci\xF3n formal escrita."
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757335
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2035
+      ejecutado: 0
+      pregunta:
+        id: 2035
+        enunciado: "Un miembro del equipo acaba de ejecutar un trabajo incorrectamente
+          sin seguir el proceso establecido, esto ha generado un problema con el
+          cliente, quien devolvi\xF3 el entregable. Es la primera vez que sucede
+          algo as\xED con esta persona. \xBFC\xF3mo le comunicar\xE1s que debe cumplir
+          con las formas de trabajar establecidas?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318476801112
+        retroalimentacion: "Las reuniones, conversaciones en pasillos y cafeter\xEDas,
+          los primeros avisos a miembros del equipo por malos desempe\xF1os,...se
+          realizan de forma verbal informal. Manual para gerente de proyectos. PMBOK\xAE
+          Guide 10. Gesti\xF3n de las comunicaciones de proyecto"
+        activo: 1
+        respuesta:
+        - id: 8181
+          respuesta: Escrito formal
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8182
+          respuesta: Verbal formal
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8183
+          respuesta: Verbal informal
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 8184
+          respuesta: Escrito informal
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757336
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2046
+      ejecutado: 0
+      pregunta:
+        id: 2046
+        enunciado: "Eres el gerente del proyecto para el desarrollo de un nuevo procedimiento
+          que se deber\xE1 aplicar a pacientes de covid-19 en el hospital que trabajas.
+          Te dice un miembro de tu equipo que hasta ahora el director de urgencias
+          estaba participando activamente en el proyecto dando informaci\xF3n y propuestas
+          interesantes pero que ya no asiste a las reuniones y su implicaci\xF3n
+          ha bajado considerablemente. \xBFQu\xE9 es lo mejor que puedes hacer?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318475215112
+        retroalimentacion: "En el plan de involucramiento de los interesados del
+          proyecto se recoge la estrategia a seguir para lograr la participaci\xF3n
+          y el involucramiento deseado de cada interesados en las diferentes fases
+          del ciclo de vida del proyecto. Todos los interesados no tienen porqu\xE9
+          participar en todas las fases ni hacerlo con igual intensidad. PMBOK\xAE
+          Guide 13.2.3.1 Plan de involucramiento de los interesados"
+        activo: 1
+        respuesta:
+        - id: 8225
+          respuesta: "Llamar al director de operaciones para saber porqu\xE9 no participa
+            m\xE1s"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8226
+          respuesta: "Hacer una comunicaci\xF3n formal verbal a su gerente funcional"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8227
+          respuesta: Revisar el plan de involucramiento de los interesados del proyecto
+            para revisar la estrategia a seguir
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 8228
+          respuesta: Nada, ya que cada interesado participa conforme siente que el
+            proyecto le afecta
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757337
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2084
+      ejecutado: 0
+      pregunta:
+        id: 2084
+        enunciado: "Como responsable del proyecto Dise\xF1o de una franquicia, en
+          cuyo alcance se incluye el establecimiento de las tres primeras tiendas
+          en tu regi\xF3n, observas que los dos dise\xF1adores encargados del dise\xF1o
+          conceptual de la tienda, clave para el \xE9xito del proyecto, ya no est\xE1n
+          en el proyecto. En su lugar est\xE1n trabajando un dise\xF1ador senior
+          y un becario que le apoya con los planos \xBFQu\xE9 es lo que ha podido
+          fallar?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318477396112
+        retroalimentacion: "Como resultado de la direcci\xF3n del equipo de proyecto
+          se pueden proponer cambios al equipo que se procesar\xE1n de acuerdo al
+          control integrado de cambios establecido y, si se aprueban, se proceder\xE1
+          a actualizar el plan de recursos humanos. Como ocurre con el proceso de
+          Controlar el alcance \u2013que tiene por objetivo que se haga todo lo que
+          debe hacerse y que no se incluyan cambios no aprobados-, el proceso de
+          dirigir el equipo debe garantizar que los recursos asignados siguen en
+          el proyecto y no se producen cambios no aprobados. PMBOK\xAE Guide 9.5
+          Dirigir al equipo"
+        activo: 1
+        respuesta:
+        - id: 8377
+          respuesta: "El plan de gesti\xF3n de recursos humanos"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8378
+          respuesta: El control integrado de cambios
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 8379
+          respuesta: "La adquisici\xF3n del equipo de proyecto"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8380
+          respuesta: El desarrollo del equipo de proyecto
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757338
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2085
+      ejecutado: 0
+      pregunta:
+        id: 2085
+        enunciado: "Eres la Directora del Proyecto \"Dise\xF1o y construcci\xF3n
+          de una PTAR para el tratamiento de las aguas residuales de la f\xE1brica
+          de carteras en cuero\". Est\xE1s reunido con el equipo de proyecto para
+          evaluar su desempe\xF1o. Durante la evaluaci\xF3n, tres personas del equipo
+          que participan en otros dos proyectos de la organizaci\xF3n se quejan de
+          los criterios de evaluaci\xF3n y te cuentan c\xF3mo est\xE1n siendo evaluados
+          en otros proyectos. \xBFQu\xE9 es lo mejor que puedes hacer?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318478091112
+        retroalimentacion: "La respuesta correcta es la b). Las herramientas de evaluaci\xF3n
+          en los activos de los procesos de la organizaci\xF3n ser\xE1n una entrada
+          para definir el plan de gesti\xF3n de recursos humanos y se tendr\xE1n
+          en cuenta a la hora de definir los criterios de evaluaci\xF3n del desempe\xF1o.
+          Pero cada proyecto adapta a sus objetivos los criterios por lo que el mejor
+          documento para ver si se est\xE1 actuando correctamente es el plan de gesti\xF3n
+          de recursos humanos. Las otras dos opciones, de acuerdo a lo comentado,
+          no proceden, al menos en primera instancia. PMBOK\xAE Guide 9.1.3.1 Plan
+          de gesti\xF3n de los recursos y 9.4.3.1 Evaluaciones del desempe\xF1o del
+          equipo"
+        activo: 1
+        respuesta:
+        - id: 8381
+          respuesta: "Consultar las herramientas de evaluaci\xF3n en los activos
+            de los procesos de la organizaci\xF3n"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8382
+          respuesta: "Consultar el plan de gesti\xF3n de los recursos"
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 8383
+          respuesta: "Aplazar la reuni\xF3n hasta que acuerdes con los otros Project
+            managers una estrategia com\xFAn"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8384
+          respuesta: Informar al patrocinador de la actitud de los miembros del equipo
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757339
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2120
+      ejecutado: 0
+      pregunta:
+        id: 2120
+        enunciado: "Est\xE1s definiendo los miembros del equipo que requieres para
+          el proyecto \"Fabricaci\xF3n de un motor impulsado energ\xEDa solar \",
+          y eres conciente que varios pueden y prefieren hacer diferentes actividades
+          del proyecto. Para evitar conflictos a la hora de asignar las funciones
+          y responsabilidades, el Project manager deber\xEDa:"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318475945112
+        retroalimentacion: "Dentro del plan para la direcci\xF3n del proyecto, uno
+          de los planes subsidiarios es el plan para la gesti\xF3n de los recursos
+          humanos del proyecto, donde se deben definir claramente las funciones y
+          responsabilidades y los flujos de comunicaci\xF3n entre los miembros del
+          equipo y el Project manager con el resto de la organizaci\xF3n. PMBOK\xAE
+          Guide 9.1.3.1 Plan de gesti\xF3n de los recursos"
+        activo: 1
+        respuesta:
+        - id: 8521
+          respuesta: Dirigir personalmente las actividades equipo de trabajo.
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8522
+          respuesta: "Estar muy pendiente del desarrollo de la ejecuci\xF3n de las
+            actividades m\xE1s conflictivas"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8523
+          respuesta: Evitar compartir actividades entre miembros de diferentes departamentos
+            funcionales.
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8524
+          respuesta: "Elaborar una matriz de asignaci\xF3n de responsabilidades con
+            el equipo del proyecto."
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757340
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2133
+      ejecutado: 0
+      pregunta:
+        id: 2133
+        enunciado: "Como Directora de proyecto sabes el equipo de proyecto lo forman
+          las personas con roles y responsabilidades asignados para la ejecuci\xF3n
+          del proyecto, tambi\xE9n sabes que la gesti\xF3n de recursos humanos incluye
+          los procesos para organizar, gestionar y liderar el equipo de proyecto.
+          \xBFQu\xE9 proceso incluir\xE1 el env\xEDo de solicitudes de cambio, la
+          actualizaci\xF3n posterior del plan de recursos humanos, la resoluci\xF3n
+          de conflictos dentro del equipo?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318476842112
+        retroalimentacion: "Dirigir el equipo de proyecto que pertenece al del grupo
+          de procesos de ejecuci\xF3n del \xE1rea de recursos humanos, incluye el
+          env\xEDo de solicitudes de cambio, la actualizaci\xF3n posterior del plan
+          de recursos humanos o la supervisi\xF3n de conflictos entre el equipo.
+          PMBOK\xAE Guide 9.5 Dirigir al equipo."
+        activo: 1
+        respuesta:
+        - id: 8573
+          respuesta: Dirigir y gestionar el trabajo del proyecto
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8574
+          respuesta: Desarrollar el equipo de proyecto
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8575
+          respuesta: Dirigir el equipo de proyecto
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 8576
+          respuesta: Monitorear y controlar el trabajo del proyecto
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757341
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2138
+      ejecutado: 0
+      pregunta:
+        id: 2138
+        enunciado: "Est\xE1s definiendo el plan del proyecto que t\xFA diriges, concretamente
+          est\xE1s planificando la gesti\xF3n de los recursos. Sabes que la actividad
+          \"definir los roles y responsabilidades del proyecto\" incluye el rol,
+          la autoridad, la responsabilidad y la competencia. \xBFCu\xE1l de las siguientes
+          afirmaciones es correcta?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318476161112
+        retroalimentacion: "La competencia son las habilidades y capacidades exigidas.
+          el poder lo da la jerarqu\xEDa mientras que la autoridad es la gana el
+          l\xEDder. La responsabilidad, por su parte, es el trabajo que debe realizar
+          el equipo y la funci\xF3n la parte del proyecto que es responsable. PMBOK\xAE
+          Guide 9.1.3.1 Plan de gesti\xF3n de los recursos."
+        activo: 1
+        respuesta:
+        - id: 8593
+          respuesta: El rol es el trabajo que debe realizar un individuo o equipo
+            para completar las actividades asignadas
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8594
+          respuesta: La responsabilidad es la capacidad para tomar decisiones
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8595
+          respuesta: La competencia son las habilidades y capacidades exigidas para
+            completar los trabajos
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 8596
+          respuesta: Poder es lo mismo que autoridad
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757342
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2140
+      ejecutado: 0
+      pregunta:
+        id: 2140
+        enunciado: "Est\xE1s identificando y documentando los roles, responsabilidades,
+          habilidades requeridas y flujos de reporte del proyecto, as\xED como el
+          plan de gesti\xF3n del personal para tu proyecto de construcci\xF3n de
+          un puente. \xBFCu\xE1l de la siguiente informaci\xF3n no utilizar\xE1s
+          como entrada para este proceso?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318478223112
+        retroalimentacion: "Est\xE1s en el proceso de planificar la gesti\xF3n de
+          recursos humanos. Las entradas de las respuestas 1, 2 y 4 son -junto con
+          el plan para la direcci\xF3n del proyecto- las tres que se utilizan como
+          informaci\xF3n base para iniciar el proceso de desarrollar el Planificar
+          la gesti\xF3n de recursos humanos. PMBOK\xAE Guide (9.1.1 Planificar la
+          gesti\xF3n de recursos humanos: Entradas)"
+        activo: 1
+        respuesta:
+        - id: 8601
+          respuesta: Recursos requeridos para la actividad
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8602
+          respuesta: "Los factores ambientales de la organizaci\xF3n"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8603
+          respuesta: El calendario de recursos
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 8604
+          respuesta: "Los activos de los procesos de la organizaci\xF3n"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757343
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2143
+      ejecutado: 0
+      pregunta:
+        id: 2143
+        enunciado: "Est\xE1s definiendo el plan de gesti\xF3n de recursos humanos
+          del proyecto que diriges. En esta actividad del plan identificas y documentas
+          los roles y responsabilidades del proyecto, las habilidades requeridas,
+          las relaciones y los flujos de reporte. Un miembro del equipo te pregunta
+          \xBFpara qu\xE9 sirve una matriz de asignaci\xF3n de responsabilidades?,
+          tu le respondes:"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318478604112
+        retroalimentacion: "La Matriz de asignaci\xF3n de responsabilidades representa
+          el nivel de responsabilidad de cada participante en el proyecto: quien
+          es responsable de realizar el trabajo; qui\xE9n es el responsable final
+          de que el trabajo est\xE9 realizado tal y como deb\xEDa y en el plazo previsto
+          y lo aprueba firm\xE1ndolo; qu\xE9 personas deben consultarse; qui\xE9n
+          puede tomar decisiones sobre el trabajo o aportar informaci\xF3n o colaborar
+          o qui\xE9n debe ser informado de las decisiones y resultados. PMBOK\xAE
+          Guide 9.1.2.2 Representaci\xF3n de datos. Descripciones de puestos y organigramas
+          de proyecto"
+        activo: 1
+        respuesta:
+        - id: 8613
+          respuesta: "Tener claro qui\xE9n pertenece y quien no pertenece al equipo
+            de proyecto."
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8614
+          respuesta: "Para conocer cu\xE1l debe ser el flujo de informaci\xF3n."
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8615
+          respuesta: "Para saber qui\xE9n debe supervisar cada actividad."
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 8616
+          respuesta: "Para saber el orden de intervenci\xF3n de cada miembro del
+            equipo."
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757344
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2144
+      ejecutado: 0
+      pregunta:
+        id: 2144
+        enunciado: "Est\xE1s con tu equipo de proyecto defendiendo el plan de direcci\xF3n
+          del proyecto que diriges. Quieres que Pamela, una ingeniera con experiencia,
+          sea quien apruebe los paquetes de trabajo y se responsabilice para que
+          se ejecuten las tareas de estos paquetes de trabajo. \xBFQu\xE9 letra RACI
+          le asignar\xE1s a Pamela?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318476532112
+        retroalimentacion: "A (Accountable) es quien es el responsable final de que
+          el trabajo se ejecute c\xF3mo deb\xEDa y cumpliendo plazos firmando su
+          aprobaci\xF3n previa a la entrega. 9.1.2.2 Representaci\xF3n de datos.
+          Organigramas y descripciones de roles"
+        activo: 1
+        respuesta:
+        - id: 8617
+          respuesta: R
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8618
+          respuesta: A
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 8619
+          respuesta: C
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8620
+          respuesta: I
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757345
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2168
+      ejecutado: 0
+      pregunta:
+        id: 2168
+        enunciado: "Eres el gerente del proyecto de desarrollo de una nueva evaluaci\xF3n
+          por competencias en tu hospital. Para lograr el \xE9xito del hospital,
+          deben participar activamente todos los departamentos y secciones del hospital.
+          Has convocado a los representantes de m\xE9dicos, enfermeras y staff para
+          comunicarles algunos cambios en el alcance del proyecto. Quieres lograr
+          su aprobaci\xF3n para lo cual deber\xE1s lograr que lo vean necesario.
+          Ello puede implicar buscar una soluci\xF3n de compromiso. Esto es un ejemplo
+          de"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318479707112
+        retroalimentacion: "En el proceso de comunicar los avances, cambios, problemas
+          que vayan surgiendo, el Project manager deber\xE1 dedicar tiempo y esfuerzo
+          a gestionar adecuadamente las expectativas de las partes interesadas m\xE1s
+          relevantes. PMBOK\xAE Guide 13.3 Gestionar el involucramiento de los interesados
+          del proyecto"
+        activo: 1
+        respuesta:
+        - id: 8713
+          respuesta: "Gesti\xF3n de conflictos"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8714
+          respuesta: "Actividades de desarrollo de esp\xEDritu de equipo"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 8715
+          respuesta: "Gesti\xF3n del involucramiento de los interesados del proyecto"
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 8716
+          respuesta: "Gesti\xF3n de las comunicaciones de proyecto"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757346
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2298
+      ejecutado: 0
+      pregunta:
+        id: 2298
+        enunciado: "Eres encargado de un proyecto \xE1gil, est\xE1s llevando a cabo
+          una reuni\xF3n con un bloque de tiempo de 15 minutos para que el Equipo
+          de Desarrollo sincronice sus actividades y se enfoque en las actividades
+          de las siguientes 24 horas. Este tiempo tambi\xE9n es usado para inspeccionar
+          el trabajo avanzado desde el \xFAltimo Scrum Diario, para as\xED establecer
+          una proyecci\xF3n acerca del trabajo que podr\xEDa completarse antes del
+          siguiente. La reuni\xF3n debiera cumplir con el tiempo asignado pero dos
+          miembros del equipo est\xE1n manteniendo una conversaci\xF3n privada mientras
+          se desarrolla la reuni\xF3n. \xBFQu\xE9 es lo primero que debes hacer?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318479788112
+        retroalimentacion: "Es necesario entender los equipos \xE1giles se deben
+          organizar y ser aut\xF3nomos, sin embargo este tipo de actividad no debe
+          ser recurrente sino comenzar\xE1 a afectar a los dem\xE1s grupos o involucrados
+          en el proyecto."
+        activo: 1
+        respuesta:
+        - id: 9233
+          respuesta: "Pedirles que se retiren de la reuni\xF3n"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 9234
+          respuesta: "Recordar al equipo que para problemas espec\xEDficos se agendan
+            otras reuniones y que es importante el foco en esta reuni\xF3n"
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 9235
+          respuesta: Informar al propietario del producto de esa conducta
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 9236
+          respuesta: "Pedirles que dialoguen en una reuni\xF3n posterior a la que
+            se trata"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757347
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2513
+      ejecutado: 0
+      pregunta:
+        id: 2513
+        enunciado: "Seg\xFAn el modelo de Dreyfus, uno de los integrantes de equipo
+          solicita que la dejen sola para practicar sus conocimientos pero de vez
+          en cuando necesita que le recuerden las razones globales detr\xE1s de las
+          tareas que ejecuta. Tiene autonom\xEDa pero necesita feedback de otras
+          personas. \xBFCu\xE1l es el nivel en donde se encuentra?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318488245112
+        retroalimentacion: "Los Profesionales est\xE1n en una etapa muy avanzada,
+          no se conforman con la poca informaci\xF3n que se les da en un proyecto,
+          y tienen una visi\xF3n m\xE1s global. Son personas que pueden aprender
+          de la experiencia de otras, aprender de sus errores y mejorar. Pueden tomar
+          ventaja sobre la reflexi\xF3n y el feedback, y esto es el n\xFAcleo de
+          las metodolog\xEDas \xE1giles."
+        activo: 1
+        respuesta:
+        - id: 10093
+          respuesta: Proficiente
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10094
+          respuesta: Competente
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10095
+          respuesta: Experto
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10096
+          respuesta: Iniciado
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757348
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2550
+      ejecutado: 0
+      pregunta:
+        id: 2550
+        enunciado: "Estas gestionando un proyecto complejo debido a que es un nuevo
+          e innovador producto con el que tu empresa busca dominar el mercado. Eres
+          consiente de la importancia de apoyar a tu equipo, compartir el poder,
+          poner en primer lugar las necesidades de los empleados y ayudar a las personas
+          a desarrollarse y rendir al m\xE1ximo. \xBFQu\xE9 es entonces lo que mejorar\xEDas?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318489535112
+        retroalimentacion: Al poner en primer lugar la importancia de apoyar al equipo,
+          compartir el poder y buscar siempre el bienestar de los trabajadores entonces
+          debes mejorar tu liderazgo de servicio.
+        activo: 1
+        respuesta:
+        - id: 10241
+          respuesta: Inteligencia emocional
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10242
+          respuesta: Liderazgo de servicio
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10243
+          respuesta: Capacidad de tomar decisiones
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10244
+          respuesta: Proactividad
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757349
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2565
+      ejecutado: 0
+      pregunta:
+        id: 2565
+        enunciado: "Como l\xEDder del proyecto has pasado a un estilo delegativo
+          durante esta fase. Esto porque el equipo trabaja con un buen rendimiento
+          y pocos conflictos, est\xE1 ya preparado para tomar decisiones sin la necesidad
+          de tu participaci\xF3n. Adem\xE1s, el equipo tiene un alto grado de autonom\xEDa.
+          Los desacuerdos ocurren pero son resueltos positivamente dentro del equipo
+          y los cambios necesarios al proceso y a la estructura son realizados por
+          el mismo. Seg\xFAn Tuckman est\xE1s en la fase de:"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318488170112
+        retroalimentacion: "Esta fase de desempe\xF1o del equipo es cuando se tiene
+          un equipo altamente efectivo, que puede autogestionarse y resolver sus
+          conflictos, por lo que se le delga funciones ya que se conf\xEDa en su
+          capacidad"
+        activo: 1
+        respuesta:
+        - id: 10301
+          respuesta: "Formaci\xF3n"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10302
+          respuesta: "Normalizaci\xF3n"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10303
+          respuesta: "Desempe\xF1o"
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10304
+          respuesta: Turbulencias
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757350
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2571
+      ejecutado: 0
+      pregunta:
+        id: 2571
+        enunciado: "La empresa financiera donde trabajas te ha encargado crear una
+          plataforma de pago que estar\xE1 integrada en la web general de la compa\xF1\xEDa.
+          El enfoque de la empresa es el Lean Management. En este entorno, el l\xEDder
+          del equipo ha delegado la toma de las decisiones al nivel m\xE1s bajo posible
+          para garantizar la agilidad y no perder tiempos innecesarios en reportes.
+          \xBFCu\xE1l de las alternativas refleja mejor el porque de esta decisi\xF3n?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318489447112
+        retroalimentacion: "Empoderamiento significa que empleados, mandos intermedios
+          y directivos, de todos los niveles de la organizaci\xF3n, tienen el poder
+          de tomar decisiones sin tener que pedir autorizaci\xF3n a sus superiores"
+        activo: 1
+        respuesta:
+        - id: 10325
+          respuesta: Reducir el tiempo para vender el producto o ser usado
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10326
+          respuesta: Reducir desperdicios
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10327
+          respuesta: Empoderar al equipo
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10328
+          respuesta: Brindar menor carga de trabajo
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757351
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2578
+      ejecutado: 0
+      pregunta:
+        id: 2578
+        enunciado: "Sostienes una reuni\xF3n con uno de los integrantes m\xE1s productivos
+          de tu equipo, el cual te indica que est\xE1 en un nivel de satisfacci\xF3n
+          que le permite desarrollar proyectos a medio y a largo plazo. Esto debido
+          a que considera que tiene cubiertos aspectos como la seguridad f\xEDsica,
+          de empleo, de ingresos y recursos, familiar, de salud, etc. Seg\xFAn Maslow,
+          \xBFCu\xE1l ser\xE1 el siguiente nivel al que aspirar\xE1?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318487468112
+        retroalimentacion: "Actualmente se encontrar\xEDa en el segundo nivel de
+          las necesidades, el tercero corresponder\xEDa a las necesidades de afiliaci\xF3n,
+          esta necesidad se expresa cuando las personas buscan superar los sentimientos
+          de soledad y sentir que hay v\xEDnculos afectivos entre ellas y ciertas
+          personas"
+        activo: 1
+        respuesta:
+        - id: 10353
+          respuesta: Necesidad de reconocimiento
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10354
+          respuesta: "Necesidad b\xE1sica"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10355
+          respuesta: "Necesidad de afiliaci\xF3n"
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10356
+          respuesta: "Necesidad de autorrealizaci\xF3n"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757352
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2587
+      ejecutado: 0
+      pregunta:
+        id: 2587
+        enunciado: "Hay 2 miembros del equipo est\xE1n trabajando en un Spike basado
+          en riesgos para ver qu\xE9 aspectos adicionales deben trabajar y as\xED
+          minimizar las incertidumbres del proyecto. Sin embargo te expresan que
+          se encuentran frustrados debido a que no saben como cumplir con las historias
+          de usuario del cliente. Puesto que como agile Project Manager una de tus
+          habilidades para trabajar es la escucha activa, por ello consideras que:"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318489645112
+        retroalimentacion: "En otras palabras lo que se requiere es que los apoyes
+          debido a que se han saturado en b\xFAsqueda de soluciones, con el debido
+          apoyo se podr\xE1 llegar a una soluci\xF3n."
+        activo: 1
+        respuesta:
+        - id: 10389
+          respuesta: "Ambos trabajadores deben ser reemplazados para aligerar el
+            estr\xE9s y llegar a la soluci\xF3n"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10390
+          respuesta: Ambos trabajadores lo pasan muy mal pero pueden resolverlo con
+            tu apoyo
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10391
+          respuesta: "Ambos trabajadores seguir\xE1n frustrados y no hay posibilidad
+            de encontrar soluci\xF3n"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10392
+          respuesta: Se debe cancelar la entrega del producto para el cliente
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757353
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2588
+      ejecutado: 0
+      pregunta:
+        id: 2588
+        enunciado: "Durante las primeras iteraciones el equipo \xE1gil entreg\xF3
+          las funcionalidades de los incrementos acordados con el propietario del
+          producto como acuerdo para lograr un feedback, pero por la excesiva presi\xF3n
+          el equipo se ha ido agotando por la necesidad de cumplir fechas de entrega
+          muy ajustadas. Se realizaron momentos de recreaci\xF3n pero en las siguiente
+          iteraciones no se logr\xF3 el crecimiento del valor acordado \xBFCu\xE1l
+          de las siguientes acciones o decisiones tomadas por el l\xEDder del proyecto
+          puede haber llevado a este incumplimiento de los incrementos acordados?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318490636112
+        retroalimentacion: "Se debe gestionar adecuadamente los factores de motivaci\xF3n
+          como desmotivaci\xF3n para as\xED lograr que se tenga los resultados deseados
+          sin afectar el estado mental del equipo como el estado del proyecto."
+        activo: 1
+        respuesta:
+        - id: 10393
+          respuesta: "Hubo excesiva diversi\xF3n y se desvi\xF3 del problema"
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10394
+          respuesta: Se tuvo demasiada creatividad por los momentos recreativos
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10395
+          respuesta: "Se tuvo mejora en el esp\xEDritu de equipo"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10396
+          respuesta: "Se cerr\xF3 el producto antes de lo previsto"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757354
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2593
+      ejecutado: 0
+      pregunta:
+        id: 2593
+        enunciado: "Eres el project manager de un proyecto que busca desarrollar
+          un sistema de control de gases peligrosos. En la ultima reuni\xF3n de retrospectiva
+          se not\xF3 que el equipo est\xE1 perdiendo la motivaci\xF3n y el compromiso
+          inicial. \xBFQu\xE9 es lo que deber\xEDas hacer?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318488874112
+        retroalimentacion: "Se deber\xEDa animar a cada uno de los miembros del equipo
+          para que asuman responsabilidades sobre retos que permitan lograr \xE9xitos
+          tempranos"
+        activo: 1
+        respuesta:
+        - id: 10413
+          respuesta: Buscar animarlos para que vuelvan a asumir los retos
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10414
+          respuesta: "Pedir m\xE1s personal para reducir la carga de trabajo"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10415
+          respuesta: Dar bonificaciones al equipo
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10416
+          respuesta: Darles menos horas de trabajo
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757355
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2596
+      ejecutado: 0
+      pregunta:
+        id: 2596
+        enunciado: "En una reuni\xF3n de retrospectiva, te das cuenta que estas en
+          la fase de normalizaci\xF3n para tu equipo. Los miembros tienen todav\xEDa
+          conflictos entre s\xED, lo que hace que se divida y genere retrasos en
+          el avance. Como l\xEDder del proyecto, \xBFQu\xE9 es lo mejor que puedes
+          realizar?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318488966112
+        retroalimentacion: "Una de las estrategias de motivaci\xF3n que aportan valor
+          al negocio, consiste en asignar mayores retos a los empleados. Una vez
+          que has descubierto y asignado tareas en donde los colaboradores se sienten
+          incentivados para trabajar, el siguiente paso es evitar que caigan en zonas
+          de confort, por medio de nuevos desaf\xEDos."
+        activo: 1
+        respuesta:
+        - id: 10425
+          respuesta: "Animar a que el equipo aborde mayores retos para que tengan
+            una mayor satisfacci\xF3n"
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10426
+          respuesta: Pedir el trabajo de horas extra de los equipos
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10427
+          respuesta: Reducir horas de trabajo
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10428
+          respuesta: Fragmentar los equipos para evitar problemas
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757356
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2597
+      ejecutado: 0
+      pregunta:
+        id: 2597
+        enunciado: "Eres el Agile Certified Practicioner del proyecto, tienes como
+          objetivo el dirigirlo bajo un enfoque \xE1gil. En las reuniones iniciales
+          le has explicado al equipo que vas a estar pendiente de satisfacer las
+          necesidades cambiantes que el equipo tenga y de reducir los bloqueos que
+          en las diferentes fases del proyecto se produzcan. \xBFC\xF3mo se denomina
+          a este tipo de liderazgo?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318488185112
+        retroalimentacion: "Al haber necesidades cambiantes del equipo, lo m\xE1s
+          acertado es tener un tipo de liderazgo adaptativo"
+        activo: 1
+        respuesta:
+        - id: 10429
+          respuesta: Liderazgo adaptativo
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10430
+          respuesta: Liderazgo servidor
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10431
+          respuesta: "Liderazgo \xE1gil"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10432
+          respuesta: Liderazgo por objetivos
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757357
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2633
+      ejecutado: 0
+      pregunta:
+        id: 2633
+        enunciado: "Actualmente muchas personas, gerentes, jefes de proyecto, etc.,
+          buscan maneras de cambiar la cultura de su organizaci\xF3n, sin embargo
+          es necesario MOTIVAR este cambio desde cambios en las tareas, pensamiento
+          y rutinas de todos los pertenecientes a la organizaci\xF3n. \xBFCu\xE1l
+          de las siguientes propuestas NO mejorar\xE1 la motivaci\xF3n del equipo?"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318491239112
+        retroalimentacion: "Si se le quita la liberta a los equipos de trabajo no
+          se sentir\xE1n motivados debido a que no siguen sus propias decisiones."
+        activo: 1
+        respuesta:
+        - id: 10573
+          respuesta: "Lograr entregar r\xE1pidamente valor al cliente"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10574
+          respuesta: Buscar que se sientan conectados por sus logros
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10575
+          respuesta: "La presencia de un l\xEDder que tome sus decisiones quit\xE1ndoles
+            cargas laborales"
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10576
+          respuesta: "Aprender a motivar a los dem\xE1s"
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
+    - id: 757358
+      idSimuladorPmpDominio: 4
+      idSimuladorPmpTarea: 17
+      idSimuladorPmpPregunta: 2639
+      ejecutado: 0
+      pregunta:
+        id: 2639
+        enunciado: "Al estar encargado de un proyecto \xE1gil, es de vital importancia
+          saber que los miembros que trabajan en un equipo \xE1gil, son m\xE1s efectivos
+          a la hora de resolver problemas si:"
+        idSimuladorTipoRespuesta: 1
+        tieneRetroalimentacion: 1
+        urlRetroalimentacionVideo: https://players.brightcove.net/6267108632001/rEr9tuuTvS_default/index.html?videoId=6318490152112
+        retroalimentacion: Si sienten que pueden cometer errores, entonces se pierde
+          el miedo a ser creativo o lograr tener mayor eficiencia
+        activo: 1
+        respuesta:
+        - id: 10597
+          respuesta: Pueden definir los entregables por ellos mismos
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10598
+          respuesta: Sienten que pueden cometer errores
+          valor: 1
+          correcto: true
+          respuestaSelecionada: 0
+        - id: 10599
+          respuesta: Se les controla adecuadamente
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+        - id: 10600
+          respuesta: Se automotivan
+          valor: 0
+          correcto: false
+          respuestaSelecionada: 0
+      dominioNombre: Personas
+      tareaNombre: 4 - Empoderar los miembros del equipo
