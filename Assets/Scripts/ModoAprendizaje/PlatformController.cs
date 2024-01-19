@@ -12,14 +12,16 @@ namespace ModoAprendizaje
         #region Variables
 
         [SerializeField] private GameObject _prefabs;
+        [SerializeField] private GameObject _domainInfoPlatform;
         [SerializeField] private float _distanceFix;
         [SerializeField] private float _multiplierDistance;
         [SerializeField] private int _multiplier;
         [SerializeField] private int _numIntances;
         [SerializeField] private BezierCurve _bezierCurve;
+        [SerializeField] private RectTransform _rectTransform;
 
         private float _currentPercentage;
-        
+        private float _lastPosition;
         #endregion
 
         #region Unity Methods
@@ -27,7 +29,7 @@ namespace ModoAprendizaje
         // Start is called before the first frame update
         void Start()
         {
-            CreatePlatforms();
+            // CreatePlatforms();
         }
 
         // Update is called once per frame
@@ -40,6 +42,10 @@ namespace ModoAprendizaje
 
         #region Methods
 
+        public void SetInstances(int instances)
+        {
+            _numIntances = instances;
+        }
         [ContextMenu("Create platforms")]
         public void CreatePlatforms()
         {
@@ -49,6 +55,31 @@ namespace ModoAprendizaje
             }
         }
 
+        public PlatformItem CreatePlatformInformation()
+        {
+            var instance = Instantiate(_domainInfoPlatform, transform.TransformPoint(_bezierCurve.GetPositionInPercentage(_distanceFix / _multiplierDistance * _numIntances  ) )* _multiplier, quaternion.identity, transform);
+            var vector3 = instance.transform.localPosition;
+            vector3.x = 0;
+            instance.transform.localPosition = vector3;
+            _numIntances++;
+            _lastPosition = instance.transform.localPosition.y - 150;
+            _lastPosition *= -1;
+            var rTemp = _rectTransform.sizeDelta;
+            rTemp.y = _lastPosition;
+            _rectTransform.sizeDelta = rTemp;
+            return instance.GetComponent<PlatformItem>();
+        }
+        public PlatformItem CreatePlatform()
+        {
+            var instance = Instantiate(_prefabs, transform.TransformPoint(_bezierCurve.GetPositionInPercentage(_distanceFix / _multiplierDistance * _numIntances  ) )* _multiplier, quaternion.identity, transform);
+            _numIntances++;
+            _lastPosition = instance.transform.localPosition.y - 150;
+            _lastPosition *= -1;
+            var rTemp = _rectTransform.sizeDelta;
+            rTemp.y = _lastPosition;
+            _rectTransform.sizeDelta = rTemp;
+            return instance.GetComponent<PlatformItem>();
+        }
         
         #endregion
 

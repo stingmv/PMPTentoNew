@@ -56,7 +56,22 @@ public class UserManager : MonoBehaviour
             _userSO.userInfo.haveInstructor = false;
             _userSO.userInfo.idInstructor = -1;
         }
-        
+        if (PlayerPrefs.HasKey("TotalExperience"))
+        {
+            _userSO.userInfo.totalExperience = PlayerPrefs.GetFloat("TotalExperience");
+        }
+        else
+        {
+            _userSO.userInfo.totalExperience = 100;
+        }
+        if (PlayerPrefs.HasKey("TotalCoins"))
+        {
+            _userSO.userInfo.totalCoins = PlayerPrefs.GetFloat("TotalCoins");
+        }
+        else
+        {
+            _userSO.userInfo.totalCoins = 100;
+        }
         Debug.Log("terminado 1");
         EndFinishLoadData = true;
     }

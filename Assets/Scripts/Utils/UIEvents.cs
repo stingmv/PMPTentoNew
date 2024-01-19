@@ -52,4 +52,10 @@ public static class UIEvents
     public static Action ShowFinishView;
 
     #endregion
+
+    #region Learning Mode
+
+    public static Action ShowDomainInformation;
+
+    #endregion
 }

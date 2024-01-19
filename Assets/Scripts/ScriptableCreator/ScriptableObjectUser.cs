@@ -59,6 +59,8 @@ public class ScriptableObjectUser : ScriptableObject
     private void GameEvents_RequestExperienceChange(float obj)
     {
         userInfo.totalExperience += obj;
+        PlayerPrefs.SetFloat("TotalExperience", userInfo.totalExperience);
+        PlayerPrefs.Save();
         GameEvents.ExperienceChanged?.Invoke(userInfo.totalExperience);
     }
 
@@ -74,6 +76,8 @@ public class ScriptableObjectUser : ScriptableObject
     private void GameEvents_RequestCoinsChange(float obj)
     {
         userInfo.totalCoins += obj;
+        PlayerPrefs.SetFloat("TotalCoins", userInfo.totalCoins);
+        PlayerPrefs.Save();
         GameEvents.CoinsChanged?.Invoke(userInfo.totalCoins);
     }
 
@@ -82,6 +86,8 @@ public class ScriptableObjectUser : ScriptableObject
         userInfo.haveInstructor = true;
         userInfo.idInstructor = index;
         PlayerPrefs.SetInt("HaveInstructor", index);
+        PlayerPrefs.Save();
+
         GameEvents.InstructorSelected?.Invoke();
 
     }

@@ -12,16 +12,29 @@ namespace UI
 
         public void OnEnable()
         {
+            EnableInteraction();
+        }
+
+        public void DeleteInteraction()
+        {
+            if (_detectTouchOutside)
+            {
+                Touch.onFingerDown -= TouchOnonFingerDown;
+                EnhancedTouchSupport.Disable();
+            }
+        }
+
+        public void EnableInteraction()
+        {
             if (_detectTouchOutside)
             {
                 EnhancedTouchSupport.Enable();
 
                 Touch.onFingerDown += TouchOnonFingerDown;
             }
-        
         }
 
-        private void TouchOnonFingerDown(Finger obj)
+    private void TouchOnonFingerDown(Finger obj)
         {
             var pos = obj.currentTouch.screenPosition;
             Debug.Log("touch pressed " + pos + " - " + _container.gameObject.activeSelf + " - " + RectTransformUtility.RectangleContainsScreenPoint(_container, pos));
@@ -35,11 +48,7 @@ namespace UI
 
         private void OnDisable()
         {
-            if (_detectTouchOutside)
-            {
-                Touch.onFingerDown -= TouchOnonFingerDown;
-                EnhancedTouchSupport.Disable();
-            }
+            DeleteInteraction();
         }
     }
 }

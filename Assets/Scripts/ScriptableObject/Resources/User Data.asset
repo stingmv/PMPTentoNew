@@ -21,7 +21,7 @@ MonoBehaviour:
       idContacto: 0
       clave: 
       userName: pruebaxjrivera@bsginstitute.net
-      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.RvspKxR9GEgG7YADBvD7joyvIUzPbyxVqETgUONRMLuufK27yt0Wtg.hzDQ_4cmMj6P1CHKaaUUww.5tctw3q7_5cvkKdxGPkyt-GKbaSTGPUjessxwwHic1XvXa60ssnTiLvPiGhYoZW2EOEcGHT7N8jta4dfuyL6qXGKLbjxeyE6n6P74e5ziDKcZt08pwanne0HqTDj5UjNSQmUl6k9cSr4bvlFAfWFCYjA1xCCKIGEnXgb89Ey-zRwdEeD1YMg3m75b2hqFHAZjOOtMfg2AacO11gGJfQ_kvAijDD86HnnxCvAuPnt0YZfRx9pymVY3CumX_CnJUyRFRwQ93FY8RlYOhzJ_DqyUUuqxsOCDrXOInfGmxbyx2HPaDyQAkPB9qG2tgkqYgcq6rxf8nt41wLBJ7Qg_WHHTwWFzPQN2fdvGnj7SqtdNTYZUG3rvoonunZ3Y9Gwe-5P57pkzoBKig30twc_AiJsWlxlXR6DSdDx5l-BAH58Nd_5R9AYdocUM2bS3zw8U0afh4izktocOgnbqe83LXUtu_K9kJloXGTJKM874UDXENNWqwAeKAkArzsS9_nIQwipCC38tDw8opt2671HdFZQeKMiPGA3fIhHxx9oP2hQkQpdyrcwi8wg1Kyz2X5N4mJKMCWF3_AyCqKIj2w9nZvsgtlewYaDUJJcsJaH0xvq0RvS7s_4xN-HluOysvVR1OtRs6DSuwjYtK3ght2E4You1A.9yligQmR5ft9ZZOrA7oqkw
+      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.3UldNgqT4Ew05y4rIFnP4F4ZXeYKd41BnYKxiQAaK9gIkPedKBV0cw.-Aig5UC-VJFE1syhmZlhKQ.JWg3rqgzS7yxt7Ekw63UsqPPvMQXgaV5Y5rXJbHhU4wHSQrpxEojU1kT5RdhS8Wpll4MHadMDwy1SdOVRSvxyUP5q6Z60zDBtr7D-Fn4da4rermZlqb37uXb7YWvTuPtEOdq7TNnM9CLr_cHK3WPK_YbRA72kGgVOeyEhzjWxrIDDlIUfWWLaSx-s1YF8OBooThEtlBAnAmBjDIET2CE0i990N0h73An1tjehOCxQpT4CSJeRz5jt5SgA-oShB_PVqVjQoF6DPtmTheI5pyKLpHDUIEFyBy9-HZCgPfEsL158_QaZS9wRS_Pre2whsAWJpfZKy-M64yQjnZiuILQ7wg6UvBTy6fBfcZJlW7k3N_ExK-enP1_MMSkbVHuj8Bx7MAWko2Kwt1AdVP8EZYVj8e9XcJ71WOg4xJQXPc7OqABfnBKjLttEHIqzWIC20KysL_TV-v13s0IYZ-cmAtzeCjxy48TGLY2_YSbxET8JwOtnSp9lmMtpCUbbe2RBE_q-vj-iBG5d5vk7TJhFnfwqD1On_jirvpsMuC5054F1WRQBfisTT_nHwCXgEBU1zKSrQmVMWuQ9796qMGjiTAd87pGui-76Ii4AZ-e5Z09t4l7Gs0lERVgnu0IQJI1oOsN.tCbGn4G5PQ4hcaJVZ8PFmg
       tipoCarrera: 1
       correoEnc: 
       telEnc: 
@@ -31,9 +31,9 @@ MonoBehaviour:
         excepcionGenerada: 0
         descripcionGeneral: 
     haveUser: 1
-    haveUsername: 0
-    username: 
-    haveInstructor: 0
-    idInstructor: -1
-    totalExperience: 500
-    totalCoins: 100
+    haveUsername: 1
+    username: gjusto
+    haveInstructor: 1
+    idInstructor: 1
+    totalExperience: 150
+    totalCoins: 110

@@ -64,4 +64,11 @@ public static class GameEvents
     public static Action<float> CoinsChanged;
 
     #endregion
+
+    #region Learning mode
+
+    public static Action<Vector3> ChosenPlatform;
+    public static Action<PlatformItem.PlatformInformation> SendInformation;
+
+    #endregion
 }
