@@ -3690,8 +3690,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 529.86505, y: -180}
-  m_SizeDelta: {x: 1059.7301, y: 0}
+  m_AnchoredPosition: {x: 539.86505, y: -180}
+  m_SizeDelta: {x: 1079.7301, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &849923114
 MonoBehaviour:
@@ -3706,7 +3706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabs: {fileID: 1410597849678061278, guid: 85f137ca56ae4164a8844aee8fe96a8d, type: 3}
-  _domainInfoPlatform: {fileID: 3128147203277746434, guid: be21fc5ae89e9cb48bb877ced40cbc94, type: 3}
+  _domainInfoPlatform: {fileID: 8909924265421017747, guid: be21fc5ae89e9cb48bb877ced40cbc94, type: 3}
   _distanceFix: 0.0909
   _multiplierDistance: 5
   _multiplier: 1
@@ -5760,10 +5760,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1767933827}
+        m_TargetAssemblyTypeName: LearningModeController, Assembly-CSharp
+        m_MethodName: SendRetrieveAttempt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _progressQuestion: {fileID: 2081259374}
   _onEndQuestions:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1767933827}
+        m_TargetAssemblyTypeName: LearningModeController, Assembly-CSharp
+        m_MethodName: EnableNextPlatform
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onNextQuestion:
     m_PersistentCalls:
       m_Calls: []
@@ -6315,7 +6339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tercer dominio
+  m_text: Modo aprendizaje
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47e61f418216d1343be7815f065eaf8b, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 3286b8f8d094a89439355696d00dd91c, type: 2}
@@ -7674,7 +7698,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2060332144}
   m_HandleRect: {fileID: 2060332143}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -7775,7 +7799,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Entorno empresarial
+  m_text: Project Management Profesional
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0ba2d82480e24b947b2a5e835b40150a, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: f2073d39816f35141837f2d78c385bea, type: 2}
@@ -8130,6 +8154,7 @@ MonoBehaviour:
   _pmpService: {fileID: 1767933826}
   _rewardItemController: {fileID: 1123753195}
   _platformController: {fileID: 849923114}
+  _platformMarkerPrefab: {fileID: 1340407718924619736, guid: 360e05f67522eba4191d5e9aba3a6408, type: 3}
 --- !u!1 &1829986917
 GameObject:
   m_ObjectHideFlags: 0
@@ -9458,6 +9483,34 @@ PrefabInstance:
     - target: {fileID: 80634645648216219, guid: e0147407303900c438effcd1c3395b53, type: 3}
       propertyPath: m_Name
       value: Button - Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3038979369785299566, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3038979369785299566, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3038979369785299566, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1683753247}
+    - target: {fileID: 3038979369785299566, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3038979369785299566, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReloadCurrentScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 3038979369785299566, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Scene.LoadScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3038979369785299566, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3600954273289424848, guid: e0147407303900c438effcd1c3395b53, type: 3}
       propertyPath: m_Pivot.x

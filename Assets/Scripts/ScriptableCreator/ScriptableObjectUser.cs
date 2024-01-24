@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [Serializable]
@@ -30,9 +31,21 @@ public class Excepcion
 }
 
 [Serializable]
+public class ItemState
+{
+    public int id;
+    public List<DateTime> timesToRetrive = new List<DateTime>();
+}
+[Serializable]
+public class LearningModeState
+{
+    public List<ItemState> ItemStates = new List<ItemState>();
+}
+[Serializable]
 public class UserInfo
 {
     public User user;
+    public LearningModeState LearningModeState;
     public bool haveUser;
     public bool haveUsername;
     public string username;
@@ -106,5 +119,23 @@ public class ScriptableObjectUser : ScriptableObject
         PlayerPrefs.SetInt("HaveUsername",1);
         PlayerPrefs.Save();
         GameEvents.UsernameSelected?.Invoke();
+    }
+
+    public void AddCounter(int idTask)
+    {
+        var item = userInfo.LearningModeState.ItemStates.FirstOrDefault(x => x.id == idTask);
+        if (item != null)
+        {
+            item.timesToRetrive.Add(DateTime.Now.AddSeconds(10));
+        }
+        else
+        {
+            item = new ItemState
+            {
+                id = idTask
+            };
+            item.timesToRetrive.Add(DateTime.Now.AddSeconds(10));
+            userInfo.LearningModeState.ItemStates.Add(item);
+        }
     }
 }

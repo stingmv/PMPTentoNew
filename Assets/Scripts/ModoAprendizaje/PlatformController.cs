@@ -12,7 +12,7 @@ namespace ModoAprendizaje
         #region Variables
 
         [SerializeField] private GameObject _prefabs;
-        [SerializeField] private GameObject _domainInfoPlatform;
+        [SerializeField] private PlatformDomainInformation _domainInfoPlatform;
         [SerializeField] private float _distanceFix;
         [SerializeField] private float _multiplierDistance;
         [SerializeField] private int _multiplier;
@@ -55,9 +55,11 @@ namespace ModoAprendizaje
             }
         }
 
-        public PlatformItem CreatePlatformInformation()
+        public PlatformItem CreatePlatformInformation(string tittle, string description)
         {
             var instance = Instantiate(_domainInfoPlatform, transform.TransformPoint(_bezierCurve.GetPositionInPercentage(_distanceFix / _multiplierDistance * _numIntances  ) )* _multiplier, quaternion.identity, transform);
+            instance.SetDescription(description);
+            instance.SetTittle(tittle);
             var vector3 = instance.transform.localPosition;
             vector3.x = 0;
             instance.transform.localPosition = vector3;

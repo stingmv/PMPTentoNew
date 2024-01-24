@@ -38,7 +38,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -120, y: 0}
+  m_AnchoredPosition: {x: -120, y: -34}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3196235736825661365
@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 3886507896696720288}
   - component: {fileID: 5159142873968116876}
   - component: {fileID: 4921948744618972076}
+  - component: {fileID: 8909924265421017747}
   m_Layer: 0
   m_Name: PlatformDomainInfo
   m_TagString: Untagged
@@ -249,6 +250,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1.6
+--- !u!114 &8909924265421017747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3128147203277746434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5152989e55b9f54687d50ee13912ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tittle: {fileID: 4526200883884540496}
+  _description: {fileID: 1200156840251291745}
 --- !u!1 &4432018207451000267
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,8 +356,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51.33
-  m_fontSizeBase: 51.33
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -448,11 +463,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "5 - Asegurarse de que los miembros de equipo y los interesados reciban
-    la capacitaci\xF3n adecuada"
+  m_text: Persona Persona Persona Persona
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ba2d82480e24b947b2a5e835b40150a, type: 2}
-  m_sharedMaterial: {fileID: 3833935482432648936, guid: 0ba2d82480e24b947b2a5e835b40150a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 47e61f418216d1343be7815f065eaf8b, type: 2}
+  m_sharedMaterial: {fileID: 7703183848853318517, guid: 47e61f418216d1343be7815f065eaf8b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -476,8 +490,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.49
-  m_fontSizeBase: 38.49
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

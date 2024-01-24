@@ -71,4 +71,16 @@ public static class GameEvents
     public static Action<PlatformItem.PlatformInformation> SendInformation;
 
     #endregion
+
+    #region Notifications
+
+    public static Action<int> RecoveryAttempt;
+
+    #endregion
+
+    #region Survivor Challenge
+
+    public static Action RecoveryTime;
+
+    #endregion
 }

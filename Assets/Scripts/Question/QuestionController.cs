@@ -22,6 +22,7 @@ namespace Question
         public string option4;
         public string idCorrectOption;
         public ProgressItem progressItem;
+        public int idTask;
     }
     public class QuestionController : MonoBehaviour
     {
@@ -32,11 +33,11 @@ namespace Question
         [SerializeField] private UnityEvent _onCorrectOption;
         [SerializeField] private UnityEvent _onIncorrectOption;
         [SerializeField] private ProgressQuestion _progressQuestion;
+        [SerializeField] private bool useProgressQuestion = true;
         [SerializeField] private UnityEvent _onEndQuestions;
         [SerializeField] private UnityEvent _onNextQuestion;
         [SerializeField] private DataToRegisterSO _toRegisterSo;
         private List<QuestionData> _session = new List<QuestionData>();
-
         private QuestionData _currentQuestion;
         private List<int> _indexes = new List<int>(){0,1,2,3} ;
         private int _currentIndex;
@@ -82,7 +83,7 @@ namespace Question
         // Start is called before the first frame update
         void Start()
         {
-            _progressQuestion.CalculateWidth(10);
+            _progressQuestion?.CalculateWidth(10);
             
             // for (int i = 0; i < 10; i++)
             // {
@@ -107,7 +108,10 @@ namespace Question
 
         public void SetData(QuestionItem[] questions)
         {
-            _progressQuestion.CalculateWidth(questions.Length);
+            if (useProgressQuestion)
+            {
+                _progressQuestion.CalculateWidth(questions.Length);
+            }
             for (int i = 0; i < questions.Length; i++)
             {
                 
@@ -131,18 +135,27 @@ namespace Question
                 _indexes.RemoveAt(0);
 
                 questionData.idCorrectOption = questions[i].pregunta.respuesta.FirstOrDefault(x => x.correcto == "true")?.id.ToString();
-                questionData.progressItem = _progressQuestion.CreateItem();
+                if (useProgressQuestion)
+                {
+                    questionData.progressItem = _progressQuestion.CreateItem();
+                }
+
                 _session.Add( questionData);
                 _indexes.Add(0);
                 _indexes.Add(1);
                 _indexes.Add(2);
                 _indexes.Add(3);
+                questionData.idTask = questions[i].idSimuladorPmpTarea;
             }
         }
         public void ConfigurateQuestion()
         {
             _currentQuestion = _session[_currentIndex];
-            _currentQuestion.progressItem.SetCurrentItem();
+            if (useProgressQuestion)
+            {
+                _currentQuestion.progressItem.SetCurrentItem();
+            }
+
             _questionInformation.SetData(_currentQuestion);
             _currentIndex++;
         }
@@ -157,7 +170,11 @@ namespace Question
             }
             var tempQuestion = _session[_currentIndex];
             _currentQuestion = tempQuestion;
-            _currentQuestion.progressItem.SetCurrentItem();
+            if (useProgressQuestion)
+            {
+                _currentQuestion.progressItem.SetCurrentItem();
+            }
+
             _questionInformation.SetData(_currentQuestion);
             _currentIndex++;
             _onNextQuestion?.Invoke();
@@ -165,7 +182,10 @@ namespace Question
 
         public void SetIncorrectQuestion()
         {
-            _currentQuestion.progressItem.SetIncorrectSelection();
+            if (useProgressQuestion)
+            {
+                _currentQuestion.progressItem.SetIncorrectSelection();
+            }
         }
         public bool ValidateResponse(string id)
         {
@@ -173,13 +193,22 @@ namespace Question
             _onSelectOption?.Invoke();
             if (_currentQuestion.idCorrectOption == id)
             {
-                _currentQuestion.progressItem.SetCorrectSelection();
+                if (useProgressQuestion)
+                {
+                    _currentQuestion.progressItem.SetCorrectSelection();
+                }
+
                 _questionInformation.SetMessage("¡Correcto! ¡Eres un experto en este tema!", true);
                 GameEvents.CorrectlyAnswered?.Invoke();
                 _onCorrectOption?.Invoke();
                 return true;
             }
-            _currentQuestion.progressItem.SetIncorrectSelection();
+
+            if (useProgressQuestion)
+            {
+                _currentQuestion.progressItem.SetIncorrectSelection();
+            }
+
             _questionInformation.SetMessage("Esa no es la respuesta correcta, pero cada error es una oportunidad de aprendizaje.", false);
             GameEvents.IncorrectlyAnswered?.Invoke();
             _onIncorrectOption?.Invoke();
@@ -189,7 +218,10 @@ namespace Question
 
         public void SetCurrentQuestionProgress()
         {
-            _currentQuestion.progressItem.SetCurrentItem();
+            if (useProgressQuestion)
+            {
+                _currentQuestion.progressItem.SetCurrentItem();
+            }
         }
         public bool CompareResponse(string id)
         {
@@ -226,7 +258,32 @@ namespace Question
         {
             GameEvents.GameLost?.Invoke();
         }
-        
+
+        private void OnDrawGizmos()
+        {
+            if (_currentQuestion == null)
+            {
+                return;
+            }
+            Gizmos.color = Color.green;
+            if (_questionInformation.Opt1.ID == _currentQuestion.idCorrectOption)
+            {
+                Gizmos.DrawSphere(_questionInformation.Opt1.transform.position, 15f);
+                return;
+            }
+            if (_questionInformation.Opt2.ID == _currentQuestion.idCorrectOption)
+            {
+                Gizmos.DrawSphere(_questionInformation.Opt2.transform.position, 15f);
+                return;
+            }
+            if (_questionInformation.Opt3.ID == _currentQuestion.idCorrectOption)
+            {
+                Gizmos.DrawSphere(_questionInformation.Opt3.transform.position, 15f);
+                return;
+            }
+            Gizmos.DrawSphere(_questionInformation.Opt4.transform.position, 15f);
+        }
+
         #endregion
 
     }
