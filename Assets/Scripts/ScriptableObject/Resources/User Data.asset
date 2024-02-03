@@ -16,12 +16,12 @@ MonoBehaviour:
     user:
       id: 
       idProveedor: 0
-      cursos: 246
+      cursos: 247
       idAlumno: 9818325
       idContacto: 0
       clave: 
       userName: pruebaxjrivera@bsginstitute.net
-      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.3UldNgqT4Ew05y4rIFnP4F4ZXeYKd41BnYKxiQAaK9gIkPedKBV0cw.-Aig5UC-VJFE1syhmZlhKQ.JWg3rqgzS7yxt7Ekw63UsqPPvMQXgaV5Y5rXJbHhU4wHSQrpxEojU1kT5RdhS8Wpll4MHadMDwy1SdOVRSvxyUP5q6Z60zDBtr7D-Fn4da4rermZlqb37uXb7YWvTuPtEOdq7TNnM9CLr_cHK3WPK_YbRA72kGgVOeyEhzjWxrIDDlIUfWWLaSx-s1YF8OBooThEtlBAnAmBjDIET2CE0i990N0h73An1tjehOCxQpT4CSJeRz5jt5SgA-oShB_PVqVjQoF6DPtmTheI5pyKLpHDUIEFyBy9-HZCgPfEsL158_QaZS9wRS_Pre2whsAWJpfZKy-M64yQjnZiuILQ7wg6UvBTy6fBfcZJlW7k3N_ExK-enP1_MMSkbVHuj8Bx7MAWko2Kwt1AdVP8EZYVj8e9XcJ71WOg4xJQXPc7OqABfnBKjLttEHIqzWIC20KysL_TV-v13s0IYZ-cmAtzeCjxy48TGLY2_YSbxET8JwOtnSp9lmMtpCUbbe2RBE_q-vj-iBG5d5vk7TJhFnfwqD1On_jirvpsMuC5054F1WRQBfisTT_nHwCXgEBU1zKSrQmVMWuQ9796qMGjiTAd87pGui-76Ii4AZ-e5Z09t4l7Gs0lERVgnu0IQJI1oOsN.tCbGn4G5PQ4hcaJVZ8PFmg
+      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.9U3JqXIoc1AwWsFhd2QiAawBZrNI9a-4nt1zNSYgWMsAFThjqAVgkQ.oAZdPk8gxpBFcZileFTcnQ.N0kvFfNLbb99Mg7W7VOe7QE4YX5CZY-DDh9A0sl4DVAub8AEOJDKrXFM0FmngU5KYq9zvBiBIV1jxnelsdfeA4CvA76J2i4wgzQZD8aQQA7ptRV-Ck9oioyOROw-joN9ptcTc6Id3ZTBzidpHxYLLDSkqMfCURAqUjpwb7TW2UTYIaYNCgXOBhcAsNDCit10g3JafgRDqPEi9mS-w4IlAPUezkSGYec7ZVZWSo2IUFmZawXeV2-6Rv0Gto-1TPcvKr_LqSrPjwq67p8uQRTdf-u9bjyLIjAsGrTv4sLIYj4aw4gZ9X1tDguscPcvbVTf9UK_4wd0zaCZkpBVtQ7Y_FRblItqOnCHptu3I4kvpeQwjhcrpeDqBZizQtFymFc38F5uxZlEI0j0Lzr5sicsvgJBDgoubzPGWkPxEpP4CrBAjDLFDjfBpU_vZynpyn1bcBFPW5G-0lWA8-oR3InsONAPJkU1pMpNTC4syztfXqyVGKPhQ_YC7YugOAXEPqeCW3opgSDTaU034_qi3xzvdoqAO4Ld04fyY0pkfj12yeKuiO9xKDpy0UKN8argQjWhBfKH6kZ8PsfUBMyqkUdHfFc-5vC7HB-Vil5HNvYFheVzfOTK1Or2KS1D5K8b953X.d1YogwLDQkUIpiFUwTS1CA
       tipoCarrera: 1
       correoEnc: 
       telEnc: 
@@ -30,10 +30,12 @@ MonoBehaviour:
       excepcion:
         excepcionGenerada: 0
         descripcionGeneral: 
+    LearningModeState:
+      ItemStates: []
     haveUser: 1
     haveUsername: 1
-    username: gjusto
+    username: dwedwe
     haveInstructor: 1
-    idInstructor: 1
-    totalExperience: 150
-    totalCoins: 110
+    idInstructor: 0
+    totalExperience: 7950
+    totalCoins: 1927

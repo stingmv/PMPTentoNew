@@ -96,25 +96,26 @@ public class SurvivorChallengeController : MonoBehaviour
     }
     private void GameEvents_CorrectlyAnswered()
     {
+        
         _numberOfConsecutiveQuestion++;
         var clampConsecutive = Mathf.Clamp(_numberOfConsecutiveQuestion, 0, int.MaxValue);
         var exp = 
             // Base experience
-            _gameSettings.settingData.MAReward.baseExperience +
+            _gameSettings.settingData.DSReward.baseExperience +
             // Bonus by consecutive question
-            _gameSettings.settingData.MAReward.aditionalBonusExpConsecutiveQuestion * clampConsecutive +
+            _gameSettings.settingData.DSReward.aditionalBonusExpConsecutiveQuestion * clampConsecutive +
             // Bonus by achievement
-            _gameSettings.settingData.MAReward.aditionalBonusExpForAchievement * 0;
+            _gameSettings.settingData.DSReward.aditionalBonusExpForAchievement * 0;
         GameEvents.RequestExperienceChange?.Invoke(exp);
         _experienceAccumulated += exp;
 
         var coins =
             // Base coins
-            _gameSettings.settingData.MAReward.baseCoins +
+            _gameSettings.settingData.DSReward.baseCoins +
             // Bonus by consecutive question
-            _gameSettings.settingData.MAReward.aditionalBonusCoinsConsecutiveQuestion * clampConsecutive +
+            _gameSettings.settingData.DSReward.aditionalBonusCoinsConsecutiveQuestion * clampConsecutive +
             // Bonus by achievement
-            _gameSettings.settingData.MAReward.aditionalBonusCoinsForAchievement * 0;
+            _gameSettings.settingData.DSReward.aditionalBonusCoinsForAchievement * 0;
         _coinsAccumulated += coins;
         GameEvents.RequestCoinsChange?.Invoke(coins);
     }
@@ -125,7 +126,8 @@ public class SurvivorChallengeController : MonoBehaviour
 
     private void GameEvent_RecoveryTime()
     {
-        
+        UIEvents_ShowQuestionView();
+        _currentTime = 0;
     }
     public void GetQuestions()
     {
@@ -138,6 +140,11 @@ public class SurvivorChallengeController : MonoBehaviour
     public void AddMoreTime()
     {
         _currentTime = Mathf.Clamp(_currentTime - extraTime / timeToQuestions, 0, 1);
+    }
+
+    public void StopTimer()
+    {
+        UseTimer = false;
     }
     // public void EnableNextPlatform()
     // {

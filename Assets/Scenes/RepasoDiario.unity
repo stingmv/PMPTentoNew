@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1043,6 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d041dd23295058a43a4e4f465a59819d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _objectScenes: {fileID: 0}
   _onBeforeLoadScene:
     m_PersistentCalls:
       m_Calls: []
@@ -2105,8 +2106,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 56.55847, y: 27.5}
-  m_SizeDelta: {x: 113.1169, y: 55}
+  m_AnchoredPosition: {x: 97.84766, y: 27.5}
+  m_SizeDelta: {x: 195.6953, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505633168
 MonoBehaviour:
@@ -2128,10 +2129,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10/10
+  m_text: 000/000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ba2d82480e24b947b2a5e835b40150a, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: f2073d39816f35141837f2d78c385bea, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 47e61f418216d1343be7815f065eaf8b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 3286b8f8d094a89439355696d00dd91c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2162,7 +2163,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2191,7 +2192,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 10, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7918,6 +7919,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _detectTouchOutside: 0
+  _textMessage: {fileID: 0}
   _message: {fileID: 821035260201017045}
   _messagePower: {fileID: 0}
   _imageBSecondOportunity: {fileID: 0}

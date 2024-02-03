@@ -19,7 +19,6 @@ namespace Question
         [SerializeField] private EventTrigger _eventTrigger;
         
         private string _id;
-
         public string ID
         {
             get => _id;
@@ -89,7 +88,6 @@ namespace Question
             return !gameObject.activeInHierarchy;
         }
         #endregion
-
     }
 
 }

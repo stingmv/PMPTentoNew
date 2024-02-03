@@ -33,7 +33,7 @@ namespace Button
         private void Call(BaseEventData arg0)
         {
             UIEvents.PressLoginButton?.Invoke(); 
-            Debug.Log("call");
+            // Debug.Log("call");
         }
 
         private void OnDisable()

@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Power Up Second Oportunity
   m_EditorClassIdentifier: 
   amount: 100
+  unitCost: 120
+  discount: 36
+  nameInPlayerPrefs: pu_secondOportunity

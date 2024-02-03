@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Linq;
 using ScriptableCreator;
 using TMPro;
@@ -40,13 +41,31 @@ namespace MainMenu
         private void OnEnable()
         {
             GameEvents.NewInstuctorId += GameEvents_InstructorChanged;
+            GameEvents.CoinsChanged += GameEvents_CoinsChanged;
+            GameEvents.ExperienceChanged += GameEvents_ExperienceChanged;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.NewInstuctorId -= GameEvents_InstructorChanged;
+            GameEvents.CoinsChanged -= GameEvents_CoinsChanged;
+            GameEvents.ExperienceChanged -= GameEvents_ExperienceChanged;
+        }
+
+        private void GameEvents_ExperienceChanged(float obj)
+        {
+            _totalExpirience.text = _user.userInfo.totalExperience.ToString();
+        }
+
+        private void GameEvents_CoinsChanged(float obj)
+        {
+            _totalCoins.text = _user.userInfo.totalCoins.ToString();
         }
 
         private void GameEvents_InstructorChanged(int obj)
         {
             ChangeInstructor();
         }
-
         public void PathToInstantiateInstructor()
         {
             var indexInstructor = _user.userInfo.idInstructor;
@@ -54,15 +73,25 @@ namespace MainMenu
                 _pointToInstantiate.position, _pointToInstantiate.rotation, _pointToInstantiate);
             _instructorInstantiated.layer = 0;
         }
-
         public void ChangeInstructor()
         {
             var indexInstructor = _user.userInfo.idInstructor;
+            StopAllCoroutines();
+            StartCoroutine(IChangeInstructor(indexInstructor));
+        }
+
+        IEnumerator IChangeInstructor(int indexInstructor)
+        {
+            Debug.Log(_instructorInstantiated.name);
             Destroy(_instructorInstantiated);
+            while (_instructorInstantiated)
+            {
+                yield return null;
+                Debug.Log("Waiting");
+            }
             _instructorInstantiated =Instantiate(_objectInstructor.instructors.FirstOrDefault(x => x.id == indexInstructor)!.prefab,
                 _pointToInstantiate.position, _pointToInstantiate.rotation);
             _instructorInstantiated.layer = 0;
-
         }
 
         public void SetUserProperties()

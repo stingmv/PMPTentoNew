@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad9f6be95d8c3446849ae19b031baed, type: 3}
   m_Name: Power Up Next Question
   m_EditorClassIdentifier: 
-  amount: 100
+  amount: 20
+  unitCost: 80
+  discount: 24
+  nameInPlayerPrefs: pu_nextQuestion

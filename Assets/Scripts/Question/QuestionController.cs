@@ -41,6 +41,7 @@ namespace Question
         private QuestionData _currentQuestion;
         private List<int> _indexes = new List<int>(){0,1,2,3} ;
         private int _currentIndex;
+        private int _numberOfCorrectQuestions;
 
         public int GetCountSession
         {
@@ -178,6 +179,7 @@ namespace Question
             _questionInformation.SetData(_currentQuestion);
             _currentIndex++;
             _onNextQuestion?.Invoke();
+            GameEvents.RecoveryTime?.Invoke();
         }
 
         public void SetIncorrectQuestion()
@@ -193,9 +195,11 @@ namespace Question
             _onSelectOption?.Invoke();
             if (_currentQuestion.idCorrectOption == id)
             {
+                _numberOfCorrectQuestions++;
                 if (useProgressQuestion)
                 {
                     _currentQuestion.progressItem.SetCorrectSelection();
+                    _progressQuestion.Label = _numberOfCorrectQuestions.ToString();
                 }
 
                 _questionInformation.SetMessage("¡Correcto! ¡Eres un experto en este tema!", true);

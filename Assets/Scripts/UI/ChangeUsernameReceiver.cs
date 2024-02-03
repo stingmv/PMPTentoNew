@@ -7,6 +7,12 @@ using UnityEngine;
 public class ChangeUsernameReceiver : MonoBehaviour
 {
     private TextMeshProUGUI _usernameLabel;
+
+    private void Start()
+    {
+        
+    }
+
     private void OnEnable()
     {
         if (!_usernameLabel)

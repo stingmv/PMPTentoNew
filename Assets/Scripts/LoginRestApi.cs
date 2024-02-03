@@ -35,8 +35,10 @@ public class LoginRestApi : MonoBehaviour
             yield return request.SendWebRequest();
             if (request.responseCode == 401)
             {
+                _objectUser.userInfo.user = JsonUtility.FromJson<User>(request.downloadHandler.text);
+
                 _objectUser.userInfo.haveUser = false;
-                GameEvents.FailedLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
+                GameEvents.ErrorLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
             }
             else if (request.responseCode >= 400)
             {

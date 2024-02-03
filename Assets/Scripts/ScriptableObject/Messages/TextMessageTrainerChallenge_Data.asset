@@ -55,4 +55,24 @@ MonoBehaviour:
     integral."
   - "\xA1Enhorabuena por completar el desaf\xEDo tem\xE1tico! Tu habilidad para enfrentar
     diversas preguntas es impresionante."
-  lostMessage: []
+  lostMessage:
+  - "\xA1Un peque\xF1o tropiezo, pero cada error es una lecci\xF3n! T\xF3mate un
+    momento y sigue construyendo tu camino de aprendizaje."
+  - "\xA1Oops! Los errores son parte del viaje. Utiliza esta experiencia para mejorar
+    y continuar tu preparaci\xF3n."
+  - "\xA1Aunque los intentos se hayan agotado, tu potencial sigue intacto! Reflexiona
+    sobre lo aprendido y sigue avanzando."
+  - "\xA1El camino hacia el conocimiento puede tener curvas! Aunque los intentos
+    se hayan agotado, cada error es una oportunidad de mejora."
+  - "\xA1Ups, es parte del proceso! Aunque se hayan agotado los intentos, sigue adelante
+    con determinaci\xF3n."
+  - "\xA1No te preocupes! Aprender de los errores es fundamental. Utiliza esta experiencia
+    para fortalecer tus habilidades.\t"
+  - "\xA1El camino hacia el \xE9xito tiene baches! Aunque los intentos se hayan agotado,
+    sigue creciendo y prepar\xE1ndote."
+  - "\xA1\xC1nimo! Cada respuesta incorrecta es una oportunidad de aprender. Sigue
+    avanzando en tu camino de preparaci\xF3n."
+  - "\xA1No hay problema! Aunque los intentos se hayan agotado, tu progreso sigue
+    en marcha. \xA1Sigue construyendo tus habilidades!"
+  - "\xA1Bien jugado! Aunque los intentos se hayan agotado, el aprendizaje contin\xFAa.
+    \xA1Sigue adelante con confianza!"

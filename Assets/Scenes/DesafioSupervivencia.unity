@@ -217,6 +217,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -308.50775
       objectReference: {fileID: 0}
+    - target: {fileID: 1268186751336379746, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: _textMessage
+      value: 
+      objectReference: {fileID: 11400000, guid: 256d111b96068bb449fd53405d3777de, type: 2}
     - target: {fileID: 3439636180888044098, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -442,6 +446,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &550131827 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8560324021063089869, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+  m_PrefabInstance: {fileID: 1012713238}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &608395202
@@ -1137,13 +1152,45 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8262717394335504669, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: _textMessage
+      value: 
+      objectReference: {fileID: 11400000, guid: 256d111b96068bb449fd53405d3777de, type: 2}
+    - target: {fileID: 8262717394335504669, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: _eventTrigger
+      value: 
+      objectReference: {fileID: 550131827}
+    - target: {fileID: 8428459312430531738, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: _onBeforeTransition.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560324021063089869, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8560324021063089869, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1337041750}
+    - target: {fileID: 8560324021063089869, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2035484419}
     - target: {fileID: 8560324021063089869, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextQuestion
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560324021063089869, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FadeOutTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560324021063089869, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: FadeUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560324021063089869, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9050644110906052400, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_LocalScale.x
@@ -6250,10 +6297,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1056146259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5584219348e047b2829f92e2838bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 1674da8303b8b25419580f4ee4707a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _event: {fileID: 11400000, guid: b90c8e18f785bf24690c106e176124f7, type: 2}
+  _event: {fileID: 11400000, guid: 9026b1be2dac5c140aaca71b68c20ffb, type: 2}
   _amount: {fileID: 1460089849}
   _response:
     m_PersistentCalls:
@@ -6290,7 +6337,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1948238318}
         m_TargetAssemblyTypeName: PowerUp.PowerUpController, Assembly-CSharp
-        m_MethodName: UseTrueOption
+        m_MethodName: UseMoreTime
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6308,13 +6355,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1543627592075921180, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166064476933086909, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2166064476933086909, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2033968173}
     - target: {fileID: 2166064476933086909, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadSceneUsingName
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166064476933086909, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 4208609819753117836, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_text
@@ -6724,24 +6783,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _onIncorrectOption:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1337041749}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1767933827}
+        m_TargetAssemblyTypeName: SurvivorChallengeController, Assembly-CSharp
+        m_MethodName: StopTimer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1767933824}
-        m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-        m_MethodName: FadeInTransition
+  _onIncorrectOption:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1337041750}
+        m_TargetAssemblyTypeName: Question.QuestionController, Assembly-CSharp
+        m_MethodName: SendGameLost
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7330,11 +7389,11 @@ PrefabInstance:
     - target: {fileID: 182303278032894870, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: _questionController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1337041750}
     - target: {fileID: 2125055819902875194, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: _questionController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1337041750}
     - target: {fileID: 3859256084208053563, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_Name
       value: Options
@@ -7434,11 +7493,11 @@ PrefabInstance:
     - target: {fileID: 5567934010644037969, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: _questionController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1337041750}
     - target: {fileID: 7446326348669814247, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: _questionController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1337041750}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7769,8 +7828,8 @@ MonoBehaviour:
   _pmpService: {fileID: 1767933826}
   _rewardItemController: {fileID: 1123753195}
   _timer: {fileID: 685507878}
-  timeToQuestions: 60
-  extraTime: 5
+  timeToQuestions: 90
+  extraTime: 30
 --- !u!1 &1854090200
 GameObject:
   m_ObjectHideFlags: 0
@@ -7967,6 +8026,7 @@ MonoBehaviour:
   _powerUpTrueOption: {fileID: 11400000, guid: b90c8e18f785bf24690c106e176124f7, type: 2}
   _powerUpDeleteOption: {fileID: 11400000, guid: 5f4ca4ad9839dcf499046b6730956fc5, type: 2}
   _powerUpNextQuestion: {fileID: 11400000, guid: baa0e82d7d157af4c91e4fff3d3b4f1a, type: 2}
+  _powerUpMoreTime: {fileID: 11400000, guid: 9026b1be2dac5c140aaca71b68c20ffb, type: 2}
 --- !u!1 &2033968172
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ namespace ScriptableCreator
     public class ScripableObjectPowerUp : ScriptableObject
     {
         public int amount;
+        public float unitCost;
+        public float discount;
+        public string nameInPlayerPrefs;
 
         private List<PowerUpListener> _listeners = new List<PowerUpListener>();
 

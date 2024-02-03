@@ -83,4 +83,10 @@ public static class GameEvents
     public static Action RecoveryTime;
 
     #endregion
+
+
+    #region PowerUps
+    
+
+    #endregion
 }

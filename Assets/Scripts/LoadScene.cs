@@ -66,7 +66,16 @@ namespace Scene
             // _initLoadAsync = true;
         }
 
-        
+        public void ExitGame()
+        {
+            Application.Quit(0);
+        }
+
+        public void LogOut()
+        {
+            PlayerPrefs.DeleteAll();
+            LoadSceneUsingName("Login");
+        }
         #endregion
 
     }

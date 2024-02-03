@@ -46,6 +46,11 @@ namespace UI
                 SetMessage(_textMessage.correctQuestionMessage[Random.Range(0, _textMessage.correctQuestionMessage.Length)], isCorrect);
             }
         }
+
+        public void SetMessageToPowerUpNextQuestion()
+        {
+            _message.text = _textMessage.nextQuestionMessage[Random.Range(0, _textMessage.nextQuestionMessage.Length)];
+        }
         public void SetMessage(string message, bool isCorrect)
         {
             if (isCorrect)

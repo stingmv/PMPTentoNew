@@ -89,13 +89,14 @@ namespace UI.Button
         {
             var item = Instantiate(_buttonPrefab, transform, true);
             var rTransform = item.GetComponent<RectTransform>();
+            // rTransform.anchoredPosition = new Vector2(0, rTransform.sizeDelta.y);
             rTransform.sizeDelta = new Vector2(0, rTransform.sizeDelta.y);
             var indexRandom = Random.Range(0, buttonColors.Count);
             var color = buttonColors[indexRandom];
             buttonColors.RemoveAt(indexRandom);
             item.SetData(tittle, color, this, _buttons.Count, tittle, id);
             item.transform.localScale = Vector3.one;
-            var posTemp = _initPosition;
+            var posTemp = new Vector2(item.transform.localPosition.x,_initPosition.y);
             posTemp.y -= _heightButton * (_buttons.Count );
             item.transform.localPosition = posTemp;
             _buttons.Add(item);

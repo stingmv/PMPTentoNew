@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Power Up MoreTime
   m_EditorClassIdentifier: 
   amount: 100
+  unitCost: 50
+  discount: 15
+  nameInPlayerPrefs: pu_moreTime

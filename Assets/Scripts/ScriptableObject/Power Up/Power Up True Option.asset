@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Power Up True Option
   m_EditorClassIdentifier: 
   amount: 100
+  unitCost: 180
+  discount: 54
+  nameInPlayerPrefs: pu_trueOption

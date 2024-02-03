@@ -643,6 +643,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30fc742217594640ae582eebb1114ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _powerUpSecondOportunity: {fileID: 11400000, guid: 72a1f2080ebcfe54199410c9f34b42ef, type: 2}
+  _powerUpTrueOption: {fileID: 11400000, guid: b90c8e18f785bf24690c106e176124f7, type: 2}
+  _powerUpDeleteOption: {fileID: 11400000, guid: 5f4ca4ad9839dcf499046b6730956fc5, type: 2}
+  _powerUpNextQuestion: {fileID: 11400000, guid: baa0e82d7d157af4c91e4fff3d3b4f1a, type: 2}
+  _powerUpMoreTime: {fileID: 11400000, guid: 9026b1be2dac5c140aaca71b68c20ffb, type: 2}
   EndFinishLoadData: 0
 --- !u!1 &226300292
 GameObject:
@@ -5261,7 +5266,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.13
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
