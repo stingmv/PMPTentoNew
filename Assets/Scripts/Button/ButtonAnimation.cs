@@ -26,7 +26,7 @@ namespace Button
         private void OnEnable()
         {
             entry.eventID = EventTriggerType.PointerDown;
-            entry.callback.AddListener( Call);
+            entry.callback.AddListener(Call);
             _eventTrigger.triggers.Add(entry);
         }
 
