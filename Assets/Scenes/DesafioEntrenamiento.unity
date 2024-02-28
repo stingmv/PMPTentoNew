@@ -1471,6 +1471,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed07cd76c6fe4e4c97dd766d4b2c8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1116342035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1116342037}
+  - component: {fileID: 1116342036}
+  - component: {fileID: 1116342038}
+  m_Layer: 0
+  m_Name: AchievementController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1116342036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116342035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80dc7ec5ccf44e4a89f9ba146662ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxGoodStreakCounter: 5
+  OnGoodStreaked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1116342038}
+        m_TargetAssemblyTypeName: AchievementUI, Assembly-CSharp
+        m_MethodName: SetCurrentGoodStreakText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnMaxGoodStreaked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1116342038}
+        m_TargetAssemblyTypeName: AchievementUI, Assembly-CSharp
+        m_MethodName: SetMaxGoodStreakText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &1116342037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116342035}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1116342038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116342035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6de9b6d0889a024ead76e65db09d856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGoodStreakText: {fileID: 0}
+  maxGoodStreakText: {fileID: 0}
 --- !u!1001 &1123753194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2661,6 +2751,7 @@ MonoBehaviour:
   _powerUpTrueOption: {fileID: 11400000, guid: b90c8e18f785bf24690c106e176124f7, type: 2}
   _powerUpDeleteOption: {fileID: 11400000, guid: 5f4ca4ad9839dcf499046b6730956fc5, type: 2}
   _powerUpNextQuestion: {fileID: 11400000, guid: baa0e82d7d157af4c91e4fff3d3b4f1a, type: 2}
+  _powerUpMoreTime: {fileID: 0}
 --- !u!1 &1954085042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3228,3 +3319,4 @@ SceneRoots:
   - {fileID: 1954085043}
   - {fileID: 38285660}
   - {fileID: 613188794}
+  - {fileID: 1116342037}

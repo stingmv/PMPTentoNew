@@ -105,6 +105,7 @@
     <Compile Include="Assets\Scripts\SurvivorChallenge\TimerDS.cs" />
     <Compile Include="Assets\Scripts\Utils\DebugText.cs" />
     <Compile Include="Assets\Scripts\UI\CommentBox\CommentSystem.cs" />
+    <Compile Include="Assets\Scripts\Achievement\AchievementUI.cs" />
     <Compile Include="Assets\Scripts\UI\Animations\UIParticleUpdater.cs" />
     <Compile Include="Assets\Scripts\Utils\PMPUrl.cs" />
     <Compile Include="Assets\Scripts\Store\PopUpCompra.cs" />

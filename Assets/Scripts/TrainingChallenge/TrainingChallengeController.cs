@@ -73,6 +73,8 @@ public class TrainingChallengeController : MonoBehaviour
             _gameSettings.settingData.DSReward.aditionalBonusCoinsForAchievement * 0;
         _coinsAccumulated += coins;
         GameEvents.RequestCoinsChange?.Invoke(coins);
+
+        CheckNumberOfConsecutiveQuestion();
     }
     
     private void GameEvents_IncorrectlyAnswered()
@@ -88,5 +90,12 @@ public class TrainingChallengeController : MonoBehaviour
         _rewardItemController.AddExperience((int)_experienceAccumulated);
         Debug.Log("GameEvent_GameWon");
         UIEvents.ShowFinishView?.Invoke();
+    }
+
+    public void CheckNumberOfConsecutiveQuestion()
+    { 
+        if (_numberOfConsecutiveQuestion >= 0) {
+            GameEvents.OnGoodStreaked?.Invoke();
+        }
     }
 }
