@@ -78,6 +78,8 @@ public static class GameEvents
     #region Notifications
 
     public static Action<int> RecoveryAttempt;
+    public static Action<string> AddNotificationPanel;
+    public static Action<BackgroundNotification> SendNotification;
 
     #endregion
 

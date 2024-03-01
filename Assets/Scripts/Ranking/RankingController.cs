@@ -4,8 +4,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using static DataUserAll;
-using static UnityEditor.Progress;
-using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class RankingController : MonoBehaviour
 {
