@@ -19652,6 +19652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3360886943406660857}
   - component: {fileID: 2872099059518322619}
+  - component: {fileID: 7569885123531247871}
   m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
@@ -19709,6 +19710,23 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7569885123531247871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245500858961504450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a194eec5524e4c95886503ddb49d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainButton: {fileID: 2199546991060538175}
+  _shopButton: {fileID: 4883480685486900557}
+  _trainButton: {fileID: 1231416095845685344}
+  _achievementButton: {fileID: 7602487145875164021}
+  _rankingButton: {fileID: 9119386322764290469}
 --- !u!1 &5259085786845912084
 GameObject:
   m_ObjectHideFlags: 0

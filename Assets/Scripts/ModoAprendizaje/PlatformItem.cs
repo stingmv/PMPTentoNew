@@ -88,10 +88,10 @@ public class PlatformItem : MonoBehaviour
         {
             Debug.Log($"tarea con id {obj} encontrado");
             Attempts++;
-            if (!ButtonTrigger.enabled)
-            {
-                ButtonTrigger.enabled = true;
-            }
+                if (!ButtonTrigger.enabled)
+                {
+                    ButtonTrigger.enabled = true;
+                }
         }
     }
 }

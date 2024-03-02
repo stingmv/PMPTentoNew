@@ -34,6 +34,9 @@ public static class UIEvents
     public static Action ChooseInstructorHide;
     // Hide the notifications
     public static Action NotificationHide;
+    // Disabe Footer buttons
+    public static Action StartFooterButtonAnimation;
+    public static Action EndFooterButtonAnimation;
 
     #endregion
 
