@@ -10,10 +10,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AABEB4AB-782A-5B48-A035-722B3D50E3C2}</ProjectGuid>
+    <ProjectGuid>{6B27A630-5E00-7DB0-69F7-6FAA31A7815E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>NativeShare.Runtime</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -60,206 +60,14 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PowerUp\BombAnimation.cs" />
-    <Compile Include="Assets\Scripts\Question\LerpColorBackground.cs" />
-    <Compile Include="Assets\Scripts\Utils\UIEvents.cs" />
-    <Compile Include="Assets\Scripts\UI\ChangeUsernameSender.cs" />
-    <Compile Include="Assets\Scripts\Utils\ScenesEvents.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectNotificationText.cs" />
-    <Compile Include="Assets\Scripts\UI\Manager\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectNotificationInt.cs" />
-    <Compile Include="Assets\Scripts\UI\PopupQuestion.cs" />
-    <Compile Include="Assets\Scripts\ModoVideoPregunta\VideoQuestionModeController.cs" />
-    <Compile Include="Assets\Scripts\GlosaryChallenge\ButtonsGroup.cs" />
-    <Compile Include="Assets\Scripts\Utils\DontDestroyOnLoad.cs" />
-    <Compile Include="Assets\Scripts\UI\Animations\ParticleSystemExtensions.cs" />
-    <Compile Include="Assets\Scripts\Notification\ScriptableObjectNotification.cs" />
-    <Compile Include="Assets\Scripts\UI\CheckAttempts.cs" />
-    <Compile Include="Assets\Scripts\Ranking\ShowRakingPlace.cs" />
-    <Compile Include="Assets\Scripts\Notification\NotificationListener.cs" />
-    <Compile Include="Assets\Scripts\CameraUI\CameraTransition.cs" />
-    <Compile Include="Assets\Scripts\GlosaryChallenge\OptionGC.cs" />
-    <Compile Include="Assets\Scripts\Question\ProgressQuestion.cs" />
-    <Compile Include="Assets\Scripts\BackgroundNotification\Notifications.cs" />
-    <Compile Include="Assets\Scripts\Question\ListQuestionData.cs" />
-    <Compile Include="Assets\Scripts\UI\Presenter\SettingsPresenter.cs" />
-    <Compile Include="Assets\Scripts\Notification\NotificationListenerInt.cs" />
-    <Compile Include="Assets\Scripts\Ranking\GetUsersApi.cs" />
-    <Compile Include="Assets\Scripts\UI\ConfigurateNavbarScale.cs" />
-    <Compile Include="Assets\Scripts\UI\Button\ButtonData.cs" />
-    <Compile Include="Assets\Scripts\Sharing\ShareSocial.cs" />
-    <Compile Include="Assets\Scripts\Question\QuestionInformation.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\ScripableObjectPowerUp.cs" />
-    <Compile Include="Assets\Scripts\Configuration\UsernameSelector.cs" />
-    <Compile Include="Assets\Scripts\Utils\GameEvents.cs" />
-    <Compile Include="Assets\Scripts\Question\MarkerAnimation.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectButton.cs" />
-    <Compile Include="Assets\Scripts\UI\CommentBox\ResizeContent.cs" />
-    <Compile Include="Assets\Scripts\GlosaryChallenge\GlosaryChallengeController.cs" />
-    <Compile Include="Assets\Scripts\ModoAprendizaje\LearningModeController.cs" />
-    <Compile Include="Assets\Scripts\ModoAprendizaje\ChooseDomainInformation.cs" />
-    <Compile Include="Assets\Scripts\UI\SetFinishViewMessage.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectUser.cs" />
-    <Compile Include="Assets\Scripts\Handles3D\XRLever.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\ItemRouletteSO.cs" />
-    <Compile Include="Assets\Scripts\Inputfield\InputBase.cs" />
-    <Compile Include="Assets\Scripts\ModoCategoria\CategoryModeController.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\AudioSettingsSO.cs" />
-    <Compile Include="Assets\Scripts\SurvivorChallenge\TimerDS.cs" />
-    <Compile Include="Assets\Scripts\Utils\DebugText.cs" />
-    <Compile Include="Assets\Scripts\UI\CommentBox\CommentSystem.cs" />
-    <Compile Include="Assets\Scripts\Achievement\AchievementUI.cs" />
-    <Compile Include="Assets\Scripts\UI\Animations\UIParticleUpdater.cs" />
-    <Compile Include="Assets\Scripts\ModoVideoPregunta\AnimationScrollItem.cs" />
-    <Compile Include="Assets\Scripts\Utils\PMPUrl.cs" />
-    <Compile Include="Assets\Scripts\Store\PopUpCompra.cs" />
-    <Compile Include="Assets\Scripts\Question\QuestionInformationVP.cs" />
-    <Compile Include="Assets\Scripts\UI\CommentBox\ChangeHeightCommentBox.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectSettings.cs" />
-    <Compile Include="Assets\Scripts\PowerUp\PowerUpTrueOption.cs" />
-    <Compile Include="Assets\Scripts\Store\StoreController.cs" />
-    <Compile Include="Assets\Scripts\PowerUp\PowerUpDeleteOption.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectScenes.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectPath.cs" />
-    <Compile Include="Assets\Scripts\Button\ButtonAnimation.cs" />
-    <Compile Include="Assets\Scripts\LoginRestApi.cs" />
-    <Compile Include="Assets\Scripts\UI\Manager\MainMenuUIManager.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\Constants.cs" />
-    <Compile Include="Assets\Scripts\UI\FXController.cs" />
-    <Compile Include="Assets\Scripts\UI\Button\ButtonDomainController.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectInstructor.cs" />
-    <Compile Include="Assets\Scripts\PowerUp\PowerUpMoreTime.cs" />
-    <Compile Include="Assets\Scripts\PowerUp\PowerUpController.cs" />
-    <Compile Include="Assets\Scripts\Utils\PMPScenes.cs" />
-    <Compile Include="Assets\Scripts\BackgroundNotification\BackgroundNotificationController.cs" />
-    <Compile Include="Assets\Scripts\CameraUI\PathController.cs" />
-    <Compile Include="Assets\Scripts\UI\Animations\RewardItemsAnimation.cs" />
-    <Compile Include="Assets\Scripts\Store\RouletteWithDrag.cs" />
-    <Compile Include="Assets\Scripts\ModoAprendizaje\PlatformController.cs" />
-    <Compile Include="Assets\Scripts\Inputfield\InputfieldSlideScreen.cs" />
-    <Compile Include="Assets\Scripts\ModoAprendizaje\DomainInformation.cs" />
-    <Compile Include="Assets\Scripts\Question\KeepScaleOnCanvas.cs" />
-    <Compile Include="Assets\Scripts\ModoAprendizaje\ChoosePlatform.cs" />
-    <Compile Include="Assets\Scripts\Configuration\NotificationToggle.cs" />
-    <Compile Include="Assets\Scripts\Handles3D\HandlesItem.cs" />
-    <Compile Include="Assets\Scripts\UI\Animations\UIParticle.cs" />
-    <Compile Include="Assets\Scripts\Ranking\DataUserAll.cs" />
-    <Compile Include="Assets\Scripts\Question\ProgressItem.cs" />
-    <Compile Include="Assets\Scripts\ModoVideoPregunta\OptionAnimation.cs" />
-    <Compile Include="Assets\Scripts\UI\Animations\AnimatableProperty.cs" />
-    <Compile Include="Assets\Scripts\BackgroundNotification\NotificationSender.cs" />
-    <Compile Include="Assets\Scripts\MainMenu\MenuController.cs" />
-    <Compile Include="Assets\Scripts\Ranking\RankingController.cs" />
-    <Compile Include="Assets\Scripts\UI\Animations\ModifiedMaterial.cs" />
-    <Compile Include="Assets\Scripts\UI\Popup.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\DomainsAndTaskSO.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\TextMessageSO.cs" />
-    <Compile Include="Assets\Scripts\Notification\NotificationListenerText.cs" />
-    <Compile Include="Assets\Plugin\SimpleJSON.cs" />
-    <Compile Include="Assets\Scripts\Store\StoreItem.cs" />
-    <Compile Include="Assets\Scripts\Question\RewardItemController.cs" />
-    <Compile Include="Assets\Scripts\TTS\ByteToAudioSource.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\PowerUpItemRoulette.cs" />
-    <Compile Include="Assets\Scripts\Services\PMPService.cs" />
-    <Compile Include="Assets\Scripts\Login\Instructor.cs" />
-    <Compile Include="Assets\Scripts\Store\StoreSection.cs" />
-    <Compile Include="Assets\Scripts\UI\Abstract\SenderEvent.cs" />
-    <Compile Include="Assets\Scripts\Store\RouletteItem.cs" />
-    <Compile Include="Assets\Scripts\Inputfield\PasswordInput.cs" />
-    <Compile Include="Assets\Scripts\SurvivorChallenge\SurvivorChallengeController.cs" />
-    <Compile Include="Assets\Scripts\UI\CommentBox\CommentItem.cs" />
-    <Compile Include="Assets\Scripts\Store\Roulette.cs" />
-    <Compile Include="Assets\Scripts\UI\GameplaySound.cs" />
-    <Compile Include="Assets\Scripts\GlosaryChallenge\TimerGC.cs" />
-    <Compile Include="Assets\Scripts\TTS\WavUtility.cs" />
-    <Compile Include="Assets\Scripts\UI\Animations\UIParticleRenderer.cs" />
-    <Compile Include="Assets\Scripts\Question\SessionController.cs" />
-    <Compile Include="Assets\Scripts\ModoVideoPregunta\ScrollController.cs" />
-    <Compile Include="Assets\Scripts\UI\PodiumAnimation.cs" />
-    <Compile Include="Assets\Scripts\Question\RewardItem.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\RouletteSO.cs" />
-    <Compile Include="Assets\Scripts\Handles3D\MoveItems.cs" />
-    <Compile Include="Assets\Scripts\Handles3D\HandlesInteract.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\DataToRegisterSO.cs" />
-    <Compile Include="Assets\Scripts\Login\PathToInstantiateInstructor.cs" />
-    <Compile Include="Assets\Scripts\UI\NavbarButtons.cs" />
-    <Compile Include="Assets\Scripts\BackgroundNotification\BackgroundNotificationControllerIos.cs" />
-    <Compile Include="Assets\Scripts\UI\AudioSettingView.cs" />
-    <Compile Include="Assets\Scripts\Inputfield\CheckInputField.cs" />
-    <Compile Include="Assets\Scripts\UI\Animations\UIParticleAttractor.cs" />
-    <Compile Include="Assets\Scripts\ScriptableCreator\CoinsItemRoulette.cs" />
-    <Compile Include="Assets\Scripts\Login\InstructorSelector.cs" />
-    <Compile Include="Assets\Scripts\CameraUI\BezierCurve.cs" />
-    <Compile Include="Assets\Scripts\Handles3D\Rotation.cs" />
-    <Compile Include="Assets\Scripts\Inputfield\EmailInput.cs" />
-    <Compile Include="Assets\Scripts\Utils\AudioEvents.cs" />
-    <Compile Include="Assets\Scripts\UI\InterfaceController.cs" />
-    <Compile Include="Assets\Scripts\UI\ChangeUsernameReceiver.cs" />
-    <Compile Include="Assets\Scripts\PowerUp\PowerUpNextQuestion.cs" />
-    <Compile Include="Assets\Scripts\Question\QuestionController.cs" />
-    <Compile Include="Assets\Scripts\UI\ContainerAnimationDownToTop.cs" />
-    <Compile Include="Assets\Scripts\Notification\NotificationWithDelay.cs" />
-    <Compile Include="Assets\Scripts\Keyboard\KeyboardController.cs" />
-    <Compile Include="Assets\Scripts\Question\Option.cs" />
-    <Compile Include="Assets\Scripts\PowerUp\PowerUpListener.cs" />
-    <Compile Include="Assets\Scripts\ModoAprendizaje\TaskInformation.cs" />
-    <Compile Include="Assets\Scripts\UI\PlatformDomainInformation.cs" />
-    <Compile Include="Assets\Scripts\CameraUI\CameraFollowPath.cs" />
-    <Compile Include="Assets\Scripts\CameraUI\MoveableSphere.cs" />
-    <Compile Include="Assets\Scripts\Login\LoginInterfaceController.cs" />
-    <Compile Include="Assets\Scripts\Login\LoginController.cs" />
-    <Compile Include="Assets\Scripts\LoadScene.cs" />
-    <Compile Include="Assets\Scripts\ModoAprendizaje\PointerToTarget.cs" />
-    <Compile Include="Assets\Scripts\CameraUI\SmoothPath.cs" />
-    <Compile Include="Assets\Scripts\PowerUp\PowerUpSecondOportunity.cs" />
-    <Compile Include="Assets\Scripts\Question\OptionVP.cs" />
-    <Compile Include="Assets\Scripts\Utils\Constants.cs" />
-    <Compile Include="Assets\Scripts\ModoAprendizaje\PlatformItem.cs" />
-    <Compile Include="Assets\Scripts\FPSView.cs" />
-    <Compile Include="Assets\Scripts\TrainingChallenge\TrainingChallengeController.cs" />
-    <Compile Include="Assets\Scripts\UI\Manager\UserManager.cs" />
-    <Compile Include="Assets\Scripts\Notification\NotificationLoginController.cs" />
-    <Compile Include="Assets\Scripts\CameraUI\FadeUI.cs" />
-    <Compile Include="Assets\Scripts\ModoVideoPregunta\ScrollViewItem.cs" />
-    <Compile Include="Assets\Scripts\RotateObject.cs" />
-    <Compile Include="Assets\Scripts\Utils\AutoDestroyParticle.cs" />
-    <Compile Include="Assets\Scripts\Achievement\AchievementControlller.cs" />
-    <Compile Include="Assets\Scripts\CameraUI\BSpline.cs" />
+    <Compile Include="Assets\Plugins\NativeShare\iOS\NSShareResultCallbackiOS.cs" />
+    <Compile Include="Assets\Plugins\NativeShare\NativeShare.cs" />
+    <Compile Include="Assets\Plugins\NativeShare\Android\NSShareResultCallbackAndroid.cs" />
+    <Compile Include="Assets\Plugins\NativeShare\Android\NSCallbackHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Sounds\668436__david819__win.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\Sounds\448081__breviceps__tic-toc-click.txt" />
-    <None Include="Assets\Sounds\131657__bertrof__game-sound-wrong.txt" />
-    <None Include="Assets\Scripts\TTS\NAudio\NAudio.dll" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\Sounds\131770__bertrof__sub-kick-long.txt" />
-    <None Include="Assets\Scripts\TTS\NAudio\license.txt" />
-    <None Include="Assets\Scripts\TTS\NAudio\readme.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\Art\Materials\UIAdditive One Minus Alpha.shader" />
-    <None Include="Assets\Scripts\TTS\NAudio\NAudio.xml" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\Sounds\220060__portwain__quiz-game-music-loop-bpm-90.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\Sounds\131660__bertrof__game-sound-correct.txt" />
-    <None Include="Assets\Art\Materials\UIAdditive Normal.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Plugins\NativeShare\README.txt" />
+    <None Include="Assets\Plugins\NativeShare\NativeShare.Runtime.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -582,6 +390,22 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="NAudio">
       <HintPath>Assets\Scripts\TTS\NAudio\NAudio.dll</HintPath>
       <Private>False</Private>
@@ -590,8 +414,32 @@
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.5\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">
@@ -1094,224 +942,16 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Notifications">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Burst.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="PPv2URPConverters">
-      <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Notifications.Unified">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.Unified.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.MemoryProfiler">
-      <HintPath>Library\ScriptAssemblies\Unity.MemoryProfiler.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.MemoryProfiler.Editor.MemoryProfilerModule">
-      <HintPath>Library\ScriptAssemblies\Unity.MemoryProfiler.Editor.MemoryProfilerModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Notifications.iOS">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.iOS.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.InputSystem.ForUI">
-      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.MemoryProfiler.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.MemoryProfiler.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Notifications.Android">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.Android.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="NativeShare.Runtime.csproj">
-      <Project>{6B27A630-5E00-7DB0-69F7-6FAA31A7815E}</Project>
-      <Name>NativeShare.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="NativeShare.Editor.csproj">
-      <Project>{FA6BC60C-D27B-03DF-C486-3A4EA76E38D1}</Project>
-      <Name>NativeShare.Editor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

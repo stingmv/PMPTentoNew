@@ -80,6 +80,7 @@ public static class GameEvents
     public static Action<int> RecoveryAttempt;
     public static Action<string> AddNotificationPanel;
     public static Action<BackgroundNotification> SendNotification;
+    public static Action<BackgroundNotificationIos> SendNotificationIos;
 
     #endregion
 

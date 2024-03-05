@@ -28,6 +28,20 @@ public class NotificationSender : MonoBehaviour
         };
 
         GameEvents.SendNotification?.Invoke(backgroundNotification);
+
+
+        BackgroundNotificationIos backgroundNotificationIos = new BackgroundNotificationIos
+        {
+            Identifier = idCanal,
+            Title = titleNotification,
+            Body = textNotification,
+            Subtitle = nameCanal,
+            FireTimeInHours = 0,
+            FireTimeInMinutes = 0,
+            FireTimeInSeconds = 5
+        };
+        GameEvents.SendNotificationIos.Invoke(backgroundNotificationIos);
+
         AddCounter();
     }
 
