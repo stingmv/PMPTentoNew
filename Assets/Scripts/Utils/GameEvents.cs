@@ -47,9 +47,10 @@ public static class GameEvents
     public static Action<QuestionInformationExam> QuestionsRetrieved;
     public static Action<int> ExamObtained;
     public static Action QuestionReady;
-
+  
     public static Action OnGoodStreaked;
     public static Action OnGoodWithoutErrors;
+    public static Action<AchievementData.Achievement, UnityEngine.UI.Button> OnSetGiftsFromAchievement;
     
     
     #endregion

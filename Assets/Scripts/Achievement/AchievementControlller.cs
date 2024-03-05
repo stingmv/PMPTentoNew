@@ -1,48 +1,35 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class AchievementControlller : MonoBehaviour
 {
-    [SerializeField] private int maxGoodStreakCounter;
-    [SerializeField] private int maxGoodWithoutErrors;
-
-
-    [SerializeField] private UnityEvent<int> OnGoodStreaked;
-    [SerializeField] private UnityEvent<int> OnMaxGoodStreaked;
-
-    private int _currentGoodStreakCounter = 0;
-    private int _currentGoodWithoutErrors = 0;
+    [SerializeField] private AchievementData achievementData;
 
     private void OnEnable()
     {
         GameEvents.OnGoodStreaked += GoodStreak;
-        GameEvents.OnGoodStreaked += GoodWithoutErrors;
+        GameEvents.OnGoodWithoutErrors += GoodWithoutErrors;
     }
 
     private void OnDisable()
     {
         GameEvents.OnGoodStreaked -= GoodStreak;
-        GameEvents.OnGoodStreaked -= GoodWithoutErrors;
+        GameEvents.OnGoodWithoutErrors -= GoodWithoutErrors;
     }
 
     private void GoodStreak() 
     {
-        _currentGoodStreakCounter++;
-        OnGoodStreaked?.Invoke(_currentGoodStreakCounter);
-
-        if (_currentGoodStreakCounter >= maxGoodStreakCounter)
-        {
-            maxGoodStreakCounter++;
-            _currentGoodStreakCounter = 0;
-            OnMaxGoodStreaked?.Invoke(maxGoodStreakCounter);
-        }
+        achievementData.AddCounter(0);
     }
 
     private void GoodWithoutErrors()
     {
-        _currentGoodWithoutErrors++;
+        achievementData.AddCounter(1);
+    }
+
+    [ContextMenu(nameof(TestGoodStreak))]
+    public void TestGoodStreak()
+    {
+        GameEvents.OnGoodStreaked?.Invoke();
     }
 }

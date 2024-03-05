@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_IOS
 using Unity.Notifications.iOS;
+#endif
 using UnityEngine;
 
 public class BackgroundNotificationIos
