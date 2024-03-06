@@ -61,4 +61,9 @@ public static class UIEvents
     public static Action ShowDomainInformation;
 
     #endregion
+
+    #region Video-Question
+
+    public static Action<string> ShowResponseVP;
+    #endregion
 }

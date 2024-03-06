@@ -12,6 +12,13 @@ public class QuestionInformationVP : MonoBehaviour
     [SerializeField] private OptionVP _opt3;
     [SerializeField] private OptionVP _opt4;
 
+    private QuestionDataVP _questionDataVp;
+
+    public string Restroalimentacion
+    {
+        get => _questionDataVp.retroalimentacion;
+        
+    }
     public OptionVP Opt1
     {
         get => _opt1;
@@ -35,8 +42,15 @@ public class QuestionInformationVP : MonoBehaviour
         get => _opt4;
         set => _opt4 = value;
     }
-    public void SetData(QuestionData questionData)
+
+    public TextMeshProUGUI Question
     {
+        get => _question;
+        set => _question = value;
+    }
+    public void SetData(QuestionDataVP questionData)
+    {
+        _questionDataVp = questionData;
         _question.text = questionData.question;
         _opt1.SetData(questionData.options[0].respuesta,questionData.options[0].id.ToString());
         _opt2.SetData(questionData.options[1].respuesta,questionData.options[1].id.ToString());
@@ -57,5 +71,11 @@ public class QuestionInformationVP : MonoBehaviour
         _opt2.DisableOption();
         _opt3.DisableOption();
         _opt4.DisableOption();
+    }
+
+    public bool CompareResponse(string idResponse)
+    {
+        DisableOptions();
+        return idResponse == _questionDataVp.idCorrectOption;
     }
 }

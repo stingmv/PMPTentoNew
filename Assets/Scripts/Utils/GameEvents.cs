@@ -8,6 +8,8 @@ public static class GameEvents
     // Username changed
     public static Action<string> UsernameChanged;
     // New username
+    public static Action RequesNewUsername;
+    public static Action WrongWhenNewUsername;
     public static Action<string> NewUsername;
 
     #region Login events

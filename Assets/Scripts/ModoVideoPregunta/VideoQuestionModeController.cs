@@ -12,15 +12,10 @@ using UnityEngine;
 public class VideoQuestionModeController : MonoBehaviour
 {
     [SerializeField] private DataToRegisterSO _registerExam;
-    [SerializeField] private DomainsAndTaskSO _domainsAndTask;
     [SerializeField] private ScriptableObjectSettings _gameSettings;
-    [SerializeField] private ScriptableObjectUser _userData;
 
-    [SerializeField] private ButtonDomainController _buttonDomainController;
-    [SerializeField] private MoveItems _moveItems;
     [SerializeField] private QuestionController _questionController;
     [SerializeField] private PMPService _pmpService;
-    [SerializeField] private RewardItemController _rewardItemController;
     private float _numberOfConsecutiveQuestion;
 
     private float _experienceAccumulated = 0;
@@ -32,6 +27,13 @@ public class VideoQuestionModeController : MonoBehaviour
         _numberOfConsecutiveQuestion = -2;
         _pmpService.Service_GetDomainAndTasks();
     }
+
+    private void Start()
+    {
+        GetQuestions();
+    }
+    
+
     private void OnEnable()
     {
         GameEvents.DomainsRetreived += GameEvents_DomainRetreived;
@@ -45,8 +47,6 @@ public class VideoQuestionModeController : MonoBehaviour
 
     private void GameEvents_GameWon()
     {
-        _rewardItemController.AddCoins((int)_coinsAccumulated);
-        _rewardItemController.AddExperience((int)_experienceAccumulated);
         UIEvents.ShowFinishView?.Invoke();
     }
 
@@ -88,7 +88,7 @@ public class VideoQuestionModeController : MonoBehaviour
 
     private void GameEvents_TaskRetreived(List<Task> obj)
     {
-        _moveItems.SetData(obj);
+        // _moveItems.SetData(obj);
     }
 
     private void OnDisable()
@@ -107,13 +107,13 @@ public class VideoQuestionModeController : MonoBehaviour
     {
         for (int i = 0; i < obj.listaDominio.Length; i++)
         {
-            _buttonDomainController.CreateButton(obj.listaDominio[i].nombre, obj.listaDominio[i].id.ToString());
+            // _buttonDomainController.CreateButton(obj.listaDominio[i].nombre, obj.listaDominio[i].id.ToString());
         }
     }
 
     public void GetTasks()
     {
-        _pmpService.Service_GetTask(int.Parse(_buttonDomainController.CurrentButton.IndexS));
+        // _pmpService.Service_GetTask(int.Parse(_buttonDomainController.CurrentButton.IndexS));
     }
 
     public void GetQuestions()

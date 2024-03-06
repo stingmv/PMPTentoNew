@@ -8,3 +8,5 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 /[Rr]ecordings
+*.csproj
+gamepmp.sln

@@ -74,10 +74,13 @@ public class InterfaceController : MonoBehaviour
     private void GameEvents_DomainsSaved(string viewName)
     {
         EnableScreen(viewName);
+        Debug.Log(" -> " + viewName);
+
     }
 
     public void EnableScreen(string viewName)
     {
+        Debug.Log(viewName);
         _currentScreen.screen.gameObject.SetActive(false);
         var screen = GetScreen(viewName);
         screen.screen.gameObject.SetActive(true);

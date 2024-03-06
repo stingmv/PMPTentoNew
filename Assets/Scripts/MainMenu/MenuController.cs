@@ -96,10 +96,10 @@ namespace MainMenu
 
         public void SetUserProperties()
         {
-            _userInputField.text = _user.userInfo.username;
-            _username.text = _user.userInfo.username;
-            _totalCoins.text = _user.userInfo.totalCoins.ToString();
-            _totalExpirience.text = _user.userInfo.totalExperience.ToString();
+            _userInputField.text = _user.userInfo.user.detail.usernameG;
+            _username.text = _user.userInfo.user.detail.usernameG;
+            _totalCoins.text = _user.userInfo.user.detail.totalCoins.ToString();
+            _totalExpirience.text = _user.userInfo.user.detail.totalExperience.ToString();
         }
 
         public void SetConfigurationProperties()

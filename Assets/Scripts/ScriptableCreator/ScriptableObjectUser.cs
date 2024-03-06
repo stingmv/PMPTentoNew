@@ -20,7 +20,23 @@ public class User
     public string telEnc;
     public string userAgent;
     public string userIp;
+    public UserDetail detail;
     public Excepcion excepcion;
+}
+[Serializable]
+public class UserDetail
+{
+    public int idCaracteristicaGamificacion;
+    public int idAlumno;
+    public string usernameG;
+    public int instructorID;
+    public int totalCoins;
+    public int totalExperience;
+    public int discardOption;
+    public int skipQuestion;
+    public int findCorrectAnswer;
+    public int increaseTime;
+    public int secondChance;
 }
 [Serializable]
 public class Excepcion
@@ -96,6 +112,7 @@ public class ScriptableObjectUser : ScriptableObject
 
     private void GameEvents_NewInstuctorId(int index)
     {
+        Debug.Log("configurando instructor ID");
         userInfo.haveInstructor = true;
         userInfo.idInstructor = index;
         PlayerPrefs.SetInt("HaveInstructor", index);

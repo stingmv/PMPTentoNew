@@ -9,6 +9,7 @@ using UnityEngine.Networking;
 public class LoginRestApi : MonoBehaviour
 {
     [SerializeField] private string url = "https://api-portalweb.bsginstitute.com/api/AspNetUser/authenticate";
+    [SerializeField] private string urlToMoreDetail = "http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ObtenerCaracteristicasGamificacion";
 
     [SerializeField] private ScriptableObjectUser _objectUser;
     [SerializeField] private LoginController _loginController;
@@ -59,8 +60,10 @@ public class LoginRestApi : MonoBehaviour
                     }
                     else
                     {
+                        StartCoroutine(GetGamificationData(_objectUser.userInfo.user.idAlumno));
                         _objectUser.userInfo.haveUser = true;
-                        GameEvents.SuccessfulLogin?.Invoke(_objectUser.userInfo.user);
+                        // GameEvents.SuccessfulLogin?.Invoke(_objectUser.userInfo.user);
+                        
                         GameEvents.GetUserExam?.Invoke(_objectUser.userInfo.user.userName);
                         GameEvents.GetNameExam?.Invoke(_objectUser.userInfo.user.idAlumno.ToString());
                         // _loginController._onSuccessLogin?.Invoke();
@@ -79,6 +82,81 @@ public class LoginRestApi : MonoBehaviour
        }
     }
 
+    public IEnumerator GetGamificationData(int userId)
+    {
+        _finishRequest = _haveError = false;
+       using (UnityWebRequest request = new UnityWebRequest(urlToMoreDetail + "/" + userId, "GET"))
+       {
+            request.downloadHandler = new DownloadHandlerBuffer();
+            
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Accept", "application/json");
+            request.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Unity 3D; ZFBrowser 3.1.0; UnityTests 1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36");
+            
+            yield return request.SendWebRequest();
+            if (request.responseCode == 401)
+            {
+                _objectUser.userInfo.user = JsonUtility.FromJson<User>(request.downloadHandler.text);
+
+                _objectUser.userInfo.haveUser = false;
+                GameEvents.ErrorLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
+            }
+            else if (request.responseCode >= 400)
+            {
+                _objectUser.userInfo.haveUser = false;
+                _loginController._onErrorInLogin?.Invoke("Fallo de comunicación con el servidor, intentelo denuevo");
+                Debug.Log(request.error);
+            }
+            else
+            {
+                try
+                {
+                    var detail = JsonUtility.FromJson<UserDetail>(request.downloadHandler.text);
+                    _objectUser.userInfo.user.detail = detail;
+                    if (_objectUser.userInfo.user.excepcion.excepcionGenerada)
+                    {
+                        _objectUser.userInfo.haveUser = false;
+                        GameEvents.FailedLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
+                        // _loginController._onFailedLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
+                    }
+                    else
+                    {
+                        if (_objectUser.userInfo.user.detail.usernameG != "UserName")
+                        {
+                            _objectUser.userInfo.haveUser = true;
+                            GameEvents.NewUsername?.Invoke(_objectUser.userInfo.user.detail.usernameG );
+
+                        }
+                        else
+                        {
+                            _objectUser.userInfo.haveUsername = false;
+                        }
+
+                        if (_objectUser.userInfo.user.detail.idCaracteristicaGamificacion != 0)
+                        {
+                            Debug.Log("idcaracteristicaGamificacion 1");
+                            GameEvents.NewInstuctorId?.Invoke(_objectUser.userInfo.user.detail.instructorID);
+
+                        }
+                        GameEvents.SuccessfulLogin?.Invoke(_objectUser.userInfo.user);
+                        
+                        // GameEvents.GetUserExam?.Invoke(_objectUser.userInfo.user.userName);
+                        // GameEvents.GetNameExam?.Invoke(_objectUser.userInfo.user.idAlumno.ToString());
+                        // _loginController._onSuccessLogin?.Invoke();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.Log(request.downloadHandler.text);
+                    _objectUser.userInfo.haveUser = false;
+                    _loginController._onErrorInLogin?.Invoke("Se tuvo un error interno, vuelva a intentarlo mas tarde");
+                }
+                
+            }
+            // PlayerPrefs.SetString("userInfo", JsonUtility.ToJson(_objectUser.userInfo));
+            _finishRequest = true;
+       }
+    }
     
     public void PostLogin(string username, string password)
     {
@@ -96,4 +174,10 @@ public class DataLogin
 {
     public string username;
     public string password;
+}
+
+[Serializable]
+public class DataGetUserGami
+{
+    public int IdAlumno;
 }

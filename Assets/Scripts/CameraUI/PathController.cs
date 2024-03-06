@@ -121,6 +121,7 @@ public class PathController : MonoBehaviour
 
     public void ToMain()
     {
+        UIEvents.StartFooterButtonAnimation.Invoke();
         gameObject.SetActive(true);
         CurrentPath = PathState.storeToMain;
         _toMain.StartTransition();
@@ -128,6 +129,7 @@ public class PathController : MonoBehaviour
 
     public void ToStore()
     {
+        UIEvents.StartFooterButtonAnimation.Invoke();
         gameObject.SetActive(true);
         CurrentPath = PathState.mainToStore;
         _toStore.StartTransition();
@@ -135,6 +137,7 @@ public class PathController : MonoBehaviour
 
     public void ToTrain()
     {
+        UIEvents.StartFooterButtonAnimation.Invoke();
         gameObject.SetActive(true);
         CurrentPath = PathState.mainToTrain;
         _toTrain.StartTransition();
@@ -142,6 +145,7 @@ public class PathController : MonoBehaviour
 
     public void ToAchievement()
     {
+        UIEvents.StartFooterButtonAnimation.Invoke();
         gameObject.SetActive(true);
         CurrentPath = PathState.maintoAchievement;
         _toAchievement.StartTransition();
@@ -149,6 +153,7 @@ public class PathController : MonoBehaviour
 
     public void ToRanking()
     {
+        UIEvents.StartFooterButtonAnimation.Invoke();
         gameObject.SetActive(true);
         CurrentPath = PathState.mainToRanking;
         _toRanking.StartTransition();

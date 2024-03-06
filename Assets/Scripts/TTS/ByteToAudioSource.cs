@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
+// using System.IO;
 using System.Text.RegularExpressions;
-using NAudio.Wave;
-using TTS;
+// using NAudio.Wave;
+// using TTS;
 using UnityEngine.Networking;
 
 public class ByteToAudioSource : MonoBehaviour
@@ -22,13 +22,26 @@ public class ByteToAudioSource : MonoBehaviour
         var encodedText = UnityWebRequest.EscapeURL(text);
         return $"{API_URL}?ie=UTF-8&tl={lang}&client=tw-ob&q={encodedText}";
     }
-    private IEnumerator Start()
+
+    public void StartTTS(string text)
     {
+        this.text = text;
+        StartCoroutine(IStartTTS());
+    }
+
+    public void StopTTS()
+    {
+        StopAllCoroutines();
+        _audioSource.Stop();
+    }
+    private IEnumerator IStartTTS()
+    {
+        yield return new WaitForSeconds(.3f);
         parts = SplitText(text);
         foreach (string part in parts)
         {
             var url = GenerateUrl(part, LANG);
-            Debug.Log(url);
+            // Debug.Log(url);
             using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
             {
                 yield return www.SendWebRequest();
@@ -39,8 +52,10 @@ public class ByteToAudioSource : MonoBehaviour
                 }
                 else
                 {
-                    byte[] audioData = www.downloadHandler.data;
-                    PlayMP3(audioData);
+                    // byte[] audioData = DownloadHandlerAudioClip.GetContent(www)/*www.downloadHandler.data;*/
+                    _audioSource.clip = DownloadHandlerAudioClip.GetContent(www);/*www.downloadHandler.data;*/
+                    _audioSource.Play();
+                    // PlayMP3(audioData);
                     yield return new WaitForSeconds(_audioSource.clip.length);
                 }
             }
@@ -62,10 +77,10 @@ public class ByteToAudioSource : MonoBehaviour
             }
             else
             {
-                Debug.Log("Texto demasiado grande para procesar");
-                Debug.Log("Dividiendo texto");
+                // Debug.Log("Texto demasiado grande para procesar");
+                // Debug.Log("Dividiendo texto");
                 parts.AddRange(SplitLongSentence(sentences[i], 200));
-                Debug.Log(sentences[i].Length);
+                // Debug.Log(sentences[i].Length);
             }
         }
         return parts;
@@ -94,35 +109,35 @@ public class ByteToAudioSource : MonoBehaviour
         return chunks;
     }
     
-    public void PlayMP3(byte[] mp3Bytes)
-    {
-        using (MemoryStream mp3Stream = new MemoryStream(mp3Bytes))
-        {
-            using (Mp3FileReader mp3Reader = new Mp3FileReader(mp3Stream))
-            {
-                using (WaveStream waveStream = WaveFormatConversionStream.CreatePcmStream(mp3Reader))
-                {
-                    byte[] waveBytes = ReadFully(waveStream);
-
-                    AudioClip audioClip = WavUtility.ToAudioClip(waveBytes, 0, waveBytes.Length, 23500);
-
-                    _audioSource.clip = audioClip;
-                    _audioSource.Play();
-                }
-            }
-        }
-    }
-    private byte[] ReadFully(WaveStream waveStream)
-    {
-        byte[] buffer = new byte[waveStream.Length];
-        using (MemoryStream ms = new MemoryStream())
-        {
-            int bytesRead;
-            while ((bytesRead = waveStream.Read(buffer, 0, buffer.Length)) > 0)
-            {
-                ms.Write(buffer, 0, bytesRead);
-            }
-            return ms.ToArray();
-        }
-    }
+    // public void PlayMP3(byte[] mp3Bytes)
+    // {
+    //     using (MemoryStream mp3Stream = new MemoryStream(mp3Bytes))
+    //     {
+    //         using (Mp3FileReader mp3Reader = new Mp3FileReader(mp3Stream))
+    //         {
+    //             using (WaveStream waveStream = WaveFormatConversionStream.CreatePcmStream(mp3Reader))
+    //             {
+    //                 byte[] waveBytes = ReadFully(mp3Stream);
+    //
+    //                 AudioClip audioClip = WavUtility.ToAudioClip(waveBytes, 0, waveBytes.Length, 23500);
+    //
+    //                 _audioSource.clip = audioClip;
+    //                 _audioSource.Play();
+    //             }
+    //         }
+    //     }
+    // }
+    // private byte[] ReadFully(WaveStream waveStream)
+    // {
+    //     byte[] buffer = new byte[waveStream.Length];
+    //     using (MemoryStream ms = new MemoryStream())
+    //     {
+    //         int bytesRead;
+    //         while ((bytesRead = waveStream.Read(buffer, 0, buffer.Length)) > 0)
+    //         {
+    //             ms.Write(buffer, 0, bytesRead);
+    //         }
+    //         return ms.ToArray();
+    //     }
+    // }
 }

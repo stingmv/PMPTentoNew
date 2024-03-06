@@ -12,7 +12,7 @@ namespace Question
         #region Variables
 
         [SerializeField] private TextMeshProUGUI _label;
-        [SerializeField] private QuestionController _questionController;
+        [SerializeField] private QuestionInformationVP _questionInformationVp;
         [SerializeField] private Image _image;
         [SerializeField] private Sprite _defaultColor;
         [SerializeField] private Sprite _correctColor;
@@ -30,6 +30,12 @@ namespace Question
         {
             get => _eventTrigger;
             set => _eventTrigger = value;
+        }
+
+        public TextMeshProUGUI Label
+        {
+            get => _label;
+            set => _label = value;
         }
 
         #endregion
@@ -50,7 +56,7 @@ namespace Question
 
         public void CompareResponse()
         {
-            if (_questionController.ValidateResponse(_id))
+            if (_questionInformationVp.CompareResponse(_id))
             {
                 _image.sprite = _correctColor;
             }
@@ -59,6 +65,10 @@ namespace Question
                 _image.sprite = _incorrectColor;
             }
             _label.color = Color.white;
+            if (!string.IsNullOrEmpty(_questionInformationVp.Restroalimentacion))
+            {
+                UIEvents.ShowResponseVP.Invoke(_questionInformationVp.Restroalimentacion);
+            }
         }
 
         public void DisableOption()
