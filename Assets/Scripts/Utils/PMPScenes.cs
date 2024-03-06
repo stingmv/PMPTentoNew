@@ -11,6 +11,8 @@ public static class PMPScenes
     public static string TaskViewInCategoryMode = "task";
     public static string QuestionAndOptionViewInCategoryMode = "question";
     public static string FinishViewInCategoryMode = "finish";
+    public static string WrongInChange = "wrongInChange";
+    public static string ChangeRequest = "changeRequest";
 
     #endregion
 

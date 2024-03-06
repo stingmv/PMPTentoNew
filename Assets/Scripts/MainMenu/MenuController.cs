@@ -43,6 +43,12 @@ namespace MainMenu
             GameEvents.NewInstuctorId += GameEvents_InstructorChanged;
             GameEvents.CoinsChanged += GameEvents_CoinsChanged;
             GameEvents.ExperienceChanged += GameEvents_ExperienceChanged;
+            GameEvents.UsernameSelected	 += GameEvents_UsernameSelected;
+        }
+
+        private void GameEvents_UsernameSelected()
+        {
+            _username.text = _user.userInfo.user.detail.usernameG;
         }
 
         private void OnDisable()
@@ -50,6 +56,7 @@ namespace MainMenu
             GameEvents.NewInstuctorId -= GameEvents_InstructorChanged;
             GameEvents.CoinsChanged -= GameEvents_CoinsChanged;
             GameEvents.ExperienceChanged -= GameEvents_ExperienceChanged;
+            GameEvents.UsernameSelected	 -= GameEvents_UsernameSelected;
         }
 
         private void GameEvents_ExperienceChanged(float obj)

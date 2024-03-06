@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using Button;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Networking;
 
 public class InstructorSelector : MonoBehaviour
 {
@@ -17,6 +19,8 @@ public class InstructorSelector : MonoBehaviour
     [SerializeField] private ButtonAnimation _buttonPrevious;
     [SerializeField] private Transform _container;
     [SerializeField] private GameObject _instructorPlatform;
+    [SerializeField] private string url =
+        "http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ActualizarCaracteristicasGamificacion";
 
     private int index = 0;
     private List<GameObject> _instructors = new List<GameObject>();
@@ -107,9 +111,57 @@ public class InstructorSelector : MonoBehaviour
     {
         _buttonNext.DisableButton();
         _buttonPrevious.DisableButton();
-        GameEvents.NewInstuctorId?.Invoke(index);
-        
-        
+        GameEvents.RequesNewUsername?.Invoke();
+        StartCoroutine(GetGamificationData(index));
+        // GameEvents.NewInstuctorId?.Invoke(index);
         _onSelectInstructor?.Invoke();
     }
+    
+    public IEnumerator GetGamificationData(int instructorId)
+        {
+            using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+            {
+                _objectUser.userInfo.user.detail.instructorID = instructorId;
+                UserDetail dataLogin = _objectUser.userInfo.user.detail;
+
+                var bodyRaw = Encoding.UTF8.GetBytes(JsonUtility.ToJson(dataLogin));
+                request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+                request.downloadHandler = new DownloadHandlerBuffer();
+
+                request.SetRequestHeader("Content-Type", "application/json");
+                request.SetRequestHeader("Accept", "application/json");
+                request.SetRequestHeader("User-Agent",
+                    "Mozilla/5.0 (Windows NT 6.1; Unity 3D; ZFBrowser 3.1.0; UnityTests 1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36");
+
+                yield return request.SendWebRequest();
+                if (request.responseCode >= 400)
+                {
+                    _objectUser.userInfo.haveUser = false;
+                    GameEvents.WrongWhenNewUsername?.Invoke();
+                    Debug.Log(request.error);
+                }
+                else
+                {
+                    try
+                    {
+                        bool detail = Convert.ToBoolean(request.downloadHandler.text);
+                        if (detail)
+                        {
+                            GameEvents.NewInstuctorId?.Invoke(index);
+                        }
+                        else
+                        {
+                            GameEvents.WrongWhenNewUsername?.Invoke();
+                        }
+
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.Log(request.downloadHandler.text);
+                        _objectUser.userInfo.haveUser = false;
+                        GameEvents.WrongWhenNewUsername?.Invoke();
+                    }
+                }
+            }
+        }
 }

@@ -25576,6 +25576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b7699905c591dc44bcb466699f020bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  url: http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ActualizarCaracteristicasGamificacion
+  _objectUser: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
 --- !u!1 &6782123938088241072
 GameObject:
   m_ObjectHideFlags: 0
