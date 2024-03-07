@@ -4,6 +4,11 @@ using UnityEngine.Events;
 public class AchievementControlller : MonoBehaviour
 {
     [SerializeField] private AchievementData achievementData;
+    [SerializeField] private int maxGoodStreak;
+    [SerializeField] private UnityEvent<int> OnMaxGoodStreakReached;
+    [SerializeField] private UnityEvent OnMaxGoodWithoutErrorsReached;
+
+    private bool _hasReachedMaxGoodStreak;
 
     private void OnEnable()
     {
@@ -27,9 +32,19 @@ public class AchievementControlller : MonoBehaviour
         achievementData.AddCounter(1);
     }
 
-    [ContextMenu(nameof(TestGoodStreak))]
-    public void TestGoodStreak()
+    public void CheckMaxGoodStreak(int counter)
     {
-        GameEvents.OnGoodStreaked?.Invoke();
+        if (counter >= maxGoodStreak && !_hasReachedMaxGoodStreak)
+        {
+            GameEvents.OnGoodStreaked?.Invoke();
+            OnMaxGoodStreakReached?.Invoke(maxGoodStreak);
+            _hasReachedMaxGoodStreak = true;
+        }
+    }
+
+    public void CheckGoodWithoutErrors() 
+    {
+        GameEvents.OnGoodWithoutErrors?.Invoke();
+        OnMaxGoodWithoutErrorsReached?.Invoke();
     }
 }

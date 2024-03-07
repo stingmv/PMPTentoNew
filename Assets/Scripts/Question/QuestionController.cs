@@ -30,7 +30,7 @@ namespace Question
 
         [SerializeField] private QuestionInformation _questionInformation;
         [SerializeField] private UnityEvent _onSelectOption;
-        [SerializeField] private UnityEvent _onCorrectOption;
+        [SerializeField] private UnityEvent<int> _onCorrectOption;
         [SerializeField] private UnityEvent _onIncorrectOption;
         [SerializeField] private ProgressQuestion _progressQuestion;
         [SerializeField] private bool useProgressQuestion = true;
@@ -204,7 +204,7 @@ namespace Question
 
                 _questionInformation.SetMessage("¡Correcto! ¡Eres un experto en este tema!", true);
                 GameEvents.CorrectlyAnswered?.Invoke();
-                _onCorrectOption?.Invoke();
+                _onCorrectOption?.Invoke(_numberOfCorrectQuestions);
                 return true;
             }
 

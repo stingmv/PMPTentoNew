@@ -19,8 +19,6 @@ public class AchievementData : ScriptableObject
         public List<GiftData> GiftData;
     }
 
-
-
     public List<Achievement> achievementList;
 
     public void AddCounter(int index)
@@ -51,7 +49,6 @@ public class AchievementData : ScriptableObject
 
     public void RemoveGiftsObtained(AchievementData.Achievement achievement)
     {
-        //var achievement = achievementList[index];
         achievement.GiftsObtained = 0;
     }
 }

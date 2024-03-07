@@ -24,7 +24,6 @@ public class AchievementUIController : MonoBehaviour
         GameEvents.OnSetGiftsFromAchievement -= SetGiftsObtained;
     }
 
-    [ContextMenu(nameof(SetAllAchievements))]
     public void SetAllAchievements()
     {
         ClearChildrenAchievement();
