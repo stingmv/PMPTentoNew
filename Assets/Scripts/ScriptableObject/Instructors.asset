@@ -16,7 +16,7 @@ MonoBehaviour:
   - id: 0
     prefab: {fileID: 7962611336709743259, guid: 231ac5e6f90f26c45ac8dbf191d6cb87, type: 3}
   - id: 1
-    prefab: {fileID: 5071594154691823426, guid: 2b1d406b9e536b44bb0e15047d400670, type: 3}
+    prefab: {fileID: 3897283599220616691, guid: a1a7d3b7a94ec424e923a2772ce288a3, type: 3}
   currentInstructor:
     id: 0
     prefab: {fileID: 0}

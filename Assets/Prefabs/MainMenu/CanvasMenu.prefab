@@ -27543,6 +27543,7 @@ MonoBehaviour:
   _buttonPrevious: {fileID: 2541272154361587634}
   _container: {fileID: 0}
   _instructorPlatform: {fileID: 484853178150525243, guid: 0a3add0c3cb6c534c8c28691ec7d14ca, type: 3}
+  url: http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ActualizarCaracteristicasGamificacion
 --- !u!1 &7144136122095288260
 GameObject:
   m_ObjectHideFlags: 0

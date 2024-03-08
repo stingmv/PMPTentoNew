@@ -9,6 +9,14 @@ public class NavbarButtons : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Button _achievementButton;
     [SerializeField] private UnityEngine.UI.Button _rankingButton;
 
+    public enum Buttons
+    {
+        main,
+        shop,
+        train,
+        achievement,
+        ranking
+    }
     private void OnEnable()
     {
         UIEvents.StartFooterButtonAnimation += UIEvents_StartFooterButtonAnimation;

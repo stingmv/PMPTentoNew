@@ -36,6 +36,8 @@ namespace Question
         [SerializeField] private bool useProgressQuestion = true;
         [SerializeField] private UnityEvent _onEndQuestions;
         [SerializeField] private UnityEvent _onNextQuestion;
+        [SerializeField] private UnityEvent _onWonGame;
+        [SerializeField] private UnityEvent _onLostGame;
         [SerializeField] private DataToRegisterSO _toRegisterSo;
         private List<QuestionData> _session = new List<QuestionData>();
         private QuestionData _currentQuestion;
@@ -165,6 +167,7 @@ namespace Question
         {
             if (_currentIndex == _session.Count)
             {
+                _onWonGame?.Invoke();
                 GameEvents.GameWon?.Invoke();
                 _onEndQuestions?.Invoke();
                 return;
@@ -260,6 +263,7 @@ namespace Question
 
         public void SendGameLost()
         {
+            _onLostGame?.Invoke();
             GameEvents.GameLost?.Invoke();
         }
 
