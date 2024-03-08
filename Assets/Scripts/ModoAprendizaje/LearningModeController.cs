@@ -13,8 +13,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+// [Serializable]
+// public class ItemToPlayerPrefs
+// {
+//     public int id;
+// }
+[Serializable]
+public class PlatformInformationToPlayerPrefs
+{
+    public List<int> _itemToPlayerPrefsList = new List<int>();
+}
 public class LearningModeController : MonoBehaviour
 {
+    private const string PREFS_INFO_LEARNING_MODE = "LearningModeInformation";
+    
     [SerializeField] private DataToRegisterSO _registerExam;
     [SerializeField] private DomainsAndTaskSO _domainsAndTask;
     [SerializeField] private ScriptableObjectSettings _gameSettings;
@@ -26,7 +38,7 @@ public class LearningModeController : MonoBehaviour
     [SerializeField] private PlatformController _platformController;
     [SerializeField] private Image _platformMarkerPrefab;
     private float _numberOfConsecutiveQuestion;
-
+    private PlatformInformationToPlayerPrefs _informationToPlayerPrefs = new PlatformInformationToPlayerPrefs();
     private float _experienceAccumulated = 0;
     private float _coinsAccumulated = 0;
     private Image _markerInstanciated;
@@ -34,14 +46,25 @@ public class LearningModeController : MonoBehaviour
 
     private PlatformItem _currentPlatform;
     // [Header("Reward")] 
-    
+    private bool haveInformationStored;
     private void Awake()
     {
         _numberOfConsecutiveQuestion = -2;
+        
         _pmpService.Service_GetDomainAndTasks();
+
     }
     private void OnEnable()
     {
+        if (!PlayerPrefs.HasKey(PREFS_INFO_LEARNING_MODE))
+        {
+            haveInformationStored = false;
+        }
+        else
+        {
+            _informationToPlayerPrefs = JsonUtility.FromJson<PlatformInformationToPlayerPrefs>(PlayerPrefs.GetString(PREFS_INFO_LEARNING_MODE));
+            haveInformationStored = true;
+        }
         GameEvents.DomainsRetreived += GameEvents_DomainRetreived;
         GameEvents.TaskRetreived += GameEvents_TaskRetreived;
         GameEvents.GetNameExam += GameEvents_GetNameExam;
@@ -150,34 +173,52 @@ public class LearningModeController : MonoBehaviour
                         ? (3 - _userData.userInfo.LearningModeState.ItemStates.FirstOrDefault(x =>
                             x.id == obj.listaTarea[i].id)!.timesToRetrive.Count)
                         : 3;
-
+                if (haveInformationStored)
+                {
+                    if (_informationToPlayerPrefs._itemToPlayerPrefsList.Exists(
+                            x => x == item.Information.id)
+                        )
+                    {
+                        item.EnablePlatform();
+                        _currentPlatform = item;
+                        if (!_markerInstanciated)
+                        {
+                            _markerInstanciated = Instantiate(_platformMarkerPrefab, _currentPlatform.transform);
+                        }
+                        else
+                        {
+                            _markerInstanciated.transform.parent = _currentPlatform.transform;
+                        }
+                        _markerInstanciated.transform.SetLocalPositionAndRotation(new Vector3(0,4,0), quaternion.identity);
+                        // _markerInstanciated.transform.parent = item.transform;
+                    }
+                }
                 _platformItems.Add(item);
             }
             
 
         }
-        _currentPlatform = _platformItems[0];
-        _currentPlatform.EnablePlatform();
-        if (!_markerInstanciated)
+
+        if (!haveInformationStored)
         {
+            _currentPlatform = _platformItems[0];
+            _currentPlatform.EnablePlatform();
             _markerInstanciated = Instantiate(_platformMarkerPrefab, _currentPlatform.transform);
+            _informationToPlayerPrefs._itemToPlayerPrefsList.Add(_currentPlatform.Information.id);
+            PlayerPrefs.SetString(PREFS_INFO_LEARNING_MODE, JsonUtility.ToJson(_informationToPlayerPrefs));
+            PlayerPrefs.Save();
         }
-        else
-        {
-            _markerInstanciated.transform.parent = _currentPlatform.transform;
-        }
-        _markerInstanciated.transform.SetLocalPositionAndRotation(new Vector3(0,4,0), quaternion.identity);
-        // for (int i = 0; i < obj.listaDominio.Length; i++)
-        // {
-        //     _buttonDomainController.CreateButton(obj.listaDominio[i].nombre, obj.listaDominio[i].id.ToString());
-        // }
     }
 
     [ContextMenu("nextPlatform")]
     public void EnableNextPlatform()
     {
+        
         _currentPlatform = _platformItems[_currentPlatform.Information.index++];
         _currentPlatform.EnablePlatform();
+        _informationToPlayerPrefs._itemToPlayerPrefsList.Add(_currentPlatform.Information.id);
+        PlayerPrefs.SetString(PREFS_INFO_LEARNING_MODE, JsonUtility.ToJson(_informationToPlayerPrefs));
+        PlayerPrefs.Save();
         if (!_markerInstanciated)
         {
             _markerInstanciated = Instantiate(_platformMarkerPrefab, _currentPlatform.transform);
