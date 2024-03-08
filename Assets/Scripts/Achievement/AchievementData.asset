@@ -30,4 +30,6 @@ MonoBehaviour:
     CurrentLevel: 0
     MaxCounterDifficulty: 0
     GiftsObtained: 0
-    GiftData: []
+    GiftData:
+    - {fileID: 11400000, guid: 8da64af161ea8394f94656e40ee0e924, type: 2}
+    - {fileID: 11400000, guid: 00303eece21cf7c4eb1b9013418c8b4b, type: 2}

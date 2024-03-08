@@ -14,6 +14,6 @@ public class PopupAchievementUI : MonoBehaviour
 
     public void ShowAchievementGoodWithoutErrors()
     {
-        achievementText.SetText("Completo la ronda sin errores");
+        achievementText.SetText("Completó la ronda sin errores");
     }
 }
