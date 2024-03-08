@@ -38,6 +38,7 @@ namespace Question
         [SerializeField] private UnityEvent _onNextQuestion;
         [SerializeField] private UnityEvent _onWonGame;
         [SerializeField] private UnityEvent _onLostGame;
+        [SerializeField] private UnityEvent OnLatestQuestionAchieved;
         [SerializeField] private DataToRegisterSO _toRegisterSo;
         private List<QuestionData> _session = new List<QuestionData>();
         private QuestionData _currentQuestion;
@@ -203,6 +204,11 @@ namespace Question
                 {
                     _currentQuestion.progressItem.SetCorrectSelection();
                     _progressQuestion.Label = _numberOfCorrectQuestions.ToString();
+                }
+
+                if (_numberOfCorrectQuestions == GetCountSession)
+                {
+                    OnLatestQuestionAchieved?.Invoke();
                 }
 
                 _questionInformation.SetMessage("¡Correcto! ¡Eres un experto en este tema!", true);
