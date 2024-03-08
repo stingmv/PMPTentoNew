@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class KeepScaleOnCanvas : MonoBehaviour
 {
@@ -21,13 +22,30 @@ public class KeepScaleOnCanvas : MonoBehaviour
     [SerializeField] private float _minResolution;
     [SerializeField] private float _maxResolution;
     public float x;
+    private bool _lost;
+    private static readonly int s_Sad = Animator.StringToHash("sad");
 
+    public bool Lost
+    {
+        get => _lost;
+        set => _lost = value;
+    }
     private void Start()
     {
         _initScale = _guideTransform.localScale;
         _guideTransform =
-            Instantiate(_instructors.instructors[_user.userInfo.idInstructor].prefab, transform.position, Quaternion.Euler(new Vector3(8.3f, 180f, 0f)), transform.parent).transform;
+            // Instantiate(_instructors.instructors[_user.userInfo.idInstructor].prefab, transform.position, Quaternion.Euler(new Vector3(8.3f, 180f, 0f)), transform.parent).transform;
+            Instantiate(_instructors.instructors[1].prefab, transform.position, Quaternion.Euler(new Vector3(8.3f, 180f, 0f)), transform.parent).transform;
         _guideTransform.localRotation= Quaternion.Euler(new Vector3(8.6f, 180f, 0f));
+        var anim = _guideTransform.GetComponent<Animator>();
+        if (_lost)
+        {
+            anim.SetTrigger(s_Sad);
+        }
+        else
+        {
+            anim.SetTrigger($"happy{Random.Range(1,3)}");
+        }
     }
 
     private void Update()

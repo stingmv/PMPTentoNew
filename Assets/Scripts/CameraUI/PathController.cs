@@ -62,6 +62,16 @@ public class PathController : MonoBehaviour
         rankingToMain
     }
 
+    public enum EActualPath
+    {
+        main,
+        shop,
+        train,
+        achievement,
+        ranking
+    }
+
+    private EActualPath _actualPath;
     public PathState CurrentPath
     {
         get => _currentPathState;
@@ -77,6 +87,7 @@ public class PathController : MonoBehaviour
                     _toStore = _rankingToStore;
                     _toTrain = _rankingToTrain;
                     _toAchievement = _rankingToAchievement;
+                    _actualPath = EActualPath.ranking;
                     break;
 
                 case PathState.mainToStore:
@@ -86,6 +97,7 @@ public class PathController : MonoBehaviour
                     _toTrain = _storeToTrain;
                     _toAchievement = _storeToAchievement;
                     _toRanking = _storeToRanking;
+                    _actualPath = EActualPath.shop;
                     break;
                 
                 case PathState.maintoAchievement:
@@ -95,6 +107,7 @@ public class PathController : MonoBehaviour
                     _toStore = _achievementToStore;
                     _toTrain = _achievementToTrain;
                     _toRanking = _achievementToRanking;
+                    _actualPath = EActualPath.achievement;
                     break;
                 
                 case PathState.storeToMain:
@@ -104,6 +117,7 @@ public class PathController : MonoBehaviour
                     _toTrain = _mainToTrain;
                     _toAchievement = _mainToAchievement;
                     _toRanking = _mainToRanking;
+                    _actualPath = EActualPath.main;
                     break;
             }
         }
@@ -111,6 +125,7 @@ public class PathController : MonoBehaviour
 
     private void Start()
     {
+        _actualPath = EActualPath.main;
         _toMain = null;
         _toAchievement = _mainToAchievement;
         _toRanking = _mainToRanking;
@@ -121,6 +136,10 @@ public class PathController : MonoBehaviour
 
     public void ToMain()
     {
+        if (_actualPath == EActualPath.main)
+        {
+            return;
+        }
         UIEvents.StartFooterButtonAnimation.Invoke();
         gameObject.SetActive(true);
         CurrentPath = PathState.storeToMain;
@@ -129,6 +148,10 @@ public class PathController : MonoBehaviour
 
     public void ToStore()
     {
+        if (_actualPath == EActualPath.shop)
+        {
+            return;
+        }
         UIEvents.StartFooterButtonAnimation.Invoke();
         gameObject.SetActive(true);
         CurrentPath = PathState.mainToStore;
@@ -137,6 +160,10 @@ public class PathController : MonoBehaviour
 
     public void ToTrain()
     {
+        if (_actualPath == EActualPath.train)
+        {
+            return;
+        }
         UIEvents.StartFooterButtonAnimation.Invoke();
         gameObject.SetActive(true);
         CurrentPath = PathState.mainToTrain;
@@ -145,6 +172,10 @@ public class PathController : MonoBehaviour
 
     public void ToAchievement()
     {
+        if (_actualPath == EActualPath.achievement)
+        {
+            return;
+        }
         UIEvents.StartFooterButtonAnimation.Invoke();
         gameObject.SetActive(true);
         CurrentPath = PathState.maintoAchievement;
@@ -153,6 +184,10 @@ public class PathController : MonoBehaviour
 
     public void ToRanking()
     {
+        if (_actualPath == EActualPath.ranking)
+        {
+            return;
+        }
         UIEvents.StartFooterButtonAnimation.Invoke();
         gameObject.SetActive(true);
         CurrentPath = PathState.mainToRanking;
