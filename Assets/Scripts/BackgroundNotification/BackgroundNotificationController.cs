@@ -70,7 +70,12 @@ public class BackgroundNotificationController : MonoBehaviour
         AndroidNotificationCenter.NotificationReceivedCallback receivedNotificationHandler = delegate (AndroidNotificationIntentData data)
         {
             Debug.Log($"CALLBACK: {data.Id}/{data.Notification.Text}/{data.Channel}");
-            GameEvents.AddNotificationPanel?.Invoke(data.Notification.Text);
+
+            NotificationPanel notificationPanel = new NotificationPanel { 
+                Title = data.Notification.Title,
+                Message = data.Notification.Text
+            };
+            GameEvents.AddNotificationPanel?.Invoke(notificationPanel);
         };
 
         var notificationIntentData = AndroidNotificationCenter.GetLastNotificationIntent();

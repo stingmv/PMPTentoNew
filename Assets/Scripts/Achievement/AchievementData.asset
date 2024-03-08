@@ -15,7 +15,7 @@ MonoBehaviour:
   achievementList:
   - Name: Racha de 5 respuestas
     MaxCounter: 5
-    CurrentCounter: 1
+    CurrentCounter: 0
     MaxLevel: 5
     CurrentLevel: 0
     MaxCounterDifficulty: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 00303eece21cf7c4eb1b9013418c8b4b, type: 2}
   - Name: Ronda sin fallas
     MaxCounter: 5
-    CurrentCounter: 1
+    CurrentCounter: 0
     MaxLevel: 5
     CurrentLevel: 0
     MaxCounterDifficulty: 0

@@ -5,26 +5,28 @@ using UnityEngine;
 
 public class Notifications : MonoBehaviour
 {
+    [SerializeField] NotificationData notificationData;
     [SerializeField] private GameObject prefab;
     [SerializeField] private Transform content;
 
-    private void OnEnable()
+    public void AddNotificationsToPanel()
     {
-        GameEvents.AddNotificationPanel += AddNotification;
-    }
+        ClearChildrenAchievement();
+        var notifications = notificationData.NotificationList;
+        var textChild = prefab.GetComponentInChildren<TextMeshProUGUI>();
 
-    private void OnDisable()
-    {
-        GameEvents.AddNotificationPanel -= AddNotification;
-    }
-
-    private void AddNotification(string text)
-    {
-        var textChild = prefab.GetComponentInChildren<TextMeshProUGUI>() as TextMeshProUGUI;
-        if (textChild != null)
+        foreach (var item in notifications)
         {
-            textChild.SetText(text);
+            textChild.SetText(item.Message);
+            Instantiate(prefab, content);
         }
-        Instantiate(prefab, content);
+    }
+
+    private void ClearChildrenAchievement()
+    {
+        for (int i = content.childCount - 1; i >= 0; i--)
+        {
+            Destroy(content.GetChild(i).gameObject);
+        }
     }
 }

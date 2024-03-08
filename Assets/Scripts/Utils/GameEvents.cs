@@ -81,7 +81,7 @@ public static class GameEvents
     #region Notifications
 
     public static Action<int> RecoveryAttempt;
-    public static Action<string> AddNotificationPanel;
+    public static Action<NotificationPanel> AddNotificationPanel;
     public static Action<BackgroundNotification> SendNotification;
     public static Action<BackgroundNotificationIos> SendNotificationIos;
 

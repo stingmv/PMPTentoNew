@@ -8,12 +8,25 @@ public class PopupAchievementUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI achievementText;
 
     public void ShowAchievementMaxGoodStreakText(int value)
-    { 
-        achievementText.SetText($"{value} preguntas seguidas");
+    {
+        string text = $"{value} preguntas seguidas";
+        achievementText.SetText(text);
+        AddMessageNotificationPanel(text);
     }
 
     public void ShowAchievementGoodWithoutErrors()
     {
-        achievementText.SetText("Completó la ronda sin errores");
+        string text = "Completó la ronda sin errores";
+        achievementText.SetText(text);
+        AddMessageNotificationPanel(text);
+    }
+
+    private void AddMessageNotificationPanel(string text)
+    {
+        NotificationPanel notificationPanel = new NotificationPanel { 
+            Title = text,
+            Message = text
+        };
+        GameEvents.AddNotificationPanel?.Invoke(notificationPanel);
     }
 }

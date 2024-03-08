@@ -169,10 +169,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 20891650}
-  - component: {fileID: 20891649}
   - component: {fileID: 20891648}
   m_Layer: 0
-  m_Name: AchievementController
+  m_Name: AchievementUIController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,19 +195,6 @@ MonoBehaviour:
   popupContainer: {fileID: 1501885997}
   popUpGift1Text: {fileID: 120048166}
   popUpGift2Text: {fileID: 2030996817}
---- !u!114 &20891649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20891647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c80dc7ec5ccf44e4a89f9ba146662ff1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  achievementData: {fileID: 0}
 --- !u!4 &20891650
 Transform:
   m_ObjectHideFlags: 0
@@ -6491,6 +6477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eae78d5732eba042b4fb048cbe7ef19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notificationData: {fileID: 11400000, guid: 19d1a3b1870c0364099b9caf63c2fc66, type: 2}
   prefab: {fileID: 7358380375832619967, guid: 1603bfdeedbce294889a1957f9600328, type: 3}
   content: {fileID: 418808241}
 --- !u!114 &1251702360
@@ -9735,6 +9722,38 @@ PrefabInstance:
     - target: {fileID: 3456883934845005843, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600897501984318576, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600897501984318576, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600897501984318576, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1251702359}
+    - target: {fileID: 3600897501984318576, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600897501984318576, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: AddNotificationsToPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600897501984318576, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Notifications, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600897501984318576, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600897501984318576, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3837313313052590797, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
