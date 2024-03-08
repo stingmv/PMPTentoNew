@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableCreator;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class AudioManager : MonoBehaviour
     private const string MASTER_VOLUME = "MasterVolume";
 
     [SerializeField] private AudioSettingsSO _audioSettings;
+    [SerializeField] private IncorrectQuestionsSO _incorrectQuestions;
     [SerializeField] private AudioSource _sFXAudioSource;
     [SerializeField] private AudioSource _musicAudioSource;
 

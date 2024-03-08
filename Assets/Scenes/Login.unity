@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -792,6 +792,7 @@ MonoBehaviour:
   _buttonPrevious: {fileID: 1389877579}
   _container: {fileID: 1726858398}
   _instructorPlatform: {fileID: 484853178150525243, guid: 0a3add0c3cb6c534c8c28691ec7d14ca, type: 3}
+  url: http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ActualizarCaracteristicasGamificacion
 --- !u!1 &266222805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,6 +1538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSettings: {fileID: 11400000, guid: f2e509c95e7e26a4fbb60ad6ceba7286, type: 2}
+  _incorrectQuestions: {fileID: 11400000, guid: be1faa31fab946a41b8e0dc255affa08, type: 2}
   _sFXAudioSource: {fileID: 1905788656}
   _musicAudioSource: {fileID: 1825912840}
 --- !u!114 &532442930
@@ -2326,6 +2328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   url: https://api-portalweb.bsginstitute.com/api/AspNetUser/authenticate
+  urlToMoreDetail: http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ObtenerCaracteristicasGamificacion
   _objectUser: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
   _loginController: {fileID: 600175731}
   _finishRequest: 1
@@ -6098,6 +6101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputUsername: {fileID: 1831081052}
+  url: http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ActualizarCaracteristicasGamificacion
+  _objectUser: {fileID: 0}
+  _buttonChangeUsername: {fileID: 0}
 --- !u!1 &1869036026
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,6 +53,12 @@ namespace Question
             _itemImage.color = _correctColor;
 
         }
+        public void RemoveCurrentItem()
+        {
+            _currentItemMarker.gameObject.SetActive(false);
+            // _itemImage.color = _correctColor;
+
+        }
         public void SetIncorrectSelection()
         {
             _currentItemMarker.gameObject.SetActive(false);

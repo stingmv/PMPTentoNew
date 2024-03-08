@@ -23,6 +23,7 @@ public class Roulette : MonoBehaviour
     [SerializeField] private UnityEvent _onInitRotation;
     [SerializeField] private UnityEvent _onFailedRotation;
     [SerializeField] private UnityEvent _onSelectedItem;
+    [SerializeField] private UnityEvent _onResetRoulette;
 
     [SerializeField] private List<RouletteItem> _rouletteItems;
     [SerializeField] private Transform _originPoint;
@@ -47,7 +48,6 @@ public class Roulette : MonoBehaviour
 
     private void Start()
     {
-        int freeFieldsTotal = _rouletteItems.Count - 1;
         // Modo 1
         // for (int i = 0; i < _rouletteSO.RouletteItems.Length; i++)
         // {
@@ -64,6 +64,13 @@ public class Roulette : MonoBehaviour
         //     
         // }
         // Modo 2
+        GenerateRoulette();
+
+        
+    }
+
+    private void GenerateRoulette()
+    {
         var itemsLength = _rouletteItems.Count -1;
         for (int i = 0; i < itemsLength; i++)
         {
@@ -77,7 +84,6 @@ public class Roulette : MonoBehaviour
             _rouletteItems[s].SetData(_rouletteSO.RouletteItems[randomData]);
             // _rouletteItems.RemoveAt(s);
         }
-
         var temp =_rouletteItems.FirstOrDefault(x => !x.HaveInformation);
         if (temp != null)
         {
@@ -85,7 +91,7 @@ public class Roulette : MonoBehaviour
             temp.AmountLabel.text = String.Empty;
         }
     }
-
+    
     private void ComputeItemsPosition()
     {
         
@@ -249,5 +255,19 @@ public class Roulette : MonoBehaviour
             _canRotate = false;
         }
         _isDragging = false;
+    }
+
+    [ContextMenu("Restart")]
+    public void Restart()
+    {
+        for (int i = 0; i < _rouletteItems.Count(); i++)
+        {
+            _rouletteItems[i].HaveInformation = false;
+        }
+        _onResetRoulette?.Invoke();
+        _useRoulette = false;
+        _canRotate = false;
+        GenerateRoulette();
+        _rewardContainer.FadeOutTransition();
     }
 }

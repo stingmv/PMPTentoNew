@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using ScriptableCreator;
 using UI;
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,12 +24,15 @@ namespace Question
         public string idCorrectOption;
         public ProgressItem progressItem;
         public int idTask;
+        public QuestionItem questionItem;
     }
     public class QuestionController : MonoBehaviour
     {
         #region Variables
 
         [SerializeField] private QuestionInformation _questionInformation;
+        [SerializeField]
+        private IncorrectQuestionsSO _incorrectQuestions;
         [SerializeField] private UnityEvent _onSelectOption;
         [SerializeField] private UnityEvent<int> _onCorrectOption;
         [SerializeField] private UnityEvent _onIncorrectOption;
@@ -120,6 +124,7 @@ namespace Question
             {
                 
                 QuestionData questionData = new QuestionData();
+                questionData.questionItem = questions[i];
                 questionData.idQuestion = questions[i].pregunta.id.ToString();
                 questionData.question = questions[i].pregunta.enunciado;
                 
@@ -216,7 +221,7 @@ namespace Question
                 _onCorrectOption?.Invoke(_numberOfCorrectQuestions);
                 return true;
             }
-
+            _incorrectQuestions.SaveIncorrectQuestion(_currentQuestion.questionItem);
             if (useProgressQuestion)
             {
                 _currentQuestion.progressItem.SetIncorrectSelection();
