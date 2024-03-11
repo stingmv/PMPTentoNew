@@ -40,4 +40,19 @@ public class ButtonsGroup : MonoBehaviour
         OldSelectedButton = buttonSelected;
     }
 
+    public void CleanOldSelected()
+    {
+        // OldSelectedButton.DeselectButton();
+        OldSelectedButton = null;
+    }
+
+    public void StartCleanAnimationGroup()
+    {
+        CleanOldSelected();
+        for (int i = 0; i < _options.Count; i++)
+        {
+            _options[i].StartAnimation();
+        }
+    }
+
 }

@@ -15,9 +15,11 @@ public class OptionGC : MonoBehaviour
     [SerializeField] private Color _incorrectColor;
     [SerializeField] private Color _colorInGC;
     [SerializeField] private EventTrigger _eventTrigger;
+    [SerializeField] private CanvasGroup _canvasGroup;
 
     private int _id;
     private bool _selectedInGC;
+    private readonly float _timeToAnimation = .5f;
 
     public int ID
     {
@@ -71,5 +73,78 @@ public class OptionGC : MonoBehaviour
     {
         _image.color = Color.white;
         _selectedInGC = false;
+    }
+    public void SetCorrectOption()
+    {
+        _image.color = _correctColor;
+        DisableOption();
+    }
+    public void SetIncorrectOption()
+    {
+        _image.color = _incorrectColor;
+        DisableOption();
+    }
+
+    public void StartAnimation()
+    {
+        DisableOption();
+        StopAllCoroutines();
+        StartCoroutine(IStartAnimation());
+    }
+    public void StartAnimationWithData(string description, int id)
+    {
+        DisableOption();
+        StopAllCoroutines();
+        StartCoroutine(IStartAnimationWithData(description, id));
+    }
+
+    private IEnumerator IStartAnimation()
+    {
+        yield return StartCoroutine(IDisable());
+        yield return StartCoroutine(IEnable());
+        
+    }
+    private IEnumerator IStartAnimationWithData(string description, int id)
+    {
+        yield return StartCoroutine(IDisable());
+        _label.text = description;
+        ID = id;
+        yield return StartCoroutine(IEnable());
+        
+    }
+    private IEnumerator IDisable()
+    {
+        var currentTime = 0f;
+        while (currentTime <=1)
+        {
+            currentTime += Time.deltaTime / _timeToAnimation;
+            _canvasGroup.alpha = Mathf.Lerp(1, 0, currentTime);
+            yield return null;
+        }
+        
+    }
+
+    public void AnimationDisable()
+    {
+        StopAllCoroutines();
+        StartCoroutine(IDisable());
+    }
+    
+    public void AnimationEnable()
+    {
+        StopAllCoroutines();
+        StartCoroutine(IEnable());
+    }
+    private IEnumerator IEnable()
+    {
+        EnableOption();
+
+        var currentTime = 0f;
+        while (currentTime <=1)
+        {
+            currentTime += Time.deltaTime / _timeToAnimation;
+            _canvasGroup.alpha = Mathf.Lerp(0, 1, currentTime);
+            yield return null;
+        }
     }
 }
