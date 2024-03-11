@@ -21,6 +21,11 @@ public class AchievementData : ScriptableObject
 
     public List<Achievement> achievementList;
 
+    private void OnEnable()
+    {
+        LoadDataPlayerPrefs();
+    }
+
     public void AddCounter(int index)
     {
         var achievement = achievementList[index];
@@ -33,22 +38,40 @@ public class AchievementData : ScriptableObject
             AddMaxCounterDifficulty(index);
             AddGiftsObtained(index);
         }
+        SaveDataPlayerPrefs();
     }
 
     private void AddMaxCounterDifficulty(int index)
     {
         var achievement = achievementList[index];
         achievement.MaxCounter += achievement.MaxCounterDifficulty;
+        SaveDataPlayerPrefs();
     }
 
     private void AddGiftsObtained(int index)
     {
         var achievement = achievementList[index];
         achievement.GiftsObtained++;
+        SaveDataPlayerPrefs();
     }
 
-    public void RemoveGiftsObtained(AchievementData.Achievement achievement)
+    public void RemoveGiftsObtained(Achievement achievement)
     {
         achievement.GiftsObtained = 0;
+        SaveDataPlayerPrefs();
+    }
+
+    private void SaveDataPlayerPrefs()
+    {
+        PlayerPrefs.SetString("AchievData", JsonUtility.ToJson(achievementList));
+        PlayerPrefs.Save();
+    }
+
+    private void LoadDataPlayerPrefs()
+    {
+        if (PlayerPrefs.HasKey("AchievData"))
+        {
+            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("AchievData"), achievementList);
+        }
     }
 }
