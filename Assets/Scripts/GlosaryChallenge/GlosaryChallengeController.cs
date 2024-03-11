@@ -226,29 +226,29 @@ public void Evaluate()
         UseTimer = false;
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        for (int i = 0; i < _concepts.Options.Count; i++)
-        {
-            Random.InitState(_concepts.Options[i].ID);
-            Gizmos.color = new Color(
-                Random.Range(0, 1f), 
-                Random.Range(0, 1f), 
-                Random.Range(0, 1f)
-            );
-            Gizmos.DrawSphere(_concepts.Options[i].transform.position, 5f);
-        }
-        for (int i = 0; i < _definitions.Options.Count; i++)
-        {
-            Random.InitState(_definitions.Options[i].ID);
-            Gizmos.color = new Color(
-                Random.Range(0, 1f), 
-                Random.Range(0, 1f), 
-                Random.Range(0, 1f)
-            );
-            Gizmos.DrawSphere(_definitions.Options[i].transform.position, 5f);
-        }
-    }
+    // private void OnDrawGizmosSelected()
+    // {
+    //     for (int i = 0; i < _concepts.Options.Count; i++)
+    //     {
+    //         Random.InitState(_concepts.Options[i].ID);
+    //         Gizmos.color = new Color(
+    //             Random.Range(0, 1f), 
+    //             Random.Range(0, 1f), 
+    //             Random.Range(0, 1f)
+    //         );
+    //         Gizmos.DrawSphere(_concepts.Options[i].transform.position, 5f);
+    //     }
+    //     for (int i = 0; i < _definitions.Options.Count; i++)
+    //     {
+    //         Random.InitState(_definitions.Options[i].ID);
+    //         Gizmos.color = new Color(
+    //             Random.Range(0, 1f), 
+    //             Random.Range(0, 1f), 
+    //             Random.Range(0, 1f)
+    //         );
+    //         Gizmos.DrawSphere(_definitions.Options[i].transform.position, 5f);
+    //     }
+    // }
     
     private void GameEvents_CorrectlyAnswered()
     {
