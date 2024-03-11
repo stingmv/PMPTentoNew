@@ -16,13 +16,19 @@ public class OptionGC : MonoBehaviour
     [SerializeField] private Color _colorInGC;
     [SerializeField] private EventTrigger _eventTrigger;
 
-    private string _id;
+    private int _id;
     private bool _selectedInGC;
 
-    public void SetData(string description, string id)
+    public int ID
+    {
+        get => _id;
+        set => _id = value;
+    }
+
+    public void SetData(string description, int id)
     {
         _label.text = description;
-        _id = id;
+        ID = id;
     }
     
     public void DisableOption()

@@ -5,9 +5,15 @@ using UnityEngine;
 public class ButtonsGroup : MonoBehaviour
 {
     [SerializeField] private GlosaryChallengeController _glosaryChallengeController;
-    private List<OptionGC> _options;
+    [SerializeField] private List<OptionGC> _options;
 
     private OptionGC _oldSelectedButton;
+
+    public List<OptionGC> Options
+    {
+        get => _options;
+        set => _options = value;
+    }
 
     public OptionGC OldSelectedButton
     {

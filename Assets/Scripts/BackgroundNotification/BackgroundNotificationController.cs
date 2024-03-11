@@ -1,6 +1,8 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using Unity.Notifications.Android;
+using Unity.Notifications.iOS;
 
 #if UNITY_ANDROID
 using Unity.Notifications.Android;
@@ -32,7 +34,9 @@ public class BackgroundNotificationController : MonoBehaviour
 
     private void Start()
     {
+#if UNITY_ANDROID
         StartCoroutine(NotificationPermission());
+#endif
         
     }
 
@@ -111,7 +115,7 @@ public class BackgroundNotificationController : MonoBehaviour
         CreateNotification(backgroundNotification);
 #endif
     }
-
+#if UNITY_ANDROID
     private IEnumerator NotificationPermission() 
     { 
         var request = new PermissionRequest();
@@ -119,4 +123,5 @@ public class BackgroundNotificationController : MonoBehaviour
             yield return null;
         }
     }
+#endif
 }

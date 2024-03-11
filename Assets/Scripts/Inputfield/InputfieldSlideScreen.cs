@@ -134,10 +134,6 @@ private void Update()
         }
         InputFieldActive = false;
     }
- 
-}
-   
-
 #endif
 }
 public static class RectTransformExtension {

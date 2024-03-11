@@ -81,7 +81,11 @@ public class BackgroundNotificationControllerIos : MonoBehaviour
         iOSNotificationCenter.OnRemoteNotificationReceived += remoteNotification =>
         {
             Debug.Log($"CALLBACK: {remoteNotification.Identifier}/{remoteNotification.Title}/{remoteNotification.Body}");
-            GameEvents.AddNotificationPanel?.Invoke(remoteNotification.Body);
+            NotificationPanel notificationPanel = new NotificationPanel { 
+                Title = remoteNotification.Title,
+                Message = remoteNotification.Body
+            };
+            GameEvents.AddNotificationPanel?.Invoke(notificationPanel);
         };
     }
 #endif
