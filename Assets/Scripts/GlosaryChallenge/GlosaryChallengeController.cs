@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Question;
 using ScriptableCreator;
 using UnityEngine;
@@ -101,6 +102,7 @@ public void Evaluate()
             Debug.Log("evaluando");
             if (_concepts.OldSelectedButton.ID == _definitions.OldSelectedButton.ID)
             {
+                Debug.Log("Se emparejo: " + _concepts.OldSelectedButton.ID + " " + _definitions	.OldSelectedButton.ID);
                 _numberOfSelectedCouple++;
                 _concepts.OldSelectedButton.SetCorrectOption();
                 _optionChoose.Add(_concepts.OldSelectedButton);
@@ -161,9 +163,14 @@ public void Evaluate()
                 var tempIndex = GetRandomIndex();
                 for (int i = 0; i < _maxSelectedIndices; i++)
                 {
-                    var conceptAndDefinition = _conceptAndDefinitionSo.list[_randomIndices[i]];
-                    _concepts.Options[tempIndex.Item1[i]].StartAnimationWithData(conceptAndDefinition.concept, conceptAndDefinition.id);
-                    _definitions.Options[tempIndex.Item2[i]].StartAnimationWithData(conceptAndDefinition.definition, conceptAndDefinition.id);
+                    var conceptAndDefinition = _conceptAndDefinitionSo.list.FirstOrDefault(x => x.id	 == _actualIndices[i]);
+                    if (conceptAndDefinition != null)
+                    {
+                        _concepts.Options[tempIndex.Item1[i]]
+                            .StartAnimationWithData(conceptAndDefinition.concept, conceptAndDefinition.id);
+                        _definitions.Options[tempIndex.Item2[i]].StartAnimationWithData(conceptAndDefinition.definition,
+                            conceptAndDefinition.id);
+                    }
                 }
                 
                 // _concepts.StartCleanAnimationGroup();
@@ -226,29 +233,29 @@ public void Evaluate()
         UseTimer = false;
     }
 
-    // private void OnDrawGizmosSelected()
-    // {
-    //     for (int i = 0; i < _concepts.Options.Count; i++)
-    //     {
-    //         Random.InitState(_concepts.Options[i].ID);
-    //         Gizmos.color = new Color(
-    //             Random.Range(0, 1f), 
-    //             Random.Range(0, 1f), 
-    //             Random.Range(0, 1f)
-    //         );
-    //         Gizmos.DrawSphere(_concepts.Options[i].transform.position, 5f);
-    //     }
-    //     for (int i = 0; i < _definitions.Options.Count; i++)
-    //     {
-    //         Random.InitState(_definitions.Options[i].ID);
-    //         Gizmos.color = new Color(
-    //             Random.Range(0, 1f), 
-    //             Random.Range(0, 1f), 
-    //             Random.Range(0, 1f)
-    //         );
-    //         Gizmos.DrawSphere(_definitions.Options[i].transform.position, 5f);
-    //     }
-    // }
+    private void OnDrawGizmosSelected()
+    {
+        for (int i = 0; i < _concepts.Options.Count; i++)
+        {
+            Random.InitState(_concepts.Options[i].ID);
+            Gizmos.color = new Color(
+                Random.Range(0, 1f), 
+                Random.Range(0, 1f), 
+                Random.Range(0, 1f)
+            );
+            Gizmos.DrawSphere(_concepts.Options[i].transform.position, 5f);
+        }
+        for (int i = 0; i < _definitions.Options.Count; i++)
+        {
+            Random.InitState(_definitions.Options[i].ID);
+            Gizmos.color = new Color(
+                Random.Range(0, 1f), 
+                Random.Range(0, 1f), 
+                Random.Range(0, 1f)
+            );
+            Gizmos.DrawSphere(_definitions.Options[i].transform.position, 5f);
+        }
+    }
     
     private void GameEvents_CorrectlyAnswered()
     {

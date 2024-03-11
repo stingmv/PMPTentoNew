@@ -1,8 +1,6 @@
 using UnityEngine;
 using System;
 using System.Collections;
-using Unity.Notifications.Android;
-using Unity.Notifications.iOS;
 
 #if UNITY_ANDROID
 using Unity.Notifications.Android;
