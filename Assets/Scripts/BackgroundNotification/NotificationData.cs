@@ -18,4 +18,9 @@ public class NotificationData : ScriptableObject
     {
         NotificationList.Add(notificationPanel);
     }
+
+    public void RemoveNotification(NotificationPanel notificationPanel)
+    { 
+        NotificationList.Remove(notificationPanel);
+    }
 }

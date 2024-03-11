@@ -14,11 +14,13 @@ public class Notifications : MonoBehaviour
         ClearChildrenAchievement();
         var notifications = notificationData.NotificationList;
         var textChild = prefab.GetComponentInChildren<TextMeshProUGUI>();
+        
 
         foreach (var item in notifications)
         {
             textChild.SetText(item.Message);
-            Instantiate(prefab, content);
+            var message = Instantiate(prefab, content);
+            message.GetComponent<NotificationMessage>().SetNotificationPanel(item);
         }
     }
 

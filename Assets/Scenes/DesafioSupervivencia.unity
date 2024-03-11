@@ -6876,6 +6876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questionInformation: {fileID: 1498630611}
+  _incorrectQuestions: {fileID: 0}
   _onSelectOption:
     m_PersistentCalls:
       m_Calls: []
@@ -6951,6 +6952,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _onNextQuestion:
+    m_PersistentCalls:
+      m_Calls: []
+  _onWonGame:
+    m_PersistentCalls:
+      m_Calls: []
+  _onLostGame:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLatestQuestionAchieved:
     m_PersistentCalls:
       m_Calls: []
   _toRegisterSo: {fileID: 11400000, guid: b8a089dc3b7564446ba9ba4dc22468da, type: 2}

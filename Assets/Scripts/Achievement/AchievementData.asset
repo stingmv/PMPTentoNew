@@ -15,7 +15,7 @@ MonoBehaviour:
   achievementList:
   - Name: Racha de 5 respuestas
     MaxCounter: 5
-    CurrentCounter: 0
+    CurrentCounter: 1
     MaxLevel: 5
     CurrentLevel: 0
     MaxCounterDifficulty: 0
