@@ -738,6 +738,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8359021804420652512, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
   m_PrefabInstance: {fileID: 1012713238}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &678766984 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5379867882959917788, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+  m_PrefabInstance: {fileID: 1123753194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b6a75a8b72d2204286b4db481b60a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &685507873
 GameObject:
   m_ObjectHideFlags: 0
@@ -6657,6 +6668,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d4b6fd6e48d2f47b72118dd0f56a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1123753196 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3230999204599561548, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+  m_PrefabInstance: {fileID: 1123753194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1130874321
 GameObject:
   m_ObjectHideFlags: 0
@@ -6855,6 +6877,7 @@ GameObject:
   - component: {fileID: 1337041751}
   - component: {fileID: 1337041750}
   - component: {fileID: 1337041752}
+  - component: {fileID: 1337041753}
   m_Layer: 0
   m_Name: Question Controller
   m_TagString: Untagged
@@ -6955,10 +6978,34 @@ MonoBehaviour:
       m_Calls: []
   _onWonGame:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 678766984}
+        m_TargetAssemblyTypeName: KeepScaleOnCanvas, Assembly-CSharp
+        m_MethodName: set_Lost
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onLostGame:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 678766984}
+        m_TargetAssemblyTypeName: KeepScaleOnCanvas, Assembly-CSharp
+        m_MethodName: set_Lost
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnLatestQuestionAchieved:
     m_PersistentCalls:
       m_Calls: []
@@ -6995,6 +7042,21 @@ MonoBehaviour:
   _lastColorIncorrect: {r: 0.7607843, g: 0.1764706, b: 0.1764706, a: 1}
   _camera: {fileID: 1424572914}
   _duration: 0.5
+--- !u!114 &1337041753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337041749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e290488f7e973243ac8888e454870f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textMessage: {fileID: 11400000, guid: 256d111b96068bb449fd53405d3777de, type: 2}
+  _messageLabel: {fileID: 1123753196}
+  _won: 0
 --- !u!1 &1424572912
 GameObject:
   m_ObjectHideFlags: 0

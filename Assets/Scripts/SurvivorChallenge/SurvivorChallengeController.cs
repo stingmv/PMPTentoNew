@@ -71,6 +71,7 @@ public class SurvivorChallengeController : MonoBehaviour
         UIEvents.ShowQuestionView += UIEvents_ShowQuestionView;
         GameEvents.CorrectlyAnswered += GameEvents_CorrectlyAnswered;
         GameEvents.IncorrectlyAnswered += GameEvents_IncorrectlyAnswered;
+        GameEvents.GetNameExam += GameEvents_GetNameExam;
         GameEvents.GameWon += GameEvents_GameWon;
         GameEvents.GameLost += GameEvents_GameWon;
     }
@@ -81,6 +82,7 @@ public class SurvivorChallengeController : MonoBehaviour
         UIEvents.ShowQuestionView -= UIEvents_ShowQuestionView;
         GameEvents.CorrectlyAnswered -= GameEvents_CorrectlyAnswered;
         GameEvents.IncorrectlyAnswered -= GameEvents_IncorrectlyAnswered;
+        GameEvents.GetNameExam -= GameEvents_GetNameExam;
         GameEvents.GameWon -= GameEvents_GameWon;
         GameEvents.GameLost -= GameEvents_GameWon;
     }
@@ -92,6 +94,11 @@ public class SurvivorChallengeController : MonoBehaviour
         Debug.Log("GameEvent_GameWon");
         UIEvents.ShowFinishView?.Invoke();
     }
+    private void GameEvents_GetNameExam(string obj)
+    {
+        _pmpService.Service_GetExam();
+    }
+
     private void GameEvents_IncorrectlyAnswered()
     {
         _numberOfConsecutiveQuestion = -2;

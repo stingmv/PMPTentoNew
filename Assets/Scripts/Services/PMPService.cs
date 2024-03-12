@@ -58,6 +58,10 @@ public class PMPService : MonoBehaviour
     {
         StartCoroutine(IRegisterExam());
     }
+    public void Service_GetExamToTrainingChallenge()
+    {
+        StartCoroutine(IRegisterExam());
+    }
     public void Service_GetQuestions(int idExam)
     {
         StartCoroutine(IGetQuestions(idExam.ToString()));
