@@ -1955,6 +1955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _registerExam: {fileID: 11400000, guid: b8a089dc3b7564446ba9ba4dc22468da, type: 2}
+  _domainsAndTaskSo: {fileID: 11400000, guid: 6b1d3e2aa35f11546b8d503c8bc3b55c, type: 2}
   _gameSettings: {fileID: 11400000, guid: 8a3b1a51c1f08c4498c73dfd5e4368d2, type: 2}
   _userData: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
   _questionController: {fileID: 0}
@@ -2637,7 +2638,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.047058824, g: 0.15686275, b: 0.34901962, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

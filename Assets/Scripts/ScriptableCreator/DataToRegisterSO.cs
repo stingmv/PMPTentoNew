@@ -52,11 +52,11 @@ public class QuestionInformationExam
     public int tiempo;
     public string fechaInicio;
     public string idAspNetUsers;
-    public object usuario;
+    // public object usuario;
     public int estadoExamen;
-    public object puntaje;
-    public object desempenio;
-    public object percentil;
+    // public object puntaje;
+    // public object desempenio;
+    // public object percentil;
     public int preguntasRespondidas;
     public int preguntasPendientes;
     public QuestionItem[] listaPreguntas;
@@ -70,12 +70,12 @@ public class QuestionItem
     public int idSimuladorPmpTarea;
     public int idSimuladorPmpPregunta;
     public bool ejecutado;
-    public object idSimuladorPmpPreguntaRespuesta;
-    public object puntaje;
+    // public object idSimuladorPmpPreguntaRespuesta;
+    // public object puntaje;
     public QuestionAndOptions pregunta;
     public string dominioNombre;
     public string tareaNombre;
-    public object nombreExamen;
+    // public object nombreExamen;
     
 }
 
@@ -88,8 +88,8 @@ public class QuestionAndOptions
     public bool tieneRetroalimentacion;
     public string urlRetroalimentacionVideo;
     public string retroalimentacion;
-    public object urlImagenPregunta;
-    public object idPmpTipoPreguntaClasificacion;
+    // public object urlImagenPregunta;
+    // public object idPmpTipoPreguntaClasificacion;
     public bool activo;
     public OptionItem[] respuesta;
 }
@@ -159,7 +159,7 @@ public class DataToRegisterSO : ScriptableObject
     }
     private void GameEvents_GetNameExam(string obj)
     {
-        dataToRegisterExam.NombreExamen += obj;
+        dataToRegisterExam.NombreExamen = obj;
     }
 
 }

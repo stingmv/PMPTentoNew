@@ -2,16 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using Handles3D;
 using Question;
 using ScriptableCreator;
 using UI.Button;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 public class VideoQuestionModeController : MonoBehaviour
 {
     [SerializeField] private DataToRegisterSO _registerExam;
+    [SerializeField] private DomainsAndTaskSO _domainsAndTaskSo;
     [SerializeField] private ScriptableObjectSettings _gameSettings;
     [SerializeField] private ScriptableObjectUser _userData;
 
@@ -124,8 +127,16 @@ public class VideoQuestionModeController : MonoBehaviour
     public void GetQuestions()
     {
 
-        _pmpService.Service_GetQuestions(9682);
+        // _pmpService.Service_GetQuestions(9682);
         UIEvents.ShowLoadingView?.Invoke();
-        // GameEvents.GetNameExam?.Invoke(DateTime.Now.ToString(CultureInfo.CurrentCulture));
+        var task = _domainsAndTaskSo.DomainContainer.listaTarea[
+            Random.Range(
+                0,
+                _domainsAndTaskSo.DomainContainer.listaTarea.Length
+            )
+        ];
+        _registerExam.dataToRegisterExam.IdSimuladorPmpTarea = task.id;
+        _registerExam.dataToRegisterExam.IdSimuladorPmpDominio = _domainsAndTaskSo.DomainContainer.listaDominio.FirstOrDefault( x => x.id == task.idSimuladorPmpDominio)!.id;
+        GameEvents.GetNameExam?.Invoke($"ModoAprendizaje-{_userData.userInfo.user.detail.usernameG}-{task.id}-{task.idSimuladorPmpDominio}-{DateTime.Now.ToString(CultureInfo.CurrentCulture)}");
     }
 }

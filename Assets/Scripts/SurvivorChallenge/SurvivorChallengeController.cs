@@ -1,14 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using Question;
 using ScriptableCreator;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SurvivorChallengeController : MonoBehaviour
 {
     [SerializeField] private DataToRegisterSO _registerSo;
     [SerializeField] private DomainsAndTaskSO _domainsAndTask;
+    [SerializeField] private DataToRegisterSO _registerExam;
     [SerializeField] private ScriptableObjectSettings _gameSettings;
     [SerializeField] private ScriptableObjectUser _userData;
 
@@ -137,9 +141,19 @@ public class SurvivorChallengeController : MonoBehaviour
     public void GetQuestions()
     {
 
-        _pmpService.Service_GetQuestions(9682);
+        // _pmpService.Service_GetQuestions(9682);
         UIEvents.ShowLoadingView?.Invoke();
         // GameEvents.GetNameExam?.Invoke(DateTime.Now.ToString(CultureInfo.CurrentCulture));
+        var task = _domainsAndTask.DomainContainer.listaTarea[
+            Random.Range(
+                0,
+                _domainsAndTask.DomainContainer.listaTarea.Length
+            )
+        ];
+        _registerExam.dataToRegisterExam.IdSimuladorPmpTarea = task.id;
+        _registerExam.dataToRegisterExam.IdSimuladorPmpDominio = _domainsAndTask.DomainContainer.listaDominio.FirstOrDefault( x => x.id == task.idSimuladorPmpDominio)!.id;
+        GameEvents.GetNameExam?.Invoke($"DesafíoSupervivencia-{_userData.userInfo.user.detail.usernameG}-{task.id}-{task.idSimuladorPmpDominio}-{DateTime.Now.ToString(CultureInfo.CurrentCulture)}");
+
     }
 
     public void AddMoreTime()

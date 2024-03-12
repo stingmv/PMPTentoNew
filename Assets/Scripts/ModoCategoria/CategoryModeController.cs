@@ -123,8 +123,11 @@ public class CategoryModeController : MonoBehaviour
     public void GetQuestions()
     {
 
-        _pmpService.Service_GetQuestions(9682);
+        // _pmpService.Service_GetQuestions(9682);
         UIEvents.ShowLoadingView?.Invoke();
-        // GameEvents.GetNameExam?.Invoke(DateTime.Now.ToString(CultureInfo.CurrentCulture));
+        GameEvents.GetNameExam?.Invoke($"ModoCategoria-" +
+                                       $"{_domainsAndTask.DomainContainer.listaDominio}-" +
+                                       $"{_domainsAndTask.DomainContainer.listaTarea}-" +
+                                       $"{DateTime.Now.ToString(CultureInfo.CurrentCulture)}");
     }
 }

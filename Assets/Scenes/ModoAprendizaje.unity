@@ -8430,6 +8430,8 @@ MonoBehaviour:
   _domainsAndTask: {fileID: 11400000, guid: 6b1d3e2aa35f11546b8d503c8bc3b55c, type: 2}
   _gameSettings: {fileID: 11400000, guid: 8a3b1a51c1f08c4498c73dfd5e4368d2, type: 2}
   _userData: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
+  _DomainLabelInQuestions: {fileID: 175734391}
+  _TaskLabelInQuestions: {fileID: 117091210}
   _questionController: {fileID: 1337041750}
   _pmpService: {fileID: 1767933826}
   _rewardItemController: {fileID: 1123753195}
@@ -8598,7 +8600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1854090201
 RectTransform:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ using Handles3D;
 using ModoAprendizaje;
 using Question;
 using ScriptableCreator;
+using TMPro;
 using UI.Button;
 using Unity.Mathematics;
 using UnityEngine;
@@ -31,7 +32,8 @@ public class LearningModeController : MonoBehaviour
     [SerializeField] private DomainsAndTaskSO _domainsAndTask;
     [SerializeField] private ScriptableObjectSettings _gameSettings;
     [SerializeField] private ScriptableObjectUser _userData;
-
+    [SerializeField] private TextMeshProUGUI _DomainLabelInQuestions;
+    [SerializeField] private TextMeshProUGUI _TaskLabelInQuestions;
     [SerializeField] private QuestionController _questionController;
     [SerializeField] private PMPService _pmpService;
     [SerializeField] private RewardItemController _rewardItemController;
@@ -45,6 +47,7 @@ public class LearningModeController : MonoBehaviour
     private List<PlatformItem> _platformItems = new List<PlatformItem>();
 
     private PlatformItem _currentPlatform;
+    private PlatformItem.PlatformInformation _selectedPlatformInformation;
     // [Header("Reward")] 
     private bool haveInformationStored;
     private void Awake()
@@ -70,8 +73,14 @@ public class LearningModeController : MonoBehaviour
         GameEvents.GetNameExam += GameEvents_GetNameExam;
         GameEvents.CorrectlyAnswered += GameEvents_CorrectlyAnswered;
         GameEvents.IncorrectlyAnswered += GameEvents_IncorrectlyAnswered;
+        GameEvents.SendInformation += GameEvents_SendInformation;
         GameEvents.GameWon += GameEvents_GameWon;
         GameEvents.GameLost += GameEvents_GameWon;
+    }
+
+    private void GameEvents_SendInformation(PlatformItem.PlatformInformation platformInformation)
+    {
+        _selectedPlatformInformation = platformInformation;
     }
 
     private void GameEvents_GameWon()
@@ -243,10 +252,14 @@ public class LearningModeController : MonoBehaviour
 
     public void GetQuestions()
     {
-
-        _pmpService.Service_GetQuestions(9682);
+        var response =_pmpService.Service_GetDomainAndTaskNames(_selectedPlatformInformation.id);
+        _DomainLabelInQuestions.text = $"Dominio: {response.Item1}";
+        _TaskLabelInQuestions.text = $"Tarea: {response.Item2}";
+        _registerExam.dataToRegisterExam.IdSimuladorPmpTarea = _selectedPlatformInformation.id;
+        _registerExam.dataToRegisterExam.IdSimuladorPmpDominio = _selectedPlatformInformation.idDomain;
+        // _pmpService.Service_GetQuestions(9682);
         UIEvents.ShowLoadingView?.Invoke();
-        // GameEvents.GetNameExam?.Invoke(DateTime.Now.ToString(CultureInfo.CurrentCulture));
+        GameEvents.GetNameExam?.Invoke($"ModoAprendizaje-{_userData.userInfo.user.detail.usernameG}-{response.Item1}-{response.Item2}-{DateTime.Now.ToString(CultureInfo.CurrentCulture)}");
     }
 
     public void SendRetrieveAttempt()

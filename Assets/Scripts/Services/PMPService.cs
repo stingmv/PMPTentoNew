@@ -20,6 +20,21 @@ public class PMPService : MonoBehaviour
         GameEvents.ExamObtained -= GameEvents_ExamObtained;
     }
 
+    public (string, string) Service_GetDomainAndTaskNames(int idTask)
+    {
+        var domAndTask =_domainsAndTaskSo.DomainContainer.listaTarea.FirstOrDefault(x => x.id == idTask);
+        if (domAndTask != null)
+        {
+            return (
+                _domainsAndTaskSo.DomainContainer.listaDominio
+                    .FirstOrDefault(x => x.id == domAndTask.idSimuladorPmpDominio)!.nombre, domAndTask.nombre);
+        }
+        else
+        {
+            return (null, null);
+        }
+    }
+
     private void GameEvents_ExamObtained(int obj)
     {
         Service_GetQuestions(obj);
