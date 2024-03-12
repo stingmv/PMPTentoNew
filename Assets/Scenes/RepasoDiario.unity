@@ -233,6 +233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pmpService: {fileID: 79173340}
   _questionInformation: {fileID: 956027479}
+  _textFeedback: {fileID: 1284313838}
+  _videoFeedback: {fileID: 791537744}
   _nameListItemPrefab: {fileID: 7393046649564979277, guid: 34b5565cf49a062498ba6605038aed2c, type: 3}
   _session: []
   _nameListContainer: {fileID: 1275339288}
@@ -3096,7 +3098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &791537741
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5015,10 +5017,10 @@ RectTransform:
   - {fileID: 1284313840}
   m_Father: {fileID: 106950008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.016507925}
-  m_AnchorMax: {x: 1, y: 0.492}
-  m_AnchoredPosition: {x: 0, y: -0.00024414062}
-  m_SizeDelta: {x: 0, y: -0.000061035}
+  m_AnchorMin: {x: 0, y: 0.093644924}
+  m_AnchorMax: {x: 1, y: 0.73700005}
+  m_AnchoredPosition: {x: 0, y: -0.51898193}
+  m_SizeDelta: {x: 0, y: 1.0380859}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1233552850
 MonoBehaviour:
@@ -5279,6 +5281,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 956027483}
     m_Modifications:
+    - target: {fileID: 61634834067843069, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61634834067843069, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 79173339}
+    - target: {fileID: 61634834067843069, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ValidateResponse
+      objectReference: {fileID: 0}
+    - target: {fileID: 61634834067843069, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DailyReviewController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 61634834067843069, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 5567934011976523633}
+    - target: {fileID: 61634834067843069, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Question.Option, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 182303278032894870, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: _questionController
       value: 
@@ -5383,9 +5409,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4772915729400415624, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772915729400415624, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 79173339}
+    - target: {fileID: 4772915729400415624, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ValidateResponse
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772915729400415624, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DailyReviewController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772915729400415624, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 7446326349506321351}
+    - target: {fileID: 4772915729400415624, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Question.Option, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5567934010644037969, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: _questionController
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519993202732748603, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519993202732748603, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 79173339}
+    - target: {fileID: 6519993202732748603, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ValidateResponse
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519993202732748603, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DailyReviewController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519993202732748603, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 182303278852613558}
+    - target: {fileID: 6519993202732748603, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Question.Option, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7030622237611791242, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_SizeDelta.x
@@ -5402,6 +5476,30 @@ PrefabInstance:
     - target: {fileID: 7446326348669814247, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: _questionController
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023473246455761820, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023473246455761820, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 79173339}
+    - target: {fileID: 8023473246455761820, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ValidateResponse
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023473246455761820, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DailyReviewController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023473246455761820, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2125055818553616410}
+    - target: {fileID: 8023473246455761820, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Question.Option, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8219959850649161535, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_SizeDelta.x
@@ -6763,7 +6861,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Gu\xEDa de la tarea: \u201DGestionar conflictos"
+  m_text: Material adicional
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47e61f418216d1343be7815f065eaf8b, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 3286b8f8d094a89439355696d00dd91c, type: 2}
@@ -6797,7 +6895,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
