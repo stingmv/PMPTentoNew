@@ -20,7 +20,7 @@ namespace PowerUp
         public void UseSecondOportunity()
         {
             _questionInformation.EnableOptions();
-            if (_event.amount > 0)
+            if (Amount > 0)
             {
                 _imageButton.color = _activeColor;
                 _labelButton.color = _activeColor;
@@ -38,7 +38,7 @@ namespace PowerUp
 
         public void ComprovePower()
         {
-            if (_event.amount > 0)
+            if (Amount > 0)
             {
                 _imageButton.color = _activeColor;
                 _labelButton.color = _activeColor;

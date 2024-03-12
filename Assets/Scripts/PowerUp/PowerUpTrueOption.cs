@@ -16,7 +16,7 @@ namespace PowerUp
 
         public void UsePowerUp()
         {
-            if (_event.amount >0)
+            if (Amount >0)
             {
                 _onUsePowerUp?.Invoke();
             }

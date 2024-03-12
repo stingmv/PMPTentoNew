@@ -2085,7 +2085,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472422088475748101}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0df0da52bebf4149bb3d725a23b10e13, type: 3}
   m_Name: 
@@ -2547,6 +2547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rouletteSO: {fileID: 11400000, guid: 6836fddc85a005e45a603180395db1ee, type: 2}
+  _userSO: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
   _rouletteTransform: {fileID: 900230765647491178}
   _speedRotationWithDrag: 220
   _velocidadWithoutDrag: 0.3
@@ -7129,7 +7130,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759579381270943565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0df0da52bebf4149bb3d725a23b10e13, type: 3}
   m_Name: 
@@ -16645,7 +16646,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4312126795473142152}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0df0da52bebf4149bb3d725a23b10e13, type: 3}
   m_Name: 
@@ -18689,7 +18690,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4874631688832026841}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0df0da52bebf4149bb3d725a23b10e13, type: 3}
   m_Name: 
@@ -28254,6 +28255,11 @@ MonoBehaviour:
   _powerUpDeleteOption: {fileID: 11400000, guid: 5f4ca4ad9839dcf499046b6730956fc5, type: 2}
   _powerUpNextQuestion: {fileID: 11400000, guid: baa0e82d7d157af4c91e4fff3d3b4f1a, type: 2}
   _powerUpMoreTime: {fileID: 11400000, guid: 9026b1be2dac5c140aaca71b68c20ffb, type: 2}
+  _powerUpSecondOportunityI: {fileID: 4812208473740971389}
+  _powerUpTrueOptionI: {fileID: 8285840202725325511}
+  _powerUpDeleteOptionI: {fileID: 5962492019326670089}
+  _powerUpNextQuestionI: {fileID: 4006909609730373062}
+  _powerUpMoreTimeI: {fileID: 5863526860991831337}
   _spriteSecondOportunity: {fileID: 21300000, guid: 0e128f3b93e169e40822a11676204497, type: 3}
   _spriteTrueOption: {fileID: 21300000, guid: 96918bb133963934487bc8fafd006cdf, type: 3}
   _spriteDeleteOption: {fileID: 21300000, guid: e14ea84a209811942920e9ca3ee663c8, type: 3}
@@ -32757,7 +32763,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8476664456357229708}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0df0da52bebf4149bb3d725a23b10e13, type: 3}
   m_Name: 

@@ -59,12 +59,12 @@ namespace MainMenu
             GameEvents.UsernameSelected	 -= GameEvents_UsernameSelected;
         }
 
-        private void GameEvents_ExperienceChanged(float obj)
+        private void GameEvents_ExperienceChanged()
         {
             _totalExpirience.text = _user.userInfo.user.detail.totalExperience.ToString();
         }
 
-        private void GameEvents_CoinsChanged(float obj)
+        private void GameEvents_CoinsChanged()
         {
             _totalCoins.text = _user.userInfo.user.detail.totalCoins.ToString();
         }

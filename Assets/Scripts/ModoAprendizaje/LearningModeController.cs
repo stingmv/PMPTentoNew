@@ -100,8 +100,10 @@ public class LearningModeController : MonoBehaviour
             _gameSettings.settingData.MAReward.aditionalBonusExpConsecutiveQuestion * clampConsecutive +
             // Bonus by achievement
             _gameSettings.settingData.MAReward.aditionalBonusExpForAchievement * 0;
-        GameEvents.RequestExperienceChange?.Invoke(exp);
+        // GameEvents.RequestExperienceChange?.Invoke(exp);
+        
         _experienceAccumulated += exp;
+        _userData.userInfo.user.detail.totalExperience += (int)exp;
 
         var coins =
             // Base coins
@@ -110,8 +112,13 @@ public class LearningModeController : MonoBehaviour
             _gameSettings.settingData.MAReward.aditionalBonusCoinsConsecutiveQuestion * clampConsecutive +
             // Bonus by achievement
             _gameSettings.settingData.MAReward.aditionalBonusCoinsForAchievement * 0;
+        
         _coinsAccumulated += coins;
-        GameEvents.RequestCoinsChange?.Invoke(coins);
+        _userData.userInfo.user.detail.totalCoins += (int)coins;
+
+        
+        // GameEvents.RequestCoinsChange?.Invoke(coins);
+        GameEvents.RequestUpdateDetail?.Invoke();
     }
 
     private void GameEvents_GetNameExam(string obj)

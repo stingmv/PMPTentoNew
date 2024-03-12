@@ -38,6 +38,7 @@ namespace Question
         #region Methods
 
 
+        /*
         public void AddDeleteOption(int amount)
         {
             _prefabDeleteOption.SetData(amount);
@@ -68,6 +69,7 @@ namespace Question
             _prefabTrueOption.SetData(amount);
             _listToInstantiate.Enqueue(_prefabTrueOption);
         }
+        */
 
         public void AddCoins(int amount)
         {

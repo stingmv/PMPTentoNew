@@ -106,8 +106,10 @@ public class SurvivorChallengeController : MonoBehaviour
             _gameSettings.settingData.DSReward.aditionalBonusExpConsecutiveQuestion * clampConsecutive +
             // Bonus by achievement
             _gameSettings.settingData.DSReward.aditionalBonusExpForAchievement * 0;
-        GameEvents.RequestExperienceChange?.Invoke(exp);
+        // GameEvents.RequestExperienceChange?.Invoke(exp);
         _experienceAccumulated += exp;
+        _userData.userInfo.user.detail.totalExperience += (int)exp;
+
 
         var coins =
             // Base coins
@@ -117,7 +119,10 @@ public class SurvivorChallengeController : MonoBehaviour
             // Bonus by achievement
             _gameSettings.settingData.DSReward.aditionalBonusCoinsForAchievement * 0;
         _coinsAccumulated += coins;
-        GameEvents.RequestCoinsChange?.Invoke(coins);
+        _userData.userInfo.user.detail.totalCoins += (int)coins;
+
+        // GameEvents.RequestCoinsChange?.Invoke(coins);
+        GameEvents.RequestUpdateDetail?.Invoke();
     }
     private void UIEvents_ShowQuestionView()
     {

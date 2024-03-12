@@ -155,57 +155,57 @@ public class UserManager : MonoBehaviour
         // EndFinishLoadData = true;
     }
 
-    private void InitPowerUpData()
-    {
-        if (PlayerPrefs.HasKey("pu_secondOportunity"))
-        {
-            _powerUpSecondOportunity.amount = PlayerPrefs.GetInt("pu_secondOportunity");
-        }
-        else
-        {
-            _powerUpSecondOportunity.amount = 5;
-            PlayerPrefs.SetInt("pu_secondOportunity", _powerUpSecondOportunity.amount);
-            PlayerPrefs.Save();
-        }
-        if (PlayerPrefs.HasKey("pu_trueOption"))
-        {
-            _powerUpTrueOption.amount = PlayerPrefs.GetInt("pu_trueOption");
-        }
-        else
-        {
-            _powerUpTrueOption.amount = 5;
-            PlayerPrefs.SetInt("pu_trueOption", _powerUpTrueOption.amount);
-            PlayerPrefs.Save();
-        }
-        if (PlayerPrefs.HasKey("pu_deleteOption"))
-        {
-            _powerUpDeleteOption.amount = PlayerPrefs.GetInt("pu_deleteOption");
-        }
-        else
-        {
-            _powerUpDeleteOption.amount = 5;
-            PlayerPrefs.SetInt("pu_deleteOption", _powerUpDeleteOption.amount);
-            PlayerPrefs.Save();
-        }
-        if (PlayerPrefs.HasKey("pu_nextQuestion"))
-        {
-            _powerUpNextQuestion.amount = PlayerPrefs.GetInt("pu_nextQuestion");
-        }
-        else
-        {
-            _powerUpNextQuestion.amount = 5;
-            PlayerPrefs.SetInt("pu_nextQuestion", _powerUpNextQuestion.amount);
-            PlayerPrefs.Save();
-        }
-        if (PlayerPrefs.HasKey("pu_moreTime"))
-        {
-            _powerUpMoreTime.amount = PlayerPrefs.GetInt("pu_moreTime");
-        }
-        else
-        {
-            _powerUpMoreTime.amount = 5;
-            PlayerPrefs.SetInt("pu_moreTime", _powerUpMoreTime.amount);
-            PlayerPrefs.Save();
-        }
-    }
+    // private void InitPowerUpData()
+    // {
+    //     if (PlayerPrefs.HasKey("pu_secondOportunity"))
+    //     {
+    //         _powerUpSecondOportunity.amount = PlayerPrefs.GetInt("pu_secondOportunity");
+    //     }
+    //     else
+    //     {
+    //         _powerUpSecondOportunity.amount = 5;
+    //         PlayerPrefs.SetInt("pu_secondOportunity", _powerUpSecondOportunity.amount);
+    //         PlayerPrefs.Save();
+    //     }
+    //     if (PlayerPrefs.HasKey("pu_trueOption"))
+    //     {
+    //         _powerUpTrueOption.amount = PlayerPrefs.GetInt("pu_trueOption");
+    //     }
+    //     else
+    //     {
+    //         _powerUpTrueOption.amount = 5;
+    //         PlayerPrefs.SetInt("pu_trueOption", _powerUpTrueOption.amount);
+    //         PlayerPrefs.Save();
+    //     }
+    //     if (PlayerPrefs.HasKey("pu_deleteOption"))
+    //     {
+    //         _powerUpDeleteOption.amount = PlayerPrefs.GetInt("pu_deleteOption");
+    //     }
+    //     else
+    //     {
+    //         _powerUpDeleteOption.amount = 5;
+    //         PlayerPrefs.SetInt("pu_deleteOption", _powerUpDeleteOption.amount);
+    //         PlayerPrefs.Save();
+    //     }
+    //     if (PlayerPrefs.HasKey("pu_nextQuestion"))
+    //     {
+    //         _powerUpNextQuestion.amount = PlayerPrefs.GetInt("pu_nextQuestion");
+    //     }
+    //     else
+    //     {
+    //         _powerUpNextQuestion.amount = 5;
+    //         PlayerPrefs.SetInt("pu_nextQuestion", _powerUpNextQuestion.amount);
+    //         PlayerPrefs.Save();
+    //     }
+    //     if (PlayerPrefs.HasKey("pu_moreTime"))
+    //     {
+    //         _powerUpMoreTime.amount = PlayerPrefs.GetInt("pu_moreTime");
+    //     }
+    //     else
+    //     {
+    //         _powerUpMoreTime.amount = 5;
+    //         PlayerPrefs.SetInt("pu_moreTime", _powerUpMoreTime.amount);
+    //         PlayerPrefs.Save();
+    //     }
+    // }
 }

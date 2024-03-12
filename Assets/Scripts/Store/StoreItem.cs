@@ -67,7 +67,7 @@ public class StoreItem : MonoBehaviour
         GameEvents.CoinsChanged -= GameEvents_CoinsChanged;
     }
 
-    private void GameEvents_CoinsChanged(float obj)
+    private void GameEvents_CoinsChanged()
     {
         if (_cost > _storeController.CoinsFromUser)
         {      

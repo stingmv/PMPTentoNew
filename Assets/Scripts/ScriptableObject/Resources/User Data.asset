@@ -16,17 +16,29 @@ MonoBehaviour:
     user:
       id: 
       idProveedor: 0
-      cursos: 247
+      cursos: 256
       idAlumno: 9818325
       idContacto: 0
       clave: 
       userName: pruebaxjrivera@bsginstitute.net
-      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.9U3JqXIoc1AwWsFhd2QiAawBZrNI9a-4nt1zNSYgWMsAFThjqAVgkQ.oAZdPk8gxpBFcZileFTcnQ.N0kvFfNLbb99Mg7W7VOe7QE4YX5CZY-DDh9A0sl4DVAub8AEOJDKrXFM0FmngU5KYq9zvBiBIV1jxnelsdfeA4CvA76J2i4wgzQZD8aQQA7ptRV-Ck9oioyOROw-joN9ptcTc6Id3ZTBzidpHxYLLDSkqMfCURAqUjpwb7TW2UTYIaYNCgXOBhcAsNDCit10g3JafgRDqPEi9mS-w4IlAPUezkSGYec7ZVZWSo2IUFmZawXeV2-6Rv0Gto-1TPcvKr_LqSrPjwq67p8uQRTdf-u9bjyLIjAsGrTv4sLIYj4aw4gZ9X1tDguscPcvbVTf9UK_4wd0zaCZkpBVtQ7Y_FRblItqOnCHptu3I4kvpeQwjhcrpeDqBZizQtFymFc38F5uxZlEI0j0Lzr5sicsvgJBDgoubzPGWkPxEpP4CrBAjDLFDjfBpU_vZynpyn1bcBFPW5G-0lWA8-oR3InsONAPJkU1pMpNTC4syztfXqyVGKPhQ_YC7YugOAXEPqeCW3opgSDTaU034_qi3xzvdoqAO4Ld04fyY0pkfj12yeKuiO9xKDpy0UKN8argQjWhBfKH6kZ8PsfUBMyqkUdHfFc-5vC7HB-Vil5HNvYFheVzfOTK1Or2KS1D5K8b953X.d1YogwLDQkUIpiFUwTS1CA
+      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.__xXQyDVm7THJkyusIdj76vFrias4IAHdHHDo-h6DzSUIJoSWK4Mwg.IcA2Mkt05PPmtDBpWOJmmw.XuEpyb6yKkVFQUuo_9FOOri4j3VRKghMCwO2ziNWMoZ90y9-TMUA2s7fnjG-ez2PUT1EeDNPOq0o4C7Bxii47t5SB8KDPaFIsZu4CWssW9S36x2saxcDbEDc62fY8bPWpkGx-8fUBBr5BwhUF8sGbn0vZvRS3GojNCC5GoO3MH345SreBAqFcJvkZgMXMe7VcDIzdwn-BzMmW5H4rzXN-elEXl3geGwXu6jMD4dNlqDKeKURTt0AZmNDecWkf8w8aSScl-qPMrNWiZ5L71xMA1pgF0OXo-emLCd7O59-ABkHvZTReKpRC7Qqk9AUXzLv43L-HmPK-0YwGGtLffr6HcU17DHpz_fSRxGRsleqRWcR_T9ii9TPJBdKApB2OxREmVf-NRpfi4iRcA4XpgAv9L2edA8WQpOXvvQ7BAHkrHjBgm8zZGayqk7yGIpK3Z4D6B3CGCv3uJcwoA10vaU1og9nF-IOlSFu8MBSADvbHe_JOYvQEU8tgR3sONw2fr92QwwsupLzLJCFfWnEA4YxpY0l15IQNRxP9BGFD5J1uS6mN6vVaTR2drEyeoteo7_IUS1uvuYvOvutuNEltwTdlfkClzOrWt28SiGz34rHP9vpG7Ksul6EmWurzMCLJz7q.U79S3gbU1DRs7P9WmLqe2g
       tipoCarrera: 1
       correoEnc: 
       telEnc: 
       userAgent: 
       userIp: 
+      detail:
+        idCaracteristicaGamificacion: 1
+        idAlumno: 9818325
+        usernameG: JRivera
+        instructorID: 0
+        totalCoins: 325
+        totalExperience: 820
+        discardOption: 20
+        skipQuestion: 30
+        findCorrectAnswer: 29
+        increaseTime: 30
+        secondChance: 26
       excepcion:
         excepcionGenerada: 0
         descripcionGeneral: 
@@ -34,8 +46,5 @@ MonoBehaviour:
       ItemStates: []
     haveUser: 1
     haveUsername: 1
-    username: dwedwe
     haveInstructor: 1
-    idInstructor: 0
-    totalExperience: 7950
-    totalCoins: 1927
+    idInstructor: 1

@@ -13,6 +13,7 @@ using Random = UnityEngine.Random;
 public class Roulette : MonoBehaviour
 {
     [SerializeField] private RouletteSO _rouletteSO;
+    [SerializeField] private ScriptableObjectUser _userSO;
 
     [SerializeField] private RectTransform _rouletteTransform; // RectTransform de la ruleta
     [SerializeField] private float _speedRotationWithDrag = 5f; // Ajusta la velocidad de rotación
@@ -197,14 +198,35 @@ public class Roulette : MonoBehaviour
         if (selecetdItem.RouletteItemData._ItemRouletteSo.GetType() == typeof(PowerUpItemRoulette))
         {
             var item = selecetdItem.RouletteItemData._ItemRouletteSo as PowerUpItemRoulette;
+            switch (item.powerUpSO.nameInPlayerPrefs)
+            {
+                case "pu_deleteOption":
+                    _userSO.userInfo.user.detail.discardOption += item.powerUpSO.amount;
+                    break;
+                case "pu_moreTime":
+                    _userSO.userInfo.user.detail.increaseTime += item.powerUpSO.amount;
+                    break;
+                case "pu_nextQuestion":
+                    _userSO.userInfo.user.detail.skipQuestion += item.powerUpSO.amount;
+                    break;
+                case "pu_secondOportunity":
+                    _userSO.userInfo.user.detail.secondChance += item.powerUpSO.amount;
+                    break;
+                case "pu_trueOption":
+                    _userSO.userInfo.user.detail.findCorrectAnswer += item.powerUpSO.amount;
+                    break;
+            }
             item.powerUpSO.amount += selecetdItem.Amount;
-            PlayerPrefs.SetInt(item.powerUpSO.nameInPlayerPrefs, item.powerUpSO.amount);
-            PlayerPrefs.Save();
-            item.powerUpSO.Raise();
+            GameEvents.RequestUpdateDetail?.Invoke();
+            // PlayerPrefs.SetInt(item.powerUpSO.nameInPlayerPrefs, item.powerUpSO.amount);
+            // PlayerPrefs.Save();
+            // item.powerUpSO.Raise();
         }
         else if (selecetdItem.RouletteItemData._ItemRouletteSo.GetType() == typeof(CoinsItemRoulette))
         {
-            GameEvents.RequestCoinsChange?.Invoke(selecetdItem.Amount);
+            _userSO.userInfo.user.detail.totalCoins += selecetdItem.Amount;
+            GameEvents.RequestUpdateDetail?.Invoke();
+            // GameEvents.RequestCoinsChange?.Invoke(selecetdItem.Amount);
         }
         
         // selecetdItem.RouletteItemData._ItemRouletteSo. _currentItem.PowerUp.amount += _currentItem.Amount;

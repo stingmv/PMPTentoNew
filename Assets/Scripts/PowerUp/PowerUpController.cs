@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using ScriptableCreator;
+using TMPro;
 using UnityEngine;
 
 namespace PowerUp
@@ -10,57 +11,73 @@ namespace PowerUp
     {
         #region Variables
 
+        [SerializeField] private ScriptableObjectUser _objectUser;
         [SerializeField] private ScripableObjectPowerUp _powerUpSecondOportunity;
         [SerializeField] private ScripableObjectPowerUp _powerUpTrueOption;
         [SerializeField] private ScripableObjectPowerUp _powerUpDeleteOption;
         [SerializeField] private ScripableObjectPowerUp _powerUpNextQuestion;
         [SerializeField] private ScripableObjectPowerUp _powerUpMoreTime;
+        
+        [SerializeField] private PowerUpListener _powerUpSecondOportunityI;
+        [SerializeField] private PowerUpListener _powerUpTrueOptionI;
+        [SerializeField] private PowerUpListener _powerUpDeleteOptionI;
+        [SerializeField] private PowerUpListener _powerUpNextQuestionI;
+        [SerializeField] private PowerUpListener _powerUpMoreTimeI;
+
+        private PowerUpListener _currentListener;
         #endregion
 
         #region Unity Methods
 
         private void OnEnable()
         {
-            if (PlayerPrefs.HasKey("pu_secondOportunity"))
+            UpdateAmounts();
+            GameEvents.DetailChanged += GameEvents_DetailChanged;
+        }
+
+        private void UpdateAmounts()
+        {
+            var detail = _objectUser.userInfo.user.detail;
+            if (_powerUpSecondOportunityI)
             {
-                _powerUpSecondOportunity.amount = PlayerPrefs.GetInt("pu_secondOportunity");
+                _powerUpSecondOportunityI.Amount = detail.secondChance;
+                
             }
-            else
+
+            if (_powerUpTrueOptionI)
             {
-                _powerUpSecondOportunity.amount = 5;
+                _powerUpTrueOptionI.Amount = detail.findCorrectAnswer;
             }
-            if (PlayerPrefs.HasKey("pu_trueOption"))
+
+            if (_powerUpDeleteOptionI)
             {
-                _powerUpTrueOption.amount = PlayerPrefs.GetInt("pu_trueOption");
+                _powerUpDeleteOptionI.Amount = detail.discardOption;
             }
-            else
+
+            if (_powerUpNextQuestionI)
             {
-                _powerUpTrueOption.amount = 5;
+                _powerUpNextQuestionI.Amount = detail.skipQuestion;
             }
-            if (PlayerPrefs.HasKey("pu_deleteOption"))
+
+            if (_powerUpMoreTimeI)
             {
-                _powerUpDeleteOption.amount = PlayerPrefs.GetInt("pu_deleteOption");
+                _powerUpMoreTimeI.Amount = detail.increaseTime;
             }
-            else
+        } 
+
+        private void OnDisable()
+        {
+            GameEvents.DetailChanged -= GameEvents_DetailChanged;
+        }
+        private void GameEvents_DetailChanged()
+        {
+            if (_currentListener)
             {
-                _powerUpDeleteOption.amount = 5;
+                UpdateAmounts(); 
+                _currentListener.OnEventRaised();
+                _currentListener = null;    
             }
-            if (PlayerPrefs.HasKey("pu_nextQuestion"))
-            {
-                _powerUpNextQuestion.amount = PlayerPrefs.GetInt("pu_nextQuestion");
-            }
-            else
-            {
-                _powerUpNextQuestion.amount = 5;
-            }
-            if (PlayerPrefs.HasKey("pu_moreTime"))
-            {
-                _powerUpMoreTime.amount = PlayerPrefs.GetInt("pu_moreTime");
-            }
-            else
-            {
-                _powerUpMoreTime.amount = 5;
-            }
+            
         }
 
         #endregion
@@ -69,10 +86,13 @@ namespace PowerUp
 
         public void UseSecondOportunity()
         {
-            _powerUpSecondOportunity.amount--;
-            PlayerPrefs.SetInt("pu_secondOportunity", _powerUpSecondOportunity.amount);
-            PlayerPrefs.Save();
-            _powerUpSecondOportunity.Raise();
+            // _powerUpSecondOportunity.amount--;
+            _objectUser.userInfo.user.detail.secondChance--;
+            // PlayerPrefs.SetInt("pu_secondOportunity", _powerUpSecondOportunity.amount);
+            // PlayerPrefs.Save();
+            _currentListener = _powerUpSecondOportunityI;
+            GameEvents.RequestUpdateDetail?.Invoke();
+            // _powerUpSecondOportunity.Raise();
         }
 
         public void BuySecondOportunity(int amount )
@@ -82,12 +102,16 @@ namespace PowerUp
             PlayerPrefs.Save();
             _powerUpSecondOportunity.Raise();
         }
+        
         public void UseTrueOption()
         {
-            _powerUpTrueOption.amount--;
-            PlayerPrefs.SetInt("pu_trueOption", _powerUpTrueOption.amount);
-            PlayerPrefs.Save();
-            _powerUpTrueOption.Raise();
+            // _powerUpTrueOption.amount--;
+            _objectUser.userInfo.user.detail.findCorrectAnswer--;
+            // PlayerPrefs.SetInt("pu_trueOption", _powerUpTrueOption.amount);
+            // PlayerPrefs.Save();
+            _currentListener = _powerUpTrueOptionI;
+            GameEvents.RequestUpdateDetail?.Invoke();
+            // _powerUpTrueOption.Raise();
         }
 
         public void BuyTrueOption(int amount )
@@ -100,10 +124,15 @@ namespace PowerUp
         
         public void UseDeleteOption()
         {
-            _powerUpDeleteOption.amount--;
-            PlayerPrefs.SetInt("pu_deleteOption", _powerUpDeleteOption.amount);
-            PlayerPrefs.Save();
-            _powerUpDeleteOption.Raise();
+            // _powerUpDeleteOption.amount--;
+            _objectUser.userInfo.user.detail.discardOption--;
+
+            // PlayerPrefs.SetInt("pu_deleteOption", _powerUpDeleteOption.amount);
+            // PlayerPrefs.Save();
+            // _powerUpDeleteOption.Raise();
+            
+            _currentListener = _powerUpDeleteOptionI;
+            GameEvents.RequestUpdateDetail?.Invoke();
         }
 
         public void BuyDeleteOption(int amount )
@@ -113,12 +142,16 @@ namespace PowerUp
             PlayerPrefs.Save();
             _powerUpDeleteOption.Raise();
         }
+        
         public void UseNextQuestion()
         {
-            _powerUpNextQuestion.amount--;
-            PlayerPrefs.SetInt("pu_nextQuestion", _powerUpNextQuestion.amount);
-            PlayerPrefs.Save();
-            _powerUpNextQuestion.Raise();
+            // _powerUpNextQuestion.amount--;
+            _objectUser.userInfo.user.detail.skipQuestion--;
+            // PlayerPrefs.SetInt("pu_nextQuestion", _powerUpNextQuestion.amount);
+            // PlayerPrefs.Save();
+            // _powerUpNextQuestion.Raise();
+            _currentListener = _powerUpNextQuestionI;
+            GameEvents.RequestUpdateDetail?.Invoke();
         }
 
         public void BuyNextQuestion(int amount )
@@ -131,10 +164,14 @@ namespace PowerUp
         
         public void UseMoreTime()
         {
-            _powerUpMoreTime.amount--;
-            PlayerPrefs.SetInt("pu_moreTime", _powerUpMoreTime.amount);
-            PlayerPrefs.Save();
-            _powerUpMoreTime.Raise();
+            // _powerUpMoreTime.amount--;
+            _objectUser.userInfo.user.detail.increaseTime--;
+            // PlayerPrefs.SetInt("pu_moreTime", _powerUpMoreTime.amount);
+            // PlayerPrefs.Save();
+            // _powerUpMoreTime.Raise();
+            
+            _currentListener = _powerUpMoreTimeI;
+            GameEvents.RequestUpdateDetail?.Invoke();
         }
         public void BuyMoreTime(int amount )
         {

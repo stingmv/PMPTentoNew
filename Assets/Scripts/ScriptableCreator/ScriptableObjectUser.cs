@@ -87,7 +87,7 @@ public class ScriptableObjectUser : ScriptableObject
         // userInfo.totalExperience += obj;
         PlayerPrefs.SetFloat("TotalExperience", userInfo.user.detail.totalExperience);
         PlayerPrefs.Save();
-        GameEvents.ExperienceChanged?.Invoke(userInfo.user.detail.totalExperience);
+        GameEvents.ExperienceChanged?.Invoke();
     }
 
     private void OnDisable()
@@ -104,7 +104,7 @@ public class ScriptableObjectUser : ScriptableObject
         // userInfo.totalCoins += obj;
         PlayerPrefs.SetFloat("TotalCoins", userInfo.user.detail.totalCoins);
         PlayerPrefs.Save();
-        GameEvents.CoinsChanged?.Invoke(userInfo.user.detail.totalCoins);
+        GameEvents.CoinsChanged?.Invoke();
     }
 
     private void GameEvents_NewInstuctorId(int index)

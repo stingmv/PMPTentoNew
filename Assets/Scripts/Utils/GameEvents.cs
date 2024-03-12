@@ -64,14 +64,14 @@ public static class GameEvents
     #region Experience
 
     public static Action<float> RequestExperienceChange;
-    public static Action<float> ExperienceChanged;
+    public static Action ExperienceChanged;
 
     #endregion
     
     #region Coins
 
     public static Action<float> RequestCoinsChange;
-    public static Action<float> CoinsChanged;
+    public static Action CoinsChanged;
 
     #endregion
 
@@ -99,7 +99,9 @@ public static class GameEvents
 
 
     #region PowerUps
-    
+
+    public static Action RequestUpdateDetail;
+    public static Action DetailChanged;
 
     #endregion
 }

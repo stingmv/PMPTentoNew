@@ -11,7 +11,7 @@ namespace PowerUp
         public void UsePowerUp()
         {
             Debug.Log(_questionController.GetCountSession + " " + (_questionController.CurrentIndex));
-            if (_event.amount >0 && _questionController.GetCountSession > _questionController.CurrentIndex)
+            if (Amount >0 && _questionController.GetCountSession > _questionController.CurrentIndex)
             {
                 _onUsePowerUp?.Invoke();
             }

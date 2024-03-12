@@ -13,6 +13,7 @@ public class VideoQuestionModeController : MonoBehaviour
 {
     [SerializeField] private DataToRegisterSO _registerExam;
     [SerializeField] private ScriptableObjectSettings _gameSettings;
+    [SerializeField] private ScriptableObjectUser _userData;
 
     [SerializeField] private QuestionController _questionController;
     [SerializeField] private PMPService _pmpService;
@@ -67,8 +68,9 @@ public class VideoQuestionModeController : MonoBehaviour
             _gameSettings.settingData.MCReward.aditionalBonusExpConsecutiveQuestion * clampConsecutive +
             // Bonus by achievement
             _gameSettings.settingData.MCReward.aditionalBonusExpForAchievement * 0;
-        GameEvents.RequestExperienceChange?.Invoke(exp);
+        // GameEvents.RequestExperienceChange?.Invoke(exp);
         _experienceAccumulated += exp;
+        _userData.userInfo.user.detail.totalExperience += (int)exp;
 
         var coins =
             // Base coins
@@ -78,7 +80,10 @@ public class VideoQuestionModeController : MonoBehaviour
             // Bonus by achievement
             _gameSettings.settingData.MCReward.aditionalBonusCoinsForAchievement * 0;
         _coinsAccumulated += coins;
-        GameEvents.RequestCoinsChange?.Invoke(coins);
+        _userData.userInfo.user.detail.totalCoins += (int)coins;
+
+        // GameEvents.RequestCoinsChange?.Invoke(coins);
+        GameEvents.RequestUpdateDetail?.Invoke();
     }
 
     private void GameEvents_GetNameExam(string obj)

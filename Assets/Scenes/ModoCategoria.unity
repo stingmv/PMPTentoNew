@@ -1080,7 +1080,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9924048cebfce7c4aab0919e7d7a4692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _event: {fileID: 11400000, guid: baa0e82d7d157af4c91e4fff3d3b4f1a, type: 2}
   _amount: {fileID: 1177150298}
   _response:
     m_PersistentCalls:
@@ -2047,6 +2046,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &487800852 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3978631257044498428, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+  m_PrefabInstance: {fileID: 487800847}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0799b8adf838f6e45a33927a116e0531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &613188790
@@ -3673,7 +3683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5584219348e047b2829f92e2838bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _event: {fileID: 11400000, guid: b90c8e18f785bf24690c106e176124f7, type: 2}
   _amount: {fileID: 1460089849}
   _response:
     m_PersistentCalls:
@@ -10809,7 +10818,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b64e8726900c449a93439a32be1052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _event: {fileID: 11400000, guid: 5f4ca4ad9839dcf499046b6730956fc5, type: 2}
   _amount: {fileID: 1674367672}
   _response:
     m_PersistentCalls:
@@ -11123,11 +11131,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb99f333f619834eafda4f6bc66b535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _objectUser: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
   _powerUpSecondOportunity: {fileID: 11400000, guid: 72a1f2080ebcfe54199410c9f34b42ef, type: 2}
   _powerUpTrueOption: {fileID: 11400000, guid: b90c8e18f785bf24690c106e176124f7, type: 2}
   _powerUpDeleteOption: {fileID: 11400000, guid: 5f4ca4ad9839dcf499046b6730956fc5, type: 2}
   _powerUpNextQuestion: {fileID: 11400000, guid: baa0e82d7d157af4c91e4fff3d3b4f1a, type: 2}
   _powerUpMoreTime: {fileID: 11400000, guid: 9026b1be2dac5c140aaca71b68c20ffb, type: 2}
+  _powerUpSecondOportunityI: {fileID: 487800852}
+  _powerUpTrueOptionI: {fileID: 1056146264}
+  _powerUpDeleteOptionI: {fileID: 1829076412}
+  _powerUpNextQuestionI: {fileID: 175939609}
+  _powerUpMoreTimeI: {fileID: 0}
 --- !u!1 &1954085042
 GameObject:
   m_ObjectHideFlags: 0
@@ -11196,6 +11210,51 @@ MonoBehaviour:
   _questionController: {fileID: 1337041750}
   _pmpService: {fileID: 1954085044}
   _rewardItemController: {fileID: 836691110}
+--- !u!1 &2002315476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2002315478}
+  - component: {fileID: 2002315477}
+  m_Layer: 0
+  m_Name: User service
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2002315477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002315476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3f6ff3f1b12f8147886d0e917c33623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectUser: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
+--- !u!4 &2002315478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002315476}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2040.5588, y: -1551.6385, z: -39.253162}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2006071207
 GameObject:
   m_ObjectHideFlags: 0
@@ -17851,3 +17910,4 @@ SceneRoots:
   - {fileID: 239968079}
   - {fileID: 708024837}
   - {fileID: 3403111}
+  - {fileID: 2002315478}
