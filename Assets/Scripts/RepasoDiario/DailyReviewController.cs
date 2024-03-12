@@ -3,14 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Question;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Video;
 using Random = UnityEngine.Random;
 
 public class DailyReviewController : MonoBehaviour
 {
     [SerializeField] private DailyReviewPMPService _pmpService;
     [SerializeField] private QuestionInformation _questionInformation;
+    [SerializeField] private TextMeshProUGUI _textFeedback;
+    [SerializeField] private VideoPlayer _videoFeedback;
     [SerializeField] private DailyReviewNameListItem _nameListItemPrefab;
     [SerializeField] private List<QuestionData> _session;
     [SerializeField] private Transform _nameListContainer;
@@ -21,7 +25,7 @@ public class DailyReviewController : MonoBehaviour
     private List<int> _indexes = new List<int>() { 0, 1, 2, 3 };
     private int _currentIndex;
     private QuestionData _currentQuestion;
-
+    private Option _oldOption;
     public int GetCountSession
     {
         get => _session.Count;
@@ -152,9 +156,51 @@ public class DailyReviewController : MonoBehaviour
         _currentQuestion = _session[CurrentIndex];
         _currentQuestion.progressItem.SetCurrentItem();
         _questionInformation.SetData(_currentQuestion);
+        if (_currentQuestion.questionItem.pregunta.tieneRetroalimentacion)
+        {
+            _textFeedback.text = _currentQuestion.questionItem.pregunta.retroalimentacion;
+            _videoFeedback.source = VideoSource.Url;
+            _videoFeedback.renderMode = VideoRenderMode.MaterialOverride;
+            _videoFeedback.targetMaterialRenderer = _videoFeedback.GetComponent<Renderer>();
+            // _videoFeedback.targetMaterialProperty = "_MainTex";
+            _videoFeedback.url = _currentQuestion.questionItem.pregunta.urlRetroalimentacionVideo;
+            _videoFeedback.isLooping = true;
+            _videoFeedback.Play();
+        }	
         // _currentIndex++;
     }
-
+    public IEnumerator PlayUrl(string url, float startTime = 0)
+    {
+        if (!url.Contains("https://") || url == "")
+        {
+            Debug.LogError("Bad video url:" + url);
+            yield break;
+        }
+ 
+        // videoPlayerBar.Enabled = false;
+        // videoWaiting.SetActive(true);
+ 
+        if (_videoFeedback.isPlaying || _videoFeedback.isPaused)
+        {
+            _videoFeedback.Stop();
+            _videoFeedback.url = "";
+        }
+ 
+        _videoFeedback.url = url;
+ 
+        // _videoFeedback = startTime;
+        _videoFeedback.Prepare();
+    }
+ 
+    public void SetTime(float value)
+    {
+        _videoFeedback.Stop();
+ 
+        // targetTime = value;
+        _videoFeedback.Prepare();
+    }
+ 
+    
     public bool IsFirst()
     {
         return CurrentIndex <= 0;
@@ -163,5 +209,23 @@ public class DailyReviewController : MonoBehaviour
     public bool IsLast()
     {
         return CurrentIndex + 1 >= _session.Count;
+    }
+
+    public void ValidateResponse(Option option)
+    {
+        if (_oldOption)
+        {
+            _oldOption.EnableOption();
+        }
+        if (option.ID.Equals(_currentQuestion.idCorrectOption))
+        {
+            option.SetCorrectColor();
+        }
+        else
+        {
+            option.SetIncorrectColor();
+        }
+
+        _oldOption = option;
     }
 }

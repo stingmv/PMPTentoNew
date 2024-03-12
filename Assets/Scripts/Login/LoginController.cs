@@ -58,7 +58,8 @@ namespace Login
 
         private void GameEvents_SuccessfulLogin(User obj)
         {
-            PlayerPrefs.SetString("UserInfo", JsonUtility.ToJson(obj));
+            PlayerPrefs.SetString("username", _emailInput.InputField.text);
+            PlayerPrefs.SetString("password", _passwordInput.InputField.text);
             PlayerPrefs.Save();
             _onSuccessLogin?.Invoke();
         }

@@ -609,6 +609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 213234112}
   - component: {fileID: 213234113}
+  - component: {fileID: 213234114}
   m_Layer: 0
   m_Name: UserManager
   m_TagString: Untagged
@@ -643,12 +644,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30fc742217594640ae582eebb1114ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _userService: {fileID: 213234114}
   _powerUpSecondOportunity: {fileID: 11400000, guid: 72a1f2080ebcfe54199410c9f34b42ef, type: 2}
   _powerUpTrueOption: {fileID: 11400000, guid: b90c8e18f785bf24690c106e176124f7, type: 2}
   _powerUpDeleteOption: {fileID: 11400000, guid: 5f4ca4ad9839dcf499046b6730956fc5, type: 2}
   _powerUpNextQuestion: {fileID: 11400000, guid: baa0e82d7d157af4c91e4fff3d3b4f1a, type: 2}
   _powerUpMoreTime: {fileID: 11400000, guid: 9026b1be2dac5c140aaca71b68c20ffb, type: 2}
   EndFinishLoadData: 0
+--- !u!114 &213234114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213234111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3f6ff3f1b12f8147886d0e917c33623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectUser: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
 --- !u!1 &226300292
 GameObject:
   m_ObjectHideFlags: 0

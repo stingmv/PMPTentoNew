@@ -40,12 +40,12 @@ public class StoreController : MonoBehaviour
 
     private StoreItem _currentItem;
 
-    public float CoinsFromUser => _user.userInfo.totalCoins;
+    public float CoinsFromUser => _user.userInfo.user.detail.totalCoins;
     private void OnEnable()
     {
-        _usernameLabel.text = _user.userInfo.username;
-        _totalCoinsLabel.text = _user.userInfo.totalCoins.ToString();
-        _totalExperienceLabel.text = _user.userInfo.totalExperience.ToString();
+        _usernameLabel.text = _user.userInfo.user.detail.usernameG;
+        _totalCoinsLabel.text = _user.userInfo.user.detail.totalCoins.ToString();
+        _totalExperienceLabel.text = _user.userInfo.user.detail.totalExperience.ToString();
         GameEvents.CoinsChanged += GameEvents_CoinsChanged;
         GameEvents.ExperienceChanged += GameEvents_ExperienceChanged;
         var itemInstantiaded = Instantiate(_storeSectionPrefab, _GeneralContainer);

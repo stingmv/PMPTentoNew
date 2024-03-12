@@ -61,12 +61,12 @@ namespace MainMenu
 
         private void GameEvents_ExperienceChanged(float obj)
         {
-            _totalExpirience.text = _user.userInfo.totalExperience.ToString();
+            _totalExpirience.text = _user.userInfo.user.detail.totalExperience.ToString();
         }
 
         private void GameEvents_CoinsChanged(float obj)
         {
-            _totalCoins.text = _user.userInfo.totalCoins.ToString();
+            _totalCoins.text = _user.userInfo.user.detail.totalCoins.ToString();
         }
 
         private void GameEvents_InstructorChanged(int obj)
@@ -120,11 +120,11 @@ namespace MainMenu
 
         public void SaveInformation()
         {
-            _user.userInfo.username = _userInputField.text;
+            // _user.userInfo.username = _userInputField.text;
             // _objectSettings.settingData.musicVolume = _music.value;
             // _objectSettings.settingData.soundEffectVolume = _soundEffects.value;
             _objectSettings.settingData.haveNotification = _notificationToggle.ToggleNotification.isOn;
-            SaveUserInformation();
+            // SaveUserInformation();
             SaveSettingInformation();
             _onSuccessSaveInformation?.Invoke();
         }
@@ -138,7 +138,7 @@ namespace MainMenu
             PlayerPrefs.SetString("userInfo", JsonUtility.ToJson(_user.userInfo));
             PlayerPrefs.Save();
 
-            _notificationTextUsername.Raise(_user.userInfo.username );
+            // _notificationTextUsername.Raise(_user.userInfo.username );
         }
 
         public void SaveSettingInformation()

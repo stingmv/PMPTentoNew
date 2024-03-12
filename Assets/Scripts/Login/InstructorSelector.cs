@@ -32,10 +32,14 @@ public class InstructorSelector : MonoBehaviour
             (Vector3, Vector3) posRot = _pathToInstantiateInstructor.GetPositionToInstantiate(i);
             var instant = Instantiate(_objectInstructor.instructors[i].prefab, posRot.Item1, quaternion.identity, _container);
             instant.layer = 6;
-            for (int j = 0; j < instant.transform.childCount; j++)
+            foreach (Renderer child in instant.GetComponentsInChildren<Renderer>())
             {
-                instant.transform.GetChild(j).gameObject.layer = 6;
+                child.gameObject.layer = 6;
             }
+            // for (int j = 0; j < instant.transform.childCount; j++)
+            // {
+            //     instant.transform.GetChild(j).gameObject.layer = 6;
+            // }
             instant.transform.forward = posRot.Item2;
             Instantiate(_instructorPlatform, posRot.Item1, Quaternion.identity).transform.parent = instant.transform;
             

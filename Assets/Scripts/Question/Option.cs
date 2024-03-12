@@ -51,15 +51,26 @@ namespace Question
         {
             if (_questionController.ValidateResponse(_id))
             {
-                _image.color = _correctColor;
+                SetCorrectColor();
             }
             else
             {
-                _image.color = _incorrectColor;
+                SetIncorrectColor();
             }
             _label.color = Color.white;
         }
 
+        public void SetCorrectColor()
+        {
+            _image.color = _correctColor;
+            _label.color = Color.white;
+        }
+
+        public void SetIncorrectColor()
+        {
+            _image.color = _incorrectColor;
+            _label.color = Color.white;
+        }
         public void DisableOption()
         {
             _eventTrigger.enabled = false;

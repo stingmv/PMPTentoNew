@@ -64,11 +64,8 @@ public class UserInfo
     public LearningModeState LearningModeState;
     public bool haveUser;
     public bool haveUsername;
-    public string username;
     public bool haveInstructor;
     public int idInstructor;
-    public float totalExperience;
-    public float totalCoins;
 }
 [CreateAssetMenu(fileName = "User Data", menuName = "User data")]
 public class ScriptableObjectUser : ScriptableObject
@@ -87,10 +84,10 @@ public class ScriptableObjectUser : ScriptableObject
 
     private void GameEvents_RequestExperienceChange(float obj)
     {
-        userInfo.totalExperience += obj;
-        PlayerPrefs.SetFloat("TotalExperience", userInfo.totalExperience);
+        // userInfo.totalExperience += obj;
+        PlayerPrefs.SetFloat("TotalExperience", userInfo.user.detail.totalExperience);
         PlayerPrefs.Save();
-        GameEvents.ExperienceChanged?.Invoke(userInfo.totalExperience);
+        GameEvents.ExperienceChanged?.Invoke(userInfo.user.detail.totalExperience);
     }
 
     private void OnDisable()
@@ -104,10 +101,10 @@ public class ScriptableObjectUser : ScriptableObject
 
     private void GameEvents_RequestCoinsChange(float obj)
     {
-        userInfo.totalCoins += obj;
-        PlayerPrefs.SetFloat("TotalCoins", userInfo.totalCoins);
+        // userInfo.totalCoins += obj;
+        PlayerPrefs.SetFloat("TotalCoins", userInfo.user.detail.totalCoins);
         PlayerPrefs.Save();
-        GameEvents.CoinsChanged?.Invoke(userInfo.totalCoins);
+        GameEvents.CoinsChanged?.Invoke(userInfo.user.detail.totalCoins);
     }
 
     private void GameEvents_NewInstuctorId(int index)
@@ -124,14 +121,14 @@ public class ScriptableObjectUser : ScriptableObject
 
     private void GameEvents_NameChanged(string username)
     {
-        userInfo.username = username;
+        // userInfo.username = username;
         PlayerPrefs.SetString("Username",username);
         PlayerPrefs.Save();
     }
     private void GameEvents_NewUsername(string username)
     {
         userInfo.haveUsername = true;
-        userInfo.username = username;
+        // userInfo.username = username;
         PlayerPrefs.SetString("Username",username);
         PlayerPrefs.SetInt("HaveUsername",1);
         PlayerPrefs.Save();

@@ -20,7 +20,11 @@ public static class GameEvents
     public static Action UsernameSelected;
     public static Action<int> NewInstuctorId;
     public static Action InstructorSelected;
-
+    public static Action SuccessGetUser;
+    public static Action ErrorGetUser;
+    public static Action SuccessGetUserDetail;
+    public static Action ErrorGetUserDetail;
+    
     #endregion
 
     #region Main menu events

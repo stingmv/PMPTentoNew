@@ -8,6 +8,7 @@ using UnityEngine.Serialization;
 public class UserManager : MonoBehaviour
 {
     private ScriptableObjectUser _userSO;
+    [SerializeField] private UserService _userService;
     [SerializeField] private ScripableObjectPowerUp _powerUpSecondOportunity;
     [SerializeField] private ScripableObjectPowerUp _powerUpTrueOption;
     [SerializeField] private ScripableObjectPowerUp _powerUpDeleteOption;
@@ -18,10 +19,69 @@ public class UserManager : MonoBehaviour
     {
         EndFinishLoadData = false;
         Initialize();
-        InitPowerUpData();
+        // InitPowerUpData();
+        GameEvents.SuccessGetUser += GameEvent_SuccessGetUser;
+        GameEvents.SuccessGetUserDetail += GameEvent_SuccessGetUserDetail;
+        GameEvents.ErrorGetUser += GameEvents_ErrorGetUser;
+        GameEvents.ErrorGetUserDetail += GameEvents_ErrorGetUserDetail;
     }
 
-    
+    private void OnDisable()
+    {
+        GameEvents.SuccessGetUser -= GameEvent_SuccessGetUser;
+        GameEvents.SuccessGetUserDetail -= GameEvent_SuccessGetUserDetail;
+        GameEvents.ErrorGetUser -= GameEvents_ErrorGetUser;
+        GameEvents.ErrorGetUserDetail -= GameEvents_ErrorGetUserDetail;
+    }
+
+    private void GameEvents_ErrorGetUserDetail()
+    {
+        Debug.Log("error get user detail");
+
+        _userSO.userInfo.haveUsername = false;
+        _userSO.userInfo.haveInstructor = false;
+        EndFinishLoadData = true;
+    }
+
+    private void GameEvents_ErrorGetUser()
+    {
+        Debug.Log("error get user");
+
+        _userSO.userInfo.haveUsername = false;
+        _userSO.userInfo.haveInstructor = false;
+        EndFinishLoadData = true;
+    }
+
+    private void GameEvent_SuccessGetUserDetail()
+    {
+        if (_userSO.userInfo.user.detail.idCaracteristicaGamificacion == 0)
+        {
+            Debug.Log("nuevo en gamificacion");
+            _userSO.userInfo.haveUsername = false;
+            _userSO.userInfo.haveInstructor = false;
+        }
+        else if (_userSO.userInfo.user.detail.idCaracteristicaGamificacion == 1)
+        {
+            Debug.Log("tiene datos en gamificacion");
+            _userSO.userInfo.haveUsername = true;
+            _userSO.userInfo.haveInstructor = true;
+        }
+
+        _powerUpDeleteOption.amount = _userSO.userInfo.user.detail.discardOption;
+        _powerUpMoreTime.amount = _userSO.userInfo.user.detail.increaseTime;
+        _powerUpNextQuestion.amount = _userSO.userInfo.user.detail.skipQuestion;
+        _powerUpSecondOportunity.amount = _userSO.userInfo.user.detail.secondChance;
+        _powerUpTrueOption.amount = _userSO.userInfo.user.detail.findCorrectAnswer;
+        EndFinishLoadData = true;
+    }
+
+    private void GameEvent_SuccessGetUser()
+    {
+        Debug.Log("succes get user");
+        GameEvents.GetUserExam?.Invoke(_userSO.userInfo.user.userName);
+        _userService.GetUserDetail(_userSO.userInfo.user.idAlumno);
+    }
+
 
     void Initialize()
     {
@@ -30,56 +90,69 @@ public class UserManager : MonoBehaviour
             _userSO = Resources.Load<ScriptableObjectUser>("User Data");
         }
 
-        if (PlayerPrefs.HasKey("UserInfo") )
+        if (PlayerPrefs.HasKey("username") && PlayerPrefs.HasKey("password"))
         {
-            _userSO.userInfo.haveUser= true;
-            _userSO.userInfo.user = JsonUtility.FromJson<User>(PlayerPrefs.GetString("UserInfo"));
-            GameEvents.GetUserExam?.Invoke(_userSO.userInfo.user.userName);
+            _userService.GetUSer(PlayerPrefs.GetString("username"), PlayerPrefs.GetString("password"));
         }
         else
         {
-            _userSO.userInfo.haveUser = false;
             _userSO.userInfo.user = new User();
-        }
-        if (PlayerPrefs.HasKey("HaveUsername") && PlayerPrefs.HasKey("Username"))
-        {
-            _userSO.userInfo.haveUsername = true;
-            _userSO.userInfo.username = PlayerPrefs.GetString("Username");
-        }
-        else
-        {
             _userSO.userInfo.haveUsername = false;
-            _userSO.userInfo.username = "";
+            _userSO.userInfo.haveUser = false;
+            EndFinishLoadData = true;
+            return;
         }
 
-        if (PlayerPrefs.HasKey("HaveInstructor"))
-        {
-            _userSO.userInfo.haveInstructor = true;
-            _userSO.userInfo.idInstructor = PlayerPrefs.GetInt("HaveInstructor");
-        }
-        else
-        {
-            _userSO.userInfo.haveInstructor = false;
-            _userSO.userInfo.idInstructor = -1;
-        }
-        if (PlayerPrefs.HasKey("TotalExperience"))
-        {
-            _userSO.userInfo.totalExperience = PlayerPrefs.GetFloat("TotalExperience");
-        }
-        else
-        {
-            _userSO.userInfo.totalExperience = 100;
-        }
-        if (PlayerPrefs.HasKey("TotalCoins"))
-        {
-            _userSO.userInfo.totalCoins = PlayerPrefs.GetFloat("TotalCoins");
-        }
-        else
-        {
-            _userSO.userInfo.totalCoins = 100;
-        }
-        Debug.Log("terminado 1");
-        EndFinishLoadData = true;
+        // if (PlayerPrefs.HasKey("UserInfo") )
+        // {
+        //     _userSO.userInfo.haveUser= true;
+        //     _userSO.userInfo.user = JsonUtility.FromJson<User>(PlayerPrefs.GetString("UserInfo"));
+        //     GameEvents.GetUserExam?.Invoke(_userSO.userInfo.user.userName);
+        // }
+        // else
+        // {
+        //     _userSO.userInfo.haveUser = false;
+        //     _userSO.userInfo.user = new User();
+        // }
+        // if (PlayerPrefs.HasKey("HaveUsername") && PlayerPrefs.HasKey("Username"))
+        // {
+        //     _userSO.userInfo.haveUsername = true;
+        //     _userSO.userInfo.username = PlayerPrefs.GetString("Username");
+        // }
+        // else
+        // {
+        //     _userSO.userInfo.haveUsername = false;
+        //     _userSO.userInfo.username = "";
+        // }
+        //
+        // if (PlayerPrefs.HasKey("HaveInstructor"))
+        // {
+        //     _userSO.userInfo.haveInstructor = true;
+        //     _userSO.userInfo.idInstructor = PlayerPrefs.GetInt("HaveInstructor");
+        // }
+        // else
+        // {
+        //     _userSO.userInfo.haveInstructor = false;
+        //     _userSO.userInfo.idInstructor = -1;
+        // }
+        // if (PlayerPrefs.HasKey("TotalExperience"))
+        // {
+        //     _userSO.userInfo.totalExperience = PlayerPrefs.GetFloat("TotalExperience");
+        // }
+        // else
+        // {
+        //     _userSO.userInfo.totalExperience = 100;
+        // }
+        // if (PlayerPrefs.HasKey("TotalCoins"))
+        // {
+        //     _userSO.userInfo.totalCoins = PlayerPrefs.GetFloat("TotalCoins");
+        // }
+        // else
+        // {
+        //     _userSO.userInfo.totalCoins = 100;
+        // }
+        // Debug.Log("terminado 1");
+        // EndFinishLoadData = true;
     }
 
     private void InitPowerUpData()
