@@ -45,11 +45,15 @@ public class NotificationData : ScriptableObject
 
     private void LoadLocalData()
     {
-        if (FileManager.LoadFromFile("SaveData1.dat", out var json))
+        // if (FileManager.LoadFromFile("SaveData1.dat", out var json))
+        // {
+        //     JsonUtility.FromJsonOverwrite(json, this);
+        //
+        //     Debug.Log("Load complete");
+        // }
+        if (PlayerPrefs.HasKey("NotificationData"))
         {
-            JsonUtility.FromJsonOverwrite(json, this);
-
-            Debug.Log("Load complete");
+            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("NotificationData"), NotificationList);
         }
     }
 }
