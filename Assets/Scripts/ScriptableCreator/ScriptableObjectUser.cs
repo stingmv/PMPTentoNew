@@ -66,6 +66,9 @@ public class UserInfo
     public bool haveUsername;
     public bool haveInstructor;
     public int idInstructor;
+    public bool haveAvatar;
+    public string urlAvatar;
+    public Sprite spriteAvatar;
 }
 [CreateAssetMenu(fileName = "User Data", menuName = "User data")]
 public class ScriptableObjectUser : ScriptableObject

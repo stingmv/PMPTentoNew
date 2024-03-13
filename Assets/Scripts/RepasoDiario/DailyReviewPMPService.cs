@@ -10,6 +10,8 @@ public class DailyReviewPMPService : MonoBehaviour
 
     public List<QuestionItem> GetAllIncorrectQuestions()
     {
-        return _incorrectQuestions.IncorrectQuestionsList;
+        List<QuestionItem> items = new List<QuestionItem>();
+        items = _incorrectQuestions.questions.IncorrectQuestionsList;
+        return items;
     }
 }

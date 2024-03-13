@@ -175,6 +175,8 @@ MonoBehaviour:
     screen: {fileID: 913606111}
   - name: finish
     screen: {fileID: 1274690540}
+  - name: domain
+    screen: {fileID: 913606111}
 --- !u!114 &38285662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2997,7 +2999,7 @@ MonoBehaviour:
   _registerExam: {fileID: 11400000, guid: b8a089dc3b7564446ba9ba4dc22468da, type: 2}
   _gameSettings: {fileID: 11400000, guid: 8a3b1a51c1f08c4498c73dfd5e4368d2, type: 2}
   _userData: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
-  _TaskLabelInQuestions: {fileID: 0}
+  _TaskLabelInQuestions: {fileID: 135895103}
   _questionController: {fileID: 1337041750}
   _pmpService: {fileID: 1954085044}
   _rewardItemController: {fileID: 902411005}

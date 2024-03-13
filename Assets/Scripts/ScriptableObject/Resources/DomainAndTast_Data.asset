@@ -12,47 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264a8fc3830fc804e9ffa3dd961aba60, type: 3}
   m_Name: DomainAndTast_Data
   m_EditorClassIdentifier: 
-  _domains:
-  - id: 1
-    name: Proceso
-    tasks:
-    - id: 28
-      name: 
-    - id: 29
-      name: 
-    - id: 30
-      name: 
-    - id: 31
-      name: 
-    - id: 32
-      name: 
-    - id: 33
-      name: 
-    - id: 34
-      name: 
-    - id: 35
-      name: 
-    - id: 36
-      name: 
-    - id: 37
-      name: 
-    - id: 38
-      name: 
-    - id: 39
-      name: 
-    - id: 40
-      name: 
-    - id: 41
-      name: 
-    - id: 42
-      name: 
-    - id: 43
-      name: 
-    - id: 44
-      name: 
-  - id: 4
-    name: Personas
-    tasks: []
-  - id: 5
-    name: Entorno empresarial
-    tasks: []
+  DomainContainer:
+    listaDominio: []
+    listaTarea: []

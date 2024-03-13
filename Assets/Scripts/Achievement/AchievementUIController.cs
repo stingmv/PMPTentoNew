@@ -28,7 +28,7 @@ public class AchievementUIController : MonoBehaviour
     {
         ClearChildrenAchievement();
 
-        var list = achievementData.achievementList;
+        var list = achievementData.achievementListContainer.achievementList;
         for (int i = 0; i < list.Count; i++)
         {
             var item = Instantiate(achievementPrefab, contentAchievements);

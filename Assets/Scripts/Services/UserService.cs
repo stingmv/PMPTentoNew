@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -16,6 +18,7 @@ public class UserService : MonoBehaviour
 
     private readonly string _urlToGetUserDetail =
         "http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ObtenerCaracteristicasGamificacion/";
+    private readonly string urlToCredentials = "https://api-portalweb.bsginstitute.com/api/CredencialPortalPmp";
 
     private bool _haveError;
     private bool _finishRequest;
@@ -152,6 +155,7 @@ public class UserService : MonoBehaviour
     public void GetUSer(string username, string password)
     {
         StartCoroutine(GetUser(username, password));
+        StartCoroutine(GetAvatar(username, password));
     }
 
     public IEnumerator GetUser(string username, string password)
@@ -206,12 +210,116 @@ public class UserService : MonoBehaviour
             _finishRequest = true;
         }
     }
+public IEnumerator GetAvatar(string username, string password)
+    {
+        Debug.Log("-> Enviando para obtener avatar");
 
+       using (UnityWebRequest request = new UnityWebRequest(urlToCredentials, "POST"))
+       {
+           DataLoginToCredentials dataLogin = new DataLoginToCredentials() { username = username, clave = password};
+            
+            var bodyRaw = Encoding.UTF8.GetBytes(JsonUtility.ToJson(dataLogin));
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Accept", "application/json");
+            request.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Unity 3D; ZFBrowser 3.1.0; UnityTests 1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36");
+            Debug.Log("-> Enviando para obtener avatar");
+
+            yield return request.SendWebRequest();
+            
+            if (request.responseCode >= 400)
+            {
+                Debug.Log("->"+request.error);
+                GameEvents.ErrorGetAvatar?.Invoke();
+            }
+            else
+            {
+                try
+                {
+                    var credential = JsonUtility.FromJson<ResponseToAvatar>(request.downloadHandler.text);
+                    Debug.Log("->"+request.downloadHandler.text);
+                    if (credential.contieneAvatar)
+                    {
+                        _scriptableObjectUser.userInfo.haveAvatar = true;
+                        _scriptableObjectUser.userInfo.urlAvatar = GenerateUrlToAvatar(credential.avatar);
+                        StartCoroutine(downloadSVG(_scriptableObjectUser.userInfo.urlAvatar));
+                    }
+                    else
+                    {
+                        _scriptableObjectUser.userInfo.haveAvatar = false;
+                        GameEvents.ErrorGetAvatar?.Invoke();
+                        
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.Log("_>"+request.downloadHandler.text);
+                    _scriptableObjectUser.userInfo.haveAvatar = false;
+                    GameEvents.ErrorGetAvatar?.Invoke();
+                }
+                
+            }
+       }
+    }
+    IEnumerator downloadSVG(string url)
+    {
+        UnityWebRequest www = UnityWebRequest.Get(url);
+     
+        yield return www.SendWebRequest();
+        if (www.isHttpError || www.isNetworkError)
+        {
+            Debug.Log("Error while Receiving: " + www.error);
+            GameEvents.ErrorGetAvatar?.Invoke();
+        }
+        else
+        {
+            //Convert byte[] data of svg into string
+            string bitString = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data);
+            var tessOptions = new VectorUtils.TessellationOptions()
+            {
+                StepDistance = 100.0f,
+                MaxCordDeviation = 0.5f,
+                MaxTanAngleDeviation = 0.1f,
+                SamplingStepSize = 0.01f
+            };
+         
+            // Dynamically import the SVG data, and tessellate the resulting vector scene.
+            var sceneInfo = SVGParser.ImportSVG(new StringReader(bitString));
+            var geoms = VectorUtils.TessellateScene(sceneInfo.Scene, tessOptions);
+         
+            // Build a sprite with the tessellated geometry
+            Sprite sprite = VectorUtils.BuildSprite(geoms, 10.0f, VectorUtils.Alignment.Center, Vector2.zero, 128, true);
+            _scriptableObjectUser.userInfo.spriteAvatar = sprite;
+            Debug.Log("creado: " + _scriptableObjectUser.userInfo.urlAvatar);
+            Debug.Log("creado: " + _scriptableObjectUser.userInfo.spriteAvatar);
+            Debug.Log("creado: " + _scriptableObjectUser.userInfo.haveAvatar);
+            GameEvents.SuccessGetAvatar?.Invoke();
+
+        }    
+    }
     private void AddHeader(UnityWebRequest request)
     {
         request.SetRequestHeader("Content-Type", "application/json");
         request.SetRequestHeader("Accept", "application/json");
         request.SetRequestHeader("User-Agent",
             "Mozilla/5.0 (Windows NT 6.1; Unity 3D; ZFBrowser 3.1.0; UnityTests 1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36");
+    }
+    private string GenerateUrlToAvatar(AvatarInfo avatarInfo)
+    {
+        string url = $"https://avataaars.io/?avatarStyle=Circle";
+        url += $"&topType={avatarInfo.top}";
+        url += $"&accessoriesType={avatarInfo.accessories}";
+        url += $"&hairColor={avatarInfo.hair_Color}";
+        url += $"&facialHairType={avatarInfo.facial_Hair}";
+        url += $"&facialHairColor={avatarInfo.facial_Hair_Color}";
+        url += $"&clotheType={avatarInfo.clothes}";
+        url += $"&clotheColor={avatarInfo.clothes_Color}";
+        url += $"&eyeType={avatarInfo.eyes}";
+        url += $"&eyebrowType={avatarInfo.eyesbrow}";
+        url += $"&mouthType={avatarInfo.mouth}";
+        url += $"&skinColor={avatarInfo.skin}";
+        return url;
     }
 }

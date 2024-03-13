@@ -5655,6 +5655,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cad90f4fa8b10f4fb0f9961706f489d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &939973288 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6645977073438282746, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+  m_PrefabInstance: {fileID: 7743064895462747754}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8b96895a0ec4ba685178a052544251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &943267913 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4788969785654553885, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
@@ -6075,6 +6086,8 @@ MonoBehaviour:
   _totalExpirience: {fileID: 1585783368}
   _totalCoins: {fileID: 51826471}
   _userInputField: {fileID: 7743064895462747756}
+  _mainMenuAvatar: {fileID: 1337638859}
+  _storeAvatar: {fileID: 939973288}
   _notificationToggle: {fileID: 86767841}
   _pointToInstantiate: {fileID: 1953554847}
   _onSuccessSaveInformation:
@@ -6636,6 +6649,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1337638859 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5479689192266668981, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+  m_PrefabInstance: {fileID: 7743064895462747754}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8b96895a0ec4ba685178a052544251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1350073650
 GameObject:
   m_ObjectHideFlags: 0

@@ -239,6 +239,7 @@ MonoBehaviour:
   _session: []
   _nameListContainer: {fileID: 1275339288}
   _progressQuestion: {fileID: 485290095}
+  _buttonAnimationStart: {fileID: 453543885}
   _onFirstQuestion:
     m_PersistentCalls:
       m_Calls:

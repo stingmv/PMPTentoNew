@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a7ee0985d840849bea0ac81f1d2b78, type: 3}
   m_Name: IncorrectQuestionSO
   m_EditorClassIdentifier: 
-  IncorrectQuestionsList: []
+  questions:
+    IncorrectQuestionsList: []

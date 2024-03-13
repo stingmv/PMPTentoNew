@@ -14,7 +14,9 @@ public class UserManager : MonoBehaviour
     [SerializeField] private ScripableObjectPowerUp _powerUpDeleteOption;
     [SerializeField] private ScripableObjectPowerUp _powerUpNextQuestion;
     [SerializeField] private ScripableObjectPowerUp _powerUpMoreTime;
-    public bool EndFinishLoadData;
+
+    public bool EndFinishLoadData, EndFinishLoadAvatar;
+    
     private void OnEnable()
     {
         EndFinishLoadData = false;
@@ -24,6 +26,18 @@ public class UserManager : MonoBehaviour
         GameEvents.SuccessGetUserDetail += GameEvent_SuccessGetUserDetail;
         GameEvents.ErrorGetUser += GameEvents_ErrorGetUser;
         GameEvents.ErrorGetUserDetail += GameEvents_ErrorGetUserDetail;
+        GameEvents.SuccessGetAvatar += GameEvents_SuccessGetAvatar;
+        GameEvents.ErrorGetAvatar += GameEvents_ErrorGetAvatar;
+    }
+
+    private void GameEvents_ErrorGetAvatar()
+    {
+        EndFinishLoadData = true;
+    }
+
+    private void GameEvents_SuccessGetAvatar()
+    {
+        EndFinishLoadAvatar = true;
     }
 
     private void OnDisable()
@@ -32,6 +46,9 @@ public class UserManager : MonoBehaviour
         GameEvents.SuccessGetUserDetail -= GameEvent_SuccessGetUserDetail;
         GameEvents.ErrorGetUser -= GameEvents_ErrorGetUser;
         GameEvents.ErrorGetUserDetail -= GameEvents_ErrorGetUserDetail;
+        GameEvents.SuccessGetAvatar -= GameEvents_SuccessGetAvatar;
+        GameEvents.ErrorGetAvatar -= GameEvents_ErrorGetAvatar;
+
     }
 
     private void GameEvents_ErrorGetUserDetail()
@@ -99,7 +116,9 @@ public class UserManager : MonoBehaviour
             _userSO.userInfo.user = new User();
             _userSO.userInfo.haveUsername = false;
             _userSO.userInfo.haveUser = false;
+            _userSO.userInfo.haveAvatar = false;
             EndFinishLoadData = true;
+            EndFinishLoadAvatar = true;
             return;
         }
 

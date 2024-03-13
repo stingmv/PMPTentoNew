@@ -8027,6 +8027,8 @@ MonoBehaviour:
     screen: {fileID: 1498630612}
   - name: finish
     screen: {fileID: 1274690540}
+  - name: domain
+    screen: {fileID: 1498630612}
 --- !u!1 &1767933824
 GameObject:
   m_ObjectHideFlags: 0

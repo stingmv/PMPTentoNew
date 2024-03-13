@@ -21,7 +21,7 @@ MonoBehaviour:
       idContacto: 0
       clave: 
       userName: pruebaxjrivera@bsginstitute.net
-      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.__xXQyDVm7THJkyusIdj76vFrias4IAHdHHDo-h6DzSUIJoSWK4Mwg.IcA2Mkt05PPmtDBpWOJmmw.XuEpyb6yKkVFQUuo_9FOOri4j3VRKghMCwO2ziNWMoZ90y9-TMUA2s7fnjG-ez2PUT1EeDNPOq0o4C7Bxii47t5SB8KDPaFIsZu4CWssW9S36x2saxcDbEDc62fY8bPWpkGx-8fUBBr5BwhUF8sGbn0vZvRS3GojNCC5GoO3MH345SreBAqFcJvkZgMXMe7VcDIzdwn-BzMmW5H4rzXN-elEXl3geGwXu6jMD4dNlqDKeKURTt0AZmNDecWkf8w8aSScl-qPMrNWiZ5L71xMA1pgF0OXo-emLCd7O59-ABkHvZTReKpRC7Qqk9AUXzLv43L-HmPK-0YwGGtLffr6HcU17DHpz_fSRxGRsleqRWcR_T9ii9TPJBdKApB2OxREmVf-NRpfi4iRcA4XpgAv9L2edA8WQpOXvvQ7BAHkrHjBgm8zZGayqk7yGIpK3Z4D6B3CGCv3uJcwoA10vaU1og9nF-IOlSFu8MBSADvbHe_JOYvQEU8tgR3sONw2fr92QwwsupLzLJCFfWnEA4YxpY0l15IQNRxP9BGFD5J1uS6mN6vVaTR2drEyeoteo7_IUS1uvuYvOvutuNEltwTdlfkClzOrWt28SiGz34rHP9vpG7Ksul6EmWurzMCLJz7q.U79S3gbU1DRs7P9WmLqe2g
+      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.rPsgGiygt1SmBGw0-28pnyGCjKODhaw_Mu9KtG7WeCAokNqem15CfQ.shQ_IZAKjLZM65d8Jv0cdg.gK-cyadSkwEJrXzajzd8V3oUZRNUNeU5EMWQ-4T9RguuQ0ObiYWqPAFzTOhJv-WSrDYnHFz3ehXrkb-8V1B_v1IYGmDZa6iVObEU-CYEgn3CyvpKHkrAD8TGgB5fR6dWF-2AkFu650F9HufLpDQcBtNGHL9Akpf6x5-UK35Bw9nyuhvY--8WipQCPilCPZ7bJVJTIsJuIEZK9zjEhjWOmlkLuP64sbufZ7C9MRyapLrv110KjtmCXh97eantjuVwpaD_5BdbqhbB1PuM9f2sYcBekeLZAVi92u4Jzx5vEH48MrXsPBElRgbu98uxRcAZMzCp_csAWScxS0UbycpWlAkPRrAzeBRzVYl60A7Rkn8AXID3jCZLpaxcZ5cGqdbqD98jl5ihvw_bvsrWRXTYlU0qq2UOdxmjnSdAdmrXukOOnpnyrjaKDYjmM1XrZKGFeSEUzNgRxmRCFrfLL2YGHe7TQFPt4r8btjoasn-_L98UiRg1-l1E64T1clq4amxQHXlAsJiPqSCQxGW7i78ZtlCiWRTiya3JqYZGe5lcas5ytlKK9p08l7FNYfKUkGo5cZtVMN7OMMJ9EWnfLstd2rhmbnFpH3ZkbdEbj1pot4WB7AUlFQAPBeah0fLxpTdf.MiSDshnBnHD1XSP8R_yDuw
       tipoCarrera: 1
       correoEnc: 
       telEnc: 
@@ -30,15 +30,15 @@ MonoBehaviour:
       detail:
         idCaracteristicaGamificacion: 1
         idAlumno: 9818325
-        usernameG: JRivera
-        instructorID: 0
-        totalCoins: 325
-        totalExperience: 820
-        discardOption: 20
+        usernameG: JRivera S
+        instructorID: 1
+        totalCoins: 145
+        totalExperience: 5380
+        discardOption: 23
         skipQuestion: 30
-        findCorrectAnswer: 29
+        findCorrectAnswer: 32
         increaseTime: 30
-        secondChance: 26
+        secondChance: 29
       excepcion:
         excepcionGenerada: 0
         descripcionGeneral: 
@@ -48,3 +48,6 @@ MonoBehaviour:
     haveUsername: 1
     haveInstructor: 1
     idInstructor: 1
+    haveAvatar: 1
+    urlAvatar: https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Round&hairColor=Black&facialHairType=BeardMedium&facialHairColor=Black&clotheType=ShirtVNeck&clotheColor=Red&eyeType=Side&eyebrowType=DefaultNatural&mouthType=Disbelief&skinColor=Light
+    spriteAvatar: {fileID: 0}

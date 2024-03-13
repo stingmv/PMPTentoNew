@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Button;
 using Question;
 using TMPro;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class DailyReviewController : MonoBehaviour
     [SerializeField] private List<QuestionData> _session;
     [SerializeField] private Transform _nameListContainer;
     [SerializeField] private ProgressQuestion _progressQuestion;
+    [SerializeField] private ButtonAnimation _buttonAnimationStart;
     [SerializeField] private UnityEvent _onFirstQuestion;
     [SerializeField] private UnityEvent _onLastQuestion;
     [SerializeField] private UnityEvent _onMediumQuestion;
@@ -45,7 +47,8 @@ public class DailyReviewController : MonoBehaviour
 
     private void Start()
     {
-        var items = _pmpService.GetAllIncorrectQuestions();
+        List<QuestionItem> items = new List<QuestionItem>();
+        items = _pmpService.GetAllIncorrectQuestions();
         foreach (Transform child in _nameListContainer.transform)
         {
             Destroy(child.gameObject);
@@ -61,6 +64,13 @@ public class DailyReviewController : MonoBehaviour
         }
 
         SetData(items.ToArray());
+
+        if (items.Count == 0)
+        {
+            _buttonAnimationStart.DisableButton();
+            return;
+        }
+        _buttonAnimationStart.EnableButton();
         ConfigurateQuestion();
         if (IsFirst())
         {

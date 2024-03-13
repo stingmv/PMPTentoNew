@@ -20,7 +20,7 @@ namespace Login
         // Start is called before the first frame update
         IEnumerator Start()
         {
-            yield return new WaitUntil(() =>_userManager.EndFinishLoadData );
+            yield return new WaitUntil(() =>_userManager.EndFinishLoadData && _userManager.EndFinishLoadAvatar );
             Debug.Log("terminado 2");
             // yield return null;
             ComprobeLogin();

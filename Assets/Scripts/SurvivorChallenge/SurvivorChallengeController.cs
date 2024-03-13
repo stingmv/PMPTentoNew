@@ -39,6 +39,7 @@ public class SurvivorChallengeController : MonoBehaviour
     private void Awake()
     {
         _numberOfConsecutiveQuestion = -2;
+        _pmpService.Service_GetDomainAndTasks();
 
     }
 
@@ -46,7 +47,6 @@ public class SurvivorChallengeController : MonoBehaviour
     {
         _timer.InitValue(timeToQuestions);
         _currentTime = 0;
-        GetQuestions();
     }
 
     private void Update()
@@ -74,6 +74,12 @@ public class SurvivorChallengeController : MonoBehaviour
         GameEvents.GetNameExam += GameEvents_GetNameExam;
         GameEvents.GameWon += GameEvents_GameWon;
         GameEvents.GameLost += GameEvents_GameWon;
+        GameEvents.DomainsSaved += GameEvents_DomainsSaved;
+    }
+
+    private void GameEvents_DomainsSaved(string obj)
+    {
+        GetQuestions();
     }
 
     private void OnDisable()
@@ -85,6 +91,8 @@ public class SurvivorChallengeController : MonoBehaviour
         GameEvents.GetNameExam -= GameEvents_GetNameExam;
         GameEvents.GameWon -= GameEvents_GameWon;
         GameEvents.GameLost -= GameEvents_GameWon;
+        GameEvents.DomainsSaved -= GameEvents_DomainsSaved;
+
     }
 
     private void GameEvents_GameWon()

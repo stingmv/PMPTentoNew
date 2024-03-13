@@ -651,6 +651,7 @@ MonoBehaviour:
   _powerUpNextQuestion: {fileID: 11400000, guid: baa0e82d7d157af4c91e4fff3d3b4f1a, type: 2}
   _powerUpMoreTime: {fileID: 11400000, guid: 9026b1be2dac5c140aaca71b68c20ffb, type: 2}
   EndFinishLoadData: 0
+  EndFinishLoadAvatar: 0
 --- !u!114 &213234114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,7 +1554,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSettings: {fileID: 11400000, guid: f2e509c95e7e26a4fbb60ad6ceba7286, type: 2}
-  _incorrectQuestions: {fileID: 11400000, guid: be1faa31fab946a41b8e0dc255affa08, type: 2}
   _sFXAudioSource: {fileID: 1905788656}
   _musicAudioSource: {fileID: 1825912840}
 --- !u!114 &532442930
@@ -2344,6 +2344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   url: https://api-portalweb.bsginstitute.com/api/AspNetUser/authenticate
   urlToMoreDetail: http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ObtenerCaracteristicasGamificacion
+  urlToCredentials: https://api-portalweb.bsginstitute.com/api/CredencialPortalPmp
   _objectUser: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
   _loginController: {fileID: 600175731}
   _finishRequest: 1
@@ -2854,6 +2855,64 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7243988509804903900, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
   m_PrefabInstance: {fileID: 5596154520970509905}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1005293126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1005293128}
+  - component: {fileID: 1005293127}
+  - component: {fileID: 1005293129}
+  m_Layer: 0
+  m_Name: Incorrect Questions Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1005293127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005293126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68882acc7868084b87d592f16aacea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _incorrectQuestions: {fileID: 11400000, guid: be1faa31fab946a41b8e0dc255affa08, type: 2}
+--- !u!4 &1005293128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005293126}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 318.24744, y: 950.1002, z: -2.6591752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1005293129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005293126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83aac9f773f4864a8612db7b255d367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1049716369
 GameObject:
   m_ObjectHideFlags: 0
@@ -8043,3 +8102,4 @@ SceneRoots:
   - {fileID: 213234112}
   - {fileID: 1806704733}
   - {fileID: 1835904624}
+  - {fileID: 1005293128}

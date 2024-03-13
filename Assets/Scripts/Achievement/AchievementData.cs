@@ -3,6 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
+public class AchievementListContainer
+{
+    public List<AchievementData.Achievement> achievementList;
+
+}
 [CreateAssetMenu(fileName = "AchievementData", menuName = "ScriptableObjects/AchievementData")]
 public class AchievementData : ScriptableObject
 {
@@ -19,8 +25,7 @@ public class AchievementData : ScriptableObject
         public List<GiftData.Gift> GiftData;
     }
 
-    public List<Achievement> achievementList;
-
+    public AchievementListContainer achievementListContainer;
     private void OnEnable()
     {
         LoadLocalData();
@@ -28,7 +33,7 @@ public class AchievementData : ScriptableObject
 
     public void AddCounter(int index)
     {
-        var achievement = achievementList[index];
+        var achievement = achievementListContainer.achievementList[index];
         achievement.CurrentCounter++;
 
         if (achievement.CurrentCounter >= achievement.MaxCounter)
@@ -43,14 +48,14 @@ public class AchievementData : ScriptableObject
 
     private void AddMaxCounterDifficulty(int index)
     {
-        var achievement = achievementList[index];
+        var achievement = achievementListContainer.achievementList[index];
         achievement.MaxCounter += achievement.MaxCounterDifficulty;
         SaveLocalData();
     }
 
     private void AddGiftsObtained(int index)
     {
-        var achievement = achievementList[index];
+        var achievement = achievementListContainer.achievementList[index];
         achievement.GiftsObtained++;
         SaveLocalData();
     }
@@ -63,23 +68,30 @@ public class AchievementData : ScriptableObject
 
     private void SaveLocalData()
     {
-        AchievementData data = CreateInstance<AchievementData>();
-        data.achievementList = new List<Achievement>();
-        data.achievementList.AddRange(achievementList);
-
-        if (FileManager.WriteToFile("SaveData.dat", JsonUtility.ToJson(data)))
-        {
-            Debug.Log("Save successful");
-        }
+        // AchievementData data = CreateInstance<AchievementData>();
+        // data.achievementList = new List<Achievement>();
+        // data.achievementList.AddRange(achievementList);
+        //
+        // if (FileManager.WriteToFile("SaveData.dat", JsonUtility.ToJson(data)))
+        // {
+        //     Debug.Log("Save successful");
+        // }
+        
+        PlayerPrefs.SetString("AchieveData", JsonUtility.ToJson(achievementListContainer));
+        PlayerPrefs.Save();
     }
 
     private void LoadLocalData()
     {
-        if (FileManager.LoadFromFile("SaveData.dat", out var json))
+        // if (FileManager.LoadFromFile("SaveData.dat", out var json))
+        // {
+        //     JsonUtility.FromJsonOverwrite(json, this);
+        //
+        //     Debug.Log("Load complete");
+        // }
+        if (PlayerPrefs.HasKey("AchieveData"))
         {
-            JsonUtility.FromJsonOverwrite(json, this);
-
-            Debug.Log("Load complete");
+            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("AchieveData"), achievementListContainer);
         }
 
     }

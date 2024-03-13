@@ -24,7 +24,9 @@ public static class GameEvents
     public static Action ErrorGetUser;
     public static Action SuccessGetUserDetail;
     public static Action ErrorGetUserDetail;
-    
+    public static Action SuccessGetAvatar;
+    public static Action ErrorGetAvatar;
+
     #endregion
 
     #region Main menu events

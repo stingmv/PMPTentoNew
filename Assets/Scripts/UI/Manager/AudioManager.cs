@@ -11,7 +11,6 @@ public class AudioManager : MonoBehaviour
     private const string MASTER_VOLUME = "MasterVolume";
 
     [SerializeField] private AudioSettingsSO _audioSettings;
-    [SerializeField] private IncorrectQuestionsSO _incorrectQuestions;
     [SerializeField] private AudioSource _sFXAudioSource;
     [SerializeField] private AudioSource _musicAudioSource;
 
@@ -53,11 +52,16 @@ public class AudioManager : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("SounEffectVolume"))
         {
-            AudioEvents_OnSFXVolumeChanged(PlayerPrefs.GetFloat("SounEffectVolume"));
+            AudioEvents.SFXVolumeChanged?.Invoke(PlayerPrefs.GetFloat("SounEffectVolume"));
+            // AudioEvents_OnSFXVolumeChanged();
+            Debug.Log("SounEffectVolume "  + PlayerPrefs.GetFloat("SounEffectVolume"));
         }
         if (PlayerPrefs.HasKey("MusicVolume"))
         {
-            AudioEvents_OnMusicVolumeChanged(PlayerPrefs.GetFloat("MusicVolume"));
+            AudioEvents.MusicVolumeChanged?.Invoke(PlayerPrefs.GetFloat("MusicVolume"));
+            // AudioEvents_OnMusicVolumeChanged(PlayerPrefs.GetFloat("MusicVolume"));
+            Debug.Log("v "  + PlayerPrefs.GetFloat("MusicVolume"));
+
         }
         
     }

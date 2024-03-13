@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 using ScriptableCreator;
 using TMPro;
+using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -18,6 +19,9 @@ namespace MainMenu
         [SerializeField] private TextMeshProUGUI _totalExpirience;
         [SerializeField] private TextMeshProUGUI _totalCoins;
         [SerializeField] private TMP_InputField _userInputField;
+
+        [SerializeField] private SVGImage _mainMenuAvatar;
+        [SerializeField] private SVGImage _storeAvatar;
         // [SerializeField] private Slider _soundEffects;
         // [SerializeField] private Slider _music;
         [SerializeField] private NotificationToggle _notificationToggle;
@@ -36,6 +40,16 @@ namespace MainMenu
             PathToInstantiateInstructor();
             SetUserProperties();
             SetConfigurationProperties();
+            if (_user.userInfo.haveAvatar)
+            {
+                _mainMenuAvatar.sprite = _user.userInfo.spriteAvatar;
+                _storeAvatar.sprite = _user.userInfo.spriteAvatar;    
+            }
+            else
+            {
+                _mainMenuAvatar.enabled = false;
+                _storeAvatar.enabled = false;   
+            }
         }
 
         private void OnEnable()

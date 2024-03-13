@@ -26,9 +26,15 @@ public class TrainingChallengeController : MonoBehaviour
     private float _numberOfConsecutiveQuestion;
     private float _experienceAccumulated = 0;
     private float _coinsAccumulated = 0;
-    private void Start()
+    // private void Start()
+    // {
+    //     GetQuestions();
+    // }
+    private void Awake()
     {
-        GetQuestions();
+        _numberOfConsecutiveQuestion = -2;
+        _pmpService.Service_GetDomainAndTasks();
+
     }
     
     private void GetQuestions()
@@ -59,8 +65,15 @@ public class TrainingChallengeController : MonoBehaviour
         GameEvents.GetNameExam	+= GameEvents_GetNameExam;
         GameEvents.GameWon += GameEvents_GameWon;
         GameEvents.GameLost += GameEvents_GameWon;
+        GameEvents.DomainsSaved += GameEvents_DomainsSaved;
+
     }
-    
+
+    private void GameEvents_DomainsSaved(string obj)
+    {
+        GetQuestions();
+    }
+
 
     private void GameEvents_GetNameExam(string obj)
     {
@@ -74,6 +87,8 @@ public class TrainingChallengeController : MonoBehaviour
         GameEvents.GetNameExam	-= GameEvents_GetNameExam;
         GameEvents.GameWon -= GameEvents_GameWon;
         GameEvents.GameLost -= GameEvents_GameWon;
+        GameEvents.DomainsSaved -= GameEvents_DomainsSaved;
+
     }
 
     private void GameEvents_CorrectlyAnswered()

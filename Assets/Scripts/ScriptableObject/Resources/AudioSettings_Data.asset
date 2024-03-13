@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioMixer: {fileID: 24100000, guid: 657981ca9c88e4d4bad439cfcb08179e, type: 2}
   _masterVolume: 100
-  _soundEffectsVolume: 0.09953202
-  _musicVolume: 0.48613578
+  _soundEffectsVolume: 0.60409904
+  _musicVolume: 0
   _isMasterMuted: 0
   _isSoundEffectsMuted: 0
   _isMusicMuted: 0
