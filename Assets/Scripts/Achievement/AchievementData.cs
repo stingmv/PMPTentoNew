@@ -16,14 +16,14 @@ public class AchievementData : ScriptableObject
         public int CurrentLevel;
         public int MaxCounterDifficulty;
         public int GiftsObtained;
-        public List<GiftData> GiftData;
+        public List<GiftData.Gift> GiftData;
     }
 
     public List<Achievement> achievementList;
 
     private void OnEnable()
     {
-        LoadDataPlayerPrefs();
+        LoadLocalData();
     }
 
     public void AddCounter(int index)
@@ -38,40 +38,49 @@ public class AchievementData : ScriptableObject
             AddMaxCounterDifficulty(index);
             AddGiftsObtained(index);
         }
-        SaveDataPlayerPrefs();
+        SaveLocalData();
     }
 
     private void AddMaxCounterDifficulty(int index)
     {
         var achievement = achievementList[index];
         achievement.MaxCounter += achievement.MaxCounterDifficulty;
-        SaveDataPlayerPrefs();
+        SaveLocalData();
     }
 
     private void AddGiftsObtained(int index)
     {
         var achievement = achievementList[index];
         achievement.GiftsObtained++;
-        SaveDataPlayerPrefs();
+        SaveLocalData();
     }
 
     public void RemoveGiftsObtained(Achievement achievement)
     {
         achievement.GiftsObtained = 0;
-        SaveDataPlayerPrefs();
+        SaveLocalData();
     }
 
-    private void SaveDataPlayerPrefs()
+    private void SaveLocalData()
     {
-        PlayerPrefs.SetString("AchievData", JsonUtility.ToJson(achievementList));
-        PlayerPrefs.Save();
-    }
+        AchievementData data = CreateInstance<AchievementData>();
+        data.achievementList = new List<Achievement>();
+        data.achievementList.AddRange(achievementList);
 
-    private void LoadDataPlayerPrefs()
-    {
-        if (PlayerPrefs.HasKey("AchievData"))
+        if (FileManager.WriteToFile("SaveData.dat", JsonUtility.ToJson(data)))
         {
-            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("AchievData"), achievementList);
+            Debug.Log("Save successful");
         }
+    }
+
+    private void LoadLocalData()
+    {
+        if (FileManager.LoadFromFile("SaveData.dat", out var json))
+        {
+            JsonUtility.FromJsonOverwrite(json, this);
+
+            Debug.Log("Load complete");
+        }
+
     }
 }

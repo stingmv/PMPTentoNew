@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d635f876e36144a84349184a6cfddc, type: 3}
   m_Name: NotificationData
   m_EditorClassIdentifier: 
-  NotificationList:
-  - Title: 5 preguntas seguidas
-    Message: 5 preguntas seguidas
+  NotificationList: []

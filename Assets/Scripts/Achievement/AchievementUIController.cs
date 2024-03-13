@@ -58,8 +58,8 @@ public class AchievementUIController : MonoBehaviour
         popupContainer.SetActive(true);
         popupContainer.GetComponent<FadeUI>().FadeInTransition();
 
-        int totalGift1 = achievement.GiftsObtained * achievement.GiftData[0].gift.Amount;
-        int totalGift2 = achievement.GiftsObtained * achievement.GiftData[1].gift.Amount;
+        int totalGift1 = achievement.GiftsObtained * achievement.GiftData[0].Amount;
+        int totalGift2 = achievement.GiftsObtained * achievement.GiftData[1].Amount;
 
         popUpGift1Text.SetText(totalGift1.ToString());
         popUpGift2Text.SetText(totalGift2.ToString());
