@@ -34,8 +34,8 @@ public class KeepScaleOnCanvas : MonoBehaviour
     {
         _initScale = _guideTransform.localScale;
         _guideTransform =
-            // Instantiate(_instructors.instructors[_user.userInfo.idInstructor].prefab, transform.position, Quaternion.Euler(new Vector3(8.3f, 180f, 0f)), transform.parent).transform;
-            Instantiate(_instructors.instructors[1].prefab, transform.position, Quaternion.Euler(new Vector3(8.3f, 180f, 0f)), transform.parent).transform;
+            Instantiate(_instructors.instructors[_user.userInfo.idInstructor].prefab, transform.position, Quaternion.Euler(new Vector3(8.3f, 180f, 0f)), transform.parent).transform;
+            // Instantiate(_instructors.instructors[1].prefab, transform.position, Quaternion.Euler(new Vector3(8.3f, 180f, 0f)), transform.parent).transform;
         _guideTransform.localRotation= Quaternion.Euler(new Vector3(8.6f, 180f, 0f));
         var anim = _guideTransform.GetComponent<Animator>();
         if (_lost)

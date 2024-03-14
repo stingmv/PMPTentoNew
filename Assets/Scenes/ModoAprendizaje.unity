@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &6543762 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3230999204599561548, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+  m_PrefabInstance: {fileID: 1123753194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7403509
 GameObject:
   m_ObjectHideFlags: 0
@@ -4917,7 +4928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4208609819753117836, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_text
-      value: "Volver al men\xFA"
+      value: Volver a jugar
       objectReference: {fileID: 0}
     - target: {fileID: 4606493883804608817, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_Name
@@ -5938,10 +5949,34 @@ MonoBehaviour:
       m_Calls: []
   _onWonGame:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2002018237}
+        m_TargetAssemblyTypeName: KeepScaleOnCanvas, Assembly-CSharp
+        m_MethodName: set_Lost
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onLostGame:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2002018237}
+        m_TargetAssemblyTypeName: KeepScaleOnCanvas, Assembly-CSharp
+        m_MethodName: set_Lost
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnLatestQuestionAchieved:
     m_PersistentCalls:
       m_Calls:
@@ -6214,6 +6249,7 @@ MonoBehaviour:
   _attemptLabel: {fileID: 664636075}
   _detailPopupTittleLabel: {fileID: 148366913}
   _detailPopupDescriptionLabel: {fileID: 1055885192}
+  _buttonToPlay: {fileID: 93087041}
 --- !u!114 &1375625741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8378,6 +8414,7 @@ GameObject:
   - component: {fileID: 1767933825}
   - component: {fileID: 1767933827}
   - component: {fileID: 1767933826}
+  - component: {fileID: 1767933828}
   m_Layer: 0
   m_Name: SessionController
   m_TagString: Untagged
@@ -8437,6 +8474,21 @@ MonoBehaviour:
   _rewardItemController: {fileID: 1123753195}
   _platformController: {fileID: 849923114}
   _platformMarkerPrefab: {fileID: 1340407718924619736, guid: 360e05f67522eba4191d5e9aba3a6408, type: 3}
+--- !u!114 &1767933828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767933824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e290488f7e973243ac8888e454870f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textMessage: {fileID: 11400000, guid: e0edf1dfff9eb784f93c83489c01043c, type: 2}
+  _messageLabel: {fileID: 6543762}
+  _won: 0
 --- !u!1 &1829986917
 GameObject:
   m_ObjectHideFlags: 0
@@ -8909,6 +8961,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2002018237 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5379867882959917788, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+  m_PrefabInstance: {fileID: 1123753194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b6a75a8b72d2204286b4db481b60a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2037666997
 GameObject:
   m_ObjectHideFlags: 0
