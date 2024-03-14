@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instructors:
   - id: 0
-    prefab: {fileID: 7962611336709743259, guid: 231ac5e6f90f26c45ac8dbf191d6cb87, type: 3}
+    prefab: {fileID: 891326003190348929, guid: 129defee381819d40b8c882d414da0be, type: 3}
   - id: 1
     prefab: {fileID: 3897283599220616691, guid: a1a7d3b7a94ec424e923a2772ce288a3, type: 3}
   currentInstructor:
