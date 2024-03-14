@@ -34,7 +34,7 @@ public class InstructorSelector : MonoBehaviour
             instant.layer = 3;
             foreach (Renderer child in instant.GetComponentsInChildren<Renderer>())
             {
-                child.gameObject.layer = 6;
+                child.gameObject.layer = 3;
             }
             // for (int j = 0; j < instant.transform.childCount; j++)
             // {
