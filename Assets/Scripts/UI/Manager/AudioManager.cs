@@ -15,7 +15,21 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource _musicAudioSource;
 
     public AudioSettingsSO AudioSettings => _audioSettings;
+    
+    public enum ActualSound
+    {
+        main,
+        categoryMode,
+        learningMode,
+        videoQuestionMode,
+        survivalChallenge,
+        trainingChallenge,
+        glossaryChallenge,
+        gameWon,
+        gameLost
+    }
 
+    public ActualSound actualSound;
     private void Start()
     {
         Initialize();

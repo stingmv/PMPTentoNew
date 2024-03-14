@@ -16,6 +16,10 @@ namespace Login
         [SerializeField] public UnityEvent<string> _onFailedLogin;
         [SerializeField] private LoginRestApi _loginRestApi;
 
+        private void Start()
+        {
+            FindObjectOfType<GameplaySound>().PlayMainMenuSound();
+        }
 
         public bool ComprobeMissFields()
         {

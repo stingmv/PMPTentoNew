@@ -36,7 +36,12 @@ public class TrainingChallengeController : MonoBehaviour
         _pmpService.Service_GetDomainAndTasks();
 
     }
-    
+
+    private void Start()
+    {
+        FindObjectOfType<GameplaySound>().PlayTrainingChallengeSound();
+    }
+
     private void GetQuestions()
     {
 

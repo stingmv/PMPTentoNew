@@ -66,15 +66,86 @@ public class GameplaySound : MonoBehaviour
     }
     private void PlayGameWonSound()
     {
+        _audioManager.actualSound = AudioManager.ActualSound.gameWon;
         _audioManager.PlayMusic(_audioManager.AudioSettings.GameWonSound, Vector3.zero, 0f, false);
         Debug.Log("play game won sound");
     }
     private void PlayLostSound()
     {
+        _audioManager.actualSound = AudioManager.ActualSound.gameLost;
         _audioManager.PlayMusic(_audioManager.AudioSettings.GameLostSound, Vector3.zero, 0f, false);
         Debug.Log("play game lost sound");
     }
-    
+
+    public void PlayCategoryModeSound()
+    {
+        if (_audioManager.actualSound == AudioManager.ActualSound.categoryMode)
+        {
+            return;
+        }
+        _audioManager.actualSound = AudioManager.ActualSound.categoryMode;
+        _audioManager.PlayMusic(_audioManager.AudioSettings.CategoryModeSound, Vector3.zero, 0, true);
+    }
+
+    public void PlayLearningModeSound()
+    {
+        if (_audioManager.actualSound == AudioManager.ActualSound.learningMode)
+        {
+            return;
+        }
+        _audioManager.actualSound = AudioManager.ActualSound.learningMode;
+        _audioManager.PlayMusic(_audioManager.AudioSettings.LearningModeSound, Vector3.zero,0, true);
+    }
+
+    public void PlayVideoQuestionModeSound()
+    {
+        if (_audioManager.actualSound == AudioManager.ActualSound.videoQuestionMode)
+        {
+            return;
+        }
+        _audioManager.actualSound = AudioManager.ActualSound.videoQuestionMode;
+        _audioManager.PlayMusic(_audioManager.AudioSettings.VideoQuestionModeSound, Vector3.zero, 0, true);
+    }
+
+    public void PlayMainMenuSound()
+    {
+        if (_audioManager.actualSound == AudioManager.ActualSound.main)
+        {
+            return;
+        }
+        _audioManager.actualSound = AudioManager.ActualSound.main;
+        _audioManager.PlayMusic(_audioManager.AudioSettings.MainSound, Vector3.zero, 0, true);
+    }
+
+    public void PlaySurvivalChallengeSound()
+    {
+        if (_audioManager.actualSound == AudioManager.ActualSound.survivalChallenge)
+        {
+            return;
+        }
+        _audioManager.actualSound = AudioManager.ActualSound.survivalChallenge;
+        _audioManager.PlayMusic(_audioManager.AudioSettings.SurvivalChallengeSound, Vector3.zero, 0, true);
+    }
+
+    public void PlayTrainingChallengeSound()
+    {
+        if (_audioManager.actualSound == AudioManager.ActualSound.trainingChallenge)
+        {
+            return;
+        }
+        _audioManager.actualSound = AudioManager.ActualSound.trainingChallenge;
+        _audioManager.PlayMusic(_audioManager.AudioSettings.TrainingChallengeSound, Vector3.zero, 0, true);
+    }
+
+    public void PlayGlossaryChallengeSound()
+    {
+        if (_audioManager.actualSound == AudioManager.ActualSound.glossaryChallenge)
+        {
+            return;
+        }
+        _audioManager.actualSound = AudioManager.ActualSound.glossaryChallenge;
+        _audioManager.PlayMusic(_audioManager.AudioSettings.GlossaryChallengeSound, Vector3.zero, 0, true);
+    }
     private void GameEvents_IncorrectlyAnswered()
     {
         PlayIncorrectAnswerSound();

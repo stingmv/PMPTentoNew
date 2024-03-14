@@ -34,6 +34,7 @@ public class VideoQuestionModeController : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<GameplaySound>().PlayVideoQuestionModeSound();
         GetQuestions();
     }
     

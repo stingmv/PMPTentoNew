@@ -57,6 +57,12 @@ public class LearningModeController : MonoBehaviour
         _pmpService.Service_GetDomainAndTasks();
 
     }
+
+    private void Start()
+    {
+        FindObjectOfType<GameplaySound>().PlayLearningModeSound();
+    }
+
     private void OnEnable()
     {
         if (!PlayerPrefs.HasKey(PREFS_INFO_LEARNING_MODE))

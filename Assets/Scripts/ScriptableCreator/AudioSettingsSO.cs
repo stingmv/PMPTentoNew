@@ -21,9 +21,19 @@ public class AudioSettingsSO : ScriptableObject
 
     [SerializeField] private AudioClip _successSound;
     [SerializeField] private AudioClip _failSound;
+    [SerializeField] private AudioClip _tapTouchSound;
+    [Header("Music")]
+    [SerializeField] private AudioClip _mainSound;
+    [SerializeField] private AudioClip _categoryModeSound;
+    [SerializeField] private AudioClip _learningModeSound;
+    [SerializeField] private AudioClip _videoQuestionModeSound;
+    [SerializeField] private AudioClip _survivalChallengeSound;
+    [SerializeField] private AudioClip _trainingChallengeSound;
+    [SerializeField] private AudioClip _glossaryChallengeSound;
     [SerializeField] private AudioClip _gameWonSound;
     [SerializeField] private AudioClip _gameLostSound;
-    [SerializeField] private AudioClip _tapTouchSound;
+    
+    
     [Header("Navbar")] [SerializeField] private AudioClip _navbarTapTouchSound;
     [Header("Power-up")] [SerializeField] private AudioClip _bombSmokeSound;
     [SerializeField] private AudioClip _bombExplosionSound;
@@ -38,6 +48,20 @@ public class AudioSettingsSO : ScriptableObject
     public AudioClip BombExplosionSound => _bombExplosionSound;
 
     public AudioClip BombSmokeSound => _bombSmokeSound;
+
+    public AudioClip MainSound => _mainSound;
+
+    public AudioClip CategoryModeSound => _categoryModeSound;
+
+    public AudioClip LearningModeSound => _learningModeSound;
+
+    public AudioClip VideoQuestionModeSound => _videoQuestionModeSound;
+
+    public AudioClip SurvivalChallengeSound => _survivalChallengeSound;
+
+    public AudioClip TrainingChallengeSound => _trainingChallengeSound;
+
+    public AudioClip GlossaryChallengeSound => _glossaryChallengeSound;
 
     public float MasterVolume
     {

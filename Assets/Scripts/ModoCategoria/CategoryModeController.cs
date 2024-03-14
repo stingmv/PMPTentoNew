@@ -32,6 +32,12 @@ public class CategoryModeController : MonoBehaviour
         _numberOfConsecutiveQuestion = -2;
         _pmpService.Service_GetDomainAndTasks();
     }
+
+    private void Start()
+    {
+        FindObjectOfType<GameplaySound>().PlayCategoryModeSound();
+    }
+
     private void OnEnable()
     {
         GameEvents.DomainsRetreived += GameEvents_DomainRetreived;

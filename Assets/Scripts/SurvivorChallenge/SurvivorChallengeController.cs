@@ -45,6 +45,7 @@ public class SurvivorChallengeController : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<GameplaySound>().PlaySurvivalChallengeSound();
         _timer.InitValue(timeToQuestions);
         _currentTime = 0;
     }

@@ -33,6 +33,7 @@ namespace MainMenu
         private GameObject _instructorInstantiated;
         private void Start()
         {
+            FindObjectOfType<GameplaySound>().PlayMainMenuSound();
             // if (PlayerPrefs.HasKey("settingInfo"))
             // {
             //     _objectSettings.settingData = JsonUtility.FromJson<ScriptableObjectSettings.SettingData>(PlayerPrefs.GetString("settingInfo"));
