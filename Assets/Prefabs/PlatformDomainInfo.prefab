@@ -264,6 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tittle: {fileID: 4526200883884540496}
   _description: {fileID: 1200156840251291745}
+  _chooseDomainInformation: {fileID: 6002847345197005692}
 --- !u!1 &4432018207451000267
 GameObject:
   m_ObjectHideFlags: 0

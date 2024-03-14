@@ -55,11 +55,12 @@ namespace ModoAprendizaje
             }
         }
 
-        public PlatformItem CreatePlatformInformation(string tittle, string description)
+        public PlatformItem CreatePlatformInformation(string tittle, string description, string detail)
         {
             var instance = Instantiate(_domainInfoPlatform, transform.TransformPoint(_bezierCurve.GetPositionInPercentage(_distanceFix / _multiplierDistance * _numIntances  ) )* _multiplier, quaternion.identity, transform);
             instance.SetDescription(description);
             instance.SetTittle(tittle);
+            instance.SetDetail(detail, description);
             var vector3 = instance.transform.localPosition;
             vector3.x = 0;
             instance.transform.localPosition = vector3;

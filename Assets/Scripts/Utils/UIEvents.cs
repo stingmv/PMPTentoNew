@@ -58,7 +58,8 @@ public static class UIEvents
 
     #region Learning Mode
 
-    public static Action ShowDomainInformation;
+    public static Action<string> ShowDomainInformation;
+    public static Action<string> ShowDomainTitle;
 
     #endregion
 

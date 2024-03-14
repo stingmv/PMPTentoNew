@@ -174,7 +174,10 @@ public class LearningModeController : MonoBehaviour
                 counterDomain++;
                 //cambio de dominio
                 ss = obj.listaTarea[i].idSimuladorPmpDominio;
-                _platformController.CreatePlatformInformation($"Sección {counterDomain}", obj.listaDominio.FirstOrDefault(x => x.id == obj.listaTarea[i].idSimuladorPmpDominio)?.nombre);
+                _platformController.CreatePlatformInformation(
+                    $"Sección {counterDomain}", 
+                    obj.listaDominio.FirstOrDefault(x => x.id == obj.listaTarea[i].idSimuladorPmpDominio)?.nombre,
+                    _domainsAndTask.DomainDetail.First(x => x.id == ss).description);
                 i--;
             }
             else

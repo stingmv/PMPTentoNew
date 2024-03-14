@@ -7,6 +7,7 @@ public class PlatformDomainInformation : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _tittle;
     [SerializeField] private TextMeshProUGUI _description;
+    [SerializeField] private ChooseDomainInformation _chooseDomainInformation;
 
     public void SetTittle(string tittle)
     {
@@ -16,5 +17,10 @@ public class PlatformDomainInformation : MonoBehaviour
     public void SetDescription(string description)
     {
         _description.text = description;
+    }
+
+    public void SetDetail(string data, string title)
+    {
+        _chooseDomainInformation.SetData( data, title);
     }
 }

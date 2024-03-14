@@ -2342,6 +2342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c823eaed9467184c9af4ce1b00c62a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _domainsAndTask: {fileID: 11400000, guid: 6b1d3e2aa35f11546b8d503c8bc3b55c, type: 2}
   _buttons: []
   _buttonPrefab: {fileID: 385937571358570306, guid: 65c6b76c7e67f1a4dbf05a383eb20986, type: 3}
   _heightButton: 215

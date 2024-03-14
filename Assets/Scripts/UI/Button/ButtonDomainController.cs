@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -9,7 +10,8 @@ namespace UI.Button
     public class ButtonDomainController : MonoBehaviour
     {
         #region Variables
-        
+
+        [SerializeField] private DomainsAndTaskSO _domainsAndTask;
         [SerializeField]
         private List<ButtonData> _buttons;
         [SerializeField] private ButtonData _buttonPrefab;
@@ -94,7 +96,7 @@ namespace UI.Button
             var indexRandom = Random.Range(0, buttonColors.Count);
             var color = buttonColors[indexRandom];
             buttonColors.RemoveAt(indexRandom);
-            item.SetData(tittle, color, this, _buttons.Count, tittle, id);
+            item.SetData(tittle, color, this, _buttons.Count, _domainsAndTask.DomainDetail.First(x => x.id == int.Parse(id)).description, id);
             item.transform.localScale = Vector3.one;
             var posTemp = new Vector2(item.transform.localPosition.x,_initPosition.y);
             posTemp.y -= _heightButton * (_buttons.Count );
