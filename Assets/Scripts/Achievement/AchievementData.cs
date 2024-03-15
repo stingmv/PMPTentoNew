@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class AchievementListContainer
 {
-    public List<AchievementData.Achievement> achievementList;
+    public List<AchievementData.Achievement> achievementList = new List<AchievementData.Achievement>();
 
 }
 [CreateAssetMenu(fileName = "AchievementData", menuName = "ScriptableObjects/AchievementData")]
@@ -93,6 +93,9 @@ public class AchievementData : ScriptableObject
         {
             JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("AchieveData"), achievementListContainer);
         }
-
+        else
+        {
+            SaveLocalData();
+        }
     }
 }

@@ -12,7 +12,7 @@ public class Notifications : MonoBehaviour
     public void AddNotificationsToPanel()
     {
         ClearChildrenAchievement();
-        var notifications = notificationData.NotificationList;
+        var notifications = notificationData.NotificationListContainer.NotificationList;
         var textChild = prefab.GetComponentInChildren<TextMeshProUGUI>();
         
 

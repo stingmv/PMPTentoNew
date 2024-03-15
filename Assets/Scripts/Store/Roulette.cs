@@ -70,6 +70,21 @@ public class Roulette : MonoBehaviour
         
     }
 
+    private void OnEnable()
+    {
+        if (PlayerPrefs.HasKey("UseRoulette"))
+        {
+            var timeUsedRoulette = DateTime.Parse(PlayerPrefs.GetString("UseRoulette"));
+            if (timeUsedRoulette < DateTime.Today)
+            {
+                // No usó ruleta hoy
+                Restart();
+            }
+        }
+
+        Restart();
+    }
+
     private void GenerateRoulette()
     {
         var itemsLength = _rouletteItems.Count -1;

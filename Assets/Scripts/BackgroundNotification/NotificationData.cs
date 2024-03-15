@@ -9,10 +9,16 @@ public class NotificationPanel
     public string Message;
 }
 
+[Serializable]
+public class NotificationListContainer
+{
+    public List<NotificationPanel> NotificationList = new List<NotificationPanel>();
+}
+
 [CreateAssetMenu(fileName = "NotificationData", menuName = "ScriptableObjects/NotificationData")]
 public class NotificationData : ScriptableObject
 {
-    public List<NotificationPanel> NotificationList = new List<NotificationPanel>();
+    public NotificationListContainer NotificationListContainer;
 
     private void OnEnable()
     {
@@ -21,26 +27,28 @@ public class NotificationData : ScriptableObject
 
     public void AddNotification(NotificationPanel notificationPanel)
     {
-        NotificationList.Add(notificationPanel);
+        NotificationListContainer.NotificationList.Add(notificationPanel);
         SaveLocalData();
     }
 
     public void RemoveNotification(NotificationPanel notificationPanel)
     { 
-        NotificationList.Remove(notificationPanel);
+        NotificationListContainer.NotificationList.Remove(notificationPanel);
         SaveLocalData();
     }
 
     private void SaveLocalData()
     {
-        NotificationData data = CreateInstance<NotificationData>();
-        data.NotificationList = new List<NotificationPanel>();
-        data.NotificationList.AddRange(NotificationList);
-
-        if (FileManager.WriteToFile("SaveData1.dat", JsonUtility.ToJson(data)))
-        {
-            Debug.Log("Save successful");
-        }
+        // NotificationData data = CreateInstance<NotificationData>();
+        // data.NotificationList = new List<NotificationPanel>();
+        // data.NotificationList.AddRange(NotificationList);
+        //
+        // if (FileManager.WriteToFile("SaveData1.dat", JsonUtility.ToJson(data)))
+        // {
+        //     Debug.Log("Save successful");
+        // }
+        PlayerPrefs.SetString("NotificationData", JsonUtility.ToJson(NotificationListContainer));
+        PlayerPrefs.Save();
     }
 
     private void LoadLocalData()
@@ -53,7 +61,7 @@ public class NotificationData : ScriptableObject
         // }
         if (PlayerPrefs.HasKey("NotificationData"))
         {
-            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("NotificationData"), NotificationList);
+            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("NotificationData"), NotificationListContainer);
         }
     }
 }
