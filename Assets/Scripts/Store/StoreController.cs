@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Button;
 using ScriptableCreator;
 using TMPro;
 using UnityEngine;
@@ -48,13 +49,34 @@ public class StoreController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _messageCompra;
     [SerializeField] private Image _imageCompra;
     [SerializeField] private TextMeshProUGUI _amountLabel;
-
+    [Header("Roulette")] 
+    [SerializeField]
+    private ButtonAnimation _rouletteButton;
+    [SerializeField] private TextMeshProUGUI _rouletteInformation;
     private StoreItem _currentItem;
 
     public float CoinsFromUser => _user.userInfo.user.detail.totalCoins;
 
     private void OnEnable()
     {
+        if (PlayerPrefs.HasKey("UseRoulette"))
+        {
+            Debug.Log(DateTime.Parse(PlayerPrefs.GetString("UseRoulette")));
+            var timeUsedRoulette = DateTime.Parse(PlayerPrefs.GetString("UseRoulette"));
+            if (timeUsedRoulette == DateTime.Today)
+            {
+                // No usó ruleta hoy
+                _rouletteButton.DisableButton	();
+                _rouletteInformation.text = "Ya uso la ruleta, solo se permite una vez por día.";
+                _rouletteInformation.gameObject.SetActive(true);
+            }
+            else
+            {
+                _rouletteButton.EnableButton();
+                _rouletteInformation.text = "";
+                _rouletteInformation.gameObject.SetActive(false);
+            }
+        }
         _usernameLabel.text = _user.userInfo.user.detail.usernameG;
         _totalCoinsLabel.text = _user.userInfo.user.detail.totalCoins.ToString();
         _totalExperienceLabel.text = _user.userInfo.user.detail.totalExperience.ToString();

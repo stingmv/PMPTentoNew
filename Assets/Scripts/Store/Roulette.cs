@@ -65,7 +65,6 @@ public class Roulette : MonoBehaviour
         //     
         // }
         // Modo 2
-        GenerateRoulette();
 
         
     }
@@ -74,15 +73,17 @@ public class Roulette : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("UseRoulette"))
         {
+            Debug.Log(DateTime.Parse(PlayerPrefs.GetString("UseRoulette")));
             var timeUsedRoulette = DateTime.Parse(PlayerPrefs.GetString("UseRoulette"));
             if (timeUsedRoulette < DateTime.Today)
             {
                 // No usó ruleta hoy
                 Restart();
             }
+            return;
         }
+        GenerateRoulette();
 
-        Restart();
     }
 
     private void GenerateRoulette()
@@ -163,6 +164,8 @@ public class Roulette : MonoBehaviour
     private void CalculateItemSelected()
     {
         //Compute the item selected
+        PlayerPrefs.SetString("UseRoulette", DateTime.Today.ToString("yyyy-MM-dd"));
+        PlayerPrefs.Save();
         float distance = Single.MaxValue;
         selecetdItem = null;
         for (int i = 0; i < _rouletteItems.Count; i++)

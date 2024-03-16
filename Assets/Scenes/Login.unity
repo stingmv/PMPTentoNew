@@ -1086,7 +1086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &377631911
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1556,6 +1556,7 @@ MonoBehaviour:
   _audioSettings: {fileID: 11400000, guid: f2e509c95e7e26a4fbb60ad6ceba7286, type: 2}
   _sFXAudioSource: {fileID: 1905788656}
   _musicAudioSource: {fileID: 1825912840}
+  actualSound: 0
 --- !u!114 &532442930
 MonoBehaviour:
   m_ObjectHideFlags: 0
