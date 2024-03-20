@@ -9931,6 +9931,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 39822145734799987, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1124365628}
+    - target: {fileID: 39822145734799987, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetAficionado
+      objectReference: {fileID: 0}
+    - target: {fileID: 39822145734799987, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GetUsersApi, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 39822145734799987, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 162152986277326141, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -10399,6 +10415,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1570086908938785091, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1124365628}
+    - target: {fileID: 1570086908938785091, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetElite
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570086908938785091, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GetUsersApi, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570086908938785091, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1596437710740042860, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.258
@@ -10438,6 +10470,22 @@ PrefabInstance:
     - target: {fileID: 1707031335715370732, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745617818291696780, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1124365628}
+    - target: {fileID: 1745617818291696780, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetMaestro
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745617818291696780, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GetUsersApi, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745617818291696780, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2059651067873882421, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_AnchorMax.y
@@ -10458,6 +10506,22 @@ PrefabInstance:
     - target: {fileID: 2059651067873882421, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186455431639632417, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1124365628}
+    - target: {fileID: 2186455431639632417, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetEspecialista
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186455431639632417, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GetUsersApi, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186455431639632417, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2199546991060538175, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10798,6 +10862,22 @@ PrefabInstance:
     - target: {fileID: 4103305983940091290, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105921833641370529, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1124365628}
+    - target: {fileID: 4105921833641370529, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetAprendiz
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105921833641370529, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GetUsersApi, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105921833641370529, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4571829913681147911, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
@@ -11201,6 +11281,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6846739585492351457, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978362590747786574, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1124365628}
+    - target: {fileID: 6978362590747786574, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetExperto
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978362590747786574, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GetUsersApi, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978362590747786574, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7027731954446779153, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}

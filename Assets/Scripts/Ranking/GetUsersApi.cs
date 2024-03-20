@@ -19,9 +19,40 @@ public class GetUsersApi : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(GetData(0, 20000));
+        GetAficionado();
     }
 
+    public void GetAficionado()
+    {
+        StopAllCoroutines();
+        StartCoroutine(GetData(0, 2000));
+    }
+    public void GetAprendiz()
+    {
+        StopAllCoroutines();
+        StartCoroutine(GetData(2001, 4500));
+    }
+    public void GetEspecialista()
+    {
+        StopAllCoroutines();
+        StartCoroutine(GetData(4501, 7500));
+    }
+    public void GetMaestro()
+    {
+        StopAllCoroutines();
+        StartCoroutine(GetData(7501, 11000));
+    }
+    public void GetExperto()
+    {
+        StopAllCoroutines();
+        StartCoroutine(GetData(1101, 15000));
+    }
+    public void GetElite()
+    {
+        StopAllCoroutines();
+        StartCoroutine(GetData(15001, 100000));
+    }
+    
     private IEnumerator GetData(int minExperience, int maxExperience)
     {
         GameEvents.RequestRanking?.Invoke();
@@ -54,6 +85,7 @@ public class GetUsersApi : MonoBehaviour
     }
 
     private void SaveDataAllUsers(SimpleJSON.JSONNode stats) {
+        dataUserAll.Users.Clear	();
         for (int i = 0; i < stats.Count; i++) {
             DataUserAll.DataUsers user = new DataUserAll.DataUsers();
             user.id = stats[i]["idAlumno"];

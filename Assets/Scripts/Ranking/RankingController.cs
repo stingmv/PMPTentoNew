@@ -25,12 +25,38 @@ public class RankingController : MonoBehaviour
 
     private void GameEvents_RankingRetrieved()
     {
-        var info = dataUserAll.Users[0];
-        _podio[0].SetData(info.userName, info.totalExperience.ToString(), info.id);
-        // info = dataUserAll.Users[1];
-        _podio[1].SetData("", "-", -1);
-        // info = dataUserAll.Users[2];
-        _podio[2].SetData("", "-", -1);
+        DataUsers infoUsers;
+        if (dataUserAll.Users.Count > 0)
+        {
+             infoUsers = dataUserAll.Users[0];
+            _podio[0].SetData(infoUsers.userName, infoUsers.totalExperience.ToString(), infoUsers.id);
+            if (dataUserAll.Users.Count > 1)
+            {
+                Debug.Log	("mas de 1");
+                infoUsers = dataUserAll.Users[1];
+                _podio[1].SetData(infoUsers.userName, infoUsers.totalExperience.ToString(), infoUsers.id);
+                if (dataUserAll.Users.Count > 2)
+                {
+                    infoUsers = dataUserAll.Users[2];
+                    _podio[2].SetData(infoUsers.userName, infoUsers.totalExperience.ToString(), infoUsers.id);
+                }
+                else
+                {
+                    _podio[2].SetData("", "-", -1);
+                }
+            }
+            else
+            {
+                _podio[1].SetData("", "-", -1);
+                _podio[2].SetData("", "-", -1);    
+            }
+        }
+        else
+        {
+            _podio[0].SetData("", "-", -1);
+            _podio[1].SetData("", "-", -1);
+            _podio[2].SetData("", "-", -1);    
+        }
         foreach (Transform child in _rankingContainer)
         {
             Destroy(child.gameObject);
@@ -38,9 +64,9 @@ public class RankingController : MonoBehaviour
         for (int i = 3; i < dataUserAll.Users.Count; i++)
         {
             var item = Instantiate(_rankingItemPrefab, _rankingContainer);
-            info = dataUserAll.Users[i];
+            infoUsers = dataUserAll.Users[i];
 
-            item.SetData(i.ToString(), info.userName, info.totalExperience.ToString(), info.id);
+            item.SetData(i.ToString(), infoUsers.userName, infoUsers.totalExperience.ToString(), infoUsers.id);
         }
     }
 }
