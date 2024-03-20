@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,48 +9,38 @@ using static DataUserAll;
 public class RankingController : MonoBehaviour
 {
     [SerializeField] private DataUserAll dataUserAll;
-    [SerializeField] private UnityEvent<DataUsers> OnFirstPlaceShowedEvent;
-    [SerializeField] private UnityEvent<DataUsers> OnSecondPlaceShowedEvent;
-    [SerializeField] private UnityEvent<DataUsers> OnThirdPlaceShowedEvent;
+    [SerializeField] private List<PodiumItem> _podio;
+    [SerializeField] private Transform _rankingContainer;
+    [SerializeField] private PodiumItem _rankingItemPrefab;
 
-    [ContextMenu(nameof(ShowTopThree))]
-    public void ShowTopThree()
+    private void OnEnable()
     {
-        List<DataUserAll.DataUsers> users = dataUserAll.Users.OrderByDescending(user => user.totalExperience).ToList();
+        GameEvents.RankingRetrieved += GameEvents_RankingRetrieved;
+    }
 
-        int counter = 0;
-        foreach (var item in users)
+    private void OnDisable()
+    {
+        GameEvents.RankingRetrieved -= GameEvents_RankingRetrieved;
+    }
+
+    private void GameEvents_RankingRetrieved()
+    {
+        var info = dataUserAll.Users[0];
+        _podio[0].SetData(info.userName, info.totalExperience.ToString(), info.id);
+        // info = dataUserAll.Users[1];
+        _podio[1].SetData("", "-", -1);
+        // info = dataUserAll.Users[2];
+        _podio[2].SetData("", "-", -1);
+        foreach (Transform child in _rankingContainer)
         {
-            Debug.Log($"{item.userName} - {item.totalExperience} - {counter}");
-            switch (counter)
-            {
-                case 0:
-                    ShowFirstPlace(item);
-                    break;
-                case 1:
-                    ShowSecondPlace(item);
-                    break;
-                case 2:
-                    ShowThirdPlace(item);
-                    break;
-            }
-            counter++;
+            Destroy(child.gameObject);
         }
-        counter = 0;
-    }
+        for (int i = 3; i < dataUserAll.Users.Count; i++)
+        {
+            var item = Instantiate(_rankingItemPrefab, _rankingContainer);
+            info = dataUserAll.Users[i];
 
-    private void ShowFirstPlace(DataUsers dataUser) 
-    {
-        OnFirstPlaceShowedEvent?.Invoke(dataUser);
-    }
-
-    private void ShowSecondPlace(DataUsers dataUser)
-    {
-        OnSecondPlaceShowedEvent?.Invoke(dataUser);
-    }
-
-    private void ShowThirdPlace(DataUsers dataUser)
-    {
-        OnThirdPlaceShowedEvent.Invoke(dataUser);
+            item.SetData(i.ToString(), info.userName, info.totalExperience.ToString(), info.id);
+        }
     }
 }

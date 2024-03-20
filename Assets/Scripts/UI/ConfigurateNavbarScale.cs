@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,10 +16,15 @@ public class ConfigurateNavbarScale : MonoBehaviour
     [SerializeField] private float _maxWidthScale;
     // Start is called before the first frame update
 
+    private float y = 0;
     // Update is called once per frame
     void Update()
     {
-        var y = _mainCanvas.rect.width;
+        if (Math.Abs(y - _mainCanvas.rect.width) < 1)
+        {
+            return;
+        }
+        y = _mainCanvas.rect.width;
 
         var x = (y - _minWidthScale) * (_maxPixelMultiplier - _minPixelMultiplier) / (_maxWidthScale - _minWidthScale) +
                 _minPixelMultiplier;

@@ -32,7 +32,8 @@ public static class GameEvents
     #region Main menu events
 
     public static Action<int> InstructorChanged;
-
+    public static Action RequestRanking;
+    public static Action RankingRetrieved;
 
     #endregion
 

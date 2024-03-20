@@ -306,7 +306,7 @@ public IEnumerator GetAvatar(string username, string password)
         request.SetRequestHeader("User-Agent",
             "Mozilla/5.0 (Windows NT 6.1; Unity 3D; ZFBrowser 3.1.0; UnityTests 1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36");
     }
-    private string GenerateUrlToAvatar(AvatarInfo avatarInfo)
+    public string GenerateUrlToAvatar(AvatarInfo avatarInfo)
     {
         string url = $"https://avataaars.io/?avatarStyle=Circle";
         url += $"&topType={avatarInfo.top}";

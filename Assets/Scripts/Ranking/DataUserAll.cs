@@ -11,8 +11,7 @@ public class DataUserAll : ScriptableObject
         public int id;
         public string userName;
         public int totalExperience;
-        public string email;
-        public string password;
+        public Sprite avatar;
     }
 
     public List<DataUsers> Users;

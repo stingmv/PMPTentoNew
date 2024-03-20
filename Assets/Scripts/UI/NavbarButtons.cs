@@ -35,7 +35,7 @@ public class NavbarButtons : MonoBehaviour
         _shopButton.interactable = true;
         _trainButton.interactable = true;
         _achievementButton.interactable = true;
-        _rankingButton.interactable = false;
+        _rankingButton.interactable = true;
     }
 
     private void UIEvents_StartFooterButtonAnimation()

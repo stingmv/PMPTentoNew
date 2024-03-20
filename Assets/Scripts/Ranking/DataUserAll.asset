@@ -12,4 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b8e99d26ccedd4bb7bc11fbd9dfbeb, type: 3}
   m_Name: DataUserAll
   m_EditorClassIdentifier: 
-  Users: []
+  Users:
+  - id: 9818325
+    userName: JRivera S
+    totalExperience: 19185
+    avatar: {fileID: 0}
+  - id: 9818325
+    userName: JRivera S
+    totalExperience: 19185
+    avatar: {fileID: 0}
+  - id: 9818325
+    userName: JRivera S
+    totalExperience: 19185
+    avatar: {fileID: 0}
+  - id: 9818325
+    userName: JRivera S
+    totalExperience: 19185
+    avatar: {fileID: 0}
