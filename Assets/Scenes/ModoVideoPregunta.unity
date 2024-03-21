@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1305,7 +1305,6 @@ GameObject:
   - component: {fileID: 869884008}
   - component: {fileID: 869884007}
   - component: {fileID: 869884010}
-  - component: {fileID: 869884011}
   m_Layer: 0
   m_Name: AudioController
   m_TagString: Untagged
@@ -1448,44 +1447,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 869884006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43c520a9bad8a3489109c869f454576, type: 3}
+  m_Script: {fileID: 11500000, guid: 87560e04aa74c7a41acb9c87051c3b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 869884007}
-  provider: 1
-  enableAcceleration: 1
-  enableKeyboardInput: 0
-  enableTouchInput: 0
-  audioLoopback: 1
-  loopbackKey: 108
-  showVisemes: 0
-  debugVisemesKey: 100
-  skipAudioSource: 0
-  gain: 1
-  debugLaughterKey: 104
-  showLaughter: 0
-  laughterScore: 0
---- !u!114 &869884011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869884006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0b97b38f2f1fd24185315141a6c6a56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skinnedMeshRenderer: {fileID: 1354550467}
-  visemeToBlendTargets: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
-  enableVisemeTestKeys: 0
-  visemeTestKeys: 600000000900000071000000770000006500000072000000740000007900000075000000690000006f000000700000005b0000005d0000005c000000
-  laughterKey: 301
-  laughterBlendTarget: 15
-  laughterThreshold: 0.5
-  laughterMultiplier: 1.5
-  smoothAmount: 70
+  profile: {fileID: 11400000, guid: 04d8d7db6114a384aaabeb1d02dd2013, type: 2}
+  onLipSyncUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 886581705}
+        m_TargetAssemblyTypeName: uLipSync.uLipSyncBlendShape, uLipSync.Runtime
+        m_MethodName: OnLipSyncUpdate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  outputSoundGain: 1
+  audioSourceProxy: {fileID: 0}
 --- !u!1001 &886581703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1494,6 +1476,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1583319019242787821, guid: 84a68f081bb476141ba9e623a60304fc, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7145950642519019686, guid: 84a68f081bb476141ba9e623a60304fc, type: 3}
       propertyPath: m_Name
       value: 65e77facbe8a6cb75d80a765
@@ -1541,8 +1527,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7145950642519019686, guid: 84a68f081bb476141ba9e623a60304fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 886581705}
   m_SourcePrefab: {fileID: 100100000, guid: 84a68f081bb476141ba9e623a60304fc, type: 3}
+--- !u!1 &886581704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7145950642519019686, guid: 84a68f081bb476141ba9e623a60304fc, type: 3}
+  m_PrefabInstance: {fileID: 886581703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &886581705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886581704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2163de355e8fd8e4b83b631e07455323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateMethod: 0
+  skinnedMeshRenderer: {fileID: 1354550467}
+  blendShapes:
+  - phoneme: A
+    index: 10
+    maxWeight: 1
+  - phoneme: E
+    index: 11
+    maxWeight: 1
+  - phoneme: I
+    index: 12
+    maxWeight: 1
+  - phoneme: O
+    index: 13
+    maxWeight: 1
+  - phoneme: U
+    index: 14
+    maxWeight: 1
+  - phoneme: N
+    index: -1
+    maxWeight: 1
+  - phoneme: '-'
+    index: -1
+    maxWeight: 1
+  minVolume: -2.5
+  maxVolume: -1.5
+  smoothness: 0.05
+  usePhonemeBlend: 0
 --- !u!1 &1073789422
 GameObject:
   m_ObjectHideFlags: 0
