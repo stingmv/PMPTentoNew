@@ -31,6 +31,7 @@ public class InterfaceControllerMainMenu : MonoBehaviour
     }
     private void GameManager_NewUsername(int id)
     {
+        Debug.Log(_currentScreen);
         if (_currentScreen != null)
         {
             _currentScreen.screen.gameObject.SetActive(false);
@@ -39,6 +40,7 @@ public class InterfaceControllerMainMenu : MonoBehaviour
 
     private void GameEvents_RequesNewUsername()
     {
+        Debug.Log("Encender");
         EnableScreen(PMPScenes.ChangeRequest);
     }
 

@@ -8110,6 +8110,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1741028920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3756658141462696555, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+  m_PrefabInstance: {fileID: 7743064895462747754}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4ead019e38e23448b5d0bed1373826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1793323279 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5238309651859127577, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
@@ -10193,7 +10204,7 @@ PrefabInstance:
       objectReference: {fileID: 2062708380}
     - target: {fileID: 565766999506945454, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: _onSelectInstructor.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 565766999506945454, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: _onSelectInstructor.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -10202,18 +10213,18 @@ PrefabInstance:
     - target: {fileID: 565766999506945454, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: _onSelectInstructor.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1111338641}
+      objectReference: {fileID: 1741028920}
     - target: {fileID: 565766999506945454, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: _onSelectInstructor.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 565766999506945454, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: _onSelectInstructor.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeInstructor
+      value: CloseChooseInstructorPopup
       objectReference: {fileID: 0}
     - target: {fileID: 565766999506945454, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: _onSelectInstructor.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu.MenuController, Assembly-CSharp
+      value: MainMenuUIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 565766999506945454, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: _onSelectInstructor.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -10879,6 +10890,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4198725815730208960, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4571829913681147911, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -11198,6 +11213,18 @@ PrefabInstance:
     - target: {fileID: 6611994795968532884, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: _onBeforeTransition.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669827412909356980, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: _onOutsidePopup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1741028920}
+    - target: {fileID: 6669827412909356980, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: _onOutsidePopup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseChooseInstructorPopup
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669827412909356980, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: _onOutsidePopup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuUIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6765876770387355769, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_AnchorMax.y

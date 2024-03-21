@@ -64,10 +64,14 @@ public class InstructorSelector : MonoBehaviour
     private void OnEnable()
     {
         InitValues();
+
     }
+  
 
     public void ClearListInsructor()
     {
+        Debug.Log("limpiando ");
+
         for (int j = 0; j < _instructors.Count; j++)
         {
             Destroy(_instructors[j]);
@@ -118,7 +122,7 @@ public class InstructorSelector : MonoBehaviour
         GameEvents.RequesNewUsername?.Invoke();
         StartCoroutine(GetGamificationData(index));
         // GameEvents.NewInstuctorId?.Invoke(index);
-        _onSelectInstructor?.Invoke();
+       
     }
     
     public IEnumerator GetGamificationData(int instructorId)
@@ -148,14 +152,19 @@ public class InstructorSelector : MonoBehaviour
                 {
                     try
                     {
+                    Debug.Log("antes");
                         bool detail = Convert.ToBoolean(request.downloadHandler.text);
                         if (detail)
                         {
-                            GameEvents.NewInstuctorId?.Invoke(index);
-                        }
+                        Debug.Log("despues1");
+                        _onSelectInstructor?.Invoke();
+
+                        GameEvents.NewInstuctorId?.Invoke(index);
+                    }
                         else
                         {
-                            GameEvents.WrongWhenNewUsername?.Invoke();
+                        Debug.Log("despues2");
+                        GameEvents.WrongWhenNewUsername?.Invoke();
                         }
 
                     }
