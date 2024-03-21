@@ -6985,7 +6985,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   URL: http://simuladorpmp-servicio.bsginstitute.com/api/Gamificacion/ObtenerRankingGamificacion
   dataUserAll: {fileID: 11400000, guid: ffd87d1a3f0a70f4f929f0f80ef1b142, type: 2}
-  _userService: {fileID: 1350073651}
   _user: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
 --- !u!114 &1124365629
 MonoBehaviour:
@@ -11653,12 +11652,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9119386322764290469, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119386322764290469, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119386322764290469, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4848286918372402271}
     - target: {fileID: 9119386322764290469, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1124365628}
+    - target: {fileID: 9119386322764290469, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119386322764290469, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToRanking
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119386322764290469, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetRankingInformation
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119386322764290469, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GetUsersApi, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119386322764290469, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9153197196501751548, guid: 4dc70a4e7d38470418d33347bb7f0560, type: 3}
       propertyPath: m_sharedMaterial
