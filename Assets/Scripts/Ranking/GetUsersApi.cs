@@ -15,10 +15,24 @@ public class GetUsersApi : MonoBehaviour
 {
     [SerializeField] private string URL = "http://simuladorpmp-servicio.bsginstitute.com/api/Gamificacion/ObtenerRankingGamificacion";
     [SerializeField] private DataUserAll dataUserAll;
-    [SerializeField] private UserService _userService;
+    [SerializeField] private ScriptableObjectUser _user;
+    public enum Categories
+    {
+        Aficionado,
+        Aprendiz,
+        Especialista,
+        Maestro,
+        Experto,
+        Elite
+    }
 
+    public void GetRankingInformation()
+    {
+        
+    }
     private void Start()
     {
+        Debug.Log(_user.userInfo.user.detail.totalExperience);
         GetAficionado();
     }
 

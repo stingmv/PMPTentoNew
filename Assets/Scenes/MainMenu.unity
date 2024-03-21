@@ -6985,7 +6985,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   URL: http://simuladorpmp-servicio.bsginstitute.com/api/Gamificacion/ObtenerRankingGamificacion
   dataUserAll: {fileID: 11400000, guid: ffd87d1a3f0a70f4f929f0f80ef1b142, type: 2}
-  _userService: {fileID: 0}
+  _userService: {fileID: 1350073651}
+  _user: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
 --- !u!114 &1124365629
 MonoBehaviour:
   m_ObjectHideFlags: 0
