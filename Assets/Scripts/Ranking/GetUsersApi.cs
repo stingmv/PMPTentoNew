@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -16,6 +17,7 @@ public class GetUsersApi : MonoBehaviour
     [SerializeField] private string URL = "http://simuladorpmp-servicio.bsginstitute.com/api/Gamificacion/ObtenerRankingGamificacion";
     [SerializeField] private DataUserAll dataUserAll;
     [SerializeField] private ScriptableObjectUser _user;
+    [SerializeField] private TextMeshProUGUI _categoryTitle;
     public enum Categories
     {
         Aficionado,
@@ -24,16 +26,42 @@ public class GetUsersApi : MonoBehaviour
         Maestro,
         Experto,
         Elite
-    }
+    }   
 
     public void GetRankingInformation()
     {
-        
+        var tExperience = _user.userInfo.user.detail.totalExperience;
+        if (tExperience < 0)
+        {
+            return;
+        }
+
+        switch (tExperience)
+        {
+            case <= 2000:
+                GetAficionado();
+                break;
+            case <= 4500:
+                GetAprendiz();
+                break;
+            case <= 7500:
+                GetEspecialista();
+                break;
+            case <= 11000:
+                GetMaestro();
+                break;
+            case <= 15000:
+                GetExperto();
+                break;
+            default:
+                GetElite();
+                break;
+        }
     }
     private void Start()
     {
-        Debug.Log(_user.userInfo.user.detail.totalExperience);
-        GetAficionado();
+        // Debug.Log(_user.userInfo.user.detail.totalExperience);
+        // GetAficionado();
     }
 
     public void GetAficionado()
