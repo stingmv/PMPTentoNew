@@ -40,21 +40,27 @@ public class GetUsersApi : MonoBehaviour
         {
             case <= 2000:
                 GetAficionado();
+                _categoryTitle.text = "Categoría:\nAficionado";
                 break;
             case <= 4500:
                 GetAprendiz();
+                _categoryTitle.text = "Categoría:\nAprendiz";
                 break;
             case <= 7500:
                 GetEspecialista();
+                _categoryTitle.text = "Categoría:\nEspecialista";
                 break;
             case <= 11000:
                 GetMaestro();
+                _categoryTitle.text = "Categoría:\nMaestro";
                 break;
             case <= 15000:
                 GetExperto();
+                _categoryTitle.text = "Categoría:\nExperto";
                 break;
             default:
                 GetElite();
+                _categoryTitle.text = "Categoría:\nÉlite";
                 break;
         }
     }
