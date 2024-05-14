@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +15,7 @@ namespace Question
         [SerializeField] private Image _itemImage;
         [SerializeField] private Image _currentItemMarker;
         [SerializeField] private RectTransform _rectOwnTransform;
+        [SerializeField] private TextMeshProUGUI numberQuestionText;
 
         public RectTransform RectOwnTransform
         {
@@ -44,13 +45,14 @@ namespace Question
 
         public void SetCurrentItem()
         {
-            _currentItemMarker.gameObject.SetActive(true);
+            //_currentItemMarker.gameObject.SetActive(true);
         }
 
         public void SetCorrectSelection()
         {
             _currentItemMarker.gameObject.SetActive(false);
             _itemImage.color = _correctColor;
+            numberQuestionText.color = Color.white;
 
         }
         public void RemoveCurrentItem()
@@ -63,7 +65,13 @@ namespace Question
         {
             _currentItemMarker.gameObject.SetActive(false);
             _itemImage.color = _incorrectColor;
+            numberQuestionText.color = Color.white;
+        }
 
+        public void SetNumberQuestion(int number)
+        {
+            int numQuestion = number + 1;
+            numberQuestionText.SetText(numQuestion.ToString());
         }
         #endregion
 

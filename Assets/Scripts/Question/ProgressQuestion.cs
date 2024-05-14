@@ -9,7 +9,7 @@ namespace Question
     {
         #region Variables
 
-        [SerializeField] private float _maxWidth;
+        [SerializeField] private float _spacing;
         [SerializeField] private RectTransform _widthReference;
         [SerializeField] private RectTransform _container;
         [SerializeField] private ProgressItem _prefab;
@@ -52,18 +52,19 @@ namespace Question
         {
             _maxQuestions = count;
             _label.text = $"0/{count}";
-            width = _widthReference.rect.width;
+            /*width = _widthReference.rect.width;
             width /= count;
             if (_prefab.RectOwnTransform.sizeDelta.x < width)
             {
                 width = _prefab.RectOwnTransform.sizeDelta.x;
-            }
+            }*/
         }
 
-        public ProgressItem CreateItem()
+        public ProgressItem CreateItem(int number)
         {
             var item = Instantiate(_prefab, _container);
-            item.RectOwnTransform.sizeDelta = new Vector2(width, 23);
+            //item.RectOwnTransform.sizeDelta = new Vector2(width, width);
+            item.SetNumberQuestion(number);
             return item;
         }
         

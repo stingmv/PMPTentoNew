@@ -117,7 +117,7 @@ public class CategoryModeController : MonoBehaviour
     {
         for (int i = 0; i < obj.listaDominio.Length; i++)
         {
-            _buttonDomainController.CreateButton(obj.listaDominio[i].nombre, obj.listaDominio[i].id.ToString());
+            //_buttonDomainController.CreateButton(obj.listaDominio[i].nombre, obj.listaDominio[i].id.ToString());
         }
     }
 

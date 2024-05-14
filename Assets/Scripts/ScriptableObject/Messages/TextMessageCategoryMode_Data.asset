@@ -51,6 +51,7 @@ MonoBehaviour:
   - "\xA1Exactitud impecable! \xA1Completaste el desaf\xEDo!"
   - "\xA1Maravilloso! \xA1Concluiste todas las preguntas!"
   - "\xA1Eres un h\xE9roe! \xA1Terminaste el conjunto victorioso!"
+  - "\xA1Bien jugado! los errores son parte del proceso, sigue intentandolo"
   lostMessage:
   - "\xA1Tranquilo/a! A veces, los errores son oportunidades de aprendizaje."
   - "\xA1No te preocupes! Cada intento cuenta, \xA1sigue adelante!"
@@ -62,3 +63,4 @@ MonoBehaviour:
   - "\xA1Rel\xE1jate! La mejora viene con la pr\xE1ctica constante."
   - "\xA1No te desanimes! Cada error es una oportunidad de mejora."
   - "\xA1Vamos! Todos cometemos errores, sigue adelante con confianza."
+  - "\xA1Bien jugado! los errores son parte del proceso, sigue intentandolo"

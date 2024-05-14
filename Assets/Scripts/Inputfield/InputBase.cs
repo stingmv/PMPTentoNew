@@ -159,8 +159,8 @@ public abstract class InputBase : MonoBehaviour
         _inputField.image.sprite = _spriteError;
         _inputField.textComponent.color = Color.red;
         _placeholderText.color = Color.red;
-        _label.color = Color.red;
-        _message.color = Color.red;
+        _label.color = Color.white;
+        _message.color = Color.white;
     }
 
     public void SetAppearanceToNormal()
@@ -172,7 +172,7 @@ public abstract class InputBase : MonoBehaviour
         _inputField.spriteState = spriteState;
         _inputField.image.sprite = _spriteDefault;
         _inputField.textComponent.color = Color.black;
-        _label.color = Color.black;
+        _label.color = Color.white;
     }
     public bool IsEmptyField(string textToComporove)
     {

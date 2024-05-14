@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PathDataBombToOption
   m_EditorClassIdentifier: 
   controlPoints:
-  - startPoint: {x: -0.0000076293945, y: -0.00012207031, z: 0}
+  - startPoint: {x: -19.1632, y: -0.00018310547, z: 0}
     haveModification: 0
-    startTangent: {x: 200, y: -100, z: 0}
+    startTangent: {x: 209.58165, y: -100.00006, z: 0}
     startRotation: {x: 0, y: 0, z: 0, w: 1}
-    endPoint: {x: -39.835, y: -894.97723, z: 0}
+    endPoint: {x: -39.835007, y: -894.97723, z: 0}
     endRotation: {x: 0, y: 0, z: 0, w: 1}
-    endTangent: {x: 160.16501, y: -794.97723, z: 0}
+    endTangent: {x: 160.16504, y: -794.97723, z: 0}
   colorPath: {r: 0.8490566, g: 0.3085105, b: 0, a: 1}

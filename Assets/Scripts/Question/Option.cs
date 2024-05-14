@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -14,9 +15,13 @@ namespace Question
         [SerializeField] private TextMeshProUGUI _label;
         [SerializeField] private QuestionController _questionController;
         [SerializeField] private Image _image;
+        [SerializeField] private Color _normalColor;
         [SerializeField] private Color _correctColor;
         [SerializeField] private Color _incorrectColor;
         [SerializeField] private EventTrigger _eventTrigger;
+        [SerializeField] private UnityEvent OnCorrectAnswered;
+        [SerializeField] private UnityEvent OnIncorrectAnswered;
+        [SerializeField] private UnityEvent OnOptionEnabled;
         
         private string _id;
         public string ID
@@ -64,12 +69,14 @@ namespace Question
         {
             _image.color = _correctColor;
             _label.color = Color.white;
+            OnCorrectAnswered?.Invoke();
         }
 
         public void SetIncorrectColor()
         {
             _image.color = _incorrectColor;
             _label.color = Color.white;
+            OnIncorrectAnswered?.Invoke();
         }
         public void DisableOption()
         {
@@ -78,10 +85,11 @@ namespace Question
         
         public void EnableOption()
         {
-            _label.color = Color.black;
-            _image.color = Color.white;
+            _label.color = Color.white;
+            _image.color = _normalColor;
             _eventTrigger.enabled = true;
             ShowOption();
+            OnOptionEnabled?.Invoke();
         }
 
         public void HideOption()

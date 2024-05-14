@@ -13,10 +13,10 @@ namespace UI.Button
         [SerializeField] private Image _buttonImage;
         [SerializeField] private ButtonAnimation _buttonAnimation;
 
-        private ButtonDomainController _butonDomainController;
-        private string _description;
-        private int _index;
-        private string _indexS;
+        [SerializeField] private ButtonDomainController _butonDomainController;
+        [SerializeField] private string _description;
+        [SerializeField] private int _index;
+        [SerializeField] private string _indexS;
 
         public int Index
         {

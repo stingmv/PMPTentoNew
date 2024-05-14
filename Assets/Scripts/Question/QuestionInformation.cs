@@ -18,6 +18,7 @@ namespace Question
         [SerializeField] private Option _opt3;
         [SerializeField] private Option _opt4;
 
+        QuestionData _data;
         public Option Opt1
         {
             get => _opt1;
@@ -51,6 +52,7 @@ namespace Question
 
         public void SetData(QuestionData questionData)
         {
+            _data = questionData;
             _question.text = questionData.question;
             _opt1.SetData(questionData.options[0].respuesta,questionData.options[0].id.ToString());
             _opt2.SetData(questionData.options[1].respuesta,questionData.options[1].id.ToString());

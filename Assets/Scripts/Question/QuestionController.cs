@@ -146,7 +146,7 @@ namespace Question
                 questionData.idCorrectOption = questions[i].pregunta.respuesta.FirstOrDefault(x => x.correcto == "true")?.id.ToString();
                 if (useProgressQuestion)
                 {
-                    questionData.progressItem = _progressQuestion.CreateItem();
+                    questionData.progressItem = _progressQuestion.CreateItem(i);
                 }
 
                 _session.Add( questionData);
@@ -166,11 +166,13 @@ namespace Question
             }
 
             _questionInformation.SetData(_currentQuestion);
-            _currentIndex++;
+            //_currentIndex++;
         }
 
         public void NextQuestion()
         {
+            _currentIndex++;
+
             if (_currentIndex == _session.Count)
             {
                 _onWonGame?.Invoke();
@@ -186,7 +188,27 @@ namespace Question
             }
 
             _questionInformation.SetData(_currentQuestion);
-            _currentIndex++;
+            
+            _onNextQuestion?.Invoke();
+            GameEvents.RecoveryTime?.Invoke();
+        }
+
+        public void BackQuestion()
+        {
+            if (_currentIndex <= 0)
+                return;
+
+            _currentIndex--;
+
+            var tempQuestion = _session[_currentIndex];
+            _currentQuestion = tempQuestion;
+            if (useProgressQuestion)
+            {
+                _currentQuestion.progressItem.SetCurrentItem();
+            }
+            
+            _questionInformation.SetData(_currentQuestion);
+            
             _onNextQuestion?.Invoke();
             GameEvents.RecoveryTime?.Invoke();
         }

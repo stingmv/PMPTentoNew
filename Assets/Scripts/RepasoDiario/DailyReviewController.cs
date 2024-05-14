@@ -112,7 +112,7 @@ public class DailyReviewController : MonoBehaviour
 
             questionData.idCorrectOption = questions[i].pregunta.respuesta.FirstOrDefault(x => x.correcto == "true")?.id
                 .ToString();
-            questionData.progressItem = _progressQuestion.CreateItem();
+            questionData.progressItem = _progressQuestion.CreateItem(i);
 
             _session.Add(questionData);
             _indexes.Add(0);

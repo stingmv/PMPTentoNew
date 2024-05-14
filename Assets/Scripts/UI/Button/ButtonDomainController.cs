@@ -45,7 +45,7 @@ namespace UI.Button
                 else
                 {
                     _chooseOption = true;
-                    _buttonToContinue.SetActive(_chooseOption);
+                    //_buttonToContinue.SetActive(_chooseOption);
                 }
                 _currentButton = value;
                 _domainDescription.text = _currentButton.Description;
@@ -79,7 +79,7 @@ namespace UI.Button
             }
             _buttons.Clear();
             buttonColors = new List<Color>(_colorsBackup);
-            _buttonToContinue.SetActive(false);
+            //_buttonToContinue.SetActive(false);
         }
         [ContextMenu("CreateButton")]
         public void CreateButton()
