@@ -118,7 +118,7 @@ public class ScriptableObjectUser : ScriptableObject
         PlayerPrefs.SetInt("HaveInstructor", index);
         PlayerPrefs.Save();
 
-        GameEvents.InstructorSelected?.Invoke();
+        //GameEvents.InstructorSelected?.Invoke();
 
     }
 
@@ -135,7 +135,7 @@ public class ScriptableObjectUser : ScriptableObject
         PlayerPrefs.SetString("Username",username);
         PlayerPrefs.SetInt("HaveUsername",1);
         PlayerPrefs.Save();
-        GameEvents.UsernameSelected?.Invoke();
+        //GameEvents.UsernameSelected?.Invoke();
     }
 
     public void AddCounter(int idTask)

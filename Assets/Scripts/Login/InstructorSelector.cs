@@ -21,6 +21,8 @@ public class InstructorSelector : MonoBehaviour
     [SerializeField] private GameObject _instructorPlatform;
     [SerializeField] private string url =
         "http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ActualizarCaracteristicasGamificacion";
+    [SerializeField] private UnityEvent OnPreviousButtonSelected;
+    [SerializeField] private UnityEvent OnNextButtonSelected;
 
     private int index = 0;
     private List<GameObject> _instructors = new List<GameObject>();
@@ -63,7 +65,7 @@ public class InstructorSelector : MonoBehaviour
 
     private void OnEnable()
     {
-        InitValues();
+        //InitValues();
 
     }
   
@@ -83,7 +85,8 @@ public class InstructorSelector : MonoBehaviour
         index++;
         ComprobeNext();
         ComprobePrevious();
-        _pathToInstantiateInstructor.RotateToItem(index);
+        //_pathToInstantiateInstructor.RotateToItem(index);
+        OnNextButtonSelected?.Invoke();
     }
 
     public void ComprobeNext()
@@ -113,7 +116,8 @@ public class InstructorSelector : MonoBehaviour
         index--;
         ComprobeNext();
         ComprobePrevious();
-        _pathToInstantiateInstructor.RotateToItem(index);
+        //_pathToInstantiateInstructor.RotateToItem(index);
+        OnPreviousButtonSelected?.Invoke();
     }
     public void SelectInstructor()
     {
@@ -121,7 +125,7 @@ public class InstructorSelector : MonoBehaviour
         _buttonPrevious.DisableButton();
         GameEvents.RequesNewUsername?.Invoke();
         StartCoroutine(GetGamificationData(index));
-        // GameEvents.NewInstuctorId?.Invoke(index);
+        //GameEvents.NewInstuctorId?.Invoke(index);
        
     }
     

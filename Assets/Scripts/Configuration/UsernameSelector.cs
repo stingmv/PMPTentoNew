@@ -4,6 +4,8 @@ using System.Text;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.Networking;
 
 namespace Configuration
@@ -16,13 +18,15 @@ namespace Configuration
             "http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ActualizarCaracteristicasGamificacion";
 
         [SerializeField] private ScriptableObjectUser _objectUser;
-        [SerializeField] private UnityEngine.UI.Button _buttonChangeUsername;
+        [SerializeField] private EventTrigger _buttonEventTriggerChangeUsername;
+        [SerializeField] private UnityEvent OnUsernameSetted;
 
         public void SetUsername()
         {
-            _buttonChangeUsername.interactable = false;
+            _buttonEventTriggerChangeUsername.enabled = false;
             StartCoroutine(GetGamificationData(_inputUsername.text));
-            // GameEvents.NewUsername?.Invoke(_inputUsername.text);
+            OnUsernameSetted?.Invoke();
+            //GameEvents.NewUsername?.Invoke(_inputUsername.text);
         }
 
         public IEnumerator GetGamificationData(string username)
@@ -45,7 +49,7 @@ namespace Configuration
                 if (request.responseCode >= 400)
                 {
                     _objectUser.userInfo.haveUser = false;
-                    _buttonChangeUsername.interactable = true;
+                    _buttonEventTriggerChangeUsername.enabled = true;
                     Debug.Log(request.error);
                 }
                 else
@@ -59,7 +63,7 @@ namespace Configuration
                         }
                         else
                         {
-                            _buttonChangeUsername.interactable = true;
+                            _buttonEventTriggerChangeUsername.enabled = true;
                         }
 
                     }
@@ -67,7 +71,7 @@ namespace Configuration
                     {
                         Debug.Log(request.downloadHandler.text);
                         _objectUser.userInfo.haveUser = false;
-                        _buttonChangeUsername.interactable = true;
+                        _buttonEventTriggerChangeUsername.enabled = true;
                     }
                 }
             }
