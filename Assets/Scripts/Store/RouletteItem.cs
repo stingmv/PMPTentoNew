@@ -10,10 +10,12 @@ public class RouletteItem : MonoBehaviour
     [SerializeField] private Transform _originPoint;
     [SerializeField] private RouletteItemData _rouletteItemData;
     [SerializeField] private Image _imageItem;
+    [SerializeField] private Sprite _iconItem;
     [SerializeField] private TextMeshProUGUI _amountLabel;
-    private bool _haveInformation;
-
+    public bool _haveInformation;
+    
     public Image ImageItem => _imageItem;
+    public Sprite IconItem => _iconItem;
     public TextMeshProUGUI AmountLabel => _amountLabel;
     private int _amount;
 
@@ -32,9 +34,14 @@ public class RouletteItem : MonoBehaviour
     public void SetData(RouletteItemData rouletteItemData)
     {
         _rouletteItemData = rouletteItemData;
-        _amount = !_rouletteItemData.UseAllAmount ? Random.Range(1, _rouletteItemData.Amount + 1) : _rouletteItemData.Amount;
-        _imageItem.sprite = _rouletteItemData._ItemRouletteSo.spritePowerUp;
+        
+        //Setear cantidad del item en cuestion
+        _amount = !_rouletteItemData.UseAllAmount ? Random.Range(1, _rouletteItemData.Amount + 1) : _rouletteItemData.Amount;//segun valor de _rouletteItemData.UseAllAmount se ejecutara expresion1 o expresion 2
+        
+        _imageItem.sprite = _rouletteItemData._ItemRouletteSo.spritePowerUp;//asignar la imagen de powerup desde el SO
+        _iconItem = _rouletteItemData._ItemRouletteSo.spriteIconPowerUp;//asignar el icono de powerup desde el SO
+        
         _amountLabel.text = $"x{_amount}";
-        HaveInformation = true;
+        HaveInformation = true;//Indica que ya se seteo informacion en el espacio de ruleta en cuestion
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 using static DataUserAll;
@@ -25,20 +26,25 @@ public class RankingController : MonoBehaviour
 
     private void GameEvents_RankingRetrieved()
     {
+
+        List<DataUsers> listDataUserAll = dataUserAll.Users;//accediendo a lista de SO DataUserAll
+
+        listDataUserAll = OrderPositions(listDataUserAll);//devuelve lista ordenada
+
         DataUsers infoUsers;
-        if (dataUserAll.Users.Count > 0)
+        if (listDataUserAll.Count > 0)
         {
-             infoUsers = dataUserAll.Users[0];
-            _podio[0].SetData(infoUsers.userName, infoUsers.totalExperience.ToString(), infoUsers.id);
-            if (dataUserAll.Users.Count > 1)
+            infoUsers = listDataUserAll[0];//posicion 1 
+            _podio[0].SetData(infoUsers.userName, infoUsers.totalExperience.ToString(), infoUsers.id);//seteamos data en la posicion 1 del podio
+            if (listDataUserAll.Count > 1)
             {
-                Debug.Log	("mas de 1");
-                infoUsers = dataUserAll.Users[1];
-                _podio[1].SetData(infoUsers.userName, infoUsers.totalExperience.ToString(), infoUsers.id);
-                if (dataUserAll.Users.Count > 2)
+                Debug.Log("mas de 1");
+                infoUsers = listDataUserAll[1];//posicion 2
+                _podio[1].SetData(infoUsers.userName, infoUsers.totalExperience.ToString(), infoUsers.id);//seteamos data en la posicion 2 del podio
+                if (listDataUserAll.Count > 2)
                 {
-                    infoUsers = dataUserAll.Users[2];
-                    _podio[2].SetData(infoUsers.userName, infoUsers.totalExperience.ToString(), infoUsers.id);
+                    infoUsers = listDataUserAll[2];//posicion 3
+                    _podio[2].SetData(infoUsers.userName, infoUsers.totalExperience.ToString(), infoUsers.id);//seteamos data en la posicion 3 del podio
                 }
                 else
                 {
@@ -48,25 +54,34 @@ public class RankingController : MonoBehaviour
             else
             {
                 _podio[1].SetData("", "-", -1);
-                _podio[2].SetData("", "-", -1);    
+                _podio[2].SetData("", "-", -1);
             }
         }
         else
         {
             _podio[0].SetData("", "-", -1);
             _podio[1].SetData("", "-", -1);
-            _podio[2].SetData("", "-", -1);    
+            _podio[2].SetData("", "-", -1);
         }
-        foreach (Transform child in _rankingContainer)
+        foreach (Transform child in _rankingContainer)//eliminar lo que tiene el contenedor
         {
             Destroy(child.gameObject);
         }
-        for (int i = 3; i < dataUserAll.Users.Count; i++)
+        for (int i = 3; i < listDataUserAll.Count; i++)//correra a partir de la cuarta posicion
         {
             var item = Instantiate(_rankingItemPrefab, _rankingContainer);
-            infoUsers = dataUserAll.Users[i];
+            infoUsers = listDataUserAll[i];
 
             item.SetData(i.ToString(), infoUsers.userName, infoUsers.totalExperience.ToString(), infoUsers.id);
         }
+
+    }
+
+    public List<DataUsers> OrderPositions(List<DataUsers> toOrder)//metodo para ordenar una lista del tipo DataUsers, retorna lo mismo
+    {
+        var listOrdered = toOrder.OrderByDescending(d => d.totalExperience);//se ordena descendentemente en base al parametro de experiencia
+        return listOrdered.ToList();//convirtiendo el IEnumerable a List
+         
+
     }
 }

@@ -20,17 +20,17 @@ public class AchievementUI : MonoBehaviour
         nameText.SetText(achievement.Name);
         counterText.SetText($"{achievement.CurrentCounter}/{achievement.MaxCounter}");
         SetSliderValues();
-        FillStarImages();
-        CheckGiftsObtained();
+        FillStarImages();//llenar estrellas
+        //CheckGiftsObtained();
     }
-
+    /*
     private void CheckGiftsObtained()
     {
         if (_achievement.GiftsObtained <= 0)
             getGiftButton.gameObject.SetActive(false);
         else
             getGiftButton.gameObject.SetActive(true);
-    }
+    }*/
 
     public void SetGiftObtained()
     {
@@ -45,16 +45,17 @@ public class AchievementUI : MonoBehaviour
 
     private void FillStarImages()
     {
-        var currentLvl = _achievement.CurrentLevel;
+        //var currentLvl = _achievement.CurrentLevel;//accedemos al campo current level de achievement
+        var consecutiveAnswer = _achievement.ConsecutiveAnswer;
 
-        foreach (var item in startLevelImages)
+        foreach (var item in startLevelImages)//recorrer lista de estrellas
         {
-            item.color = starNormalColor;
+            item.color = starNormalColor;//seteo todas las estrellas en su color por defecto
         }
 
-        for (int i = 0; i < currentLvl; i++)
+        for (int i = 0; i < consecutiveAnswer; i++)//recorro las estrellas hasta el valor de consecutiveAnswer
         {
-            startLevelImages[i].color = starFillColor;
+            startLevelImages[i].color = starFillColor;//lleno las estrellas cambiando el color
         }
     }
 }

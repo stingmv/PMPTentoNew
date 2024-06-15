@@ -56,7 +56,7 @@ public class SmoothPath : MonoBehaviour
         endTransition = false;
         _fadeUI.FadeOutTransition();
         yield return null;
-        yield return new WaitUntil(() => !_fadeUI.InTransition);
+        yield return new WaitUntil(() => !_fadeUI.InTransition);//
         objectToMove.rotation = initQuaternion;
         currentTransition = true;
         tinit = 0;
@@ -74,45 +74,25 @@ public class SmoothPath : MonoBehaviour
             return;
         }
 
-        tinit += Time.deltaTime;
-        t = Mathf.SmoothStep(0, _pathData.controlPoints.Length, tinit * _velocityDuration);
-        var i = Mathf.Floor(t);
-        tt = Mathf.Clamp01(t - i);
+       
         // Debug.Log(i);
-        if (!_completePercentageEvent && t/ _pathData.controlPoints.Length >= _percentageOfCompletion )
+        /*if (!_completePercentageEvent && t/ _pathData.controlPoints.Length >= _percentageOfCompletion )
         {
             _completePercentageEvent = true;
             _onPercentage?.Invoke();
-        }
-        if (i < _pathData.controlPoints.Length)
+        }*/
+
+       
+       
+        if (!endTransition)
         {
-            // Calculate rotation with smooth interpolation 
-            // objectToMove.LookAt(_controlPoints[_controlPoints.Length -1].endPoint);
-
-            // Use Quaternion.Slerp to smoothly interpolate between the current rotation and the target rotation
-            objectToMove.rotation = Quaternion.Lerp(initQuaternion, _pathData.controlPoints[_pathData.controlPoints.Length -1].endRotation, t/ _pathData.controlPoints.Length );
-
-            
-            
-            // Calculate position with smooth interpolation
-            // Curve bezier
-           Vector3 position = CalculateBezierPoint(tt, _pathData.controlPoints[(int)i].startPoint, _pathData.controlPoints[(int)i].startTangent, _pathData.controlPoints[(int)i].endTangent, _pathData.controlPoints[(int)i].endPoint);
-           objectToMove.position = position;
+            endTransition = true;
+            Debug.Log("Finalizo transicion");
+            _onEndTransition.Invoke();
+            UIEvents.EndFooterButtonAnimation.Invoke();
+            currentTransition = false;
         }
-        else
-        {
-            if (!endTransition)
-            {
-                objectToMove.position = CalculateBezierPoint(1, _pathData.controlPoints[_pathData.controlPoints.Length -1].startPoint, _pathData.controlPoints[_pathData.controlPoints.Length -1].startTangent, _pathData.controlPoints[_pathData.controlPoints.Length -1].endTangent, _pathData.controlPoints[_pathData.controlPoints.Length -1].endPoint);
-                objectToMove.rotation = Quaternion.Lerp(initQuaternion, _pathData.controlPoints[_pathData.controlPoints.Length -1].endRotation, 1 );
-
-                endTransition = true;
-                Debug.Log("Finalizo transicion");
-                _onEndTransition.Invoke();
-                UIEvents.EndFooterButtonAnimation.Invoke();
-                currentTransition = false;
-            }
-        }
+        
     }
 
     public void ConfigurateStartTangents(int index)

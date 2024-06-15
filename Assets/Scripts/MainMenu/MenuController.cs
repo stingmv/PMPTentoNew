@@ -15,9 +15,14 @@ namespace MainMenu
         [SerializeField] private ScriptableObjectUser _user;
         [SerializeField] private ScriptableObjectSettings _objectSettings ;
         [SerializeField] private ScriptableObjectInstructor _objectInstructor ;
+        [SerializeField] private LevelUserSO _levelUserSO ;
+
         [SerializeField] private TextMeshProUGUI _username;
         [SerializeField] private TextMeshProUGUI _totalExpirience;
         [SerializeField] private TextMeshProUGUI _totalCoins;
+        [SerializeField] private TextMeshProUGUI _experienceToAchieve;
+        [SerializeField] private Image _levelIcon;
+
         [SerializeField] private TMP_InputField _userInputField;
 
         [SerializeField] private SVGImage _mainMenuAvatar;
@@ -39,17 +44,17 @@ namespace MainMenu
             //     _objectSettings.settingData = JsonUtility.FromJson<ScriptableObjectSettings.SettingData>(PlayerPrefs.GetString("settingInfo"));
             // }
             PathToInstantiateInstructor();
-            SetUserProperties();
+            SetUserProperties();//Metodo que setea propiedades de usuario al iniciar
             SetConfigurationProperties();
             if (_user.userInfo.haveAvatar)
             {
                 _mainMenuAvatar.sprite = _user.userInfo.spriteAvatar;
-                _storeAvatar.sprite = _user.userInfo.spriteAvatar;    
+                //_storeAvatar.sprite = _user.userInfo.spriteAvatar;    
             }
             else
             {
                 _mainMenuAvatar.enabled = false;
-                _storeAvatar.enabled = false;   
+                //_storeAvatar.enabled = false;   
             }
         }
 
@@ -77,6 +82,7 @@ namespace MainMenu
         private void GameEvents_ExperienceChanged()
         {
             _totalExpirience.text = _user.userInfo.user.detail.totalExperience.ToString();
+            SetUserLevel();
         }
 
         private void GameEvents_CoinsChanged()
@@ -88,11 +94,11 @@ namespace MainMenu
         {
             ChangeInstructor();
         }
-        public void PathToInstantiateInstructor()
+        public void PathToInstantiateInstructor()//metodo para instanciar el instructor
         {
             var indexInstructor = _user.userInfo.idInstructor;
             _instructorInstantiated =Instantiate(_objectInstructor.instructors.FirstOrDefault(x => x.id == indexInstructor)!.prefab,
-                _pointToInstantiate.position, _pointToInstantiate.rotation, _pointToInstantiate);
+                _pointToInstantiate.position, _pointToInstantiate.rotation, _pointToInstantiate);//instanciar instructor del prefab en el scriptable object
             _instructorInstantiated.layer = 0;
         }
         public void ChangeInstructor()
@@ -102,17 +108,17 @@ namespace MainMenu
             StartCoroutine(IChangeInstructor(indexInstructor));
         }
 
-        IEnumerator IChangeInstructor(int indexInstructor)
+        IEnumerator IChangeInstructor(int indexInstructor)//corutina para cambiar el instructor 
         {
             Debug.Log(_instructorInstantiated.name);
-            Destroy(_instructorInstantiated);
+            Destroy(_instructorInstantiated);//eliminar instructor anterior
             while (_instructorInstantiated)
             {
                 yield return null;
                 Debug.Log("Waiting");
             }
             _instructorInstantiated =Instantiate(_objectInstructor.instructors.FirstOrDefault(x => x.id == indexInstructor)!.prefab,
-                _pointToInstantiate.position, _pointToInstantiate.rotation);
+                _pointToInstantiate.position, _pointToInstantiate.rotation, _pointToInstantiate);
             _instructorInstantiated.layer = 0;
         }
 
@@ -120,8 +126,9 @@ namespace MainMenu
         {
             _userInputField.text = _user.userInfo.user.detail.usernameG;
             _username.text = _user.userInfo.user.detail.usernameG;
-            _totalCoins.text = _user.userInfo.user.detail.totalCoins.ToString();
-            _totalExpirience.text = _user.userInfo.user.detail.totalExperience.ToString();
+            _totalCoins.text = _user.userInfo.user.detail.totalCoins.ToString();//setear monedas
+            _totalExpirience.text = _user.userInfo.user.detail.totalExperience.ToString();//setear experiencia
+            SetUserLevel();
         }
 
         public void SetConfigurationProperties()
@@ -161,6 +168,36 @@ namespace MainMenu
             PlayerPrefs.SetString("MusicVolume", JsonUtility.ToJson(_objectSettings.settingData));
             PlayerPrefs.SetString("SounEffectVolume", JsonUtility.ToJson(_objectSettings.settingData));
 PlayerPrefs.Save();
+        }
+
+        public void SetUserLevel()
+        {
+            Debug.Log("Seteando nivel");
+
+            if (_user.userInfo.user.detail.totalExperience<=4500)
+            {
+                _levelIcon.sprite = _levelUserSO.levelSprite[0];
+                Debug.Log("Nivel Novato");
+                _experienceToAchieve.text = "de 4500";
+            }
+            else if (_user.userInfo.user.detail.totalExperience >= 4501 && _user.userInfo.user.detail.totalExperience <= 9500)
+            {
+                _levelIcon.sprite = _levelUserSO.levelSprite[1];
+                Debug.Log("Nivel Experto");
+                _experienceToAchieve.text = "de 9500";
+            }
+            else if (_user.userInfo.user.detail.totalExperience >= 9501 && _user.userInfo.user.detail.totalExperience <= 15000)
+            {
+                _levelIcon.sprite = _levelUserSO.levelSprite[2];
+                Debug.Log("Nivel Master");
+                _experienceToAchieve.text = "de 15000";
+            }
+            else if (_user.userInfo.user.detail.totalExperience >= 15001)
+            {
+                _levelIcon.sprite = _levelUserSO.levelSprite[3];
+                Debug.Log("Nivel Leyenda");
+                _experienceToAchieve.text = null;
+            }
         }
     }
 }

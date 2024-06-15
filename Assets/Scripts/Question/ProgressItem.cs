@@ -15,7 +15,7 @@ namespace Question
         [SerializeField] private Image _itemImage;
         [SerializeField] private Image _currentItemMarker;
         [SerializeField] private RectTransform _rectOwnTransform;
-        [SerializeField] private TextMeshProUGUI numberQuestionText;
+        //[SerializeField] private TextMeshProUGUI numberQuestionText;
 
         public RectTransform RectOwnTransform
         {
@@ -45,14 +45,14 @@ namespace Question
 
         public void SetCurrentItem()
         {
-            //_currentItemMarker.gameObject.SetActive(true);
+            _currentItemMarker.gameObject.SetActive(true);
         }
 
         public void SetCorrectSelection()
         {
-            _currentItemMarker.gameObject.SetActive(false);
+            //_currentItemMarker.gameObject.SetActive(false);
             _itemImage.color = _correctColor;
-            numberQuestionText.color = Color.white;
+            //numberQuestionText.color = Color.white;
 
         }
         public void RemoveCurrentItem()
@@ -63,16 +63,18 @@ namespace Question
         }
         public void SetIncorrectSelection()
         {
-            _currentItemMarker.gameObject.SetActive(false);
+            //_currentItemMarker.gameObject.SetActive(false);
             _itemImage.color = _incorrectColor;
-            numberQuestionText.color = Color.white;
+            //numberQuestionText.color = Color.white;
         }
 
+        /*
         public void SetNumberQuestion(int number)
         {
             int numQuestion = number + 1;
             numberQuestionText.SetText(numQuestion.ToString());
-        }
+        }*/
+
         #endregion
 
     }

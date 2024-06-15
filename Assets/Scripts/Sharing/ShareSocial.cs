@@ -5,9 +5,33 @@ using UnityEngine;
 
 public class ShareSocial : MonoBehaviour
 {
-    public void SharePicture() 
+    public Texture2D predefinedImage;
+    [SerializeField] private AchievementRewardsSO achievementRewardsSO;
+    [SerializeField] public int valueToShare;
+    public void SharePicture()//para compartir captura de pantalla
     {
         StartCoroutine(TakeScreenshotAndShare());
+    }
+
+    public void SharePredefinedImage()//para compartir imagen predefinida
+    {
+        switch (valueToShare)
+        {
+            case 4:
+                predefinedImage= achievementRewardsSO.imageShare[0];
+                break;
+            case 6:
+                predefinedImage = achievementRewardsSO.imageShare[1];
+                break;
+            case 8:
+                predefinedImage = achievementRewardsSO.imageShare[2];
+                break;
+            case 10:
+                predefinedImage = achievementRewardsSO.imageShare[3];
+                break;
+        }
+        StartCoroutine(SharePredefinedImageCoroutine());   
+
     }
 
     private IEnumerator TakeScreenshotAndShare()
@@ -28,4 +52,23 @@ public class ShareSocial : MonoBehaviour
             .SetCallback((result, shareTarget) => Debug.Log("Share result: " + result + ", selected app: " + shareTarget))
             .Share();
     }
+
+    private IEnumerator SharePredefinedImageCoroutine()
+    {
+        string filePath = Path.Combine(Application.temporaryCachePath, "shared_img.png");
+        byte[] imageBytes = predefinedImage.EncodeToPNG();
+
+        File.WriteAllBytes(filePath, imageBytes);
+
+        new NativeShare().AddFile(filePath)
+           .SetSubject("Predefined image shared") 
+           .SetText("Score") 
+           .SetCallback((result, shareTarget) => Debug.Log("Share result: " + result + ", selected app: " + shareTarget)) 
+           .Share();
+
+        yield return null;
+
+
+    }
+
 }

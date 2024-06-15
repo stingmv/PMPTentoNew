@@ -32,6 +32,11 @@ public class PathController : MonoBehaviour
     [SerializeField] private SmoothPath _rankingToAchievement;
     [SerializeField] private SmoothPath _rankingToMain;
 
+    [SerializeField] private SmoothPath _trainToMain;
+    [SerializeField] private SmoothPath _trainToRanking;
+    [SerializeField] private SmoothPath _trainToStore;
+    [SerializeField] private SmoothPath _trainToAchievement;       
+
     [SerializeField] private PathState _currentPathState;
 
     private SmoothPath _toMain;
@@ -39,6 +44,7 @@ public class PathController : MonoBehaviour
     private SmoothPath _toTrain;
     private SmoothPath _toAchievement;
     private SmoothPath _toRanking;
+
     private SmoothPath _currentPath;
 
     public enum PathState
@@ -59,7 +65,14 @@ public class PathController : MonoBehaviour
         rankingToStore,
         rankingToTrain,
         rankingToAchievement,
-        rankingToMain
+        rankingToMain,
+
+        trainToMain,
+        trainToRanking,
+        trainToStore,
+        trainToAchievement,
+           
+            
     }
 
     public enum EActualPath
@@ -83,6 +96,9 @@ public class PathController : MonoBehaviour
                 case PathState.mainToRanking:
                 case PathState.storeToRanking:
                 case PathState.achievementToRanking:
+
+                case PathState.trainToRanking:
+                    
                     _toMain = _rankingToMain;
                     _toStore = _rankingToStore;
                     _toTrain = _rankingToTrain;
@@ -93,6 +109,9 @@ public class PathController : MonoBehaviour
                 case PathState.mainToStore:
                 case PathState.achievementToStore:
                 case PathState.rankingToStore:
+
+                case PathState.trainToStore:
+
                     _toMain = _storeToMain;
                     _toTrain = _storeToTrain;
                     _toAchievement = _storeToAchievement;
@@ -103,6 +122,9 @@ public class PathController : MonoBehaviour
                 case PathState.maintoAchievement:
                 case PathState.storeToAchievement:
                 case PathState.rankingToAchievement:
+
+                case PathState.trainToAchievement:
+
                     _toMain = _achievementToMain;
                     _toStore = _achievementToStore;
                     _toTrain = _achievementToTrain;
@@ -113,11 +135,27 @@ public class PathController : MonoBehaviour
                 case PathState.storeToMain:
                 case PathState.achievementToMain:
                 case PathState.rankingToMain:
+
+                case PathState.trainToMain:
+
                     _toStore = _mainToStore;
                     _toTrain = _mainToTrain;
                     _toAchievement = _mainToAchievement;
                     _toRanking = _mainToRanking;
                     _actualPath = EActualPath.main;
+                    break;
+
+                case PathState.storeToTrain:
+                case PathState.achievementToTrain:
+                case PathState.rankingToTrain:
+
+                case PathState.mainToTrain:
+
+                    _toStore = _trainToStore;
+                    _toMain = _trainToMain;
+                    _toAchievement = _trainToAchievement;
+                    _toRanking = _trainToRanking;
+                    _actualPath = EActualPath.train;
                     break;
             }
         }

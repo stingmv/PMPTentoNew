@@ -6,12 +6,14 @@ public class AchievementUIController : MonoBehaviour
     [SerializeField] private AchievementData achievementData;
     [SerializeField] private GameObject achievementPrefab;
     [SerializeField] private Transform contentAchievements;
+    [SerializeField] private Transform contentScrollViewStreaks;
+
 
     [SerializeField] private GameObject popupContainer;
     [SerializeField] private TextMeshProUGUI popUpGift1Text;
     [SerializeField] private TextMeshProUGUI popUpGift2Text;
 
-    private AchievementData.Achievement _achievement;
+    private AchievementData.Achievement _achievement;//variable tipo Achievement
     private UnityEngine.UI.Button _button;
 
     private void OnEnable()
@@ -24,7 +26,7 @@ public class AchievementUIController : MonoBehaviour
         GameEvents.OnSetGiftsFromAchievement -= SetGiftsObtained;
     }
 
-    public void SetAllAchievements()
+    public void SetAllAchievements()//se llama al presionar boton de Logros en footer de MainMeny
     {
         ClearChildrenAchievement();
 
@@ -32,16 +34,27 @@ public class AchievementUIController : MonoBehaviour
         for (int i = 0; i < list.Count; i++)
         {
             var item = Instantiate(achievementPrefab, contentAchievements);
-            item.GetComponent<AchievementUI>().SetValues(list[i]);
+            item.GetComponent<AchievementUI>().SetValues(list[i]);//setear valores en contenedor de logros            
         }
+
+        for (int i = 0; i < contentScrollViewStreaks.childCount; i++)
+        {
+            contentScrollViewStreaks.GetChild(i).GetComponent<AwardsContainer>().SetValuesAwards();//accedo al metodo de cada uno de los AwardsContainers
+
+        }
+
+
     }
 
-    public void ClearChildrenAchievement()
+    public void ClearChildrenAchievement()//limpio los logros del contenedor y de los trofeos
     {
         for (int i = contentAchievements.childCount - 1; i >= 0; i--)
         {
             Destroy(contentAchievements.GetChild(i).gameObject);
         }
+       
+
+
     }
 
     public void GetGifts()
@@ -50,7 +63,7 @@ public class AchievementUIController : MonoBehaviour
         _button.gameObject.SetActive(false);
     }
 
-    public void SetGiftsObtained(AchievementData.Achievement achievement, UnityEngine.UI.Button button)
+    public void SetGiftsObtained(AchievementData.Achievement achievement, UnityEngine.UI.Button button)//recibe variable tipo achievment y boton
     {
         _achievement = achievement;
         _button = button;
@@ -64,4 +77,7 @@ public class AchievementUIController : MonoBehaviour
         popUpGift1Text.SetText(totalGift1.ToString());
         popUpGift2Text.SetText(totalGift2.ToString());
     }
+
+   
+
 }

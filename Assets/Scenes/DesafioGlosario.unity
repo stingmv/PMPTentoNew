@@ -6386,15 +6386,14 @@ MonoBehaviour:
   _user: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
   _instructorPrefab: {fileID: 0}
   _camera: {fileID: 1018825809}
-  _guideTransform: {fileID: 4382323204244515407}
-  _initScale: {x: 0, y: 0, z: 0}
+  _referenceInstructor: {fileID: 0}
   _factor: 1
   _topLimit: {fileID: 1956033490497603050}
   _minHeight: 75.58749
   _maxHeight: 78.34402
   _minResolution: 310.3
   _maxResolution: 462.5
-  x: 0
+  _pointOfInstantiate: {fileID: 0}
 --- !u!224 &8103451975334051059
 RectTransform:
   m_ObjectHideFlags: 0

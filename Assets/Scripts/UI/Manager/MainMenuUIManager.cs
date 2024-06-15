@@ -11,6 +11,7 @@ public class MainMenuUIManager : MonoBehaviour
     [SerializeField] private FadeUI _chooseInstructorPopup;
     [SerializeField] private FadeUI _notificationPopup;
     
+    
     // [Header("Views")]
     // [SerializeField]
     private void OnEnable()
@@ -43,11 +44,12 @@ public class MainMenuUIManager : MonoBehaviour
         UIEvents.NotificationHide -= UIEvent_NotificationHide;
     }
 
-    private void UIEvent_SettingShow()
+    private void UIEvent_SettingShow()//metodo para mostrar configuraciones
     {
         _gameConfigurationPopup.gameObject.SetActive(true);
         _gameConfigurationPopup.FadeInTransition();
         var _audioSettingsSO = Resources.Load<AudioSettingsSO>("AudioSettings_Data");
+     
 
         // Update values to Sliders 
         float masterVolume = _audioSettingsSO.MasterVolume * 100f;
@@ -85,6 +87,7 @@ public class MainMenuUIManager : MonoBehaviour
     private void UIEvent_SettingHide()
     {
         _gameConfigurationPopup.FadeOutTransition();
+        
     }
     private void UIEvent_GameModesHide()
     {
@@ -102,13 +105,14 @@ public class MainMenuUIManager : MonoBehaviour
     {
         _notificationPopup.FadeOutTransition();
     }
-    public void OpenConfigurationPopup()
+    public void OpenConfigurationPopup()//abrir menu de configuracion, se ejecuta el metodo al presionar en icono config
     {
-        UIEvents.SettingShow?.Invoke();
+        UIEvents.SettingShow?.Invoke();//invocar evento de mostrar menu de configuracion
     }
-    public void CloseConfigurationPopup()
+    public void CloseConfigurationPopup()//cerrar menu de configuracion, se ejecuta el metodo al presionar en icono config
     {
         UIEvents.SettingHide?.Invoke();
+     
     }
     public void OpenGameModesPopup()
     {

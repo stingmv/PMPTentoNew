@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "aabeb4ab-782a-5b48-a035-722b3d50e3c2": {
+      "ProjectGuid": "aabeb4ab-782a-5b48-a035-722b3d50e3c2",
+      "DisplayName": "Assembly-CSharp",
+      "ColorIndex": 0
+    },
+    "6b27a630-5e00-7db0-69f7-6faa31a7815e": {
+      "ProjectGuid": "6b27a630-5e00-7db0-69f7-6faa31a7815e",
+      "DisplayName": "NativeShare.Runtime",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

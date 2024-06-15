@@ -20,86 +20,75 @@ public class GetUsersApi : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _categoryTitle;
     public enum Categories
     {
-        Aficionado,
-        Aprendiz,
-        Especialista,
-        Maestro,
+        Novato,
         Experto,
-        Elite
+        Master,
+        Leyenda
     }   
 
-    public void GetRankingInformation()
+    public void GetRankingInformation()//este metodo se llama al presionar en seccion ranking
     {
-        var tExperience = _user.userInfo.user.detail.totalExperience;
+        
+        var tExperience = _user.userInfo.user.detail.totalExperience;//obtenemos experiencia y colocamos en variable
         if (tExperience < 0)
         {
             return;
         }
 
-        switch (tExperience)
+        switch (tExperience)//Setear titulo de categoria(nivel) 
         {
-            case <= 2000:
-                GetAficionado();
-                _categoryTitle.text = "Categoría:\nAficionado";
-                break;
             case <= 4500:
-                GetAprendiz();
-                _categoryTitle.text = "Categoría:\nAprendiz";
+                GetNovato();
+                _categoryTitle.text = "Categoría:\nNovato";
                 break;
-            case <= 7500:
-                GetEspecialista();
-                _categoryTitle.text = "Categoría:\nEspecialista";
-                break;
-            case <= 11000:
-                GetMaestro();
-                _categoryTitle.text = "Categoría:\nMaestro";
-                break;
-            case <= 15000:
+            case <= 9500:
                 GetExperto();
                 _categoryTitle.text = "Categoría:\nExperto";
                 break;
-            default:
-                GetElite();
-                _categoryTitle.text = "Categoría:\nÉlite";
+            case <= 15000:
+                GetMaster();
+                _categoryTitle.text = "Categoría:\nMaster";
                 break;
+            default:
+                GetLeyenda();
+                _categoryTitle.text = "Categoría:\nLeyenda";
+                break;           
         }
+        GetGlobal();//para que en principio se ejecute el filtro global
     }
     private void Start()
     {
         // Debug.Log(_user.userInfo.user.detail.totalExperience);
-        // GetAficionado();
+        //GetNovato();
     }
 
-    public void GetAficionado()
+    public void GetNovato()//filtro de experiencia en rango de novato
     {
         StopAllCoroutines();
-        StartCoroutine(GetData(0, 2000));
-    }
-    public void GetAprendiz()
-    {
-        StopAllCoroutines();
-        StartCoroutine(GetData(2001, 4500));
-    }
-    public void GetEspecialista()
-    {
-        StopAllCoroutines();
-        StartCoroutine(GetData(4501, 7500));
-    }
-    public void GetMaestro()
-    {
-        StopAllCoroutines();
-        StartCoroutine(GetData(7501, 11000));
+        StartCoroutine(GetData(0, 4500));//con metodo GetData hago la solicitud al endpoint con los parametros de experiencia minima 0 y maxima 2000
     }
     public void GetExperto()
     {
         StopAllCoroutines();
-        StartCoroutine(GetData(1101, 15000));
+        StartCoroutine(GetData(4501, 9500));
     }
-    public void GetElite()
+    public void GetMaster()
+    {
+        StopAllCoroutines();
+        StartCoroutine(GetData(9501, 15000));
+    }
+    public void GetLeyenda()
     {
         StopAllCoroutines();
         StartCoroutine(GetData(15001, 100000));
     }
+    public void GetGlobal()
+    {
+        StopAllCoroutines();
+        StartCoroutine(GetData(0, 100000));
+    }
+
+    
     
     private IEnumerator GetData(int minExperience, int maxExperience)
     {

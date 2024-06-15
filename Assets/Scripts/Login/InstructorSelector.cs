@@ -19,6 +19,8 @@ public class InstructorSelector : MonoBehaviour
     [SerializeField] private ButtonAnimation _buttonPrevious;
     [SerializeField] private Transform _container;
     [SerializeField] private GameObject _instructorPlatform;
+    [SerializeField] private GameObject _imageWomanInstructor;
+    [SerializeField] private GameObject _imageManInstructor;
     [SerializeField] private string url =
         "http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ActualizarCaracteristicasGamificacion";
 
@@ -83,29 +85,33 @@ public class InstructorSelector : MonoBehaviour
         index++;
         ComprobeNext();
         ComprobePrevious();
-        _pathToInstantiateInstructor.RotateToItem(index);
+        //_pathToInstantiateInstructor.RotateToItem(index);
     }
 
-    public void ComprobeNext()
+    public void ComprobeNext()//comprobar boton de siguiente
     {
         if ((index+ 1) >= _objectInstructor.instructors.Length)
         {
-            _buttonNext.gameObject.SetActive(false);
+            _buttonNext.gameObject.SetActive(false);//desactivar boton siguiente
+            _imageWomanInstructor.gameObject.SetActive(false);//desactivar imagen de seleccion instructor mujer
         }
         else
         {
-            _buttonNext.gameObject.SetActive(true);
+            _buttonNext.gameObject.SetActive(true);//activar boton siguiente
+            _imageWomanInstructor.gameObject.SetActive(true);//activar imagen de seleccion instructor mujer
         }
     }
-    public void ComprobePrevious()
+    public void ComprobePrevious()//comprobar boton de anterior
     {
         if ((index - 1) < 0)
         {
             _buttonPrevious.gameObject.SetActive(false);
+            _imageManInstructor.gameObject.SetActive(false);
         }
         else
         {
             _buttonPrevious.gameObject.SetActive(true);
+            _imageManInstructor.gameObject.SetActive(true);
         }
     }
     public void GetPreviousInstructor()
@@ -113,7 +119,7 @@ public class InstructorSelector : MonoBehaviour
         index--;
         ComprobeNext();
         ComprobePrevious();
-        _pathToInstantiateInstructor.RotateToItem(index);
+        //_pathToInstantiateInstructor.RotateToItem(index);
     }
     public void SelectInstructor()
     {

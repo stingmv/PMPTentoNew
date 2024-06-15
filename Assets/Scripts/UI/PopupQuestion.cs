@@ -11,6 +11,7 @@ namespace UI
 
         [SerializeField] private TextMessageSO _textMessage;
         [SerializeField] private TextMeshProUGUI _message;
+        
         [SerializeField] private TextMeshProUGUI _messagePower;
         [SerializeField] private Image _imageBSecondOportunity;
         [SerializeField] private TextMeshProUGUI _labelBSecondOportunity;
@@ -49,19 +50,23 @@ namespace UI
 
         public void SetMessageToPowerUpNextQuestion()
         {
-            _message.text = _textMessage.nextQuestionMessage[Random.Range(0, _textMessage.nextQuestionMessage.Length)];
+            _message.text = _textMessage.nextQuestionMessage[Random.Range(0, _textMessage.nextQuestionMessage.Length)];            
         }
         public void SetMessage(string message, bool isCorrect)
         {
             if (isCorrect)
             {
                 _message.color =_correctColor;
+                
             }
             else
             {
                 _message.color = _incorrectColor;
+                
             }
             _message.text = message;
+            
+
         }
 
         public void SetMessagePower(string message)
@@ -80,6 +85,10 @@ namespace UI
         }
 
         #endregion
+
+      
+
+   
 
     }
 }

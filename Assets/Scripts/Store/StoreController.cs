@@ -39,9 +39,9 @@ public class StoreController : MonoBehaviour
     [SerializeField] private StoreSection _storeSectionPrefab;
     [SerializeField] private StoreItem _storeItemPrefab;
     [SerializeField] private Transform _offset;
-    [SerializeField] private TextMeshProUGUI _totalCoinsLabel;
-    [SerializeField] private TextMeshProUGUI _totalExperienceLabel;
-    [SerializeField] private TextMeshProUGUI _usernameLabel;
+    //[SerializeField] private TextMeshProUGUI _totalCoinsLabel;
+    //[SerializeField] private TextMeshProUGUI _totalExperienceLabel;
+    //[SerializeField] private TextMeshProUGUI _usernameLabel;
 
     [Header("Pop-up compra")] [SerializeField]
     private FadeUI _popupCompra;
@@ -59,14 +59,14 @@ public class StoreController : MonoBehaviour
 
     private void OnEnable()
     {
-        if (PlayerPrefs.HasKey("UseRoulette"))
+        if (PlayerPrefs.HasKey("UseRoulette"))//verifica si fue usada la ruleta
         {
             Debug.Log(DateTime.Parse(PlayerPrefs.GetString("UseRoulette")));
             var timeUsedRoulette = DateTime.Parse(PlayerPrefs.GetString("UseRoulette"));
             if (timeUsedRoulette == DateTime.Today)
             {
                 // No usó ruleta hoy
-                _rouletteButton.DisableButton	();
+                _rouletteButton.DisableButton();
                 _rouletteInformation.text = "Ya uso la ruleta, solo se permite una vez por día.";
                 _rouletteInformation.gameObject.SetActive(true);
             }
@@ -77,9 +77,9 @@ public class StoreController : MonoBehaviour
                 _rouletteInformation.gameObject.SetActive(false);
             }
         }
-        _usernameLabel.text = _user.userInfo.user.detail.usernameG;
-        _totalCoinsLabel.text = _user.userInfo.user.detail.totalCoins.ToString();
-        _totalExperienceLabel.text = _user.userInfo.user.detail.totalExperience.ToString();
+        //_usernameLabel.text = _user.userInfo.user.detail.usernameG;
+        //_totalCoinsLabel.text = _user.userInfo.user.detail.totalCoins.ToString();
+        //_totalExperienceLabel.text = _user.userInfo.user.detail.totalExperience.ToString();
 
         _powerUpSecondOportunityI.text = _user.userInfo.user.detail.secondChance.ToString();
         _powerUpTrueOptionI.text = _user.userInfo.user.detail.findCorrectAnswer.ToString();
@@ -113,7 +113,7 @@ public class StoreController : MonoBehaviour
         // Verdadera opcion
 
         itemInstantiaded = Instantiate(_storeSectionPrefab, _GeneralContainer);
-        itemInstantiaded.SetData("Opción correcta");
+        itemInstantiaded.SetData("Mostrar respuesta");
         for (int i = 0; i < 3; i++)
         {
             var storeItem = Instantiate(_storeItemPrefab, itemInstantiaded.Container);
@@ -133,7 +133,7 @@ public class StoreController : MonoBehaviour
         // Eliminar opcion
 
         itemInstantiaded = Instantiate(_storeSectionPrefab, _GeneralContainer);
-        itemInstantiaded.SetData("Eliminar opción");
+        itemInstantiaded.SetData("Descartar alternativa");
         for (int i = 0; i < 3; i++)
         {
             var storeItem = Instantiate(_storeItemPrefab, itemInstantiaded.Container);
@@ -153,7 +153,7 @@ public class StoreController : MonoBehaviour
         // Siguiente pregunta
 
         itemInstantiaded = Instantiate(_storeSectionPrefab, _GeneralContainer);
-        itemInstantiaded.SetData("Siguiente pregunta");
+        itemInstantiaded.SetData("Saltar pregunta");
         for (int i = 0; i < 3; i++)
         {
             var storeItem = Instantiate(_storeItemPrefab, itemInstantiaded.Container);
@@ -173,7 +173,7 @@ public class StoreController : MonoBehaviour
         // Mas Tiempo
 
         itemInstantiaded = Instantiate(_storeSectionPrefab, _GeneralContainer);
-        itemInstantiaded.SetData("Mas tiempo");
+        itemInstantiaded.SetData("Aumento de tiempo");
         for (int i = 0; i < 3; i++)
         {
             var storeItem = Instantiate(_storeItemPrefab, itemInstantiaded.Container);
@@ -206,12 +206,12 @@ public class StoreController : MonoBehaviour
 
     private void GameEvents_ExperienceChanged()
     {
-        _totalExperienceLabel.text = _user.userInfo.user.detail.totalExperience.ToString();
+        //_totalExperienceLabel.text = _user.userInfo.user.detail.totalExperience.ToString();
     }
 
     private void GameEvents_CoinsChanged()
     {
-        _totalCoinsLabel.text = _user.userInfo.user.detail.totalCoins.ToString();
+        //_totalCoinsLabel.text = _user.userInfo.user.detail.totalCoins.ToString();
         // _totalCoinsLabel.text = _user.userInfo.totalCoins.ToString();
     }
 
@@ -268,7 +268,7 @@ public class StoreController : MonoBehaviour
             case "pu_secondOportunity":
                 return "segunda oportunidad";
             case "pu_trueOption":
-                return "opción correcta";
+                return "mostrar respuesta";
             default:
                 return "";
         }

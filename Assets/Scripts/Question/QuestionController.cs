@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using ScriptableCreator;
+using TMPro;
 using UI;
 using UnityEngine;
 using UnityEngine.Events;
@@ -33,8 +34,9 @@ namespace Question
         [SerializeField] private QuestionInformation _questionInformation;
         [SerializeField]
         private IncorrectQuestionsSO _incorrectQuestions;
+
         [SerializeField] private UnityEvent _onSelectOption;
-        [SerializeField] private UnityEvent<int> _onCorrectOption;
+        [SerializeField] private UnityEvent<int> _onCorrectOption;//evento con parametro int
         [SerializeField] private UnityEvent _onIncorrectOption;
         [SerializeField] private ProgressQuestion _progressQuestion;
         [SerializeField] private bool useProgressQuestion = true;
@@ -45,10 +47,10 @@ namespace Question
         [SerializeField] private UnityEvent OnLatestQuestionAchieved;
         [SerializeField] private DataToRegisterSO _toRegisterSo;
         private List<QuestionData> _session = new List<QuestionData>();
-        private QuestionData _currentQuestion;
+        public QuestionData _currentQuestion;//provisionalmente en public para ver respuestas
         private List<int> _indexes = new List<int>(){0,1,2,3} ;
         private int _currentIndex;
-        private int _numberOfCorrectQuestions;
+        private int _numberOfConsecutiveAnswers;
 
         public int GetCountSession
         {
@@ -88,6 +90,7 @@ namespace Question
             UIEvents.ShowQuestionView?.Invoke();
         }
 
+    
         // Start is called before the first frame update
         void Start()
         {
@@ -156,6 +159,7 @@ namespace Question
                 _indexes.Add(3);
                 questionData.idTask = questions[i].idSimuladorPmpTarea;
             }
+
         }
         public void ConfigurateQuestion()
         {
@@ -180,6 +184,7 @@ namespace Question
                 _onEndQuestions?.Invoke();
                 return;
             }
+            _currentQuestion.progressItem.RemoveCurrentItem();//remover marcador de pregunta 
             var tempQuestion = _session[_currentIndex];
             _currentQuestion = tempQuestion;
             if (useProgressQuestion)
@@ -197,7 +202,7 @@ namespace Question
         {
             if (_currentIndex <= 0)
                 return;
-
+            _currentQuestion.progressItem.RemoveCurrentItem();//remover marcador de pregunta
             _currentIndex--;
 
             var tempQuestion = _session[_currentIndex];
@@ -222,37 +227,58 @@ namespace Question
         }
         public bool ValidateResponse(string id)
         {
-            _questionInformation.DisableOptions();
+            _questionInformation.DisableOptions();//deshabilita opciones de respuestas una vez seleccionada una
             _onSelectOption?.Invoke();
-            if (_currentQuestion.idCorrectOption == id)
+
+            AchievementControlller _achievementController=FindObjectOfType<AchievementControlller>();//referencio achievement controller
+            int lastElement = _achievementController.maxGoodStreakList.Last();//accedo al ultimo elemento de la lista maxGoodStreakList en AchievementController
+
+            if (_currentQuestion.idCorrectOption == id)//compara el id de la opcion seleccionada con el de la correcta
             {
-                _numberOfCorrectQuestions++;
+
+                if (_numberOfConsecutiveAnswers < lastElement)
+                {
+                _numberOfConsecutiveAnswers++;//incrementa contador de respuestas correctas
+                Debug.Log($"Se aumentó _numberOfConsecutiveAnswers:{_numberOfConsecutiveAnswers}");
+
+                }
+                else
+                {
+                    _numberOfConsecutiveAnswers = 1;
+                    Debug.Log($"Se reinicio _numberOfConsecutiveAnswers:{_numberOfConsecutiveAnswers}");
+
+                }
+
                 if (useProgressQuestion)
                 {
                     _currentQuestion.progressItem.SetCorrectSelection();
-                    _progressQuestion.Label = _numberOfCorrectQuestions.ToString();
+                    _progressQuestion.Label = _numberOfConsecutiveAnswers.ToString();
                 }
 
-                if (_numberOfCorrectQuestions == GetCountSession)
+                if (_numberOfConsecutiveAnswers == GetCountSession)//Verifica si se alcanzo el numero de respuestas deseado
                 {
-                    OnLatestQuestionAchieved?.Invoke();
+                    OnLatestQuestionAchieved?.Invoke();//si alcanzo el numero dispara el evento
                 }
 
-                _questionInformation.SetMessage("¡Correcto! ¡Eres un experto en este tema!", true);
-                GameEvents.CorrectlyAnswered?.Invoke();
-                _onCorrectOption?.Invoke(_numberOfCorrectQuestions);
-                return true;
+                _questionInformation.SetMessage("¡Correcto! ¡Eres un experto en este tema!", true);//muestra mensaje
+                GameEvents.CorrectlyAnswered?.Invoke();//dispara evento
+                _onCorrectOption?.Invoke(_numberOfConsecutiveAnswers);//llamar al evento local onCorrectOption con el contador de respuestas correctas como parametro
+                Debug.Log("Respuesta Correcta");
+                return true;//retorna verdadero si es correcta la respuesta
+                
+                
             }
-            _incorrectQuestions.SaveIncorrectQuestion(_currentQuestion.questionItem);
+            //SI ES INCORRECTA
+            _incorrectQuestions.SaveIncorrectQuestion(_currentQuestion.questionItem);//guarda la pregunta incorrecta
             if (useProgressQuestion)
             {
                 _currentQuestion.progressItem.SetIncorrectSelection();
             }
 
             _questionInformation.SetMessage("Esa no es la respuesta correcta, pero cada error es una oportunidad de aprendizaje.", false);
-            GameEvents.IncorrectlyAnswered?.Invoke();
+            GameEvents.IncorrectlyAnswered?.Invoke();//dispara evento
             _onIncorrectOption?.Invoke();
-            return false;
+            return false;//retorna falso si es incorrecta la respuesta
             
         }
 

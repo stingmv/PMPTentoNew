@@ -16,12 +16,12 @@ MonoBehaviour:
     user:
       id: 
       idProveedor: 0
-      cursos: 256
+      cursos: 271
       idAlumno: 9818325
       idContacto: 0
       clave: 
       userName: pruebaxjrivera@bsginstitute.net
-      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.rPsgGiygt1SmBGw0-28pnyGCjKODhaw_Mu9KtG7WeCAokNqem15CfQ.shQ_IZAKjLZM65d8Jv0cdg.gK-cyadSkwEJrXzajzd8V3oUZRNUNeU5EMWQ-4T9RguuQ0ObiYWqPAFzTOhJv-WSrDYnHFz3ehXrkb-8V1B_v1IYGmDZa6iVObEU-CYEgn3CyvpKHkrAD8TGgB5fR6dWF-2AkFu650F9HufLpDQcBtNGHL9Akpf6x5-UK35Bw9nyuhvY--8WipQCPilCPZ7bJVJTIsJuIEZK9zjEhjWOmlkLuP64sbufZ7C9MRyapLrv110KjtmCXh97eantjuVwpaD_5BdbqhbB1PuM9f2sYcBekeLZAVi92u4Jzx5vEH48MrXsPBElRgbu98uxRcAZMzCp_csAWScxS0UbycpWlAkPRrAzeBRzVYl60A7Rkn8AXID3jCZLpaxcZ5cGqdbqD98jl5ihvw_bvsrWRXTYlU0qq2UOdxmjnSdAdmrXukOOnpnyrjaKDYjmM1XrZKGFeSEUzNgRxmRCFrfLL2YGHe7TQFPt4r8btjoasn-_L98UiRg1-l1E64T1clq4amxQHXlAsJiPqSCQxGW7i78ZtlCiWRTiya3JqYZGe5lcas5ytlKK9p08l7FNYfKUkGo5cZtVMN7OMMJ9EWnfLstd2rhmbnFpH3ZkbdEbj1pot4WB7AUlFQAPBeah0fLxpTdf.MiSDshnBnHD1XSP8R_yDuw
+      token: eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.fnjLS9iHy939uv7kS1rnPMdGxDsedWp5X4DcudotB_qQ2GWoYTYvHQ.qmMFQDX9eoEPBmA_QUwE_Q.oYNQ3ftbtcOh25kbO2icBgjjSzCiureEzqN4PZ3yHlopYUKlBZPd2jGTgl4z_3ZZcni88JLgAYs5LbsjPXd3gqkZFIsxWb8MPJaKhxi8XAZUFvXb26uIgSg5b6cMjZbHAgboz6Q-mU14zEu2KrBYXfoB-HkDvu6cBhrOka6wTi6FADDObbFirASDsGwo8S7PcAUgIPE1npbZOI0Y4e5bnNjzqB-aT37i7NgUvW0DdGVd98srb_2h15-e_6-raMEWHjD0v4XdBt4WkfMUJhGi1TzQDnlfBAmLVLn5Sa8GARC9goOfqkSDI8es3QEmCog0PoyrPyZPoeDPU3uLxhNb1TFPuBBAQy1XLJADrL2-Fdj89hYGluMCMsXESb4nIRend7GstTmbdMvzgwO5qSchQPCmfev3_SBRk3JxpG236ooMUSfI4bdLm7KtELofRDDPzRKM3F9q1mNcnmEU9NjWHeWu7X2PETXR3Tj9uxmGPTprNsDxYoemwmz6UB7n4VqBioVhM4fqLvpZF4POXM497H-7K1A72BFkL91SwBliuIYmHecMXmUTrce2O1t6QFW9_wCzOWROhjvDPl4gt1CVCzvi1gR2s2biiNPIESsep5wAylWB_k2bsusX8859mP-w.ChfwbYUmOo_golqKxuFIKg
       tipoCarrera: 1
       correoEnc: 
       telEnc: 
@@ -32,22 +32,23 @@ MonoBehaviour:
         idAlumno: 9818325
         usernameG: JRivera S
         instructorID: 1
-        totalCoins: 145
-        totalExperience: 5380
+        totalCoins: 465
+        totalExperience: 7135
         discardOption: 23
         skipQuestion: 30
         findCorrectAnswer: 32
         increaseTime: 30
-        secondChance: 29
+        secondChance: 991
       excepcion:
         excepcionGenerada: 0
         descripcionGeneral: 
     LearningModeState:
-      ItemStates: []
+      ItemStates:
+      - id: 14
     haveUser: 1
     haveUsername: 1
     haveInstructor: 1
-    idInstructor: 1
+    idInstructor: 0
     haveAvatar: 1
     urlAvatar: https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Round&hairColor=Black&facialHairType=BeardMedium&facialHairColor=Black&clotheType=ShirtVNeck&clotheColor=Red&eyeType=Side&eyebrowType=DefaultNatural&mouthType=Disbelief&skinColor=Light
     spriteAvatar: {fileID: 0}

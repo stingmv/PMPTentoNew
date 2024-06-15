@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A80F16ED-70B0-19CA-482A-E4C2C5902055}</ProjectGuid>
+    <ProjectGuid>{809F5830-2DA4-BD49-939B-69156040B572}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -1212,23 +1212,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{AABEB4AB-782A-5B48-A035-722B3D50E3C2}</Project>
+      <Project>{02DF2F08-E953-875E-3D10-A8C17BAF7CB6}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="NativeShare.Runtime.csproj">
-      <Project>{6B27A630-5E00-7DB0-69F7-6FAA31A7815E}</Project>
+      <Project>{5E3A54CA-16DA-F306-0DCE-F7D63FB75E91}</Project>
       <Name>NativeShare.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="uLipSync.Runtime.csproj">
-      <Project>{4492AE5C-43D7-33A0-9519-B82C74A0DBE3}</Project>
+      <Project>{4E3B5E91-B823-DCB1-BB61-1C56578B975B}</Project>
       <Name>uLipSync.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="uLipSync.Editor.csproj">
-      <Project>{413EC61A-79B5-6DFA-8181-8DDFFD962677}</Project>
+      <Project>{96AFEE51-4AD1-BE0F-9E6F-1988CC5871FB}</Project>
       <Name>uLipSync.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="NativeShare.Editor.csproj">
-      <Project>{FA6BC60C-D27B-03DF-C486-3A4EA76E38D1}</Project>
+      <Project>{C1380CFE-F568-635A-635C-15CC4CB7655F}</Project>
       <Name>NativeShare.Editor</Name>
     </ProjectReference>
   </ItemGroup>

@@ -19,11 +19,15 @@ public class DailyReviewController : MonoBehaviour
     [SerializeField] private DailyReviewNameListItem _nameListItemPrefab;
     [SerializeField] private List<QuestionData> _session;
     [SerializeField] private Transform _nameListContainer;
+
     [SerializeField] private ProgressQuestion _progressQuestion;
+
     [SerializeField] private ButtonAnimation _buttonAnimationStart;
     [SerializeField] private UnityEvent _onFirstQuestion;
     [SerializeField] private UnityEvent _onLastQuestion;
     [SerializeField] private UnityEvent _onMediumQuestion;
+
+
     private List<int> _indexes = new List<int>() { 0, 1, 2, 3 };
     private int _currentIndex;
     private QuestionData _currentQuestion;
@@ -231,10 +235,13 @@ public class DailyReviewController : MonoBehaviour
         if (option.ID.Equals(_currentQuestion.idCorrectOption))
         {
             option.SetCorrectColor();
+            _currentQuestion.progressItem.SetCorrectSelection();//setear color en contador de pregunta
+            
         }
         else
         {
             option.SetIncorrectColor();
+            _currentQuestion.progressItem.SetIncorrectSelection();//setear color en contador de pregunta
         }
 
         _oldOption = option;

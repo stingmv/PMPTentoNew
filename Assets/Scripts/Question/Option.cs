@@ -17,6 +17,7 @@ namespace Question
         [SerializeField] private Image _image;
         [SerializeField] private Color _normalColor;
         [SerializeField] private Color _correctColor;
+        [SerializeField] private Color _alternativaColor;//color de alternativa
         [SerializeField] private Color _incorrectColor;
         [SerializeField] private EventTrigger _eventTrigger;
         [SerializeField] private UnityEvent OnCorrectAnswered;
@@ -86,7 +87,7 @@ namespace Question
         public void EnableOption()
         {
             _label.color = Color.white;
-            _image.color = _normalColor;
+            _image.color = _alternativaColor;
             _eventTrigger.enabled = true;
             ShowOption();
             OnOptionEnabled?.Invoke();

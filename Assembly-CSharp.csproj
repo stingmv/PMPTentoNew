@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AABEB4AB-782A-5B48-A035-722B3D50E3C2}</ProjectGuid>
+    <ProjectGuid>{02DF2F08-E953-875E-3D10-A8C17BAF7CB6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Question\LerpColorBackground.cs" />
     <Compile Include="Assets\Scripts\Utils\UIEvents.cs" />
     <Compile Include="Assets\Scripts\UI\ChangeUsernameSender.cs" />
+    <Compile Include="Assets\Scripts\CameraUI\BackgroundNotification\NotificationSender.cs" />
     <Compile Include="Assets\Scripts\Utils\ScenesEvents.cs" />
     <Compile Include="Assets\Scripts\UI\PodiumItem.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectNotificationText.cs" />
@@ -76,22 +77,20 @@
     <Compile Include="Assets\Scripts\GlosaryChallenge\ButtonsGroup.cs" />
     <Compile Include="Assets\Scripts\Utils\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\UI\Animations\ParticleSystemExtensions.cs" />
-    <Compile Include="Assets\Scripts\Notification\ScriptableObjectNotification.cs" />
     <Compile Include="Assets\Scripts\UI\CheckAttempts.cs" />
     <Compile Include="Assets\Scripts\Ranking\ShowRakingPlace.cs" />
-    <Compile Include="Assets\Scripts\Notification\NotificationListener.cs" />
     <Compile Include="Assets\Scripts\CameraUI\CameraTransition.cs" />
     <Compile Include="Assets\Scripts\GlosaryChallenge\OptionGC.cs" />
     <Compile Include="Assets\Scripts\Question\ProgressQuestion.cs" />
-    <Compile Include="Assets\Scripts\BackgroundNotification\Notifications.cs" />
     <Compile Include="Assets\Scripts\Question\ListQuestionData.cs" />
     <Compile Include="Assets\Scripts\UI\Presenter\SettingsPresenter.cs" />
-    <Compile Include="Assets\Scripts\Notification\NotificationListenerInt.cs" />
+    <Compile Include="Assets\Scripts\ScriptableCreator\AchievementRewardsSO.cs" />
     <Compile Include="Assets\Scripts\Ranking\GetUsersApi.cs" />
     <Compile Include="Assets\Scripts\UI\ConfigurateNavbarScale.cs" />
     <Compile Include="Assets\Scripts\Utils\DisableWithDelay.cs" />
     <Compile Include="Assets\Scripts\UI\Button\ButtonData.cs" />
     <Compile Include="Assets\Scripts\Sharing\ShareSocial.cs" />
+    <Compile Include="Assets\Scripts\PowerUp\Notification\NotificationListener.cs" />
     <Compile Include="Assets\Scripts\Question\QuestionInformation.cs" />
     <Compile Include="Assets\Scripts\UI\InterfaceControllerMainMenu.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\ScripableObjectPowerUp.cs" />
@@ -100,7 +99,6 @@
     <Compile Include="Assets\Scripts\Question\MarkerAnimation.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectButton.cs" />
     <Compile Include="Assets\Scripts\UI\CommentBox\ResizeContent.cs" />
-    <Compile Include="Assets\Scripts\BackgroundNotification\NotificationMessage.cs" />
     <Compile Include="Assets\Scripts\Achievement\AchievementUIController.cs" />
     <Compile Include="Assets\Scripts\GlosaryChallenge\GlosaryChallengeController.cs" />
     <Compile Include="Assets\Scripts\Utils\ScreenRotation.cs" />
@@ -125,12 +123,17 @@
     <Compile Include="Assets\Scripts\Utils\PMPUrl.cs" />
     <Compile Include="Assets\Scripts\RepasoDiario\DailyReviewNameListItem.cs" />
     <Compile Include="Assets\Scripts\Store\PopUpCompra.cs" />
+    <Compile Include="Assets\Scripts\CameraUI\BackgroundNotification\Notifications.cs" />
     <Compile Include="Assets\Scripts\Question\QuestionInformationVP.cs" />
     <Compile Include="Assets\Scripts\UI\CommentBox\ChangeHeightCommentBox.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectSettings.cs" />
+    <Compile Include="Assets\Scripts\ScriptableCreator\LevelUserSO.cs" />
+    <Compile Include="Assets\Scripts\PowerUp\Notification\NotificationListenerInt.cs" />
     <Compile Include="Assets\Scripts\PowerUp\PowerUpTrueOption.cs" />
     <Compile Include="Assets\Scripts\Store\StoreController.cs" />
     <Compile Include="Assets\Scripts\PowerUp\PowerUpDeleteOption.cs" />
+    <Compile Include="Assets\Scripts\CameraUI\BackgroundNotification\NotificationPanelController.cs" />
+    <Compile Include="Assets\Scripts\CameraUI\BackgroundNotification\NotificationMessage.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectScenes.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\ScriptableObjectPath.cs" />
     <Compile Include="Assets\Scripts\Button\ButtonAnimation.cs" />
@@ -144,37 +147,40 @@
     <Compile Include="Assets\Scripts\PowerUp\PowerUpMoreTime.cs" />
     <Compile Include="Assets\Scripts\PowerUp\PowerUpController.cs" />
     <Compile Include="Assets\Scripts\Utils\PMPScenes.cs" />
-    <Compile Include="Assets\Scripts\BackgroundNotification\BackgroundNotificationController.cs" />
     <Compile Include="Assets\Scripts\CameraUI\PathController.cs" />
+    <Compile Include="Assets\Scripts\CameraUI\BackgroundNotification\BackgroundNotificationController.cs" />
     <Compile Include="Assets\Scripts\UI\Animations\RewardItemsAnimation.cs" />
     <Compile Include="Assets\Scripts\Store\RouletteWithDrag.cs" />
     <Compile Include="Assets\Scripts\ModoAprendizaje\PlatformController.cs" />
     <Compile Include="Assets\Scripts\Inputfield\InputfieldSlideScreen.cs" />
     <Compile Include="Assets\Scripts\ModoAprendizaje\DomainInformation.cs" />
+    <Compile Include="Assets\Scripts\CameraUI\BackgroundNotification\BackgroundNotificationControllerIos.cs" />
     <Compile Include="Assets\Scripts\Question\KeepScaleOnCanvas.cs" />
     <Compile Include="Assets\Scripts\ModoAprendizaje\ChoosePlatform.cs" />
     <Compile Include="Assets\Scripts\Configuration\NotificationToggle.cs" />
     <Compile Include="Assets\Scripts\Handles3D\HandlesItem.cs" />
     <Compile Include="Assets\Scripts\UI\Animations\UIParticle.cs" />
+    <Compile Include="Assets\Scripts\CameraUI\BackgroundNotification\NotificationData.cs" />
     <Compile Include="Assets\Scripts\Ranking\DataUserAll.cs" />
     <Compile Include="Assets\Scripts\Question\ProgressItem.cs" />
     <Compile Include="Assets\Scripts\ModoVideoPregunta\OptionAnimation.cs" />
+    <Compile Include="Assets\Scripts\PowerUp\Notification\NotificationListenerText.cs" />
     <Compile Include="Assets\Scripts\UI\Animations\AnimatableProperty.cs" />
-    <Compile Include="Assets\Scripts\BackgroundNotification\NotificationSender.cs" />
     <Compile Include="Assets\Scripts\MainMenu\MenuController.cs" />
+    <Compile Include="Assets\Scripts\PowerUp\Notification\NotificationWithDelay.cs" />
     <Compile Include="Assets\Scripts\Ranking\RankingController.cs" />
     <Compile Include="Assets\Scripts\UI\Animations\ModifiedMaterial.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\ConceptAndDefinitionSO.cs" />
     <Compile Include="Assets\Scripts\UI\Popup.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\DomainsAndTaskSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\TextMessageSO.cs" />
-    <Compile Include="Assets\Scripts\Notification\NotificationListenerText.cs" />
     <Compile Include="Assets\Plugin\SimpleJSON.cs" />
     <Compile Include="Assets\Scripts\Store\StoreItem.cs" />
     <Compile Include="Assets\Scripts\Question\RewardItemController.cs" />
     <Compile Include="Assets\Scripts\TTS\ByteToAudioSource.cs" />
     <Compile Include="Assets\Scripts\Achievement\AchievementData.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\PowerUpItemRoulette.cs" />
+    <Compile Include="Assets\Filters.cs" />
     <Compile Include="Assets\Scripts\Services\PMPService.cs" />
     <Compile Include="Assets\Scripts\Login\Instructor.cs" />
     <Compile Include="Assets\Scripts\Store\StoreSection.cs" />
@@ -188,25 +194,25 @@
     <Compile Include="Assets\Scripts\GlosaryChallenge\TimerGC.cs" />
     <Compile Include="Assets\Scripts\TTS\WavUtility.cs" />
     <Compile Include="Assets\Scripts\UI\Animations\UIParticleRenderer.cs" />
+    <Compile Include="Assets\Scripts\Achievement\Awards\AwardsContainer.cs" />
     <Compile Include="Assets\Scripts\Question\SessionController.cs" />
     <Compile Include="Assets\Scripts\ModoVideoPregunta\ScrollController.cs" />
     <Compile Include="Assets\Scripts\UI\PodiumAnimation.cs" />
-    <Compile Include="Assets\Scripts\BackgroundNotification\NotificationData.cs" />
     <Compile Include="Assets\Scripts\Question\RewardItem.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\RouletteSO.cs" />
     <Compile Include="Assets\Scripts\Handles3D\MoveItems.cs" />
     <Compile Include="Assets\Scripts\Handles3D\HandlesInteract.cs" />
+    <Compile Include="Assets\Scripts\PowerUp\Notification\ScriptableObjectNotification.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\DataToRegisterSO.cs" />
     <Compile Include="Assets\Scripts\ModoCategoria\LoadRoutine.cs" />
+    <Compile Include="Assets\Scripts\PowerUp\Notification\NotificationLoginController.cs" />
     <Compile Include="Assets\Scripts\Login\PathToInstantiateInstructor.cs" />
     <Compile Include="Assets\Scripts\UI\NavbarButtons.cs" />
-    <Compile Include="Assets\Scripts\BackgroundNotification\BackgroundNotificationControllerIos.cs" />
     <Compile Include="Assets\Scripts\UI\AudioSettingView.cs" />
     <Compile Include="Assets\Scripts\Inputfield\CheckInputField.cs" />
     <Compile Include="Assets\Scripts\UI\Animations\UIParticleAttractor.cs" />
     <Compile Include="Assets\Scripts\ScriptableCreator\CoinsItemRoulette.cs" />
     <Compile Include="Assets\Scripts\Login\InstructorSelector.cs" />
-    <Compile Include="Assets\Scripts\BackgroundNotification\NotificationPanelController.cs" />
     <Compile Include="Assets\Scripts\CameraUI\BezierCurve.cs" />
     <Compile Include="Assets\Scripts\Handles3D\Rotation.cs" />
     <Compile Include="Assets\Scripts\Inputfield\EmailInput.cs" />
@@ -218,7 +224,6 @@
     <Compile Include="Assets\Scripts\UI\ContainerAnimationDownToTop.cs" />
     <Compile Include="Assets\Scripts\GlosaryChallenge\GlosaryChallengeProgress.cs" />
     <Compile Include="Assets\Scripts\Achievement\PopupAchievementUI.cs" />
-    <Compile Include="Assets\Scripts\Notification\NotificationWithDelay.cs" />
     <Compile Include="Assets\Scripts\Keyboard\KeyboardController.cs" />
     <Compile Include="Assets\Scripts\Question\Option.cs" />
     <Compile Include="Assets\Scripts\PowerUp\PowerUpListener.cs" />
@@ -238,12 +243,13 @@
     <Compile Include="Assets\Scripts\Question\OptionVP.cs" />
     <Compile Include="Assets\Scripts\Utils\Constants.cs" />
     <Compile Include="Assets\Scripts\ModoAprendizaje\PlatformItem.cs" />
+    <Compile Include="Assets\Scripts\Test\TestList.cs" />
     <Compile Include="Assets\Scripts\FPSView.cs" />
     <Compile Include="Assets\Scripts\TrainingChallenge\TrainingChallengeController.cs" />
     <Compile Include="Assets\Scripts\UI\Manager\UserManager.cs" />
-    <Compile Include="Assets\Scripts\Notification\NotificationLoginController.cs" />
     <Compile Include="Assets\Scripts\CameraUI\FadeUI.cs" />
     <Compile Include="Assets\Scripts\ModoVideoPregunta\ScrollViewItem.cs" />
+    <Compile Include="Assets\Scripts\Test\Item.cs" />
     <Compile Include="Assets\Scripts\RotateObject.cs" />
     <Compile Include="Assets\Scripts\Utils\AutoDestroyParticle.cs" />
     <Compile Include="Assets\Scripts\Achievement\AchievementControlller.cs" />
@@ -276,6 +282,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Sounds\131660__bertrof__game-sound-correct.txt" />
     <None Include="Assets\Art\Materials\UIAdditive Normal.shader" />
+    <None Include="Assets\Art\Fonts\Poppins\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
@@ -1352,19 +1359,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="NativeShare.Runtime.csproj">
-      <Project>{6B27A630-5E00-7DB0-69F7-6FAA31A7815E}</Project>
+      <Project>{5E3A54CA-16DA-F306-0DCE-F7D63FB75E91}</Project>
       <Name>NativeShare.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="uLipSync.Runtime.csproj">
-      <Project>{4492AE5C-43D7-33A0-9519-B82C74A0DBE3}</Project>
+      <Project>{4E3B5E91-B823-DCB1-BB61-1C56578B975B}</Project>
       <Name>uLipSync.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="uLipSync.Editor.csproj">
-      <Project>{413EC61A-79B5-6DFA-8181-8DDFFD962677}</Project>
+      <Project>{96AFEE51-4AD1-BE0F-9E6F-1988CC5871FB}</Project>
       <Name>uLipSync.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="NativeShare.Editor.csproj">
-      <Project>{FA6BC60C-D27B-03DF-C486-3A4EA76E38D1}</Project>
+      <Project>{C1380CFE-F568-635A-635C-15CC4CB7655F}</Project>
       <Name>NativeShare.Editor</Name>
     </ProjectReference>
   </ItemGroup>

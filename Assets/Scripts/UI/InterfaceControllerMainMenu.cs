@@ -10,8 +10,7 @@ public class InterfaceControllerMainMenu : MonoBehaviour
     private UIScreen _currentScreen;
 
     private UIScreen GetScreen(string name)
-    {
-        
+    {        
         return _screens.FirstOrDefault(x => x.name == name)!;
     }
     private void OnEnable()

@@ -17,23 +17,35 @@ MonoBehaviour:
     Amount: 3
     UseAllAmount: 0
   - _ItemRouletteSo: {fileID: 11400000, guid: 569ddb528b128ea47a1ebb1a67145c8f, type: 2}
-    Amount: 3
-    UseAllAmount: 0
+    Amount: 2
+    UseAllAmount: 1
   - _ItemRouletteSo: {fileID: 11400000, guid: be72272f8e43fc04586b3d1dd668cc63, type: 2}
-    Amount: 3
-    UseAllAmount: 0
+    Amount: 1
+    UseAllAmount: 1
   - _ItemRouletteSo: {fileID: 11400000, guid: 571b9fa9e918de84781edc127182e26c, type: 2}
     Amount: 3
     UseAllAmount: 0
   - _ItemRouletteSo: {fileID: 11400000, guid: e532dec3643c03e43a60ccd29d113c8c, type: 2}
-    Amount: 3
+    Amount: 2
+    UseAllAmount: 1
+  - _ItemRouletteSo: {fileID: 11400000, guid: 445b365444b8df748aa99a76ac280132, type: 2}
+    Amount: 100
+    UseAllAmount: 1
+  - _ItemRouletteSo: {fileID: 11400000, guid: 445b365444b8df748aa99a76ac280132, type: 2}
+    Amount: 50
+    UseAllAmount: 1
+  - _ItemRouletteSo: {fileID: 11400000, guid: 4e77112b14c07be48b9c89ff2f30b2f7, type: 2}
+    Amount: 10
     UseAllAmount: 0
   - _ItemRouletteSo: {fileID: 11400000, guid: 445b365444b8df748aa99a76ac280132, type: 2}
     Amount: 10
     UseAllAmount: 1
-  - _ItemRouletteSo: {fileID: 11400000, guid: 445b365444b8df748aa99a76ac280132, type: 2}
-    Amount: 80
+  - _ItemRouletteSo: {fileID: 11400000, guid: 569ddb528b128ea47a1ebb1a67145c8f, type: 2}
+    Amount: 1
     UseAllAmount: 1
-  - _ItemRouletteSo: {fileID: 11400000, guid: 445b365444b8df748aa99a76ac280132, type: 2}
-    Amount: 100
+  - _ItemRouletteSo: {fileID: 11400000, guid: 571b9fa9e918de84781edc127182e26c, type: 2}
+    Amount: 10
+    UseAllAmount: 0
+  - _ItemRouletteSo: {fileID: 11400000, guid: e532dec3643c03e43a60ccd29d113c8c, type: 2}
+    Amount: 1
     UseAllAmount: 1
