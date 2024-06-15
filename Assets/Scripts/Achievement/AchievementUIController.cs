@@ -26,7 +26,7 @@ public class AchievementUIController : MonoBehaviour
         GameEvents.OnSetGiftsFromAchievement -= SetGiftsObtained;
     }
 
-    public void SetAllAchievements()//se llama al presionar boton de Logros en footer de MainMeny
+    public void SetAllAchievements()//se llama al presionar boton de Logros en footer de MainMenu
     {
         ClearChildrenAchievement();
 
