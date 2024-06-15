@@ -31,13 +31,13 @@ public class AchievementUIController : MonoBehaviour
         ClearChildrenAchievement();
 
         var list = achievementData.achievementListContainer.achievementList;
-        for (int i = 0; i < list.Count; i++)
-        {
+        //for (int i = 0; i < list.Count; i++)
+        //{
             var item = Instantiate(achievementPrefab, contentAchievements);
-            item.GetComponent<AchievementUI>().SetValues(list[i]);//setear valores en contenedor de logros            
-        }
+            item.GetComponent<AchievementUI>().SetValues(list[0]);//setear valores en contenedor de logros, el primer elemento de la lista de achievement Data        
+        //}
 
-        for (int i = 0; i < contentScrollViewStreaks.childCount; i++)
+        for (int i = 0; i < contentScrollViewStreaks.childCount; i++)//recorrer contenedores de rachas de n preguntas
         {
             contentScrollViewStreaks.GetChild(i).GetComponent<AwardsContainer>().SetValuesAwards();//accedo al metodo de cada uno de los AwardsContainers
 
