@@ -19,10 +19,10 @@ public class InstructorSelector : MonoBehaviour
     [SerializeField] private ButtonAnimation _buttonPrevious;
     [SerializeField] private Transform _container;
     [SerializeField] private GameObject _instructorPlatform;
-    [SerializeField] private GameObject _imageWomanInstructor;
-    [SerializeField] private GameObject _imageManInstructor;
     [SerializeField] private string url =
         "http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ActualizarCaracteristicasGamificacion";
+    [SerializeField] private UnityEvent OnPreviousButtonSelected;
+    [SerializeField] private UnityEvent OnNextButtonSelected;
 
     private int index = 0;
     private List<GameObject> _instructors = new List<GameObject>();
@@ -65,7 +65,7 @@ public class InstructorSelector : MonoBehaviour
 
     private void OnEnable()
     {
-        InitValues();
+        //InitValues();
 
     }
   
@@ -86,6 +86,7 @@ public class InstructorSelector : MonoBehaviour
         ComprobeNext();
         ComprobePrevious();
         //_pathToInstantiateInstructor.RotateToItem(index);
+        OnNextButtonSelected?.Invoke();
     }
 
     public void ComprobeNext()//comprobar boton de siguiente
@@ -93,12 +94,10 @@ public class InstructorSelector : MonoBehaviour
         if ((index+ 1) >= _objectInstructor.instructors.Length)
         {
             _buttonNext.gameObject.SetActive(false);//desactivar boton siguiente
-            _imageWomanInstructor.gameObject.SetActive(false);//desactivar imagen de seleccion instructor mujer
         }
         else
         {
             _buttonNext.gameObject.SetActive(true);//activar boton siguiente
-            _imageWomanInstructor.gameObject.SetActive(true);//activar imagen de seleccion instructor mujer
         }
     }
     public void ComprobePrevious()//comprobar boton de anterior
@@ -106,12 +105,10 @@ public class InstructorSelector : MonoBehaviour
         if ((index - 1) < 0)
         {
             _buttonPrevious.gameObject.SetActive(false);
-            _imageManInstructor.gameObject.SetActive(false);
         }
         else
         {
             _buttonPrevious.gameObject.SetActive(true);
-            _imageManInstructor.gameObject.SetActive(true);
         }
     }
     public void GetPreviousInstructor()
@@ -120,6 +117,7 @@ public class InstructorSelector : MonoBehaviour
         ComprobeNext();
         ComprobePrevious();
         //_pathToInstantiateInstructor.RotateToItem(index);
+        OnPreviousButtonSelected?.Invoke();
     }
     public void SelectInstructor()
     {
