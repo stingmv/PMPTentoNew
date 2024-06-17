@@ -40,6 +40,7 @@ namespace Question
         [SerializeField] private UnityEvent _onIncorrectOption;
         [SerializeField] private ProgressQuestion _progressQuestion;
         [SerializeField] private bool useProgressQuestion = true;
+        [SerializeField] private bool hasProgressController;
         [SerializeField] private UnityEvent _onEndQuestions;
         [SerializeField] private UnityEvent _onNextQuestion;
         [SerializeField] private UnityEvent _onWonGame;
@@ -184,7 +185,11 @@ namespace Question
                 _onEndQuestions?.Invoke();
                 return;
             }
-            _currentQuestion.progressItem.RemoveCurrentItem();//remover marcador de pregunta 
+            if (hasProgressController)
+            {
+                _currentQuestion.progressItem.RemoveCurrentItem();//remover marcador de pregunta 
+
+            }
             var tempQuestion = _session[_currentIndex];
             _currentQuestion = tempQuestion;
             if (useProgressQuestion)
