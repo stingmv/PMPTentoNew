@@ -2712,6 +2712,7 @@ MonoBehaviour:
         m_CallState: 2
   _progressQuestion: {fileID: 2081259374}
   useProgressQuestion: 1
+  hasProgressController: 1
   _onEndQuestions:
     m_PersistentCalls:
       m_Calls: []
