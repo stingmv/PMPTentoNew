@@ -4719,18 +4719,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1012713244}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   OnMaxGoodWithoutErrorsReached:
     m_PersistentCalls:
       m_Calls: []
@@ -6037,10 +6025,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
@@ -6052,7 +6044,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1012713243}
     - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1012713244}
+    - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
@@ -6064,11 +6064,23 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6046350308011957201, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
@@ -8340,7 +8352,7 @@ MonoBehaviour:
         m_CallState: 2
   _progressQuestion: {fileID: 2081259374}
   useProgressQuestion: 1
-  hasProgressController: 0
+  hasProgressController: 1
   _onEndQuestions:
     m_PersistentCalls:
       m_Calls: []
