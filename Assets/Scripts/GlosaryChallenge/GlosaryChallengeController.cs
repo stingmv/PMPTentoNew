@@ -20,6 +20,7 @@ public class GlosaryChallengeController : MonoBehaviour
     [SerializeField] private float _maxTime;
     [SerializeField] private int _maxNumberOfCouples;
     [SerializeField] private int _cumulativeNumberOfCouples;
+    [SerializeField] private int maxNumberOfCouplesCorrectSelected = 5;
     [SerializeField] private UnityEvent _onGameLost;
     [SerializeField] private UnityEvent _onGameWin;
 
@@ -48,7 +49,7 @@ public class GlosaryChallengeController : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<GameplaySound>().PlayGlossaryChallengeSound();
+        //FindObjectOfType<GameplaySound>().PlayGlossaryChallengeSound();
         _glosaryChallengeProgress.SetData(_maxNumberOfCouples * 1/3, _maxNumberOfCouples * 2 / 3, _maxNumberOfCouples * 3 / 3);
         UseTimer = true;
         _timerGC.InitValue(_maxTime);
@@ -109,7 +110,7 @@ public void Evaluate()
                 _optionChoose.Add(_concepts.OldSelectedButton);
                 _definitions.OldSelectedButton.SetCorrectOption();
                 _optionChoose.Add(_definitions.OldSelectedButton);
-                if (_numberOfSelectedCouple == 2)
+                if (_numberOfSelectedCouple == maxNumberOfCouplesCorrectSelected)
                 {
                     var totalToChange = _optionChoose.Count / 2;
                     Dictionary<int, int> actualValuesToConcept = new Dictionary<int, int>();
@@ -136,7 +137,7 @@ public void Evaluate()
                         _optionChoose[randomIndexInDefinition].StartAnimationWithData(conceptAndDefinition.definition, conceptAndDefinition.id);
                         _actualIndices.Add(conceptAndDefinition.id);
                     }
-                    _cumulativeNumberOfCouples += 2;
+                    _cumulativeNumberOfCouples += maxNumberOfCouplesCorrectSelected;
                     _glosaryChallengeProgress.UpdateProgress(1f * _cumulativeNumberOfCouples / _maxNumberOfCouples);
                     _numberOfSelectedCouple = 0;
                     _optionChoose.Clear();
@@ -155,27 +156,12 @@ public void Evaluate()
             else
             {
                 Debug.Log("incorrecto");
-                _numberOfSelectedCouple = 0;
-                _optionChoose.Clear();
                 _concepts.OldSelectedButton.SetIncorrectOption();
                 _definitions.OldSelectedButton.SetIncorrectOption();
-                
+
                 //Update data with animation
-                var tempIndex = GetRandomIndex();
-                for (int i = 0; i < _maxSelectedIndices; i++)
-                {
-                    var conceptAndDefinition = _conceptAndDefinitionSo.list.FirstOrDefault(x => x.id	 == _actualIndices[i]);
-                    if (conceptAndDefinition != null)
-                    {
-                        _concepts.Options[tempIndex.Item1[i]]
-                            .StartAnimationWithData(conceptAndDefinition.concept, conceptAndDefinition.id);
-                        _definitions.Options[tempIndex.Item2[i]].StartAnimationWithData(conceptAndDefinition.definition,
-                            conceptAndDefinition.id);
-                    }
-                }
-                
-                // _concepts.StartCleanAnimationGroup();
-                // _definitions.StartCleanAnimationGroup();
+                _concepts.OldSelectedButton.StartAnimation();
+                _definitions.OldSelectedButton.StartAnimation();
             }
             _concepts.CleanOldSelected();
             _definitions.CleanOldSelected();
@@ -244,7 +230,7 @@ public void Evaluate()
                 Random.Range(0, 1f), 
                 Random.Range(0, 1f)
             );
-            Gizmos.DrawSphere(_concepts.Options[i].transform.position, 5f);
+            Gizmos.DrawSphere(_concepts.Options[i].transform.position, 20f);
         }
         for (int i = 0; i < _definitions.Options.Count; i++)
         {
@@ -254,7 +240,7 @@ public void Evaluate()
                 Random.Range(0, 1f), 
                 Random.Range(0, 1f)
             );
-            Gizmos.DrawSphere(_definitions.Options[i].transform.position, 5f);
+            Gizmos.DrawSphere(_definitions.Options[i].transform.position, 20f);
         }
     }
     

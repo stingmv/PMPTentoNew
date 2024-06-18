@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -14,8 +15,11 @@ public class OptionGC : MonoBehaviour
     [SerializeField] private Color _correctColor;
     [SerializeField] private Color _incorrectColor;
     [SerializeField] private Color _colorInGC;
+    [SerializeField] private Color defaultColor;
     [SerializeField] private EventTrigger _eventTrigger;
     [SerializeField] private CanvasGroup _canvasGroup;
+    [SerializeField] private UnityEvent OnCorrectOptionSetted;
+    [SerializeField] private UnityEvent OnAnimationRestarted;
 
     private int _id;
     private bool _selectedInGC;
@@ -40,10 +44,11 @@ public class OptionGC : MonoBehaviour
         
     public void EnableOption()
     {
-        _label.color = Color.black;
-        _image.color = Color.white;
+        _label.color = Color.white;
+        _image.color = defaultColor;
         _eventTrigger.enabled = true;
         ShowOption();
+        OnAnimationRestarted?.Invoke();
     }
     public void HideOption()
     {
@@ -71,13 +76,14 @@ public class OptionGC : MonoBehaviour
 
     public void DeselectButton()
     {
-        _image.color = Color.white;
+        _image.color = defaultColor;
         _selectedInGC = false;
     }
     public void SetCorrectOption()
     {
         _image.color = _correctColor;
         DisableOption();
+        OnCorrectOptionSetted?.Invoke();
     }
     public void SetIncorrectOption()
     {
