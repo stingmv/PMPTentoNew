@@ -20,7 +20,8 @@ public class GlosaryChallengeController : MonoBehaviour
     [SerializeField] private float _maxTime;
     [SerializeField] private int _maxNumberOfCouples;
     [SerializeField] private int _cumulativeNumberOfCouples;
-    [SerializeField] private int maxNumberOfCouplesCorrectSelected = 5;
+    [SerializeField] private int maxNumberCouplesCorrectSelected = 5;
+    [SerializeField] private UnityEvent OnMaxNumberCoupleCorrectSelected;
     [SerializeField] private UnityEvent _onGameLost;
     [SerializeField] private UnityEvent _onGameWin;
 
@@ -110,7 +111,7 @@ public void Evaluate()
                 _optionChoose.Add(_concepts.OldSelectedButton);
                 _definitions.OldSelectedButton.SetCorrectOption();
                 _optionChoose.Add(_definitions.OldSelectedButton);
-                if (_numberOfSelectedCouple == maxNumberOfCouplesCorrectSelected)
+                if (_numberOfSelectedCouple == maxNumberCouplesCorrectSelected)
                 {
                     var totalToChange = _optionChoose.Count / 2;
                     Dictionary<int, int> actualValuesToConcept = new Dictionary<int, int>();
@@ -137,7 +138,7 @@ public void Evaluate()
                         _optionChoose[randomIndexInDefinition].StartAnimationWithData(conceptAndDefinition.definition, conceptAndDefinition.id);
                         _actualIndices.Add(conceptAndDefinition.id);
                     }
-                    _cumulativeNumberOfCouples += maxNumberOfCouplesCorrectSelected;
+                    _cumulativeNumberOfCouples += maxNumberCouplesCorrectSelected;
                     _glosaryChallengeProgress.UpdateProgress(1f * _cumulativeNumberOfCouples / _maxNumberOfCouples);
                     _numberOfSelectedCouple = 0;
                     _optionChoose.Clear();
@@ -147,7 +148,7 @@ public void Evaluate()
                         GameEvents.GameWon?.Invoke();
                         return;
                     }
-
+                    OnMaxNumberCoupleCorrectSelected?.Invoke();
                     GameEvents_CorrectlyAnswered();
                     // Remove old indices from "_actualIndices"
                 }

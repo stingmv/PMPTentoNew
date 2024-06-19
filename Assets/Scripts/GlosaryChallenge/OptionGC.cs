@@ -18,7 +18,9 @@ public class OptionGC : MonoBehaviour
     [SerializeField] private Color defaultColor;
     [SerializeField] private EventTrigger _eventTrigger;
     [SerializeField] private CanvasGroup _canvasGroup;
+    [SerializeField] private UnityEvent OnOptionSelected;
     [SerializeField] private UnityEvent OnCorrectOptionSetted;
+    [SerializeField] private UnityEvent OnIncorrectOptionSetted;
     [SerializeField] private UnityEvent OnAnimationRestarted;
 
     private int _id;
@@ -65,7 +67,7 @@ public class OptionGC : MonoBehaviour
     public void SendSelectOption()
     {
         _buttonsGroup.SelectButton(this);
-        
+        OnOptionSelected?.Invoke();
     }
 
     public void SelectButton()
@@ -89,6 +91,7 @@ public class OptionGC : MonoBehaviour
     {
         _image.color = _incorrectColor;
         DisableOption();
+        OnIncorrectOptionSetted?.Invoke();
     }
 
     public void StartAnimation()
