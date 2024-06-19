@@ -65,7 +65,7 @@ public class InstructorSelector : MonoBehaviour
 
     private void OnEnable()
     {
-        //InitValues();
+        InitValues();
 
     }
   
@@ -94,10 +94,12 @@ public class InstructorSelector : MonoBehaviour
         if ((index+ 1) >= _objectInstructor.instructors.Length)
         {
             _buttonNext.gameObject.SetActive(false);//desactivar boton siguiente
+            OnNextButtonSelected?.Invoke();           
         }
         else
         {
             _buttonNext.gameObject.SetActive(true);//activar boton siguiente
+            OnPreviousButtonSelected?.Invoke();
         }
     }
     public void ComprobePrevious()//comprobar boton de anterior
@@ -105,10 +107,12 @@ public class InstructorSelector : MonoBehaviour
         if ((index - 1) < 0)
         {
             _buttonPrevious.gameObject.SetActive(false);
+            OnPreviousButtonSelected?.Invoke();
         }
         else
         {
             _buttonPrevious.gameObject.SetActive(true);
+            OnNextButtonSelected?.Invoke();
         }
     }
     public void GetPreviousInstructor()
