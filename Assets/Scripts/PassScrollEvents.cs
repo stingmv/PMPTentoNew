@@ -1,20 +1,29 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
 public class PassScrollEvents : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler,IPointerClickHandler
 {
-    private ScrollRect scrollRect;
+    public ScrollRect scrollRect;
     private bool isDragging=false;
     [SerializeField] UnityEvent onPointerClick;
-   
+    [SerializeField] bool hasScrollHorizontal=false;
 
     void Start()
-    {              
-        scrollRect = GetComponentInParent<ScrollRect>();//scroll rect de padre mas cercano
+    {
+        if (hasScrollHorizontal)
+        {
+            scrollRect = transform.parent.GetComponentInParent<ScrollRect>();//para no obtener el scrollrect del mismo gameobject empieza a buscar a partir del primer padre
+        }
+        else
+        {
+            scrollRect=GetComponentInParent<ScrollRect>();//scroll rect de padre mas cercano
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
