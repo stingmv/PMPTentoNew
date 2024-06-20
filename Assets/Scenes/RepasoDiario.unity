@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3727,6 +3727,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 956027483}
     m_Modifications:
     - target: {fileID: 61634834067843069, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61634834067843069, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
       objectReference: {fileID: 0}
@@ -4279,6 +4283,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4772915729400415624, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772915729400415624, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
       objectReference: {fileID: 0}
@@ -4365,6 +4373,10 @@ PrefabInstance:
     - target: {fileID: 6196347151430624031, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_text
       value: Reuniones
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519993202732748603, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6519993202732748603, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -4479,6 +4491,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8023473246455761820, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023473246455761820, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
       objectReference: {fileID: 0}
@@ -4577,6 +4593,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 257306203}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8207237686206611097, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7030622236276690347}
+    - targetCorrespondingSourceObject: {fileID: 9023454775431785558, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5567934011976523634}
+    - targetCorrespondingSourceObject: {fileID: 678907103829649693, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8219959849275265312}
+    - targetCorrespondingSourceObject: {fileID: 3326564388533256192, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9084196341525330474}
     - targetCorrespondingSourceObject: {fileID: 873340552053614486, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1457834376}
@@ -5482,6 +5510,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1683072553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3326564388533256192, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+  m_PrefabInstance: {fileID: 1374428704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1683072554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 678907103829649693, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+  m_PrefabInstance: {fileID: 1374428704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1683072555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9023454775431785558, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+  m_PrefabInstance: {fileID: 1374428704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1683072556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8207237686206611097, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+  m_PrefabInstance: {fileID: 1374428704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1722037084
 GameObject:
   m_ObjectHideFlags: 0
@@ -5638,7 +5686,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 279213921}
   m_HandleRect: {fileID: 279213920}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5821,7 +5869,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 182303278032894870, guid: 298431218b8df924ea5ea318225aad88, type: 3}
   m_PrefabInstance: {fileID: 1374428704}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1683072556}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5aee48f615062a42a5f93a81ec02883, type: 3}
@@ -5978,7 +6026,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2125055819902875194, guid: 298431218b8df924ea5ea318225aad88, type: 3}
   m_PrefabInstance: {fileID: 1374428704}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1683072554}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5aee48f615062a42a5f93a81ec02883, type: 3}
@@ -6126,12 +6174,39 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5567934010644037969, guid: 298431218b8df924ea5ea318225aad88, type: 3}
   m_PrefabInstance: {fileID: 1374428704}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1683072555}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5aee48f615062a42a5f93a81ec02883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5567934011976523634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683072555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPointerClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 79173339}
+        m_TargetAssemblyTypeName: DailyReviewController, Assembly-CSharp
+        m_MethodName: ValidateResponse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5567934011976523633}
+          m_ObjectArgumentAssemblyTypeName: Question.Option, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6046350307163172959
 GameObject:
   m_ObjectHideFlags: 0
@@ -6232,12 +6307,39 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7030622237611791242, guid: 298431218b8df924ea5ea318225aad88, type: 3}
   m_PrefabInstance: {fileID: 1374428704}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7030622236276690347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683072556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPointerClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 79173339}
+        m_TargetAssemblyTypeName: DailyReviewController, Assembly-CSharp
+        m_MethodName: ValidateResponse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 182303278852613558}
+          m_ObjectArgumentAssemblyTypeName: Question.Option, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7446326349506321351 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7446326348669814247, guid: 298431218b8df924ea5ea318225aad88, type: 3}
   m_PrefabInstance: {fileID: 1374428704}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1683072553}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5aee48f615062a42a5f93a81ec02883, type: 3}
@@ -6298,6 +6400,33 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8219959850649161535, guid: 298431218b8df924ea5ea318225aad88, type: 3}
   m_PrefabInstance: {fileID: 1374428704}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8219959849275265312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683072554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPointerClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 79173339}
+        m_TargetAssemblyTypeName: DailyReviewController, Assembly-CSharp
+        m_MethodName: ValidateResponse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2125055818553616410}
+          m_ObjectArgumentAssemblyTypeName: Question.Option, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8262717395368915603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6460,6 +6589,33 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9084196340734960649, guid: 298431218b8df924ea5ea318225aad88, type: 3}
   m_PrefabInstance: {fileID: 1374428704}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9084196341525330474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683072553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPointerClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 79173339}
+        m_TargetAssemblyTypeName: DailyReviewController, Assembly-CSharp
+        m_MethodName: ValidateResponse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7446326349506321351}
+          m_ObjectArgumentAssemblyTypeName: Question.Option, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

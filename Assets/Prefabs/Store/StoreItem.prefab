@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1251550018962827328}
   - component: {fileID: 8618464715385853533}
   - component: {fileID: 4137516394886681467}
+  - component: {fileID: 4497828009324473614}
   m_Layer: 5
   m_Name: StoreItem
   m_TagString: Untagged
@@ -144,22 +145,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1251550018962827328}
-          m_TargetAssemblyTypeName: StoreItem, Assembly-CSharp
-          m_MethodName: BuyItem
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &4137516394886681467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +160,33 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 8901812705875435767}
   _eventTrigger: {fileID: 8618464715385853533}
+--- !u!114 &4497828009324473614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24227395991276435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPointerClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1251550018962827328}
+        m_TargetAssemblyTypeName: StoreItem, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &657339948400353007
 GameObject:
   m_ObjectHideFlags: 0

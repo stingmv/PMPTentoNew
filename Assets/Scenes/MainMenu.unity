@@ -8924,9 +8924,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eae78d5732eba042b4fb048cbe7ef19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notificationData: {fileID: 0}
-  prefab: {fileID: 0}
-  content: {fileID: 0}
 --- !u!114 &1251702360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10531,6 +10528,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a25494c2f0fea4f8c8817a1db7c214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1981052081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7840889660127757509, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
+  m_PrefabInstance: {fileID: 6398047530715479321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2015913894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18329,8 +18331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 531.645, y: -538.95}
-  m_SizeDelta: {x: 1063.29, y: 1037.9}
+  m_AnchoredPosition: {x: 481.07834, y: -538.95}
+  m_SizeDelta: {x: 962.1567, y: 1037.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &2446577796022688123
 RectTransform:
@@ -18693,7 +18695,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8007331836931732196}
   m_HandleRect: {fileID: 9099302459662459706}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -24042,6 +24044,21 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6435224001153423021, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
   m_PrefabInstance: {fileID: 6398047530715479321}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4040306225232958542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981052081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPointerClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4046079102428424748
 GameObject:
   m_ObjectHideFlags: 0
@@ -24235,6 +24252,7 @@ GameObject:
   - component: {fileID: 9176496629424827121}
   - component: {fileID: 4385379340757342119}
   - component: {fileID: 5756953638152605456}
+  - component: {fileID: 9176496629424827122}
   m_Layer: 5
   m_Name: ImageRuleta
   m_TagString: Untagged
@@ -25656,34 +25674,6 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 779178025867330270}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 7148819345227718683}
-          m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
-          m_MethodName: FadeInTransition
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
           m_CallState: 2
   - eventID: 3
     callback:
@@ -33805,7 +33795,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -612.6}
-  m_SizeDelta: {x: 750, y: 750}
+  m_SizeDelta: {x: 706.3, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &6097453164035230105
 RectTransform:
@@ -35508,6 +35498,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 902068282}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7840889660127757509, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4040306225232958542}
     - targetCorrespondingSourceObject: {fileID: 6333984474718235386, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 385192459}
@@ -40159,8 +40152,6 @@ MonoBehaviour:
   _buttonPrevious: {fileID: 5201813631822121432}
   _container: {fileID: 2062708379}
   _instructorPlatform: {fileID: 484853178150525243, guid: 0a3add0c3cb6c534c8c28691ec7d14ca, type: 3}
-  _imageWomanInstructor: {fileID: 3773533684185494675}
-  _imageManInstructor: {fileID: 4120288810150928307}
   url: http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ActualizarCaracteristicasGamificacion
   OnPreviousButtonSelected:
     m_PersistentCalls:
@@ -42919,7 +42910,7 @@ MonoBehaviour:
   _messageCompra: {fileID: 1858163476868281725}
   _imageCompra: {fileID: 8471860458072704660}
   _amountLabel: {fileID: 7738665090748912483}
-  _rouletteButton: {fileID: 5756953638152605456}
+  _rouletteButton: {fileID: 0}
   _rouletteInformation: {fileID: 3116771163939751894}
 --- !u!114 &8454156335493468611
 MonoBehaviour:
@@ -45612,6 +45603,45 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9176496629424827122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097240747596453796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPointerClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 779178025867330270}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7148819345227718683}
+        m_TargetAssemblyTypeName: FadeUI, Assembly-CSharp
+        m_MethodName: FadeInTransition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &9177654543218847521
 RectTransform:
   m_ObjectHideFlags: 0
