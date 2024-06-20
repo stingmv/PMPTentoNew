@@ -14,17 +14,15 @@ public class PassScrollEvents : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
     void Start()
     {              
-        scrollRect = GetComponentInParent<ScrollRect>();// Obtiene el ScrollRect del padre más cercano
+        scrollRect = GetComponentInParent<ScrollRect>();//scroll rect de padre mas cercano
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (scrollRect != null)
         {
-            scrollRect.OnBeginDrag(eventData);//llama al metodo OnBeginDrag del ScrollRect padre, pasandole el evento
-                                              //de arrastre, permite que ScrollRect comience a procesar el arrastre
-
-            isDragging = true;//se esta arrastrando
+            scrollRect.OnBeginDrag(eventData);
+            isDragging = true;
         }
     }
 
@@ -32,9 +30,8 @@ public class PassScrollEvents : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     {
         if (scrollRect != null)
         {
-            scrollRect.OnDrag(eventData);//Llama a metodo OnDrag de ScrollRect padre,
-                                         //permitiendo que continue procesando el arrastre
-            isDragging = true;//se esta arrastrando
+            scrollRect.OnDrag(eventData);
+            isDragging = true;
         }
     }
 
@@ -42,8 +39,7 @@ public class PassScrollEvents : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     {
         if (scrollRect != null)
         {
-            scrollRect.OnEndDrag(eventData);//llama a metodo OnEndDrag de ScrollRect padre,
-                                            //finalizando el procesamiento del arrastre
+            scrollRect.OnEndDrag(eventData);
             isDragging = false;//indicador de que se esta arrastrando en falso
         }
     }
