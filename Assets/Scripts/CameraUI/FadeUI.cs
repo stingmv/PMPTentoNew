@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class FadeUI : MonoBehaviour
@@ -15,6 +16,11 @@ public class FadeUI : MonoBehaviour
     [SerializeField] private UnityEvent _onEndTransitionFadeout;
     [SerializeField] private UnityEvent _onEndTransitionFadein;
     [SerializeField] private bool _initInStart;
+    [SerializeField] private bool _hasSection;
+    [SerializeField] private GameObject iconSection;
+    [SerializeField] private Sprite iconSectionSelected;
+    [SerializeField] private Sprite iconSectionUnselected;
+
 
     private bool _inTransition;
     
@@ -29,6 +35,20 @@ public class FadeUI : MonoBehaviour
         if (_initInStart)
         {
             FadeInTransition();
+        }
+        if (_hasSection)
+        {
+            iconSection.GetComponent<Image>().sprite = iconSectionSelected;
+
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (_hasSection)
+        {
+            iconSection.GetComponent<Image>().sprite = iconSectionUnselected;
+
         }
     }
 

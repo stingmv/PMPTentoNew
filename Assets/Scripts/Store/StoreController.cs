@@ -67,12 +67,14 @@ public class StoreController : MonoBehaviour
             {
                 // No usó ruleta hoy
                 _rouletteButton.DisableButton();
+                _rouletteButton.GetComponent<PassScrollEvents>().enabled = false;
                 _rouletteInformation.text = "Ya uso la ruleta, solo se permite una vez por día.";
                 _rouletteInformation.gameObject.SetActive(true);
             }
             else
             {
                 _rouletteButton.EnableButton();
+                _rouletteButton.GetComponent<PassScrollEvents>().enabled = true;
                 _rouletteInformation.text = "";
                 _rouletteInformation.gameObject.SetActive(false);
             }
