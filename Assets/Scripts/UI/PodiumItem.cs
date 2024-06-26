@@ -9,22 +9,24 @@ public class PodiumItem : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _username;
     [SerializeField] private TextMeshProUGUI _totalExperience;
-    [SerializeField] private Image _imageAvatar;//hay que reemplazar por SVImage para el avatar
+    [SerializeField] private SVGImage _imageAvatar;//hay que reemplazar por SVImage para el avatar
     [SerializeField] private TextMeshProUGUI _position;
 
     private int _id;
-    public void SetData(string position, string username, string totalExperience, int id)//se usa para el resto de posiciones
+    public void SetData(string position, string username, string totalExperience, int id, Sprite sprite)//se usa para el resto de posiciones
     {
         _position.text = position;
         _username.text = username;
         _totalExperience.text = totalExperience;
         _id = id;
+        _imageAvatar.sprite = sprite;
     }
-    public void SetData(string username, string totalExperience, int id)//se usa para el podio, las 3 primeras posiciones
+    public void SetDataPodio(string username, string totalExperience, int id, Sprite sprite)//se usa para el podio, las 3 primeras posiciones
     {
         _username.text = username;
         _totalExperience.text = totalExperience;
         _id = id;
+        _imageAvatar.sprite = sprite;
     }
 
 }

@@ -10,8 +10,29 @@ public class DataUserAll : ScriptableObject
     {
         public int id;
         public string userName;
-        public int totalExperience;
-        public Sprite avatar;
+        public int totalExperience;        
+        public AvatarUsers avatar;
+        public string urlAvatarUser;
+        public Sprite spriteAvatarUser;
+ 
+    }
+    [Serializable]
+    public class AvatarUsers
+    {
+        public int idAvatar;
+        public int idAlumno;
+        public string nombres;
+        public string topC;
+        public string accessories;
+        public string hair_Color;
+        public string facial_Hair;
+        public string facial_Hair_Color;
+        public string clothes;
+        public string clothes_Color;
+        public string eyes;
+        public string eyesbrow;
+        public string mouth;
+        public string skin;        
     }
 
     public List<DataUsers> Users;

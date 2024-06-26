@@ -260,7 +260,7 @@ public class LoginRestApi : MonoBehaviour
             request.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Unity 3D; ZFBrowser 3.1.0; UnityTests 1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36");
             Debug.Log("-> Enviando para obtener avatar");
 
-            yield return request.SendWebRequest();
+            yield return request.SendWebRequest();//se envia solicitud y se espera respuesta
             
             if (request.responseCode >= 400)
             {
