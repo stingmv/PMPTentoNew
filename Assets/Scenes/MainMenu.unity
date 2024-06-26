@@ -4902,9 +4902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eae78d5732eba042b4fb048cbe7ef19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notificationData: {fileID: 0}
-  prefab: {fileID: 0}
-  content: {fileID: 0}
 --- !u!114 &1251702360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10549,9 +10546,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.299988, y: -0.519989}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -15.699936, y: -26.520061}
+  m_SizeDelta: {x: 110, y: 110}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &888108261478708953
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11551,9 +11548,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.299988, y: -0.519989}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -15.700066, y: -26.520061}
+  m_SizeDelta: {x: 110, y: 110}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203462892971446872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15076,9 +15073,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.299988, y: -0.519989}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -15.70005, y: -26.520061}
+  m_SizeDelta: {x: 110, y: 110}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2337669020117284585
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16347,6 +16344,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6043318868498796723, guid: b2851a7ac037e9c43bf4ea9a5d0d3ffb, type: 3}
     - target: {fileID: 6206987589914865553, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
+      propertyPath: _objectUser
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
+    - target: {fileID: 6206987589914865553, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
       propertyPath: streaksText
       value: 
       objectReference: {fileID: 1245684886}
@@ -16692,9 +16693,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.299988, y: -0.519989}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -15.700451, y: -26.520065}
+  m_SizeDelta: {x: 110, y: 110}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2837608273209042176
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19949,6 +19950,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7879314264037972841, guid: 209661b0b466f7645acb86131b977cbb, type: 3}
     - target: {fileID: 6206987589914865553, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
+      propertyPath: _objectUser
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
+    - target: {fileID: 6206987589914865553, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
       propertyPath: streaksText
       value: 
       objectReference: {fileID: 91866738}
@@ -22107,6 +22112,10 @@ PrefabInstance:
       propertyPath: awardImage
       value: 
       objectReference: {fileID: 7587073063512923809, guid: 32421cb6ee3bcf441800c1067db13d45, type: 3}
+    - target: {fileID: 6206987589914865553, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
+      propertyPath: _objectUser
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
     - target: {fileID: 6206987589914865553, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
       propertyPath: streaksText
       value: 
@@ -28843,7 +28852,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7298805637421368911}
   m_Direction: 2
   m_Value: 1.0000004
-  m_Size: 0.50483936
+  m_Size: 0.50517446
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -30698,9 +30707,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.299988, y: -0.519989}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -15.699936, y: -26.520061}
+  m_SizeDelta: {x: 110, y: 110}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6146066037971918103
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32102,6 +32111,10 @@ PrefabInstance:
       propertyPath: awardImage
       value: 
       objectReference: {fileID: 2866637775062159940, guid: 5cb33d0aab02f4f43b00c73de54d44fe, type: 3}
+    - target: {fileID: 6206987589914865553, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
+      propertyPath: _objectUser
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
     - target: {fileID: 6206987589914865553, guid: dbc18d3cd1491cb4c9e625ee33df6ebf, type: 3}
       propertyPath: streaksText
       value: 

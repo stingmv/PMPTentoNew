@@ -3993,6 +3993,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _initInStart: 1
+  _hasSection: 0
+  iconSection: {fileID: 0}
+  iconSectionSelected: {fileID: 0}
+  iconSectionUnselected: {fileID: 0}
 --- !u!225 &634584449
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4722,6 +4726,7 @@ MonoBehaviour:
   OnMaxGoodWithoutErrorsReached:
     m_PersistentCalls:
       m_Calls: []
+  _objectUser: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
   achievementOrigin: "Modo Categor\xEDa"
 --- !u!4 &708024837
 Transform:
@@ -5674,6 +5679,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _initInStart: 0
+  _hasSection: 0
+  iconSection: {fileID: 0}
+  iconSectionSelected: {fileID: 0}
+  iconSectionUnselected: {fileID: 0}
 --- !u!225 &913606112
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9194,6 +9203,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _initInStart: 0
+  _hasSection: 0
+  iconSection: {fileID: 0}
+  iconSectionSelected: {fileID: 0}
+  iconSectionUnselected: {fileID: 0}
 --- !u!225 &1486346906
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -22172,6 +22185,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _initInStart: 1
+  _hasSection: 0
+  iconSection: {fileID: 0}
+  iconSectionSelected: {fileID: 0}
+  iconSectionUnselected: {fileID: 0}
 --- !u!225 &2140614100
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -22943,6 +22960,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _initInStart: 0
+  _hasSection: 0
+  iconSection: {fileID: 0}
+  iconSectionSelected: {fileID: 0}
+  iconSectionUnselected: {fileID: 0}
 --- !u!1 &1547236269190588808
 GameObject:
   m_ObjectHideFlags: 0
@@ -25497,6 +25518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -25512,6 +25534,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!222 &8255705695610218899
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25759,6 +25782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -25774,6 +25798,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!224 &8923098043597787136
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25854,6 +25879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -25869,6 +25895,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!224 &9084196341621833641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25928,6 +25955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -25943,6 +25971,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!224 &9157504977883282405
 RectTransform:
   m_ObjectHideFlags: 0

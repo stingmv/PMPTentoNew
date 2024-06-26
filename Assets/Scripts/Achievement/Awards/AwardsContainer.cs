@@ -12,7 +12,9 @@ public class AwardsContainer : MonoBehaviour
     [SerializeField] TextMeshProUGUI dateText;
     [SerializeField] GameObject awardContent;
     [SerializeField] int typeOfStreak;
-    [SerializeField] AchievementData achievementData;
+
+    [SerializeField] private ScriptableObjectUser _objectUser;
+
 
     public void SetValuesAwards()
     {
@@ -27,37 +29,37 @@ public class AwardsContainer : MonoBehaviour
         switch (typeOfStreak)
         {
             case 4:
-                for (int i = 0; i < achievementData.achievementListContainer.achievementList[0].Streak4Questions; i++)
+                for (int i = 0; i < _objectUser.userInfo.user.achievements.streak4; i++)
                 {
                     Instantiate(awardImage, awardContent.transform);
-                    streaksText.text = $"Tienes {achievementData.achievementListContainer.achievementList[0].Streak4Questions} rachas de {typeOfStreak} estrellas";
-                    dateText.text = $"<b>Ultima racha</b>: {achievementData.achievementListContainer.achievementList[0].Streak4Date} - {achievementData.achievementListContainer.achievementList[0].lastOriginStreak4}";
+                    streaksText.text = $"Tienes {_objectUser.userInfo.user.achievements.streak4} rachas de {typeOfStreak} estrellas";
+                    dateText.text = $"<b>Ultima racha</b>: {_objectUser.userInfo.user.achievements.streak4Date} - {_objectUser.userInfo.user.achievements.streak4Origin}";
 
                 }
                 break;
             case 6:
-                for (int i = 0; i < achievementData.achievementListContainer.achievementList[0].Streak6Questions; i++)
+                for (int i = 0; i < _objectUser.userInfo.user.achievements.streak6; i++)
                 {
                     Instantiate(awardImage, awardContent.transform);
-                    streaksText.text = $"Tienes {achievementData.achievementListContainer.achievementList[0].Streak6Questions} rachas de {typeOfStreak} estrellas";
-                    dateText.text = $"<b>Ultima racha</b>: {achievementData.achievementListContainer.achievementList[0].Streak6Date} - {achievementData.achievementListContainer.achievementList[0].lastOriginStreak6}";
+                    streaksText.text = $"Tienes {_objectUser.userInfo.user.achievements.streak6} rachas de {typeOfStreak} estrellas";
+                    dateText.text = $"<b>Ultima racha</b>: {_objectUser.userInfo.user.achievements.streak6Date} - {_objectUser.userInfo.user.achievements.streak6Origin}";
                 }
                 break;
             case 8:
-                for (int i = 0; i < achievementData.achievementListContainer.achievementList[0].Streak8Questions; i++)
+                for (int i = 0; i < _objectUser.userInfo.user.achievements.streak8; i++)
                 {
                     Instantiate(awardImage, awardContent.transform);
-                    streaksText.text = $"Tienes {achievementData.achievementListContainer.achievementList[0].Streak8Questions} rachas de {typeOfStreak} estrellas";
-                    dateText.text = $"<b>Ultima racha</b>: {achievementData.achievementListContainer.achievementList[0].Streak8Date} - {achievementData.achievementListContainer.achievementList[0].lastOriginStreak8}";
+                    streaksText.text = $"Tienes {_objectUser.userInfo.user.achievements.streak8} rachas de {typeOfStreak} estrellas";
+                    dateText.text = $"<b>Ultima racha</b>: {_objectUser.userInfo.user.achievements.streak8Date} - {_objectUser.userInfo.user.achievements.streak8Origin}";
 
                 }
                 break;
             case 10:
-                for (int i = 0; i < achievementData.achievementListContainer.achievementList[0].Streak10Questions; i++)
+                for (int i = 0; i < _objectUser.userInfo.user.achievements.streak10; i++)
                 {
                     Instantiate(awardImage, awardContent.transform);
-                    streaksText.text = $"Tienes {achievementData.achievementListContainer.achievementList[0].Streak10Questions} rachas de {typeOfStreak} estrellas";
-                    dateText.text = $"<b>Ultima racha</b>: {achievementData.achievementListContainer.achievementList[0].Streak10Date} - {achievementData.achievementListContainer.achievementList[0].lastOriginStreak10}";
+                    streaksText.text = $"Tienes {_objectUser.userInfo.user.achievements.streak10} rachas de {typeOfStreak} estrellas";
+                    dateText.text = $"<b>Ultima racha</b>: {_objectUser.userInfo.user.achievements.streak10Date} - {_objectUser.userInfo.user.achievements.streak10Origin}";
 
                 }
                 break;

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ public class User
     public string userAgent;
     public string userIp;
     public UserDetail detail;
+    public UserAchievements achievements;
     public Excepcion excepcion;
 }
 [Serializable]
@@ -37,6 +39,25 @@ public class UserDetail
     public int findCorrectAnswer;
     public int increaseTime;
     public int secondChance;
+}
+[Serializable]
+public class UserAchievements
+{
+    public int id;
+    public int idAlumno;//parametro obligatorio en endpoint
+    public int streak4;
+    public int streak6;
+    public int streak8;
+    public int streak10;
+    public string streak4Date;
+    public string streak6Date;
+    public string streak8Date;
+    public string streak10Date;
+    public string streak4Origin;
+    public string streak6Origin;
+    public string streak8Origin;
+    public string streak10Origin;
+    public string usuario;//parametro obligatorio al parecer en endpoint
 }
 [Serializable]
 public class Excepcion

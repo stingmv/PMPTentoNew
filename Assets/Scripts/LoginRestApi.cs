@@ -13,6 +13,7 @@ public class LoginRestApi : MonoBehaviour
     [SerializeField] private string url = "https://api-portalweb.bsginstitute.com/api/AspNetUser/authenticate";
     [SerializeField] private string urlToMoreDetail = "http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ObtenerCaracteristicasGamificacion";
     [SerializeField] private string urlToCredentials = "https://api-portalweb.bsginstitute.com/api/CredencialPortalPmp";
+    [SerializeField] private string urlGetAchievements = "http://simuladorpmp-servicio.bsginstitute.com/api/Gamificacion/ObtenerLogroAlumno?IdRegistroAlumno=0&IdAlumno=";
 
     [SerializeField] private ScriptableObjectUser _objectUser;
     [SerializeField] private LoginController _loginController;
@@ -29,17 +30,17 @@ public class LoginRestApi : MonoBehaviour
             DataLogin dataLogin = new DataLogin() { username = username, password = password};
             
             var bodyRaw = Encoding.UTF8.GetBytes(JsonUtility.ToJson(dataLogin));
-            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-            request.downloadHandler = new DownloadHandlerBuffer();
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);//para subir datos en formato RAW
+            request.downloadHandler = new DownloadHandlerBuffer();//para manejar la descarga de la respuesta
             
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("Accept", "application/json");
             request.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Unity 3D; ZFBrowser 3.1.0; UnityTests 1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36");
             
-            yield return request.SendWebRequest();
+            yield return request.SendWebRequest();//envia solicitud y espera hasta una respuesta
             if (request.responseCode == 401)
             {
-                _objectUser.userInfo.user = JsonUtility.FromJson<User>(request.downloadHandler.text);
+                _objectUser.userInfo.user = JsonUtility.FromJson<User>(request.downloadHandler.text);//se deserializa respuesta JSON a un objeto user
 
                 _objectUser.userInfo.haveUser = false;
                 GameEvents.ErrorLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
@@ -54,20 +55,22 @@ public class LoginRestApi : MonoBehaviour
             {
                 try
                 {
-                    _objectUser.userInfo.user = JsonUtility.FromJson<User>(request.downloadHandler.text);
-                    if (_objectUser.userInfo.user.excepcion.excepcionGenerada)
+                    _objectUser.userInfo.user = JsonUtility.FromJson<User>(request.downloadHandler.text);//se deserializa respuesta JSON y llenamos el objeto user
+                    Debug.Log("PostLoginCORUOTUINE");
+                    if (_objectUser.userInfo.user.excepcion.excepcionGenerada)//fallo
                     {
                         _objectUser.userInfo.haveUser = false;
                         GameEvents.FailedLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
                         // _loginController._onFailedLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
                     }
-                    else
+                    else//es exitosa
                     {
-                        StartCoroutine(GetGamificationData(_objectUser.userInfo.user.idAlumno));
+                        StartCoroutine(GetGamificationData(_objectUser.userInfo.user.idAlumno));//llamo endpoint, para llenar el detail
+                        StartCoroutine(GetAchievementData(_objectUser.userInfo.user.idAlumno));//llamo endpoint, para llenar el achievement
                         _objectUser.userInfo.haveUser = true;
                         // GameEvents.SuccessfulLogin?.Invoke(_objectUser.userInfo.user);
                         
-                        GameEvents.GetUserExam?.Invoke(_objectUser.userInfo.user.userName);
+                        GameEvents.GetUserExam?.Invoke(_objectUser.userInfo.user.userName);//para crear un ID para generar un ID de examen
                         GameEvents.GetNameExam?.Invoke(_objectUser.userInfo.user.idAlumno.ToString());
                         // _loginController._onSuccessLogin?.Invoke();
                     }
@@ -90,7 +93,7 @@ public class LoginRestApi : MonoBehaviour
         _finishRequest = _haveError = false;
        using (UnityWebRequest request = new UnityWebRequest(urlToMoreDetail + "/" + userId, "GET"))
        {
-            request.downloadHandler = new DownloadHandlerBuffer();
+            request.downloadHandler = new DownloadHandlerBuffer();//manejar descarga de respuesta
             
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("Accept", "application/json");
@@ -115,7 +118,7 @@ public class LoginRestApi : MonoBehaviour
                 try
                 {
                     var detail = JsonUtility.FromJson<UserDetail>(request.downloadHandler.text);
-                    _objectUser.userInfo.user.detail = detail;
+                    _objectUser.userInfo.user.detail = detail;//llenamos el detail
                     if (_objectUser.userInfo.user.excepcion.excepcionGenerada)
                     {
                         _objectUser.userInfo.haveUser = false;
@@ -124,10 +127,10 @@ public class LoginRestApi : MonoBehaviour
                     }
                     else
                     {
-                        if (_objectUser.userInfo.user.detail.usernameG != "UserName")
+                        if (_objectUser.userInfo.user.detail.usernameG != "UserName")//verificamos si tiene un nombre de usuario o no, si es diferente a UserName que se coloca por defecto
                         {
                             _objectUser.userInfo.haveUser = true;
-                            GameEvents.NewUsername?.Invoke(_objectUser.userInfo.user.detail.usernameG );
+                            GameEvents.NewUsername?.Invoke(_objectUser.userInfo.user.detail.usernameG );//evento para actualizar, le pasamos usernameG que es el numero nombre de usuario
 
                         }
                         else
@@ -135,10 +138,10 @@ public class LoginRestApi : MonoBehaviour
                             _objectUser.userInfo.haveUsername = false;
                         }
 
-                        if (_objectUser.userInfo.user.detail.idCaracteristicaGamificacion != 0)
+                        if (_objectUser.userInfo.user.detail.idCaracteristicaGamificacion != 0)//0 es que es un objeto nuevo y 1 que ya hay informacion almacenada
                         {
                             Debug.Log("idcaracteristicaGamificacion 1");
-                            GameEvents.NewInstuctorId?.Invoke(_objectUser.userInfo.user.detail.instructorID);
+                            GameEvents.NewInstuctorId?.Invoke(_objectUser.userInfo.user.detail.instructorID);//le colocamos el id del instructor que ya se tiene para que se use
 
                         }
                         GameEvents.SuccessfulLogin?.Invoke(_objectUser.userInfo.user);
@@ -160,6 +163,85 @@ public class LoginRestApi : MonoBehaviour
             _finishRequest = true;
        }
     }
+
+    public IEnumerator GetAchievementData(int userId)//obtiene datos de achievement en login
+    {
+        Debug.Log("GetAchievementData");
+        _finishRequest = _haveError = false;
+        using (UnityWebRequest request = new UnityWebRequest(urlGetAchievements + userId, "GET"))
+        {
+            request.downloadHandler = new DownloadHandlerBuffer();//manejar descarga de respuesta
+
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Accept", "application/json");
+            request.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Unity 3D; ZFBrowser 3.1.0; UnityTests 1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36");
+
+            yield return request.SendWebRequest();
+            if (request.responseCode == 401)
+            {
+                _objectUser.userInfo.user = JsonUtility.FromJson<User>(request.downloadHandler.text);
+
+                _objectUser.userInfo.haveUser = false;
+                GameEvents.ErrorLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
+            }
+            else if (request.responseCode >= 400)
+            {
+                _objectUser.userInfo.haveUser = false;
+                _loginController._onErrorInLogin?.Invoke("Fallo de comunicación con el servidor, intentelo denuevo");
+                Debug.Log(request.error);
+            }
+            else
+            {
+                try
+                {
+                    var achievements = JsonUtility.FromJson<UserAchievements>(request.downloadHandler.text);
+                    Debug.Log("llenando achievements");
+                    _objectUser.userInfo.user.achievements = achievements;//llenamos el achivements
+                    if (_objectUser.userInfo.user.excepcion.excepcionGenerada)
+                    {
+                        _objectUser.userInfo.haveUser = false;
+                        GameEvents.FailedLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
+                        // _loginController._onFailedLogin?.Invoke(_objectUser.userInfo.user.excepcion.descripcionGeneral);
+                    }
+                    else//es exitosa
+                    {
+                        if (_objectUser.userInfo.user.detail.usernameG != "UserName")//verificamos si tiene un nombre de usuario o no, si es diferente a UserName que se coloca por defecto
+                        {
+                            _objectUser.userInfo.haveUser = true;
+                            GameEvents.NewUsername?.Invoke(_objectUser.userInfo.user.detail.usernameG);//evento para actualizar, le pasamos usernameG que es el numero nombre de usuario
+                        }
+                        else
+                        {
+                            _objectUser.userInfo.haveUsername = false;
+                        }
+
+                        if (_objectUser.userInfo.user.detail.idCaracteristicaGamificacion != 0)//0 es que es un objeto nuevo y 1 que ya hay informacion almacenada
+                        {
+                            Debug.Log("idcaracteristicaGamificacion 1");
+                            GameEvents.NewInstuctorId?.Invoke(_objectUser.userInfo.user.detail.instructorID);//le colocamos el id del instructor que ya se tiene para que se use
+
+                        }
+                        GameEvents.SuccessfulLogin?.Invoke(_objectUser.userInfo.user);
+
+                        // GameEvents.GetUserExam?.Invoke(_objectUser.userInfo.user.userName);
+                        // GameEvents.GetNameExam?.Invoke(_objectUser.userInfo.user.idAlumno.ToString());
+                        // _loginController._onSuccessLogin?.Invoke();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.Log(request.downloadHandler.text);
+                    _objectUser.userInfo.haveUser = false;
+                    _loginController._onErrorInLogin?.Invoke("Se tuvo un error interno, vuelva a intentarlo mas tarde");
+                }
+
+            }
+            // PlayerPrefs.SetString("userInfo", JsonUtility.ToJson(_objectUser.userInfo));
+            _finishRequest = true;
+        }
+    }
+
+
 
     public IEnumerator GetAvatar(string username, string password)
     {

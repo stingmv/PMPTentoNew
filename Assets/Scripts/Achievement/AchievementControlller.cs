@@ -9,8 +9,9 @@ public class AchievementControlller : MonoBehaviour
     [SerializeField] public List<int> maxGoodStreakList;//numero maximo de respuestas consecutivas para alcanzar una racha
     [SerializeField] private UnityEvent<int> OnMaxGoodStreakReached;//evento publico en editor
     [SerializeField] private UnityEvent OnMaxGoodWithoutErrorsReached;//evento publico en editor
+    [SerializeField] private ScriptableObjectUser _objectUser;
     [SerializeField] private string achievementOrigin;
-    
+
 
     //private bool _hasReachedMaxGoodStreak;
 
@@ -47,7 +48,7 @@ public class AchievementControlller : MonoBehaviour
                 Debug.Log($"Alcanzo Racha de {maxGoodStreakList[i]} preguntas");
                 GameEvents.OnGoodStreaked?.Invoke();
                 OnMaxGoodStreakReached?.Invoke(maxGoodStreakList[i]);
-                achievementData.StreakCounter(maxGoodStreakList[i], SetDateAchievement(), achievementOrigin);//añado al contador de rachas de achivement data a traves del metodo StreakCounter
+                UpdateAchievementData(maxGoodStreakList[i], SetDateAchievement(), achievementOrigin);//añado al contador de rachas de achivement data a traves del metodo StreakCounter
 
                 //_hasReachedMaxGoodStreak = true;
             }
@@ -76,6 +77,44 @@ public class AchievementControlller : MonoBehaviour
         OnMaxGoodWithoutErrorsReached?.Invoke();
     }
 
- 
+    public void UpdateAchievementData(int verifier, string date, string origin)
+    {
+
+        switch (verifier)
+        {
+            case 4:
+                //achievementListContainer.achievementList[0].Streak4Questions++;
+                //achievementListContainer.achievementList[0].Streak4Date = date;
+                //achievementListContainer.achievementList[0].lastOriginStreak4 = origin;
+                _objectUser.userInfo.user.achievements.streak4++;
+                _objectUser.userInfo.user.achievements.streak4Date=date;
+                _objectUser.userInfo.user.achievements.streak4Origin=origin;
+
+                Debug.Log("Se añadio logro racha 4 preguntas");
+                break;
+
+            case 6:
+                _objectUser.userInfo.user.achievements.streak6++;
+                _objectUser.userInfo.user.achievements.streak6Date = date;
+                _objectUser.userInfo.user.achievements.streak6Origin = origin;
+                Debug.Log("Se añadio logro racha 6 preguntas");
+                break;
+            case 8:
+                _objectUser.userInfo.user.achievements.streak8++;
+                _objectUser.userInfo.user.achievements.streak8Date = date;
+                _objectUser.userInfo.user.achievements.streak8Origin = origin;
+                Debug.Log("Se añadio logro racha 8 preguntas");
+                break;
+
+            case 10:
+                _objectUser.userInfo.user.achievements.streak10++;
+                _objectUser.userInfo.user.achievements.streak10Date = date;
+                _objectUser.userInfo.user.achievements.streak10Origin = origin;
+                Debug.Log("Se añadio logro racha 10 preguntas");
+                break;
+        }
+        //SaveLocalData();
+        GameEvents.RequestUpdateAchievements?.Invoke();
+    }
 
 }

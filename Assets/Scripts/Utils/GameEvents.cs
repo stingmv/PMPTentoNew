@@ -104,6 +104,8 @@ public static class GameEvents
     #region PowerUps
 
     public static Action RequestUpdateDetail;
+    public static Action RequestUpdateAchievements;
+
     public static Action DetailChanged;
 
     #endregion

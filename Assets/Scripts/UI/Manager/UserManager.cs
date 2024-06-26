@@ -96,7 +96,8 @@ public class UserManager : MonoBehaviour
     {
         Debug.Log("succes get user");
         GameEvents.GetUserExam?.Invoke(_userSO.userInfo.user.userName);
-        _userService.GetUserDetail(_userSO.userInfo.user.idAlumno);
+        _userService.GetUserDetail(_userSO.userInfo.user.idAlumno);//obtiene datos user detail de endpoint
+        _userService.GetUserAchievement(_userSO.userInfo.user.idAlumno);//obtiene datos user achievement de endpoint
     }
 
 

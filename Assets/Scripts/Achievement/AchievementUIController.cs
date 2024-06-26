@@ -40,9 +40,7 @@ public class AchievementUIController : MonoBehaviour
         for (int i = 0; i < contentScrollViewStreaks.childCount; i++)//recorrer contenedores de rachas de n preguntas
         {
             contentScrollViewStreaks.GetChild(i).GetComponent<AwardsContainer>().SetValuesAwards();//accedo al metodo de cada uno de los AwardsContainers
-
         }
-
 
     }
 

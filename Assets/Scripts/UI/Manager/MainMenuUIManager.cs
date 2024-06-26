@@ -48,7 +48,7 @@ public class MainMenuUIManager : MonoBehaviour
     {
         _gameConfigurationPopup.gameObject.SetActive(true);
         _gameConfigurationPopup.FadeInTransition();
-        var _audioSettingsSO = Resources.Load<AudioSettingsSO>("AudioSettings_Data");
+        var _audioSettingsSO = Resources.Load<AudioSettingsSO>("AudioSettings_Data");//carga datos de Resources
      
 
         // Update values to Sliders 

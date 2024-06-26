@@ -167,7 +167,7 @@ namespace MainMenu
         {
             PlayerPrefs.SetString("MusicVolume", JsonUtility.ToJson(_objectSettings.settingData));
             PlayerPrefs.SetString("SounEffectVolume", JsonUtility.ToJson(_objectSettings.settingData));
-PlayerPrefs.Save();
+            PlayerPrefs.Save();
         }
 
         public void SetUserLevel()

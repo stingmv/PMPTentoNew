@@ -203,6 +203,7 @@ MonoBehaviour:
   OnMaxGoodWithoutErrorsReached:
     m_PersistentCalls:
       m_Calls: []
+  _objectUser: {fileID: 11400000, guid: 2f47c0a4eb7b9cf4a9cf3eccaac92c96, type: 2}
   achievementOrigin: "Desaf\xEDo Supervivencia"
 --- !u!4 &20065582
 Transform:
@@ -7985,6 +7986,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _initInStart: 0
+  _hasSection: 0
+  iconSection: {fileID: 0}
+  iconSectionSelected: {fileID: 0}
+  iconSectionUnselected: {fileID: 0}
 --- !u!225 &1498630613
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9386,6 +9391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -9401,6 +9407,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!1 &1818012793 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3326564388533256192, guid: 298431218b8df924ea5ea318225aad88, type: 3}
@@ -9438,6 +9445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -9453,6 +9461,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!1 &1854090200
 GameObject:
   m_ObjectHideFlags: 0
@@ -9693,6 +9702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -9708,6 +9718,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!114 &1971067480 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 821035260445898075, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
@@ -9756,6 +9767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -9771,6 +9783,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!1 &1985619732
 GameObject:
   m_ObjectHideFlags: 0
@@ -9995,6 +10008,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _initInStart: 1
+  _hasSection: 0
+  iconSection: {fileID: 0}
+  iconSectionSelected: {fileID: 0}
+  iconSectionUnselected: {fileID: 0}
 --- !u!225 &2140614100
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -14,11 +14,16 @@ public class UserService : MonoBehaviour
     private readonly string _urlToUpdate =
         "http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ActualizarCaracteristicasGamificacion";
 
+    private readonly string _urlToUpdateAchievement =
+        "http://simuladorpmp-servicio.bsginstitute.com/api/Gamificacion/RegistrarLogroAlumno";
+
     private readonly string _urlToGetUser = "https://api-portalweb.bsginstitute.com/api/AspNetUser/authenticate";
 
     private readonly string _urlToGetUserDetail =
         "http://simuladorpmp-servicio.bsginstitute.com/api/ConfiguracionSimulador/ObtenerCaracteristicasGamificacion/";
     private readonly string urlToCredentials = "https://api-portalweb.bsginstitute.com/api/CredencialPortalPmp";
+
+    private readonly string _urlToGetUserAchievements="http://simuladorpmp-servicio.bsginstitute.com/api/Gamificacion/ObtenerLogroAlumno?IdRegistroAlumno=0&IdAlumno=";
 
     private bool _haveError;
     private bool _finishRequest;
@@ -28,17 +33,26 @@ public class UserService : MonoBehaviour
         GameEvents.RequestCoinsChange += GameEvents_RequestCoinsChange;
         GameEvents.RequestExperienceChange += GameEvents_RequestExperienceChange;
         GameEvents.RequestUpdateDetail += GameEvents_RequestUpdateDetail;
+        GameEvents.RequestUpdateAchievements += GameEvents_RequestUpdateAchievements;
     }
 
     private void OnDisable()
     {
         GameEvents.RequestCoinsChange -= GameEvents_RequestCoinsChange;
         GameEvents.RequestExperienceChange -= GameEvents_RequestExperienceChange;
-        GameEvents.RequestUpdateDetail -= GameEvents_RequestUpdateDetail;    }
+        GameEvents.RequestUpdateDetail -= GameEvents_RequestUpdateDetail;
+        GameEvents.RequestUpdateAchievements -= GameEvents_RequestUpdateAchievements;
 
-    private void GameEvents_RequestUpdateDetail()
+    }
+
+    private void GameEvents_RequestUpdateDetail()//METODO QUE ACTUALIZA USER DETAIL
     {
         StartCoroutine(UpdateUserDetail());
+    }
+
+    private void GameEvents_RequestUpdateAchievements()//METODO QUE ACTUALIZA USER ACHIEVEMENTS
+    {
+        StartCoroutine(UpdateUserAchievements());
     }
 
     private void GameEvents_RequestExperienceChange(float obj)
@@ -49,9 +63,13 @@ public class UserService : MonoBehaviour
     {
     }
 
-    public void GetUserDetail(int userId)
+    public void GetUserDetail(int userId)//llenar user detail en user data SO
     {
         StartCoroutine(IGetUserDetail(userId));
+    }
+    public void GetUserAchievement(int userId)//llenar user achievement en user data SO
+    {
+        StartCoroutine(IGetUserAchievements(userId));
     }
 
     public IEnumerator IGetUserDetail(int userId)
@@ -109,6 +127,59 @@ public class UserService : MonoBehaviour
         }
     }
 
+    public IEnumerator IGetUserAchievements(int userId)
+    {
+        _finishRequest = _haveError = false;
+        using (UnityWebRequest request = new UnityWebRequest(_urlToGetUserAchievements + userId, "GET"))
+        {
+            request.downloadHandler = new DownloadHandlerBuffer();
+            AddHeader(request);
+
+            yield return request.SendWebRequest();
+
+            if (request.responseCode >= 400)
+            {
+                _scriptableObjectUser.userInfo.haveUser = false;
+                Debug.Log(request.error);
+            }
+            else
+            {
+                try
+                {
+                    var achievements = JsonUtility.FromJson<UserAchievements>(request.downloadHandler.text);
+                    _scriptableObjectUser.userInfo.user.achievements = achievements;
+                    if (_scriptableObjectUser.userInfo.user.excepcion.excepcionGenerada)
+                    {
+                        _scriptableObjectUser.userInfo.haveUser = false;
+                    }
+                    else
+                    {
+                        if (_scriptableObjectUser.userInfo.user.detail.usernameG != "UserName")
+                        {
+                            _scriptableObjectUser.userInfo.haveUsername = true;
+                        }
+                        else
+                        {
+                            _scriptableObjectUser.userInfo.haveUsername = false;
+                        }
+
+                        if (_scriptableObjectUser.userInfo.user.detail.idCaracteristicaGamificacion != 0)
+                        {
+                            Debug.Log("idcaracteristicaGamificacion 1");
+                        }
+                    }
+                    GameEvents.SuccessGetUserDetail?.Invoke();
+                }
+                catch (Exception e)
+                {
+                    Debug.Log(e.Message);
+                    _scriptableObjectUser.userInfo.haveUser = false;
+                }
+            }
+            _finishRequest = true;
+        }
+    }
+
     public IEnumerator UpdateUserDetail()
     {
         using (UnityWebRequest request = new UnityWebRequest(_urlToUpdate, "POST"))
@@ -152,6 +223,49 @@ public class UserService : MonoBehaviour
         }
     }
 
+    public IEnumerator UpdateUserAchievements()
+    {
+        using (UnityWebRequest request = new UnityWebRequest(_urlToUpdateAchievement, "POST"))
+        {
+            UserAchievements dataAchievement = _scriptableObjectUser.userInfo.user.achievements;
+
+            var bodyRaw = Encoding.UTF8.GetBytes(JsonUtility.ToJson(dataAchievement));
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+
+            AddHeader(request);
+            yield return request.SendWebRequest();
+            if (request.responseCode >= 400)
+            {
+                // _buttonChangeUsername.interactable = true;
+                Debug.Log(request.error);
+
+            }
+            else
+            {
+                try
+                {
+                    bool achievement = Convert.ToBoolean(request.downloadHandler.text);//comprueba si devuelve true o false
+                    if (achievement)//si es true es exitoso
+                    {
+                        //GameEvents.AchievementsChanged?.Invoke();//falta llenar metodo
+                        Debug.Log("UpdateUserAchievements");
+                    }
+                    else
+                    {
+                        Debug.Log("UpdateUserAchievementes false");
+                        // _buttonChangeUsername.interactable = true;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.Log(request.downloadHandler.text);
+                    // _scriptableObjectUser.userInfo.haveUser = false;
+                    // _buttonChangeUsername.interactable = true;
+                }
+            }
+        }
+    }
     public void GetUSer(string username, string password)
     {
         StartCoroutine(GetUser(username, password));
