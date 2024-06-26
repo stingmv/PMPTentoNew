@@ -20,22 +20,7 @@ public class AchievementData : ScriptableObject
         public int MaxCounter;
         public int CurrentLevel;
         public int MaxLevel;
-
-        public int Streak4Questions;
-        public int Streak6Questions;
-        public int Streak8Questions;
-        public int Streak10Questions;
-
-        public string Streak4Date;
-        public string Streak6Date;
-        public string Streak8Date;
-        public string Streak10Date;
-
-        public string lastOriginStreak4;
-        public string lastOriginStreak6;
-        public string lastOriginStreak8;
-        public string lastOriginStreak10;
-            
+           
 
         //public int MaxCounterDifficulty;
         public int GiftsObtained;
@@ -126,7 +111,7 @@ public class AchievementData : ScriptableObject
             SaveLocalData();
         }
     }
-
+    /*
     public void StreakCounter(int verifier,string date, string origin)
     {
         switch (verifier)
@@ -160,5 +145,5 @@ public class AchievementData : ScriptableObject
                 break;                
         }
         SaveLocalData();
-    }
+    }*/
 }
