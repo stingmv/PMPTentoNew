@@ -13,6 +13,7 @@ public class StoreController : MonoBehaviour
 
     [Header("Power ups scriptable objects")] [SerializeField]
     private ScripableObjectPowerUp _powerUpSecondOportunity;
+    private bool areItemsInstanciated=false;
 
     [SerializeField] private ScripableObjectPowerUp _powerUpTrueOption;
     [SerializeField] private ScripableObjectPowerUp _powerUpDeleteOption;
@@ -91,10 +92,14 @@ public class StoreController : MonoBehaviour
         GameEvents.CoinsChanged += GameEvents_CoinsChanged;
         GameEvents.ExperienceChanged += GameEvents_ExperienceChanged;
         GameEvents.DetailChanged += GameEvents_DetailChanged;
+
+
+        if (areItemsInstanciated)
+        {
+            return;
+        }
         var itemInstantiaded = Instantiate(_storeSectionPrefab, _GeneralContainer);
-
         // Segunda oportunidad
-
         itemInstantiaded.SetData("Segunda oportunidad");
         for (int i = 0; i < 3; i++)
         {
@@ -132,7 +137,7 @@ public class StoreController : MonoBehaviour
             storeItem.SetData(this, costItem, i + 1, _spriteTrueOption, _powerUpTrueOption);
         }
 
-        // Eliminar opcion
+        // Descartar alternativa
 
         itemInstantiaded = Instantiate(_storeSectionPrefab, _GeneralContainer);
         itemInstantiaded.SetData("Descartar alternativa");
@@ -193,6 +198,7 @@ public class StoreController : MonoBehaviour
         }
 
         Instantiate(_offset, _GeneralContainer);
+        areItemsInstanciated = true;
     }
 
     private void GameEvents_DetailChanged()
