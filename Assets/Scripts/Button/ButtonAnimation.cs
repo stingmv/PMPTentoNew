@@ -12,7 +12,7 @@ namespace Button
         [SerializeField] private ScriptableObjectButton _scriptableObjectButton;
         [SerializeField] private Image _imageButton;
         [SerializeField] private EventTrigger _eventTrigger;
-
+        public bool toSound=true;
         private float _currentTime;
         private Vector3 _startScale;
         private Color _colorDisable = new Color(.8f , .8f, .8f, 1);
@@ -25,12 +25,16 @@ namespace Button
 
         private void OnEnable()
         {
-            entry.eventID = EventTriggerType.PointerDown;
-            entry.callback.AddListener(Call);
+            if (toSound)
+            {
+            entry.eventID = EventTriggerType.PointerDown;//establece tipo de evento a escuchar
+            entry.callback.AddListener(Call);//se añade a la lista de metodos que se ejecutaran cuando el evento a escuchar se dispare
             _eventTrigger.triggers.Add(entry);
+
+            }
         }
 
-        private void Call(BaseEventData arg0)
+        private void Call(BaseEventData arg0)//cuando hay evento PointerDown se llama a call
         {
             UIEvents.PressLoginButton?.Invoke(); 
             // Debug.Log("call");
@@ -38,8 +42,12 @@ namespace Button
 
         private void OnDisable()
         {
+            if (toSound)
+            {
             entry.callback.RemoveListener(Call);
             _eventTrigger.triggers.Remove(entry);
+                
+            }
         }
         
 

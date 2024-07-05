@@ -7060,6 +7060,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 1851334288}
   _eventTrigger: {fileID: 1851334291}
+  toSound: 1
 --- !u!114 &1851334291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8218,6 +8219,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 902330652012615025}
   _eventTrigger: {fileID: 6457623386042042440}
+  toSound: 1
 --- !u!222 &173401013710223020
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8597,6 +8599,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 4371975979550121606}
   _eventTrigger: {fileID: 6432706413699461385}
+  toSound: 1
 --- !u!224 &262060136356112419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8713,6 +8716,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 2880075333732086285}
   _eventTrigger: {fileID: 6691205831088541426}
+  toSound: 1
 --- !u!222 &309746883742221034
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9756,6 +9760,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 3581534794155825461}
   _eventTrigger: {fileID: 5930007556656217130}
+  toSound: 1
 --- !u!224 &590901030828494873
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9792,6 +9797,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 6099093978232070848}
   _eventTrigger: {fileID: 2364930009502442567}
+  toSound: 1
 --- !u!222 &592636740828105664
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11186,6 +11192,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 6240300084667167214}
   _eventTrigger: {fileID: 5850240363096583850}
+  toSound: 1
 --- !u!114 &1001846548678779818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11222,6 +11229,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 4348733689341159937}
   _eventTrigger: {fileID: 6541855189778363832}
+  toSound: 1
 --- !u!222 &1016336510518794585
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12849,6 +12857,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 5362521426475782662}
   _eventTrigger: {fileID: 2253734128292803279}
+  toSound: 1
 --- !u!224 &1530945570559446320
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13385,6 +13394,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 2765058095928741676}
   _eventTrigger: {fileID: 4902843725325388184}
+  toSound: 1
 --- !u!225 &1722495587336764018
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14686,6 +14696,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 2935060798366773609}
   _eventTrigger: {fileID: 5679405814017875334}
+  toSound: 1
 --- !u!1 &2123003911329087349
 GameObject:
   m_ObjectHideFlags: 0
@@ -15738,6 +15749,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 1417231249252474799}
   _eventTrigger: {fileID: 8023280216146207511}
+  toSound: 1
 --- !u!114 &2548552734384412854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17706,6 +17718,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 6853812595092518422}
   _eventTrigger: {fileID: 5750332885969296218}
+  toSound: 1
 --- !u!224 &3067996191417308064
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18908,6 +18921,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 463889333686264505}
   _eventTrigger: {fileID: 6021258104831495627}
+  toSound: 1
 --- !u!224 &3416658575345028697
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20998,6 +21012,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 5393618391423247319}
   _eventTrigger: {fileID: 3165211785948950247}
+  toSound: 1
 --- !u!224 &3924422546777901875
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21964,6 +21979,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 7346078980460184597}
   _eventTrigger: {fileID: 6008315957248395273}
+  toSound: 1
 --- !u!225 &4204494860513525746
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -22607,6 +22623,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 779818770501498796}
   _eventTrigger: {fileID: 5716717790879515444}
+  toSound: 1
 --- !u!224 &4307237360130511667
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23213,6 +23230,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 685659207837553865}
   _eventTrigger: {fileID: 9133007329117290281}
+  toSound: 1
 --- !u!222 &4481906019583451621
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24333,6 +24351,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 8893151030073728179}
   _eventTrigger: {fileID: 5610449908748874849}
+  toSound: 1
 --- !u!224 &4817437514187208199
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26405,6 +26424,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 459128459954694840}
   _eventTrigger: {fileID: 841323975853200164}
+  toSound: 1
 --- !u!225 &5089472349642347533
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -26901,6 +26921,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 3422302744820028916}
   _eventTrigger: {fileID: 4228824210242704143}
+  toSound: 1
 --- !u!114 &5203812978437120921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27429,6 +27450,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6869872699312454657}
+    - target: {fileID: 6427582710663734513, guid: b6d839297fab6b641bb1be95ac4d6990, type: 3}
+      propertyPath: toSound
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6869986600070811285, guid: b6d839297fab6b641bb1be95ac4d6990, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -28441,6 +28466,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1460421079126098229, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+      propertyPath: toSound
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2123808934886505177, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -28680,8 +28709,320 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4886514456664794145, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5625062165814696749}
+    - targetCorrespondingSourceObject: {fileID: 4886514456664794145, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5625062165814696748}
+    - targetCorrespondingSourceObject: {fileID: 7320761229002196426, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5625062165814696758}
+    - targetCorrespondingSourceObject: {fileID: 7320761229002196426, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5625062165814696757}
+    - targetCorrespondingSourceObject: {fileID: 8618994174668871152, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5625062165814696754}
+    - targetCorrespondingSourceObject: {fileID: 8618994174668871152, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5625062165814696753}
+    - targetCorrespondingSourceObject: {fileID: 6155200267443154823, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5625062165814696756}
+    - targetCorrespondingSourceObject: {fileID: 6155200267443154823, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5625062165814696755}
   m_SourcePrefab: {fileID: 100100000, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+--- !u!114 &5625062165814696747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1316445863703457201, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+  m_PrefabInstance: {fileID: 5625062165814696746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436033293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5625062165814696748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436033293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cad90f4fa8b10f4fb0f9961706f489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
+  _imageButton: {fileID: 5625062165814696747}
+  _eventTrigger: {fileID: 5625062165814696749}
+  toSound: 1
+--- !u!114 &5625062165814696749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436033293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5625062165814696748}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5625062165814696748}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartInverseAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &5625062165814696750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8963634663666681345, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+  m_PrefabInstance: {fileID: 5625062165814696746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134542684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5625062165814696751 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4178147983747118650, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+  m_PrefabInstance: {fileID: 5625062165814696746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566230848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5625062165814696752 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6015832470469256111, guid: f360bfa75a9768d478d6876e3cc4e991, type: 3}
+  m_PrefabInstance: {fileID: 5625062165814696746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227097100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5625062165814696753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134542684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cad90f4fa8b10f4fb0f9961706f489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
+  _imageButton: {fileID: 5625062165814696750}
+  _eventTrigger: {fileID: 5625062165814696754}
+  toSound: 1
+--- !u!114 &5625062165814696754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134542684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5625062165814696753}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5625062165814696753}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartInverseAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &5625062165814696755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566230848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cad90f4fa8b10f4fb0f9961706f489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
+  _imageButton: {fileID: 5625062165814696751}
+  _eventTrigger: {fileID: 5625062165814696756}
+  toSound: 1
+--- !u!114 &5625062165814696756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566230848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5625062165814696755}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5625062165814696755}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartInverseAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &5625062165814696757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227097100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cad90f4fa8b10f4fb0f9961706f489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
+  _imageButton: {fileID: 5625062165814696752}
+  _eventTrigger: {fileID: 5625062165814696758}
+  toSound: 1
+--- !u!114 &5625062165814696758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227097100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5625062165814696757}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5625062165814696757}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartInverseAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &5628451250460859073
 GameObject:
   m_ObjectHideFlags: 0
@@ -29183,6 +29524,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 8485315880917981379}
   _eventTrigger: {fileID: 8440658150561948747}
+  toSound: 1
 --- !u!222 &5704187499543158153
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29535,6 +29877,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 9176496629424827121}
   _eventTrigger: {fileID: 4385379340757342119}
+  toSound: 0
 --- !u!114 &5758185130034548557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29550,6 +29893,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 8961262379117099882}
   _eventTrigger: {fileID: 209123396540165311}
+  toSound: 1
 --- !u!1 &5759526377498016903
 GameObject:
   m_ObjectHideFlags: 0
@@ -30330,6 +30674,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 4760528034709378649}
   _eventTrigger: {fileID: 7533368335981073318}
+  toSound: 1
 --- !u!1 &5984436392999878929
 GameObject:
   m_ObjectHideFlags: 0
@@ -31458,6 +31803,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 2155967123124226845}
   _eventTrigger: {fileID: 5574514821387342182}
+  toSound: 1
 --- !u!224 &6279802629497340758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34333,6 +34679,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 2134356753191909774}
   _eventTrigger: {fileID: 6054671240547964525}
+  toSound: 1
 --- !u!224 &6909127318316113493
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34657,6 +35004,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 0}
   _eventTrigger: {fileID: 2954698745987335031}
+  toSound: 1
 --- !u!224 &7048977760418243199
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35175,6 +35523,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 32013155182294057}
   _eventTrigger: {fileID: 7780424072251169817}
+  toSound: 1
 --- !u!114 &7222873777706697953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35190,6 +35539,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 2133425100190401062}
   _eventTrigger: {fileID: 2969315896897395433}
+  toSound: 1
 --- !u!224 &7228018044939206033
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38261,6 +38611,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 3536985667584184940}
   _eventTrigger: {fileID: 8167093308848762377}
+  toSound: 1
 --- !u!114 &8023280216146207511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39970,6 +40321,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 4702083158280360226}
   _eventTrigger: {fileID: 3679227405435204228}
+  toSound: 1
 --- !u!224 &8458483575863881722
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41204,6 +41556,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 7149907042989303524}
   _eventTrigger: {fileID: 8308378626198657766}
+  toSound: 1
 --- !u!224 &8727310086733117329
 RectTransform:
   m_ObjectHideFlags: 0
