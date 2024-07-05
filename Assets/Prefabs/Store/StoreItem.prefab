@@ -160,6 +160,7 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 8901812705875435767}
   _eventTrigger: {fileID: 8618464715385853533}
+  toSound: 0
 --- !u!114 &4497828009324473614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -187,6 +189,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!1 &657339948400353007
 GameObject:
   m_ObjectHideFlags: 0
