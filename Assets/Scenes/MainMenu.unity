@@ -8604,8 +8604,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 4371975979550121606}
   _eventTrigger: {fileID: 6432706413699461385}
-  toSound: 1
-  vibrationMode: 0
+  toSound: 0
+  vibrationMode: 2
 --- !u!224 &262060136356112419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9805,8 +9805,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 6099093978232070848}
   _eventTrigger: {fileID: 2364930009502442567}
-  toSound: 1
-  vibrationMode: 0
+  toSound: 0
+  vibrationMode: 2
 --- !u!222 &592636740828105664
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14649,6 +14649,14 @@ PrefabInstance:
     - target: {fileID: 3600954273289424848, guid: e0147407303900c438effcd1c3395b53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353702206968328100, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353702206968328100, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6026718585442224372, guid: e0147407303900c438effcd1c3395b53, type: 3}
       propertyPath: m_Type
