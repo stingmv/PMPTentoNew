@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -425,6 +425,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 913606109}
     m_Modifications:
+    - target: {fileID: 96991047404144506, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96991047404144506, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1268186751336379746, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
       propertyPath: _textMessage
       value: 
@@ -565,6 +573,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PopupIncorrect
       objectReference: {fileID: 0}
+    - target: {fileID: 6226129355147115701, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382767523426633923, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7382767523426633923, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
       propertyPath: _imageButton
       value: 
@@ -573,6 +589,10 @@ PrefabInstance:
       propertyPath: _eventTrigger
       value: 
       objectReference: {fileID: 487800850}
+    - target: {fileID: 7382767523426633923, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7647312075675491196, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -588,6 +608,10 @@ PrefabInstance:
     - target: {fileID: 7647312075675491196, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
       value: ResetUses
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227212524027666158, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -971,6 +995,68 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &699356623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699356618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cad90f4fa8b10f4fb0f9961706f489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
+  _imageButton: {fileID: 699356620}
+  _eventTrigger: {fileID: 699356624}
+  toSound: 0
+  vibrationMode: 2
+--- !u!114 &699356624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699356618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 699356623}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 699356623}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartInverseAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &748902639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,6 +1514,14 @@ PrefabInstance:
     - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290939198591437572, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290939198591437572, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: vibrationMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2658161257750529345, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1894,6 +1988,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5224399336131284784, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5224399336131284784, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5321570740595865380, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_Type
       value: 0
@@ -2302,6 +2404,68 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1185924312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185924307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cad90f4fa8b10f4fb0f9961706f489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
+  _imageButton: {fileID: 1185924309}
+  _eventTrigger: {fileID: 1185924313}
+  toSound: 0
+  vibrationMode: 2
+--- !u!114 &1185924313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185924307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1185924312}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1185924312}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartInverseAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1191716679 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7732492394894672013, guid: 298431218b8df924ea5ea318225aad88, type: 3}
@@ -3710,9 +3874,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 873340552053614486, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1185924311}
+    - targetCorrespondingSourceObject: {fileID: 873340552053614486, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1185924313}
+    - targetCorrespondingSourceObject: {fileID: 873340552053614486, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1185924312}
     - targetCorrespondingSourceObject: {fileID: 8564658680125043116, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       insertIndex: -1
       addedObject: {fileID: 699356622}
+    - targetCorrespondingSourceObject: {fileID: 8564658680125043116, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 699356624}
+    - targetCorrespondingSourceObject: {fileID: 8564658680125043116, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 699356623}
   m_SourcePrefab: {fileID: 100100000, guid: 298431218b8df924ea5ea318225aad88, type: 3}
 --- !u!224 &1529650081 stripped
 RectTransform:

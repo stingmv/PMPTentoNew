@@ -634,8 +634,16 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4932811401933341278, guid: 68e140815e9f5e641932e4328a53800a, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932811401933341278, guid: 68e140815e9f5e641932e4328a53800a, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932811401933341278, guid: 68e140815e9f5e641932e4328a53800a, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6964380558819880841, guid: 68e140815e9f5e641932e4328a53800a, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1031,6 +1039,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 167951002}
   _eventTrigger: {fileID: 167951001}
+  toSound: 0
+  vibrationMode: 3
 --- !u!114 &167951001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,7 +1226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 365890132504539882, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -151.79999
+      value: -151.80005
       objectReference: {fileID: 0}
     - target: {fileID: 365890132504539882, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1229,6 +1239,14 @@ PrefabInstance:
     - target: {fileID: 365890132504539882, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066207786677099909, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066207786677099909, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1458083089009004823, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
       propertyPath: m_Sprite
@@ -1585,8 +1603,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 546.3593, y: -81.63124}
-  m_SizeDelta: {x: 1012.7186, y: 163.26248}
+  m_AnchoredPosition: {x: 489.4333, y: -81.63124}
+  m_SizeDelta: {x: 898.8666, y: 163.26248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &236806898
 MonoBehaviour:
@@ -2212,15 +2230,15 @@ RectTransform:
   m_GameObject: {fileID: 330791077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8366382, y: 0.8366382, z: 0.8366382}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4193032113825340269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 546.3593, y: -827.5699}
-  m_SizeDelta: {x: 1012.7186, y: 0}
+  m_AnchoredPosition: {x: 489.4333, y: -827.5699}
+  m_SizeDelta: {x: 898.8666, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330791079
 MonoBehaviour:
@@ -2355,6 +2373,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 350114522}
   _eventTrigger: {fileID: 350114525}
+  toSound: 1
+  vibrationMode: 0
 --- !u!114 &350114525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2677,7 +2697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 529.8593, y: -81.63124}
+  m_AnchoredPosition: {x: 472.9333, y: -81.63124}
   m_SizeDelta: {x: 640, y: 50.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &456703142
@@ -2815,8 +2835,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 546.3593, y: -495.4162}
-  m_SizeDelta: {x: 1012.7186, y: 163.26248}
+  m_AnchoredPosition: {x: 489.4333, y: -495.4162}
+  m_SizeDelta: {x: 898.8666, y: 163.26248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &484648954
 MonoBehaviour:
@@ -2890,6 +2910,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 913606109}
     m_Modifications:
+    - target: {fileID: 96991047404144506, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96991047404144506, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1268186751336379746, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
       propertyPath: _textMessage
       value: 
@@ -3079,6 +3107,10 @@ PrefabInstance:
       value: PopupIncorrect
       objectReference: {fileID: 0}
     - target: {fileID: 7382767523426633923, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382767523426633923, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
       propertyPath: _imageButton
       value: 
       objectReference: {fileID: 487800851}
@@ -3086,6 +3118,10 @@ PrefabInstance:
       propertyPath: _eventTrigger
       value: 
       objectReference: {fileID: 487800850}
+    - target: {fileID: 7382767523426633923, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7647312075675491196, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3422,8 +3458,16 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4932811401933341278, guid: 8941f8442a7747547bd8954ff88b6f42, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932811401933341278, guid: 8941f8442a7747547bd8954ff88b6f42, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932811401933341278, guid: 8941f8442a7747547bd8954ff88b6f42, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6964380558819880841, guid: 8941f8442a7747547bd8954ff88b6f42, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3583,7 +3627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 529.8593, y: -81.63124}
+  m_AnchoredPosition: {x: 472.9333, y: -81.63124}
   m_SizeDelta: {x: 640, y: 50.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609140590
@@ -4873,6 +4917,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 729922305}
   _eventTrigger: {fileID: 729922304}
+  toSound: 1
+  vibrationMode: 0
 --- !u!114 &729922304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5964,7 +6010,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -1871.1499}
-  m_SizeDelta: {x: 1092.7186, y: 417.98}
+  m_SizeDelta: {x: 978.8666, y: 417.98}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &991471998
 MonoBehaviour:
@@ -6091,6 +6137,14 @@ PrefabInstance:
     - target: {fileID: 2064088547741656671, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290939198591437572, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290939198591437572, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6046350308011957201, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Name
@@ -7211,6 +7265,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1320195022223472957, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320195022223472957, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1613988070561155176, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -7366,6 +7428,14 @@ PrefabInstance:
     - target: {fileID: 5203476934637620319, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5224399336131284784, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5224399336131284784, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5321570740595865380, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_Sprite
@@ -7568,8 +7638,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 535.8593, y: -163.4}
-  m_SizeDelta: {x: 1013.7186, y: 326.8}
+  m_AnchoredPosition: {x: 478.9333, y: -163.4}
+  m_SizeDelta: {x: 899.8666, y: 326.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1130874323
 MonoBehaviour:
@@ -9256,7 +9326,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -43}
-  m_SizeDelta: {x: 1092.7186, y: 441.2}
+  m_SizeDelta: {x: 978.8666, y: 441.2}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1515828006
 CanvasRenderer:
@@ -9350,8 +9420,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 546.3593, y: -702.30865}
-  m_SizeDelta: {x: 1012.7186, y: 163.26248}
+  m_AnchoredPosition: {x: 489.4333, y: -702.30865}
+  m_SizeDelta: {x: 898.8666, y: 163.26248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548414251
 MonoBehaviour:
@@ -10071,7 +10141,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 529.8593, y: -81.63124}
+  m_AnchoredPosition: {x: 472.9333, y: -81.63124}
   m_SizeDelta: {x: 640, y: 50.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739818921
@@ -10345,7 +10415,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.000015259, y: 0}
-  m_SizeDelta: {x: -0.00012207, y: 229.0979}
+  m_SizeDelta: {x: -0.00012207, y: 8.38208}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1802068377
 MonoBehaviour:
@@ -15732,6 +15802,8 @@ GameObject:
   - component: {fileID: 1879741275}
   - component: {fileID: 1879741274}
   - component: {fileID: 1879741273}
+  - component: {fileID: 1879741277}
+  - component: {fileID: 1879741276}
   m_Layer: 5
   m_Name: SiguienteButton
   m_TagString: Untagged
@@ -15852,6 +15924,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879741271}
   m_CullTransparentMesh: 1
+--- !u!114 &1879741276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879741271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cad90f4fa8b10f4fb0f9961706f489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
+  _imageButton: {fileID: 1879741274}
+  _eventTrigger: {fileID: 1879741277}
+  toSound: 0
+  vibrationMode: 2
+--- !u!114 &1879741277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879741271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1879741276}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1879741276}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartInverseAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1886796322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16061,8 +16195,16 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4932811401933341278, guid: 89ecb0c09d2d12c459d9071100aeb5c5, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932811401933341278, guid: 89ecb0c09d2d12c459d9071100aeb5c5, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932811401933341278, guid: 89ecb0c09d2d12c459d9071100aeb5c5, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6964380558819880841, guid: 89ecb0c09d2d12c459d9071100aeb5c5, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -16276,8 +16418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 546.3593, y: -288.52374}
-  m_SizeDelta: {x: 1012.7186, y: 163.26248}
+  m_AnchoredPosition: {x: 489.4333, y: -288.52374}
+  m_SizeDelta: {x: 898.8666, y: 163.26248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993882393
 MonoBehaviour:
@@ -16377,7 +16519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 529.8593, y: -81.63124}
+  m_AnchoredPosition: {x: 472.9333, y: -81.63124}
   m_SizeDelta: {x: 640, y: 50.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2001421142
@@ -21595,6 +21737,8 @@ GameObject:
   - component: {fileID: 2102957326}
   - component: {fileID: 2102957325}
   - component: {fileID: 2102957324}
+  - component: {fileID: 2102957328}
+  - component: {fileID: 2102957327}
   m_Layer: 5
   m_Name: AnteriorButton
   m_TagString: Untagged
@@ -21715,6 +21859,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102957322}
   m_CullTransparentMesh: 1
+--- !u!114 &2102957327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102957322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cad90f4fa8b10f4fb0f9961706f489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
+  _imageButton: {fileID: 2102957325}
+  _eventTrigger: {fileID: 2102957328}
+  toSound: 0
+  vibrationMode: 2
+--- !u!114 &2102957328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102957322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2102957327}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2102957327}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartInverseAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2107637573
 GameObject:
   m_ObjectHideFlags: 0
@@ -22910,6 +23116,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 4550402916594807826}
   _eventTrigger: {fileID: 61634834988792925}
+  toSound: 0
+  vibrationMode: 1
 --- !u!114 &1429648308486566948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23249,6 +23457,14 @@ PrefabInstance:
     - target: {fileID: 365890132504539882, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066207786677099909, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066207786677099909, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1458083089009004823, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
       propertyPath: m_Type
@@ -23791,8 +24007,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 506.3593, y: -81.63124}
-  m_SizeDelta: {x: 1012.7186, y: 163.26248}
+  m_AnchoredPosition: {x: 449.4333, y: -81.63124}
+  m_SizeDelta: {x: 898.8666, y: 163.26248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3465036523460400081
 GameObject:
@@ -24161,7 +24377,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -501.40002}
-  m_SizeDelta: {x: 1092.7186, y: 934.5699}
+  m_SizeDelta: {x: 978.8666, y: 934.5699}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &4193032113825340270
 MonoBehaviour:
@@ -24512,6 +24728,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 2158403839751084804}
   _eventTrigger: {fileID: 8023473245467709500}
+  toSound: 0
+  vibrationMode: 1
 --- !u!1 &5463401145444323981
 GameObject:
   m_ObjectHideFlags: 0
@@ -24576,6 +24794,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 817227127901682658}
   _eventTrigger: {fileID: 4772915728747978280}
+  toSound: 0
+  vibrationMode: 1
 --- !u!222 &5487954610425310616
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24924,8 +25144,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 506.3593, y: -81.63124}
-  m_SizeDelta: {x: 1012.7186, y: 163.26248}
+  m_AnchoredPosition: {x: 449.4333, y: -81.63124}
+  m_SizeDelta: {x: 898.8666, y: 163.26248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &7049193173028640960
 RectTransform:
@@ -25145,6 +25365,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 8903819291810927149}
   _eventTrigger: {fileID: 6519993204194170011}
+  toSound: 0
+  vibrationMode: 1
 --- !u!224 &7568519804484736363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25477,8 +25699,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 506.3593, y: -81.63124}
-  m_SizeDelta: {x: 1012.7186, y: 163.26248}
+  m_AnchoredPosition: {x: 449.4333, y: -81.63124}
+  m_SizeDelta: {x: 898.8666, y: 163.26248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8219959849455588512
 MonoBehaviour:
@@ -25618,6 +25840,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 8333710759812959711}
   _eventTrigger: {fileID: 1291591699874729587}
+  toSound: 0
+  vibrationMode: 2
 --- !u!1 &8748524691831130087
 GameObject:
   m_ObjectHideFlags: 0
@@ -25653,6 +25877,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 4075166744213592315}
   _eventTrigger: {fileID: 8748524691831130089}
+  toSound: 0
+  vibrationMode: 2
 --- !u!114 &8748524691831130089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25914,8 +26140,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 506.3593, y: -81.63124}
-  m_SizeDelta: {x: 1012.7186, y: 163.26248}
+  m_AnchoredPosition: {x: 449.4333, y: -81.63124}
+  m_SizeDelta: {x: 898.8666, y: 163.26248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9084196341621833642
 MonoBehaviour:

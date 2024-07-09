@@ -582,6 +582,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5353702206968328100, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353702206968328100, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6026718585442224372, guid: e0147407303900c438effcd1c3395b53, type: 3}
       propertyPath: m_Type
       value: 0
@@ -1186,6 +1194,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 406847683}
   _eventTrigger: {fileID: 406847682}
+  toSound: 0
+  vibrationMode: 2
 --- !u!114 &406847682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1616,6 +1626,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 453543883}
   _eventTrigger: {fileID: 453543886}
+  toSound: 0
+  vibrationMode: 2
 --- !u!114 &453543886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2340,6 +2352,14 @@ PrefabInstance:
     - target: {fileID: 365890132504539882, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066207786677099909, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066207786677099909, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6185905826144767499, guid: 9e92f3f15b20ad54fa0851f3e4553ac3, type: 3}
       propertyPath: m_Name
@@ -3176,6 +3196,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 1052276430}
   _eventTrigger: {fileID: 1052276433}
+  toSound: 0
+  vibrationMode: 2
 --- !u!114 &1052276433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3834,6 +3856,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -105.03209
       objectReference: {fileID: 0}
+    - target: {fileID: 1427993980040478308, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427993980040478308, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1624893006334109690, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -4330,6 +4360,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -65.2
       objectReference: {fileID: 0}
+    - target: {fileID: 5445175002827891774, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445175002827891774, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485997382297028937, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485997382297028937, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5567934010644037969, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: _label
       value: 
@@ -4469,6 +4515,14 @@ PrefabInstance:
     - target: {fileID: 7446326348669814247, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: _questionController
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502044673840873372, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502044673840873372, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7631010462791859282, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_Padding.m_Top
@@ -4827,6 +4881,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 1457834377}
   _eventTrigger: {fileID: 1457834376}
+  toSound: 0
+  vibrationMode: 2
 --- !u!114 &1457834376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5260,6 +5316,14 @@ PrefabInstance:
     - target: {fileID: 3600954273289424848, guid: e0147407303900c438effcd1c3395b53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353702206968328100, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353702206968328100, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6026718585442224372, guid: e0147407303900c438effcd1c3395b53, type: 3}
       propertyPath: m_Type
@@ -6047,6 +6111,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 0}
   _eventTrigger: {fileID: 0}
+  toSound: 0
+  vibrationMode: 2
 --- !u!222 &2847282674804886115
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6192,6 +6258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -6207,6 +6274,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!1 &6046350307163172959
 GameObject:
   m_ObjectHideFlags: 0
@@ -6319,6 +6387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -6334,6 +6403,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!114 &7446326349506321351 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7446326348669814247, guid: 298431218b8df924ea5ea318225aad88, type: 3}
@@ -6412,6 +6482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -6427,6 +6498,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!114 &8262717395368915603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6502,6 +6574,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _initInStart: 0
+  _hasSection: 0
+  iconSection: {fileID: 0}
+  iconSectionSelected: {fileID: 0}
+  iconSectionUnselected: {fileID: 0}
 --- !u!114 &8560324020348507459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6601,6 +6677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dae5ac8d3c3a8e4cb1ce5c74f1c2a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   onPointerClick:
     m_PersistentCalls:
       m_Calls:
@@ -6616,6 +6693,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hasScrollHorizontal: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

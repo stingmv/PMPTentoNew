@@ -322,6 +322,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1498630610}
     m_Modifications:
+    - target: {fileID: 96991047404144506, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96991047404144506, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 667490963080776350, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
       propertyPath: m_SizeDelta.y
       value: 617.0149
@@ -487,6 +495,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7382767523426633923, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382767523426633923, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
       propertyPath: _imageButton
       value: 
       objectReference: {fileID: 487800851}
@@ -494,6 +506,10 @@ PrefabInstance:
       propertyPath: _eventTrigger
       value: 
       objectReference: {fileID: 487800850}
+    - target: {fileID: 7382767523426633923, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7647312075675491196, guid: 6e640f6312b9e5e4e9f641f7624d7124, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1371,6 +1387,14 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2290939198591437572, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290939198591437572, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6046350308011957201, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Name
       value: PopupCorrect
@@ -1386,6 +1410,14 @@ PrefabInstance:
     - target: {fileID: 6364756245332809511, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: m_Alpha
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560520003890732646, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560520003890732646, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8262717394335504669, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
       propertyPath: _textMessage
@@ -8218,6 +8250,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1427993980040478308, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427993980040478308, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1624893006334109690, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8750,6 +8790,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -77.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5445175002827891774, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445175002827891774, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485997382297028937, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485997382297028937, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5567934010644037969, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: _label
       value: 
@@ -8854,6 +8910,14 @@ PrefabInstance:
       propertyPath: _questionController
       value: 
       objectReference: {fileID: 1337041750}
+    - target: {fileID: 7502044673840873372, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502044673840873372, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7736538728137386905, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -10235,6 +10299,14 @@ PrefabInstance:
     - target: {fileID: 3600954273289424848, guid: e0147407303900c438effcd1c3395b53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353702206968328100, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353702206968328100, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6026718585442224372, guid: e0147407303900c438effcd1c3395b53, type: 3}
       propertyPath: m_Type

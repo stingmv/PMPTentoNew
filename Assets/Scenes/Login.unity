@@ -427,6 +427,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7159976342439286557, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159976342439286557, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7243988509804903900, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4892,6 +4900,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5216130378987212426, guid: 2d1378ec31e24bc46b3e89aaace5cb14, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216130378987212426, guid: 2d1378ec31e24bc46b3e89aaace5cb14, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7163663902697861778, guid: 2d1378ec31e24bc46b3e89aaace5cb14, type: 3}
       propertyPath: m_Name
       value: Button - Previous
@@ -8993,6 +9009,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7159976342439286557, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159976342439286557, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
+      propertyPath: vibrationMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7243988509804903900, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9201,6 +9225,14 @@ PrefabInstance:
     - target: {fileID: 4580404880457579474, guid: 2d1378ec31e24bc46b3e89aaace5cb14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216130378987212426, guid: 2d1378ec31e24bc46b3e89aaace5cb14, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216130378987212426, guid: 2d1378ec31e24bc46b3e89aaace5cb14, type: 3}
+      propertyPath: vibrationMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7163663902697861778, guid: 2d1378ec31e24bc46b3e89aaace5cb14, type: 3}
       propertyPath: m_Name
