@@ -8,6 +8,7 @@ public static class UIEvents
     #region Login Scene
     
     public static Action PressLoginButton;
+    public static Action<int> PressVibrateButton;//recibe un int
     
     #endregion
 

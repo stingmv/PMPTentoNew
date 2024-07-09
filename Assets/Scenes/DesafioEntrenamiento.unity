@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2818,6 +2818,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1427993980040478308, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427993980040478308, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1624893006334109690, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3422,6 +3430,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -65.2
       objectReference: {fileID: 0}
+    - target: {fileID: 5445175002827891774, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445175002827891774, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485997382297028937, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5485997382297028937, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5567934010644037969, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: _label
       value: 
@@ -3526,6 +3550,14 @@ PrefabInstance:
       propertyPath: _questionController
       value: 
       objectReference: {fileID: 1337041750}
+    - target: {fileID: 7502044673840873372, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502044673840873372, guid: 298431218b8df924ea5ea318225aad88, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7532119442819643257, guid: 298431218b8df924ea5ea318225aad88, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4669,6 +4701,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 4075166744213592315}
   _eventTrigger: {fileID: 8748524691831130089}
+  toSound: 1
+  vibrationMode: 2
 --- !u!114 &8748524691831130089
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -161,6 +161,7 @@ MonoBehaviour:
   _imageButton: {fileID: 8901812705875435767}
   _eventTrigger: {fileID: 8618464715385853533}
   toSound: 0
+  mode: 1
 --- !u!114 &4497828009324473614
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CandyCoded.HapticFeedback;
+
 
 public class GameplaySound : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class GameplaySound : MonoBehaviour
             _audioManager = GetComponent<AudioManager>();
         }
         UIEvents.PressLoginButton += UIEvents_PressLoginButton;
+        UIEvents.PressVibrateButton += UIEvents_PressToVibrate;
         GameEvents.CorrectlyAnswered += GameEvents_CorrectlyAnswered;
         GameEvents.IncorrectlyAnswered += GameEvents_IncorrectlyAnswered;
         GameEvents.GameLost += GameEvents_GameLost;
@@ -28,6 +31,7 @@ public class GameplaySound : MonoBehaviour
     private void OnDisable()
     {
         UIEvents.PressLoginButton -= UIEvents_PressLoginButton;
+        UIEvents.PressVibrateButton -= UIEvents_PressToVibrate;
         GameEvents.CorrectlyAnswered -= GameEvents_CorrectlyAnswered;
         GameEvents.IncorrectlyAnswered -= GameEvents_IncorrectlyAnswered;
         GameEvents.GameLost -= GameEvents_GameLost;
@@ -36,13 +40,51 @@ public class GameplaySound : MonoBehaviour
 
     private void UIEvents_PressLoginButton()
     {
-        PlayPressedButtonSound();
+        PlayPressedButtonSound();//reproducir sonido
+    }
+
+    private void UIEvents_PressToVibrate(int vibrateIndicator)
+    {
+        switch (vibrateIndicator)
+        {
+            case 0:
+                return;                
+            case 1:
+                LightVibration();//vibrar
+                break;
+            case 2:
+                MediumVibration();
+                break;
+            case 3:
+                HeavyVibration();
+                break;
+
+            default:
+                break;
+        }
+
     }
 
     private void PlayPressedButtonSound()
     {
-        _audioManager.PlaySFXAtPoint(_audioManager.AudioSettings.TapTouchSound, Vector3.zero, 0f, false);
+        _audioManager.PlaySFXAtPoint(_audioManager.AudioSettings.TapTouchSound, Vector3.zero, 0f, false);//reproduce sonido 
         Debug.Log("play");
+    }
+
+    private void LightVibration()
+    {
+        Debug.Log("Light Vibration performed");
+        HapticFeedback.LightFeedback();
+    }
+    private void MediumVibration()
+    {
+        Debug.Log("Medium Vibration performed");
+        HapticFeedback.MediumFeedback();
+    }
+    private void HeavyVibration()
+    {
+        Debug.Log("Heavy Vibration performed");
+        HapticFeedback.HeavyFeedback();
     }
     private void PlayCorrectAnswerSound()
     {
