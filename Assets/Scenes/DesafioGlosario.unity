@@ -647,6 +647,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 356809678}
   _eventTrigger: {fileID: 356809675}
+  toSound: 0
+  vibrationMode: 1
 --- !u!114 &356809678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,6 +1220,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 683896171}
   _eventTrigger: {fileID: 683896168}
+  toSound: 0
+  vibrationMode: 1
 --- !u!114 &683896171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1600,6 +1604,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 695528862}
   _eventTrigger: {fileID: 695528859}
+  toSound: 0
+  vibrationMode: 1
 --- !u!114 &695528862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2893,6 +2899,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 989045977}
   _eventTrigger: {fileID: 989045974}
+  toSound: 0
+  vibrationMode: 1
 --- !u!114 &989045977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3535,6 +3543,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 1047854489}
   _eventTrigger: {fileID: 1047854486}
+  toSound: 0
+  vibrationMode: 1
 --- !u!114 &1047854489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5958,6 +5968,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 2051587270}
   _eventTrigger: {fileID: 2051587267}
+  toSound: 0
+  vibrationMode: 1
 --- !u!114 &2051587270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7043,6 +7055,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 5321570739561638862}
   _eventTrigger: {fileID: 8867376343169639745}
+  toSound: 1
+  vibrationMode: 0
 --- !u!114 &1427993981531841988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7058,6 +7072,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 4550402916594807826}
   _eventTrigger: {fileID: 61634834988792925}
+  toSound: 0
+  vibrationMode: 1
 --- !u!1 &1543627590979705846
 GameObject:
   m_ObjectHideFlags: 0
@@ -8628,6 +8644,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 1613988069520643202}
   _eventTrigger: {fileID: 2166064475903050327}
+  toSound: 1
+  vibrationMode: 0
 --- !u!114 &5321570739561638862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8684,6 +8702,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _initInStart: 0
+  _hasSection: 0
+  iconSection: {fileID: 0}
+  iconSectionSelected: {fileID: 0}
+  iconSectionUnselected: {fileID: 0}
 --- !u!114 &5445175003715223454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8699,6 +8721,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 2158403839751084804}
   _eventTrigger: {fileID: 8023473245467709500}
+  toSound: 0
+  vibrationMode: 1
 --- !u!114 &5485997382953145065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8714,6 +8738,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 817227127901682658}
   _eventTrigger: {fileID: 4772915728747978280}
+  toSound: 0
+  vibrationMode: 1
 --- !u!222 &5506822539886804191
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8903,6 +8929,14 @@ PrefabInstance:
     - target: {fileID: 3600954273289424848, guid: e0147407303900c438effcd1c3395b53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353702206968328100, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353702206968328100, guid: e0147407303900c438effcd1c3395b53, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6026718585442224372, guid: e0147407303900c438effcd1c3395b53, type: 3}
       propertyPath: m_Type
@@ -9215,6 +9249,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 8903819291810927149}
   _eventTrigger: {fileID: 6519993204194170011}
+  toSound: 0
+  vibrationMode: 1
 --- !u!1 &7563081525175536051
 GameObject:
   m_ObjectHideFlags: 0

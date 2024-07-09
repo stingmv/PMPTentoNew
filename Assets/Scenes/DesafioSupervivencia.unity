@@ -6490,6 +6490,8 @@ GameObject:
   - component: {fileID: 1056146261}
   - component: {fileID: 1056146264}
   - component: {fileID: 1056146263}
+  - component: {fileID: 1056146266}
+  - component: {fileID: 1056146265}
   m_Layer: 5
   m_Name: Power - More Time
   m_TagString: Untagged
@@ -6669,6 +6671,68 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1056146265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056146259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cad90f4fa8b10f4fb0f9961706f489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
+  _imageButton: {fileID: 1056146261}
+  _eventTrigger: {fileID: 1056146266}
+  toSound: 0
+  vibrationMode: 3
+--- !u!114 &1056146266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056146259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1056146265}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1056146265}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartInverseAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1123753194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6680,6 +6744,14 @@ PrefabInstance:
     - target: {fileID: 381409351144963052, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320195022223472957, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320195022223472957, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1543627592075921180, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_IsActive
@@ -6752,6 +6824,14 @@ PrefabInstance:
     - target: {fileID: 4606493883804608817, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5224399336131284784, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5224399336131284784, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5379867882959917788, guid: 67a32d2ee87431e41815c928dabf6e27, type: 3}
       propertyPath: _user

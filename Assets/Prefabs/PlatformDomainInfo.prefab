@@ -155,6 +155,8 @@ MonoBehaviour:
   _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
   _imageButton: {fileID: 6878306528100575251}
   _eventTrigger: {fileID: 6547817427395634297}
+  toSound: 0
+  vibrationMode: 1
 --- !u!114 &6002847345197005692
 MonoBehaviour:
   m_ObjectHideFlags: 0
