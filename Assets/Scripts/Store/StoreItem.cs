@@ -37,12 +37,14 @@ public class StoreItem : MonoBehaviour
         {      
             _costLabel.color = Color.red;
             _buttonAnimation.DisableButton();
+            GetComponent<PassScrollEvents>().enabled = false;
             Debug.Log(powerUp.nameInPlayerPrefs + " " + amount + " " + "costo mayor al total de monedas del usuario");
         }
         else
         {
             _costLabel.color = Color.black;
             _buttonAnimation.EnableButton();
+            GetComponent<PassScrollEvents>().enabled = true;
         }
         _costLabel.text = $"{_cost}";
         _amountLabel.text = $"x{_amount}";

@@ -14,9 +14,9 @@ namespace Question
         [SerializeField] private TextMeshProUGUI _label;
         [SerializeField] private QuestionInformationVP _questionInformationVp;
         [SerializeField] private Image _image;
-        [SerializeField] private Sprite _defaultColor;
-        [SerializeField] private Sprite _correctColor;
-        [SerializeField] private Sprite _incorrectColor;
+        [SerializeField] private Color _defaultColor;
+        [SerializeField] private Color _correctColor;
+        [SerializeField] private Color _incorrectColor;
         [SerializeField] private EventTrigger _eventTrigger;
         
         private string _id;
@@ -58,11 +58,11 @@ namespace Question
         {
             if (_questionInformationVp.CompareResponse(_id))
             {
-                _image.sprite = _correctColor;
+                _image.color = _correctColor;
             }
             else
             {
-                _image.sprite = _incorrectColor;
+                _image.color = _incorrectColor;
             }
             _label.color = Color.white;
             if (!string.IsNullOrEmpty(_questionInformationVp.Restroalimentacion))
@@ -79,7 +79,7 @@ namespace Question
         public void EnableOption()
         {
             _label.color = Color.white;
-            _image.sprite = _defaultColor;
+            _image.color = _defaultColor;
             _eventTrigger.enabled = true;
             ShowOption();
         }

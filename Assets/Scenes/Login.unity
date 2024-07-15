@@ -433,7 +433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7159976342439286557, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
       propertyPath: vibrationMode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7243988509804903900, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
       propertyPath: m_Pivot.x
@@ -695,6 +695,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: e378b93379a49494a83bf29bcfca3188, type: 3}
+    - target: {fileID: 7159976342439286557, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159976342439286557, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
+      propertyPath: vibrationMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7243988509804903900, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4285,6 +4293,14 @@ PrefabInstance:
     - target: {fileID: 3650957581318653255, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159976342439286557, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
+      propertyPath: toSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159976342439286557, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
+      propertyPath: vibrationMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7243988509804903900, guid: aa84ca15091c5c14aa180f32f3134cb9, type: 3}
       propertyPath: m_Pivot.x

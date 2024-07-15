@@ -112,6 +112,9 @@ namespace Button
             _eventTrigger.enabled = false;
             _imageButton.color = _colorDisable;
         }
+    
+
+
 
         IEnumerator IStartAnimation()
         {

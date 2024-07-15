@@ -187,7 +187,7 @@ public class Roulette : MonoBehaviour
     private void CalculateItemSelected()//item selected es el item escogido
     {
         //COMPUTE THE ITEM SELECTED
-        PlayerPrefs.SetString("UseRoulette", DateTime.Today.ToString("yyyy-MM-dd"));//guardo la fecha en el playerpref
+        PlayerPrefs.SetString("UseRoulette", DateTime.Now.ToString());//guardo la fecha en el playerpref
         PlayerPrefs.Save();//guarda todas las preferencias modificadas
         float distance = Single.MaxValue;//setear a un valor maximo extremadamente grande
         selecetdItem = null;
@@ -227,7 +227,7 @@ public class Roulette : MonoBehaviour
         _coofigurationMessage.text = "Usted obtuvo las siguiente recompensas:";
         _imageReward.sprite = selecetdItem.IconItem;//asigna el Icono del powerup obtenido        
         _finalAmount.text = $"x{selecetdItem.Amount}";
-        _rewardContainer.transform.GetChild(2).gameObject.SetActive(true);
+        //_rewardContainer.transform.GetChild(2).gameObject.SetActive(true);
         _rewardContainer.gameObject.SetActive(true);
         _rewardContainer.FadeInTransition();
         

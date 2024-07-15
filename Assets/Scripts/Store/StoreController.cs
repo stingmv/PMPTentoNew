@@ -53,31 +53,49 @@ public class StoreController : MonoBehaviour
     [Header("Roulette")] 
     [SerializeField]
     private ButtonAnimation _rouletteButton;
-    [SerializeField] private TextMeshProUGUI _rouletteInformation;
+    [SerializeField]
+    private ButtonAnimation _rouletteButtonUsed;
+    [SerializeField] private TextMeshProUGUI _timeRemainingRoulette;
     private StoreItem _currentItem;
 
     public float CoinsFromUser => _user.userInfo.user.detail.totalCoins;
+    private void Update()
+    {
+        if (PlayerPrefs.HasKey("UseRoulette"))
+        {
+        DateTime lastUseTime = DateTime.Parse(PlayerPrefs.GetString("UseRoulette"));
+        TimeSpan timeSinceLastUse = DateTime.Now - lastUseTime; 
+        TimeSpan timeRemaining = TimeSpan.FromHours(24) - timeSinceLastUse;
+        _timeRemainingRoulette.text = "El giro de la ruleta estará \r\ndisponible nuevamente en: " +string.Format("{0:D2}:{1:D2}:{2:D2}", timeRemaining.Hours, timeRemaining.Minutes, timeRemaining.Seconds);
+        }
+    }
 
     private void OnEnable()
     {
         if (PlayerPrefs.HasKey("UseRoulette"))//verifica si fue usada la ruleta
         {
-            Debug.Log(DateTime.Parse(PlayerPrefs.GetString("UseRoulette")));
-            var timeUsedRoulette = DateTime.Parse(PlayerPrefs.GetString("UseRoulette"));
-            if (timeUsedRoulette == DateTime.Today)
-            {
-                // No usó ruleta hoy
-                _rouletteButton.DisableButton();
-                _rouletteButton.GetComponent<PassScrollEvents>().enabled = false;
-                _rouletteInformation.text = "Ya uso la ruleta, solo se permite una vez por día.";
-                _rouletteInformation.gameObject.SetActive(true);
+            //Debug.Log(DateTime.Parse(PlayerPrefs.GetString("UseRoulette")));
+            //var timeUsedRoulette = DateTime.Parse(PlayerPrefs.GetString("UseRoulette"));
+            DateTime lastUseTime = DateTime.Parse(PlayerPrefs.GetString("UseRoulette"));
+            TimeSpan timeSinceLastUse = DateTime.Now - lastUseTime;
+            TimeSpan timeRemaining = TimeSpan.FromHours(24) - timeSinceLastUse;
+            
+            Debug.Log("Última vez que se usó la ruleta: " + lastUseTime);
+            Debug.Log("Tiempo desde la última vez que se usó: " + timeSinceLastUse);
+            Debug.Log("Faltan: "+timeRemaining);
+
+            if (timeSinceLastUse < TimeSpan.FromHours(24))//es igual a la fecha de hoy
+            {//desactiva ruleta
+                _rouletteButton.gameObject.SetActive(false);
+                _rouletteButtonUsed.gameObject.SetActive(true);
+                //_timeRemainingRoulette.text = "El giro de la ruleta estará \r\ndisponible nuevamente en: " +timeRemaining;
+                _rouletteButton.GetComponent<PassScrollEvents>().enabled = false;               
             }
             else
-            {
-                _rouletteButton.EnableButton();
-                _rouletteButton.GetComponent<PassScrollEvents>().enabled = true;
-                _rouletteInformation.text = "";
-                _rouletteInformation.gameObject.SetActive(false);
+            {//activa ruleta
+                _rouletteButton.gameObject.SetActive(true);
+                _rouletteButtonUsed.gameObject.SetActive(false);
+                _rouletteButton.GetComponent<PassScrollEvents>().enabled = true;               
             }
         }
         //_usernameLabel.text = _user.userInfo.user.detail.usernameG;
