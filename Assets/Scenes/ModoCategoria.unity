@@ -2219,7 +2219,7 @@ RectTransform:
   m_GameObject: {fileID: 330791077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8366382, y: 0.8366382, z: 0.8366382}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4193032113825340269}
@@ -9916,17 +9916,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748648232}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5244236629446733570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: -590.8997}
-  m_SizeDelta: {x: 0, y: 87.489}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -139}
+  m_SizeDelta: {x: 769.32, y: 87.48901}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1748648234
 MonoBehaviour:
@@ -9948,11 +9948,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Recuerda que este potenciador no afecta en absoluto la obtenci\xF3n de
-    logros, experiencia."
+  m_text: Recuerda que este potenciador no afecta en absoluto la obtenci{on de logros,
+    experiencia.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0ba2d82480e24b947b2a5e835b40150a, type: 2}
-  m_sharedMaterial: {fileID: 3833935482432648936, guid: 0ba2d82480e24b947b2a5e835b40150a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3fccd3d071c122440849c1ca53cd10ed, type: 2}
+  m_sharedMaterial: {fileID: 2025754286801431975, guid: 3fccd3d071c122440849c1ca53cd10ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9976,19 +9976,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.3
-  m_fontSizeBase: 28.3
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -3.16
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -29.11
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -24025,7 +24025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &4129395403632162364
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24064,10 +24064,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5244236629446733570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -273.5761}
-  m_SizeDelta: {x: 0, y: 547.1516}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 165.7}
+  m_SizeDelta: {x: 885.27, y: 547.1516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &4193032113825340269
 RectTransform:
@@ -24360,7 +24360,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 771.5807, y: 914.7605}
+  m_SizeDelta: {x: 830, y: 830}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5279871855278945184
 MonoBehaviour:
@@ -24628,7 +24628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5816221267492417124
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25099,8 +25099,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -272.5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 0, y: -285.4}
+  m_SizeDelta: {x: 654.9, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &7568604834595394233
 RectTransform:
@@ -25219,15 +25219,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Usaste el potenciador para pasar a la siguiente pregunta
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ea14674fa98ff784d8d9b33aa3e4230c, type: 2}
-  m_sharedMaterial: {fileID: 7697706570058653365, guid: ea14674fa98ff784d8d9b33aa3e4230c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a62fe1bcff4af3a4d91e68be79bdd788, type: 2}
+  m_sharedMaterial: {fileID: 1695501363858142048, guid: a62fe1bcff4af3a4d91e68be79bdd788, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291656965
-  m_fontColor: {r: 0.019607844, g: 0.49019608, b: 0.8039216, a: 1}
+    rgba: 4291657221
+  m_fontColor: {r: 0.019607844, g: 0.49411768, b: 0.80392164, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -25244,19 +25244,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -3.13
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -17.97
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -25492,16 +25492,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.45882353, b: 0.13725491, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dbf8db9faabf526409cc8a119906941e, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 9e36da9e504ecf3499f84c1a1ec95596, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
