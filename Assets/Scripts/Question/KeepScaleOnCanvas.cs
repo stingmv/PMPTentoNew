@@ -9,7 +9,7 @@ public class KeepScaleOnCanvas : MonoBehaviour
 {
     [SerializeField] private ScriptableObjectInstructor _instructors;
     [SerializeField] private ScriptableObjectUser _user;
-    [SerializeField] private GameObject _instructorPrefab;
+    //[SerializeField] private GameObject _instructorPrefab;
     [SerializeField] private Camera _camera;
     //[SerializeField] private Transform _guideTransform;//extrae la transformada del personaje en escena
     private Transform _guideTransform;
@@ -54,7 +54,7 @@ public class KeepScaleOnCanvas : MonoBehaviour
 
         
 
-
+        /*
 
         var anim = _guideTransform.GetComponent<Animator>();
         if (_lost)
@@ -64,7 +64,7 @@ public class KeepScaleOnCanvas : MonoBehaviour
         else
         {
             anim.SetTrigger($"happy{Random.Range(1,3)}");
-        }
+        }*/
     }
 
    

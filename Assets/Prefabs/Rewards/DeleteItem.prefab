@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3ed5c5f00a760e644a0db168bd2bed59, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9228dc8260059e40a6753dd6f465ec3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -167,6 +167,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _initInStart: 1
+  _hasSection: 0
+  iconSection: {fileID: 0}
+  iconSectionSelected: {fileID: 0}
+  iconSectionUnselected: {fileID: 0}
 --- !u!114 &-3658422512081167963
 MonoBehaviour:
   m_ObjectHideFlags: 0
