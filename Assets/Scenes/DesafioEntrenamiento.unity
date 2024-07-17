@@ -1365,7 +1365,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5586139801730563026, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2122392904}
+    - targetCorrespondingSourceObject: {fileID: 5586139801730563026, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2122392903}
   m_SourcePrefab: {fileID: 100100000, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
 --- !u!114 &1012713239 stripped
 MonoBehaviour:
@@ -3442,7 +3448,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8091935000072062711, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
   m_PrefabInstance: {fileID: 1012713238}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2122392898}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b19907412b0f69438e4c82c1909900b, type: 3}
@@ -3974,6 +3980,84 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   hasScrollHorizontal: 0
+--- !u!1 &2122392898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5586139801730563026, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+  m_PrefabInstance: {fileID: 1012713238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2122392900 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6629087029391356039, guid: 893973ff80bfbc24ca8ce59e67b51a5b, type: 3}
+  m_PrefabInstance: {fileID: 1012713238}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122392898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2122392903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122392898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cad90f4fa8b10f4fb0f9961706f489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectButton: {fileID: 11400000, guid: afee54e7612f7344ca5fcf4e51b54d64, type: 2}
+  _imageButton: {fileID: 2122392900}
+  _eventTrigger: {fileID: 2122392904}
+  toSound: 0
+  vibrationMode: 2
+--- !u!114 &2122392904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122392898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2122392903}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2122392903}
+          m_TargetAssemblyTypeName: Button.ButtonAnimation, Assembly-CSharp
+          m_MethodName: StartInverseAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2140614098
 GameObject:
   m_ObjectHideFlags: 0
