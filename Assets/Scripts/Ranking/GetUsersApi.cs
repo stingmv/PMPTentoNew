@@ -121,7 +121,7 @@ public class GetUsersApi : MonoBehaviour
             {
                 Debug.LogError(request.error);
             }
-            else
+            else//si no tuvo error
             {
                 string json = request.downloadHandler.text;//almacena respuesta del endpoint
                 Debug.Log(json);

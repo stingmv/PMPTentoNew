@@ -18,7 +18,6 @@ public class StoreItem : MonoBehaviour
     
     public Action<int> SendEvent;
     private float _cost;
-
     private int _amount;
 
     public float Cost => _cost;
@@ -26,25 +25,26 @@ public class StoreItem : MonoBehaviour
     public int Amount => _amount;
     public ScripableObjectPowerUp PowerUp => _powerUp;
     public Sprite SpriteFromImage => _image.sprite;
+
     public void SetData(StoreController storeController, float cost, int amount, Sprite sprite, ScripableObjectPowerUp powerUp)
     {
         _storeController = storeController;
-        
-        
+
+        PassScrollEvents passScroll = gameObject.GetComponent<PassScrollEvents>();
         _cost = cost;
         _amount = amount;
         if (_cost > storeController.CoinsFromUser)
         {      
+            passScroll.enabled = false;
             _costLabel.color = Color.red;
             _buttonAnimation.DisableButton();
-            GetComponent<PassScrollEvents>().enabled = false;
             Debug.Log(powerUp.nameInPlayerPrefs + " " + amount + " " + "costo mayor al total de monedas del usuario");
         }
         else
         {
+            passScroll.enabled = true;
             _costLabel.color = Color.black;
             _buttonAnimation.EnableButton();
-            GetComponent<PassScrollEvents>().enabled = true;
         }
         _costLabel.text = $"{_cost}";
         _amountLabel.text = $"x{_amount}";
@@ -62,6 +62,7 @@ public class StoreItem : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.CoinsChanged += GameEvents_CoinsChanged;
+        
     }
 
     private void OnDisable()
